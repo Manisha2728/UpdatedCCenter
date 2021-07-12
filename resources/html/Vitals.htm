@@ -1,0 +1,892 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Viewer Vitals Front End Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicaldomainvitals/13/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicaldomainvitals_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+     In this section you can configure how the Vitals grid is displayed in the Clinical Viewer application.
+     <br/>
+     <br/>
+     In addition, you can create a new subdomain or replace an existing subdomain, as follows:
+     <ol>
+      <li>
+       Create a new subdomain in the dbMotion Vocabulary within the Vitals subdomin.
+       <li>
+        Associate all relevant codes to this subdomain.
+        <li>
+         Do one of the following in the Elements column:
+         <ol>
+          <li>
+           Add the new subdomain code at the end of the list of existing codes.
+           <li>
+            Replace an existing subdomain code with the new code.
+           </li>
+          </li>
+         </ol>
+         <li>
+          Check the Enable checkbox to make the column visible in Clinical Viewer.
+          <br/>
+         </li>
+        </li>
+       </li>
+      </li>
+     </ol>
+     <ul>
+      <li>
+       The number of columns is limited to 11 for optimal presentation.
+       <li>
+        If the total column width exceeds 100%, a horizontal scrollbar will appear in the Clinical Viewer application.
+       </li>
+      </li>
+     </ul>
+    </div>
+    <div class="inline-group" id="dataelement_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Elements Grid Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Enable
+           <img alt="(Determines whether or not the column is displayed.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether or not the column is displayed." width="10"/>
+          </th>
+          <th>
+           Elements (Vocabulary Domain Code)
+          </th>
+          <th class="required">
+           Column Width
+           <img alt="(Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher." width="10"/>
+          </th>
+          <th>
+           Default Column Width
+          </th>
+          <th class="required">
+           Report Column Width
+           <img alt="(Defines the report column width, as a percentage of the screen's width. The sum of weight of all visible columns should be strongly equal to 100%.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the report column width, as a percentage of the screen's width. The sum of weight of all visible columns should be strongly equal to 100%." width="10"/>
+          </th>
+          <th>
+           Default Report Column Width
+          </th>
+          <th>
+           Hide the UOM
+           <img alt="(Defines the Vital Signs measurement in which the UOM (Unit of Measurement) is hidden (not displayed), by default.
+Default: BloodPressure, HeartRate
+This configuration applies to Clinical Viewer and EHR Agent.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Vital Signs measurement in which the UOM (Unit of Measurement) is hidden (not displayed), by default.
+Default: BloodPressure, HeartRate
+This configuration applies to Clinical Viewer and EHR Agent." width="10"/>
+          </th>
+          <th>
+           Concatenate Values
+           <img alt="(Defines which Vitals Measurements will be displayed as concatenated. For example: 65 kg 50 g or 65.5 kg
+Default: BodyWeight, BodyHeight.
+The Blood Pressure (BP) concatenation business rule is as follows:
+If a BP Measurement event includes a combined BP Measurement value, display the combined value and do not display separate systolic and diastolic measurements.
+If a BP Measurement event does not include a combined BP Measurement value and includes both systolic and diastolic measurements, display the concatenated value as systolic/diastolic.
+This configuration applies to Clinical Viewer and EHR Agent.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines which Vitals Measurements will be displayed as concatenated. For example: 65 kg 50 g or 65.5 kg
+Default: BodyWeight, BodyHeight.
+The Blood Pressure (BP) concatenation business rule is as follows:
+If a BP Measurement event includes a combined BP Measurement value, display the combined value and do not display separate systolic and diastolic measurements.
+If a BP Measurement event does not include a combined BP Measurement value and includes both systolic and diastolic measurements, display the concatenated value as systolic/diastolic.
+This configuration applies to Clinical Viewer and EHR Agent." width="10"/>
+          </th>
+          <th class="required">
+           Order
+           <img alt="(Determines the order of the column in the grid)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines the order of the column in the grid" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="dataelement_set-0">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-1">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-2">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            10.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            10.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-3">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            11.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            10.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-4">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-5">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-6">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            8.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-7">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            7.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            7.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-8">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            13.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            13.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-9">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            11.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            11.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-10">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            11.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            12.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-11">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-12">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="dataelement_set-13">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="dataelement_set-14">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="dataelement_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-report_width">
+          </td>
+          <td class="field-default_report_width">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-hide_uom">
+          </td>
+          <td class="field-concatenate_values">
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentcvcommonclinicaldomainsproperties_set-group">
+     <div class="inline-related" id="ehragentcvcommonclinicaldomainsproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Time Range Filter
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_searching_time field-default_searching_option">
+        <div class="field-box field-default_searching_time">
+         <label for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_time">
+          Time range filter:
+         </label>
+        </div>
+        <div class="field-box field-default_searching_option">
+         <label class="inline" for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+         </label>
+         <select id="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option" name="ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+          <option selected="selected" value="0">
+           Year
+          </option>
+          <option value="1">
+           Month
+          </option>
+          <option value="4">
+           All
+          </option>
+         </select>
+         <p class="help">
+          The textbox determines the time Range used to filter the patient's Vitals list when using the Show option.
+          <br/>
+          The dropdown menu defines the time Unit used to filter the patient's Vitals list. For example, if the Unit is "month" and the Range is 10, the patient's Vitals over the past 10 months are displayed.
+          <br>
+           This configuration affects the Clinical Viewer and EHR Agent.
+           <br>
+            <i>
+             Default: 3 Years.
+            </i>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicaldomainproperties_set-group">
+     <div class="inline-related" id="clinicaldomainproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-show_cancelled_display">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-show_cancelled_display">
+          "Show Cancelled" is displayed
+         </label>
+         <p class="help">
+          Determines whether the "Show Cancelled" checkbox is displayed in Clinical Viewer.
+          <br>
+           If False: Show Cancelled checkbox is not displayed, and cancelled items are not displayed in the Clinical Viewer.
+           <br>
+            If True: Show Cancelled checkbox is displayed. Its default behavior is based on the "Show Cancelled is selected" configuration.
+            <br>
+             <i>
+              Default: True
+             </i>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-show_cancelled_selected">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-show_cancelled_selected">
+          "Show Cancelled" is selected
+         </label>
+         <p class="help">
+          Determines whether the Show Cancelled checkbox (if displayed) is selected.
+          <br>
+           <i>
+            Default: False
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-unit_priority_list_body_weight">
+        <div>
+         <label for="id_vpo_set-0-unit_priority_list_body_weight">
+          UOM priority order to display concatenated Body Weight:
+         </label>
+         <textarea cols="100" id="id_vpo_set-0-unit_priority_list_body_weight" name="vpo_set-0-unit_priority_list_body_weight" rows="4">
+          2.16.840.1.113883.6.8,kg;2.16.840.1.113883.6.8,g|2.16.840.1.113883.6.8,[lb_av];2.16.840.1.113883.6.8,[oz_av]
+         </textarea>
+         <p class="help">
+          Defines the priority order to display concatenated Body Weight measurements, when there are different types of UoM (Units of Measurement).
+          <br/>
+          If the value is empty, all measurement types are displayed in a comma-separated list.
+          <br/>
+          If the priorities are defined, the system displays the first (concatenated) measurement type if it exists. If it does not exist, the second priority is displayed, and so on.
+          <br/>
+          If the concatenation configuration above is on, then the results will be concatenated.
+          <br/>
+          The list of priorities must be displayed in the following format. If not, the display of vital signs will fail.
+          <br/>
+          &lt;first priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;|&lt;second priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;
+          <br/>
+          <br/>
+          Note: When ticking this checkbox, please fill out the relevant configuration of UOM priory, in order for it to take effect.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.6.8,kg;2.16.840.1.113883.6.8,g|2.16.840.1.113883.6.8,[lb_av];2.16.840.1.113883.6.8,[oz_av]
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-unit_priority_list_body_height">
+        <div>
+         <label for="id_vpo_set-0-unit_priority_list_body_height">
+          UOM priority order to display concatenated Body Height:
+         </label>
+         <textarea cols="100" id="id_vpo_set-0-unit_priority_list_body_height" name="vpo_set-0-unit_priority_list_body_height" rows="4">
+          2.16.840.1.113883.6.8,[ft_us];2.16.840.1.113883.6.8,[in_us]|2.16.840.1.113883.6.8,m;2.16.840.1.113883.6.8,cm
+         </textarea>
+         <p class="help">
+          Defines the priority order to display concatenated Body Height measurements, when there are different types of UoM (Units of Measurement).
+          <br/>
+          If the value is empty, all measurement types are displayed in a comma-separated list.
+          <br/>
+          If the priorities are defined, the system displays the first (concatenated) measurement type if it exists. If it does not exist, the second priority is displayed, and so on.
+          <br/>
+          If the concatenation configuration above is on, then the results will be concatenated.
+          <br/>
+          The list of priorities must be displayed in the following format. If not, the display of vital signs will fail.
+          <br/>
+          &lt;first priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;|&lt;second priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;
+          <br/>
+          <br/>
+          Note: When ticking this checkbox, please fill out the relevant configuration of UOM priory, in order for it to take effect.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.6.8,[ft_us];2.16.840.1.113883.6.8,[in_us]|2.16.840.1.113883.6.8,m;2.16.840.1.113883.6.8,cm
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vitalsinpatientmeasurement_set-group">
+     <h2>
+      Inpatient Measurements
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+         <li>
+          IIS(CVA)
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="vitalsinpatientmeasurement_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-include_inpatient_measurements">
+        <div>
+         <label class="vCheckboxLabel" for="id_vitalsinpatientmeasurement_set-0-include_inpatient_measurements">
+          Include Inpatient Measurements
+         </label>
+         <p class="help">
+          Determines whether Inpatient Measurements are displayed in the Vital Signs domain in CV and EHR Agent.
+          <br>
+           True: Inpatient Measurements will be displayed in Vital Signs.
+           <br>
+            False: Inpatient Measurements will be filtered out and not displayed in Vital Signs.
+            <br>
+             Inpatient Encounter baseline codes: 2.16.840.1.113883.5.4|IMP^2.16.840.1.113883.5.4|ACUTE^2.16.840.1.113883.5.4|NONAC
+             <br>
+              <br>
+               Note that all Inpatient Measurements will be displayed. In extreme cases, this can increase system load and reduce performance and product usability. Therefore, we recommend loading only the relevant measurements to the CDR.
+               <br/>
+               <i>
+                Default: False
+               </i>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-include_emergency_measurements">
+        <div>
+         <label class="vCheckboxLabel" for="id_vitalsinpatientmeasurement_set-0-include_emergency_measurements">
+          Include Emergency Measurements
+         </label>
+         <p class="help">
+          Determines whether Emergency Measurements are displayed in the Vital Signs domain in CV and EHR Agent.
+          <br>
+           True: Emergency Measurements will be displayed in Vital Signs.
+           <br>
+            False: Emergency Measurements will be filtered out and not displayed in Vital Signs.
+            <br>
+             Emergency Encounter baseline codes: 2.16.840.1.113883.5.4|EMER
+             <br>
+              <br>
+               Note that all Emergency Measurements will be displayed. In extreme cases, this can increase system load and reduce performance and product usability. Therefore, we recommend loading only the relevant measurements to the CDR.
+               <br/>
+               <i>
+                Default: False
+               </i>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

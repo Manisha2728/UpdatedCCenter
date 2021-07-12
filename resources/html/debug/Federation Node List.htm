@@ -1,0 +1,218 @@
+<div class="colSM" id="content">
+ <h1>
+  Create or Edit Federation Nodes
+ </h1>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="addlink" href="/admin/federation/node/add/">
+     Add Federation Node
+    </a>
+   </li>
+  </ul>
+  <div class="page-help">
+   dbMotion supports the capability to connect multiple dbMotion instances (Nodes) that natively integrate with one another.
+   <br>
+    The connectivity of multiple Nodes is referred to as the Federation Solution. To implement a Federated Solution, perform the following configurations for all nodes on a single local node. Then export the Federation JSON file and import it to all the other nodes in the federation. After importing the JSON file or changing the node definitions click Apply. No service restart is required.
+    <br>
+     The Export and Import process assures alignment of all configurations between all nodes in the federation. It is not recommended to configure this alignment manually on each node.
+     <br>
+      <br>
+       The system identifies the local node and configures it as isLocal (true) automatically by recognizing the local application server name. The isLocal setting cannot be manually configured. Additionally, after each of the nodes import the JSON files, the isLocal (true) configuration is set automatically for the local node.
+       <br>
+        <br>
+         To add a node, click Add Federation Node and follow the instructions.
+         <br>
+          To delete a node, select the required row and click Action -&gt; Delete. Then click Go.
+          <br>
+           To change a node configuration, click on the node name or ID and edit the node properties as required.
+           <br>
+            <br>
+             <b>
+              Symmetric Topology
+             </b>
+             (where all nodes use identical federation settings) is highly recommended. In some cases, a single member might change the federation configurations locally, apply and test the changes prior to sharing the settings with all other nodes. During the test, the network is
+             <b>
+              asymmetric
+             </b>
+             and the configurations are applied differentially at each node.
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </br>
+  </div>
+  <div class="module" id="changelist">
+   <form action="" id="changelist-form" method="post">
+    <div class="actions">
+     <label>
+      Action:
+      <select name="action">
+       <option selected="selected" value="">
+        ---------
+       </option>
+       <option value="delete_nodes">
+        Delete Federation Node
+       </option>
+      </select>
+     </label>
+     <button class="button" name="index" title="Run the selected action" type="submit" value="0">
+      Go
+     </button>
+     <span class="action-counter">
+      0 of 1 selected
+     </span>
+    </div>
+    <div class="results">
+     <table id="result_list">
+      <thead>
+       <tr>
+        <th class="action-checkbox-column" scope="col">
+         <div class="text">
+          <span>
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-uid sorted ascending" scope="col">
+         <div class="sortoptions">
+          <a class="sortremove" href="?o=" title="Remove from sorting">
+          </a>
+          <a class="toggle ascending" href="?o=-1" title="Toggle sorting">
+          </a>
+         </div>
+         <div class="text">
+          <a href="?o=-1">
+           Id
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-name" scope="col">
+         <div class="text">
+          <a href="?o=2.1">
+           Name
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-application_server" scope="col">
+         <div class="text">
+          <a href="?o=3.1">
+           Application Server
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-request_from" scope="col">
+         <div class="text">
+          <a href="?o=4.1">
+           Retrieve from
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-response_to" scope="col">
+         <div class="text">
+          <a href="?o=5.1">
+           Provide to
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-ppol_provider_node" scope="col">
+         <div class="text">
+          <a href="?o=6.1">
+           PPOL Provider Node
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-pl_active" scope="col">
+         <div class="text">
+          <a href="?o=7.1">
+           Provide to Patient List
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-pas_option_remote" scope="col">
+         <div class="text">
+          <a href="?o=8.1">
+           Filter Federated Patient Records Policy
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="column-is_local" scope="col">
+         <div class="text">
+          <span>
+           Is local
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-uid">
+         <a href="/admin/federation/node/1/">
+          1
+         </a>
+        </th>
+        <td class="field-name">
+         <a href="/admin/federation/node/1/">
+          NODE1
+         </a>
+        </td>
+        <td class="field-application_server">
+         PH-ST7-APP.dbMotion.loc
+        </td>
+        <td class="field-request_from nowrap">
+         &lt;None&gt;
+        </td>
+        <td class="field-response_to nowrap">
+         &lt;None&gt;
+        </td>
+        <td class="field-ppol_provider_node nowrap">
+         NODE1
+        </td>
+        <td class="field-pl_active">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+        <td class="field-pas_option_remote">
+         Apply local node policy
+        </td>
+        <td class="field-is_local">
+         <img alt="False" src="/static/admin/img/icon-no.gif"/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="paginator">
+     1 Federation Node
+    </p>
+   </form>
+  </div>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{% if title %}{{ title }} | {% endif %}{% trans 'dbMotion Configuration Center' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% if user.is_active %}<a href="/">{% endif %} {% trans 'dbMotion Configuration Center' %} {% if user.is_active %}</a>{% endif %}</h1>
+
+{% endblock %}
+
+{% block nav-global %}
+
+{% endblock %}

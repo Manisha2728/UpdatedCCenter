@@ -1,0 +1,367 @@
+<div class="colSM" id="content">
+ <h1>
+  Create or Edit Active Directory Providers Settings for Managed Users
+ </h1>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="addlink" href="/admin/security/adproviders/add/">
+     Add Active Directory Provider
+    </a>
+   </li>
+  </ul>
+  <div class="page-help">
+   This configuration is used to define the properties  of the Active Directory Domains for all Active Directories whose users require access to dbMotion.
+  </div>
+  <div class="module" id="changelist">
+   <form action="" id="changelist-form" method="post">
+    <div class="actions">
+     <label>
+      Action:
+      <select name="action">
+       <option selected="selected" value="">
+        ---------
+       </option>
+       <option value="copy_Selected">
+        Make a Copy of selected Active Directory Provider
+       </option>
+       <option value="delete_adprovider">
+        Delete Selected Active Directory Provider
+       </option>
+      </select>
+     </label>
+     <button class="button" name="index" title="Run the selected action" type="submit" value="0">
+      Go
+     </button>
+     <span class="action-counter">
+      0 of 5 selected
+     </span>
+    </div>
+    <div class="results">
+     <table id="result_list">
+      <thead>
+       <tr>
+        <th class="action-checkbox-column" scope="col">
+         <div class="text">
+          <span>
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-domain_name" scope="col">
+         <div class="text">
+          <a href="?o=1">
+           Domain Name
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-domain_port" scope="col">
+         <div class="text">
+          <a href="?o=2">
+           Port
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-container" scope="col">
+         <div class="text">
+          <a href="?o=3">
+           Container
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-trusted_ad" scope="col">
+         <div class="text">
+          <a href="?o=4">
+           Trusted Active Directory
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-untrusted_ad_user_name" scope="col">
+         <div class="text">
+          <a href="?o=5">
+           Untrusted AD User Name
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="column-SAML_Issuer_Name" scope="col">
+         <div class="text">
+          <span>
+           SAML Issuer Name
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="column-SAML_Issuer_Certificate_Thumbprint" scope="col">
+         <div class="text">
+          <span>
+           SAML Certificate Thumbprint
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-domain_name">
+         <a href="/admin/security/adproviders/5/">
+          CORP.ALLSCRIPTS.COM
+         </a>
+        </th>
+        <td class="field-domain_port">
+         389
+        </td>
+        <td class="field-container">
+         DC=corp,DC=allscripts,DC=com
+        </td>
+        <td class="field-trusted_ad">
+         Trusted
+        </td>
+        <td class="field-untrusted_ad_user_name">
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-domain_name">
+         <a href="/admin/security/adproviders/1/">
+          dbMotion.loc
+         </a>
+        </th>
+        <td class="field-domain_port">
+         (None)
+        </td>
+        <td class="field-container">
+        </td>
+        <td class="field-trusted_ad">
+         Trusted
+        </td>
+        <td class="field-untrusted_ad_user_name">
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            DBM_SVC_DEV.dbMotion.loc
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion SmartAgent Developer
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion.com
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion.loc
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            E37FDEE44921A9A246DC28D944D05581D96A710F
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            e37fdee44921a9a246dc28d944d05581d96a710f
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-domain_name">
+         <a href="/admin/security/adproviders/2/">
+          DEV.local
+         </a>
+        </th>
+        <td class="field-domain_port">
+         (None)
+        </td>
+        <td class="field-container">
+        </td>
+        <td class="field-trusted_ad">
+         Trusted
+        </td>
+        <td class="field-untrusted_ad_user_name">
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-domain_name">
+         <a href="/admin/security/adproviders/3/">
+          DEV2.local
+         </a>
+        </th>
+        <td class="field-domain_port">
+         (None)
+        </td>
+        <td class="field-container">
+        </td>
+        <td class="field-trusted_ad">
+         Untrusted
+        </td>
+        <td class="field-untrusted_ad_user_name">
+         eranmh
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-domain_name">
+         <a href="/admin/security/adproviders/4/">
+          SITQA2.RD.ALLSCRIPTS.COM
+         </a>
+        </th>
+        <td class="field-domain_port">
+         389
+        </td>
+        <td class="field-container">
+         CN=Employees,CN=Users,CN=Eclipsys,CN=Program Data,DC=SITQA2,DC=RD,DC=ALLSCRIPTS,DC=COM
+        </td>
+        <td class="field-trusted_ad">
+         Untrusted
+        </td>
+        <td class="field-untrusted_ad_user_name">
+         twprovider
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+          <tr>
+           <td>
+            urn:allscripts.com
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            â€Ž125ea6e92f44c66f4e0967a9702ae84752e7c2f4
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="paginator">
+     5 Active Directory Providers Settings for Managed Users
+    </p>
+   </form>
+  </div>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,3 @@
+C:\Temp\CCenter\NewDjango\ConfigurationCenter\src\ConfigCenter\obj\Debug\ConfigCenter.pyproj.CoreCompileInputs.cache
+C:\Temp\CCenter\NewDjango\ConfigurationCenter\src\ConfigCenter\bin\Microsoft.PythonTools.WebRole.dll
+C:\Temp\CCenter\NewDjango\ConfigurationCenter\src\ConfigCenter\bin\wfastcgi.py

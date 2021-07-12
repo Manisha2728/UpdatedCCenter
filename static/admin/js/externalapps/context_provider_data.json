@@ -1,0 +1,4 @@
+[ 
+		{"pluginName" : "Custom", "isHardCodedPluginData" : "false", "pluginData" : ""},
+		{"pluginName" : "UI Automation", "isHardCodedPluginData" : "true", "pluginData" : "ContextProviderServiceInterceptor.ContextProviderServiceInterceptor, dbMotion.SmartAgent.ContextProviderServiceInterceptor"}		
+]

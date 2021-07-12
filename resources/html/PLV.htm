@@ -1,0 +1,89 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Viewer PLV Front End Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicaldomainplv/9/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicaldomainplv_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentcvcommonclinicaldomainsproperties_set-group">
+     <div class="inline-related" id="ehragentcvcommonclinicaldomainsproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Time Range Filter
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_searching_time field-default_searching_option">
+        <div class="field-box field-default_searching_time">
+         <label for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_time">
+          Time range filter:
+         </label>
+        </div>
+        <div class="field-box field-default_searching_option">
+         <label class="inline" for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+         </label>
+         <select id="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option" name="ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+          <option value="0">
+           Year
+          </option>
+          <option selected="selected" value="1">
+           Month
+          </option>
+          <option value="4">
+           All
+          </option>
+         </select>
+         <p class="help">
+          The textbox determines the time Range used to filter the patient's PLV list when using the Show option.
+          <br/>
+          The dropdown menu defines the time Unit used to filter the patient's PLV list. For example, if the Unit is "month" and the Range is 10, the patient's PLV over the past 10 months are displayed.
+          <br>
+           <i>
+            Default: 1 Month.
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

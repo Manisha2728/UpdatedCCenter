@@ -1,0 +1,250 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<title>{% block title %}{% endblock %}</title>
+
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/dbmotion_admin_extensions.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "jquery/jquery-ui.min.css" %}">
+
+{% block extrastyle %}
+
+{% endblock %}
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="{% block stylesheet_ie %}{% static "admin/css/ie.css" %}{% endblock %}" /><![endif]-->
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
+<script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
+{% block extrahead %}
+	<script src="/static/jquery/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/static/jquery/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script src="/static/jquery/js/jquery.form.min.js" type="text/javascript"></script>
+    
+    {% if not is_popup and user.is_active %}
+    <script src="/static/admin/js/search.js" type="text/javascript"></script>
+    <script src="/static/admin/js/menu.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="/static/jquery/jsTree/_lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/static/jquery/jsTree/_lib/jquery.hotkeys.js"></script>
+    <script src="/static/jquery/jstree/jquery.jstree.js" type="text/javascript"></script>
+    
+    {% endif %}
+	
+	<script type="text/javascript" class="source below">
+    $(function(){
+    	$( document ).tooltip();
+
+    {% block jquery %}
+    	
+    {% endblock %}
+    
+    {% if not is_popup and user.is_active %}
+
+    $(document).ready(function(){  
+        if(typeof tracking_menu_expanded !== 'undefined' && tracking_menu_expanded == 'True')
+        {
+            document.getElementById('Tracking').style.display = 'block';
+        }
+}); 
+
+    function setTreeviewHeight(argument) {
+        tree = $('.left-wrap #treeview'); 
+        if (tree.position() != "undefined" && tree.position()!=null)
+        tree.height($(window).height() - tree.position().top - 80);
+    }
+    setTreeviewHeight();
+
+    $( window ).resize(function() {
+        setTreeviewHeight();
+    });
+
+    $("#treeview")
+        // call `.jstree` with the options object
+        .jstree({
+            // the `plugins` array allows you to configure the active plugins on this instance
+            "types" : {
+                // "valid_children" : [ "folder" ],
+                "types" : {
+                    "concrete_page" : {
+                        // "valid_children" : [ "file" ],
+                        // "icon" : { "image" : "http://jstree.com/tree.png"},
+                        "icon" : { "image" : "/static/img/concrete_page_icon.png"},
+                        // "max_depth" : 1
+                    },
+                    "export_disabled" : { 
+	                    "icon" : { "image" : "/static/img/concrete_page_icon.png"},
+                    } 
+                }
+            },
+            "plugins" : ["themes","html_data","ui","crrm", "types"],
+            "themes": {
+                "dots": false,
+            },
+
+            // originally: "plugins" : ["themes","html_data","ui","crrm","hotkeys"],
+            // each plugin you have included can have its own config object
+            "core" : { "initially_open" : [ "#open" ] }
+            // it makes sense to configure a plugin only if overriding the defaults
+        })
+        // EVENTS
+        // each instance triggers its own events - to process those listen on the container
+        // all events are in the `.jstree` namespace
+        // so listen for `function_name`.`jstree` - you can function names from the docs
+        .bind("loaded.jstree", function (event, data) {
+            // you get two params - event & data - check the core docs for a detailed description
+            
+        })
+
+        .bind("select_node.jstree", function (event, data) {
+        // `data.rslt.obj` is the jquery extended node that was clicked
+            //alert(data.rslt.obj.firstchild.attr("href"));
+        })
+
+        .delegate("a","click", function(e) {
+            if ($("#treeview").jstree("is_leaf", this)) {
+                document.location.href = this;
+            }
+            else {
+                $("#treeview").jstree("toggle_node", this);
+            }
+		});
+
+	    // the tree_selection_id variable should be set in change_form or change_list template according to the displayed object
+	    if  (typeof tree_selection_id !== 'undefined'){
+	    	$.jstree._reference('treeview').data.ui.to_select = ['#' + tree_selection_id];
+	    }
+        
+
+    {% endif %}
+    });
+    
+    function getUrlParameter(sParam)
+	{
+	    var sPageURL = window.location.search.substring(1);
+	    var sURLVariables = sPageURL.split('&');
+	    for (var i = 0; i < sURLVariables.length; i++) 
+	    {
+	        var sParameterName = sURLVariables[i].split('=');
+	        if (sParameterName[0] == sParam) 
+	        {
+	            return sParameterName[1];
+	        }
+	    }
+	}
+	
+		
+	    
+    </script>
+{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
+
+<!-- Container -->
+<div id="container">
+
+    {% if not is_popup %}
+    <!-- Header -->
+    <div id="header" {% if user.is_active %}class="fixed"{% endif %}>
+    	{% if user.is_active and user.is_staff %}
+		<a id="home" href="/" title="home">
+    		<img src="/static/img/home.png"/>
+    	</a>
+    	<div id="search">
+    		<form method="post" action="/search/">{% csrf_token %}
+	    		<input id="text_search" name="search_string" type="text" placeholder="Search CCenter" value="{{ search_string }}"/>
+	    		<input type="submit" value="" onClick="return checkSearch();"/>
+    		</form>
+    	</div>
+    	{% endif %}
+        <div id="branding">
+        {% block branding %}{% endblock %}
+        </div>
+
+
+        {% if user.is_active and user.is_staff %}
+        <div id="user-tools">
+            {% trans 'Welcome,' %}
+            <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong>.
+            {% block userlinks %}
+                {% url 'django-admindocs-docroot' as docsroot %}
+                {% if docsroot %}
+                    <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+                {% endif %}
+                {% if user.has_usable_password %}
+                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+                {% endif %}
+                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+            {% endblock %}
+        </div>
+        {% endif %}
+        {% block nav-global %}{% endblock %}
+    </div>
+    <!-- END Header -->
+<!--     {% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
+    {% endblock %}
+ -->    
+    {% endif %}
+
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock messages %}
+
+	{% if not is_popup %}
+    {% block left_panel %}
+    {% if user.is_active %}
+    <div class="left-wrap">
+        
+        <ul class="action-buttons">
+            <li><a class="" href="/export_db/">Export</a></li>
+            <li><a class="" href="/import_db">Import</a></li>
+            {% if user.django_login == True %}
+            <li><a class="" href="/authccenter/">Switch to Login with AD only</a></li>
+            <li><a class="" href="/admin/auth/">Manage Users</a></li>
+            {% endif %}
+            <li><a class="" href="javascript:expand_collapse_submenu('Tracking')">>>Tracking</a>
+                <ul id="Tracking" style="display:none;">
+                    <li><a class="" href="/history/">List of Changes per Session</a></li>
+                    <li><a class="" href="/admin/dbmconfigapp/changeshistory/">List of Changes History</a></li>
+                    <li><a class="" href="/admin/dbmconfigapp/loginshistory/">Logins History</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="tree-wrap">
+            {% include "admin/includes/treeview.html" %}
+        </div>
+    </div>
+    {% endif %}
+    {% endblock %}
+    {% endif %}
+
+    <!-- Content -->
+    <div id="content" class="{% block coltype %}colSM{% endblock %}">
+        {% block pretitle %}{% endblock %}
+        {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+        {% block content %}
+        {% block object-tools %}{% endblock %}
+        {{ content }}
+        {% endblock %}
+        {% block sidebar %}{% endblock %}
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    {% block footer %}<div id="footer"></div>{% endblock %}
+</div>
+<!-- END Container -->
+
+</body>
+</html>

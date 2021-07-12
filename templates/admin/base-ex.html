@@ -1,0 +1,41 @@
+{% extends "admin/base.html" %}
+
+<!-- LOADING -->
+{% load url from future %}
+{% load i18n admin_urls %}
+
+{% block title %}{% if title %}{{ title }} | {% endif %}{% trans 'dbMotion Configuration Center' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'dbMotion Configuration Center' %}</h1>
+{% endblock %}
+
+<!-- BREADCRUMBS -->
+{% block breadcrumbs %}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+    <!--div class="g-d-c">
+    	
+    	
+    	<ul>
+			<li id="n_1">
+				<a href="#">Clinical Domains</a>
+				<ul>
+		    	{% for cd in formset %}
+		    		<li id="n_1_1">
+		    			<a href="#">{{ cd.name }}</a>
+		    			<ul>
+		    				<li><a href="/admin/dbmconfigapp/dataelement/?clinical_domain__id__exact={{cd.id}}">Data Elements</a>
+		    			</ul>	
+		    		</li>
+		    	{% endfor %}
+		    	</ul>
+		   </li>
+    	</ul>
+    <div-->
+    <!--div>
+    	{{ block.super}}
+    </div-->
+{% endblock %}

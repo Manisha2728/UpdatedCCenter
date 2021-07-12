@@ -1,0 +1,372 @@
+<div class="colSM" id="content">
+ <h1>
+  Add EHR
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="ehr_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned ">
+     <h2>
+      EHR
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+       <p class="help">
+        Defines the name of the EHR
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned ">
+     <h2>
+      Detection
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-deployment_type">
+      <div>
+       <label for="id_deployment_type">
+        Deployment type:
+       </label>
+       <select id="id_deployment_type" name="deployment_type">
+        <option value="Citrix">
+         EHR Agent on Desktop and EHR hosted on Citrix
+        </option>
+        <option selected="selected" value="Local">
+         Desktop EHR, with Both EHR Agent and EHR on Desktop / Both EHR Agent and EHR hosted on Citrix
+        </option>
+        <option value="Web">
+         Web EHR, with Both EHR Agent and EHR on Desktop / Both EHR Agent and EHR hosted on Citrix
+        </option>
+       </select>
+       <p class="help">
+        The EHR application can be either a desktop application or a Web-based application.
+        <br/>
+        The Deployment type applies to both the EHR Agent and the EHR and can be one of the following: Desktop deployment or a desktop virtualization deployment, such as hosted on Citrix.
+        <br/>
+        The Deployment Type configurations depend on both the EHR application type and the EHR Agent/EHR deployment.
+        <br/>
+        For example, detecting when a Citrix-based EHR has been launched is difficult because it is hosted in a Citrix process and there can be multiple Citrix processes running simultaneously, each hosting a different application.
+        <br/>
+        The following Deployment type options are available:
+        <br/>
+        - EHR Agent on Desktop and EHR hosted on Citrix: The EHR is either a desktop or Web application. The EHR Agent is deployed on the desktop and the EHR is hosted on Citrix.
+        <br/>
+        - Desktop EHR, with Both EHR Agent and EHR on Desktop/Both EHR Agent and EHR hosted on Citrix: The EHR is a desktop application. And both the EHR Agent and the EHR are deployed on the local desktop. Or, both the EHR Agent and the EHR are hosted on Citrix.
+        <br/>
+        - Web EHR, with Both EHR Agent and EHR on Desktop/Both EHR Agent and EHR hosted on Citrix: The EHR is a Web application. And both the EHR Agent and the EHR are deployed on the local desktop. Or, both the EHR Agent and the EHR are hosted on Citrix.
+        <br/>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_exe">
+      <div>
+       <label for="id_detection_exe">
+        Executable:
+       </label>
+       <p class="help">
+        Defines the EHR executable application file name.
+        <br/>
+        The value is a regular expression. For more information about regular expression refer to
+        <a href="https://msdn.microsoft.com/en-us/library/az24scfc(v=vs.110).aspx">
+         MSDN Regular Expression Language guide
+        </a>
+        .
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_launch_title">
+      <div>
+       <label for="id_detection_launch_title">
+        EHR Detection Title:
+       </label>
+       <p class="help">
+        Defines the Title of the EHR application, which is used to enable the system to detect this EHR by its title. If the Title is undefined, the EHR will be detected only by its Executable Application file name.
+        <br/>
+        The value functions as a regular expression. For more information about regular expression refer to
+        <a href="https://msdn.microsoft.com/en-us/library/az24scfc(v=vs.110).aspx">
+         MSDN Regular Expression Language guide
+        </a>
+        .
+        <br/>
+        <b>
+         Note:
+        </b>
+        EHR Agent will ignore this value on Share Desktop mode.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_window_class">
+      <div>
+       <label for="id_detection_window_class">
+        EHR Window Class:
+       </label>
+       <p class="help">
+        This parameter is used to detect the window class of an EHR in order to identify that the running application is the desired EHR.
+        <br/>
+        This configuration is important in scenarios when there may be multiple windows which are otherwise indistinguishable.
+        <br/>
+        The value is a regular expression. For more information about regular expression refer to
+        <a href="https://msdn.microsoft.com/en-us/library/az24scfc(v=vs.110).aspx">
+         MSDN Regular Expression Language guide
+        </a>
+        .
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_url">
+      <div>
+       <label for="id_detection_url">
+        URL:
+       </label>
+       <p class="help">
+        Defines the EHR's Url
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_title">
+      <div>
+       <label for="id_detection_title">
+        EHR Window Title:
+       </label>
+       <p class="help">
+        This parameter is used to detect the window label of an EHR in order to anchor the EHR Agent to the window that matches this title.
+        <br/>
+        This configuration is important in scenarios when "Follow Focused Window" is checked. In this case, and if the title is empty, the EHR Agent will anchor itself to every new window and every dialog box belonging to the EHR.
+        <br/>
+        The value is a regular expression. For more information about regular expression refer to
+        <a href="https://msdn.microsoft.com/en-us/library/az24scfc(v=vs.110).aspx">
+         MSDN Regular Expression Language guide
+        </a>
+        .
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_follow_focused_window">
+      <div>
+       <label class="vCheckboxLabel" for="id_detection_follow_focused_window">
+        Follow focused window
+       </label>
+       <p class="help">
+        Determines to which EHR window the EHR Agent will be anchored.
+        <br/>
+        True: If the target EHR has several windows, the EHR Agent will anchor to the EHR's focused window.
+        <br/>
+        False: The EHR Agent will anchor to the EHR's first window.
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-prevent_detected_window_topmost">
+      <div>
+       <label class="vCheckboxLabel" for="id_prevent_detected_window_topmost">
+        Prevent detected window reposition to topmost window
+       </label>
+       <p class="help">
+        This option supports the following case:
+        <br/>
+        1.The EHR has multiple windows.
+        <br/>
+        2. The focused window must be generally followed by the Agent.
+        <br/>
+        3. There is a window in focus, which should not be detected by the Agent at the moment, according to other configuration settings.
+        <br/>
+        4. Another EHR window, which is currently detected by the Agent, should not be automatically repositioned to be the topmost window, so that it does not block the focused window.
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-detection_version">
+      <div>
+       <label for="id_detection_version">
+        Version:
+       </label>
+       <p class="help">
+        Defines the EHR product version as defined in the executable application.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned ">
+     <h2>
+      Position
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="description">
+      This configuration enables you to define the EHR Agent window position relative to the EHR application window. This configuration defines the default position each time the EHR Agent opens. After it opens in the defined position, however, it can be moved to any other position that the user prefers.
+      <br/>
+      App corner: Defines the corner of the EHR application window that is used as a starting point to calculate the EHR Agent window position.
+      <br/>
+      Agent corner: Defines the corner of the EHR Agent window that is positioned in relation to the defined EHR application window corner.
+      <br/>
+      Offset: Defines the horizontal and vertical offset positions, in pixels, of the EHR Agent window corner from the EHR application window corner.
+     </div>
+     <div class="form-row field-position_app_corner field-position_agent_corner field-position_offset_x field-position_offset_y">
+      <div class="field-box field-position_app_corner">
+       <label for="id_position_app_corner">
+        App corner:
+       </label>
+       <select id="id_position_app_corner" name="position_app_corner">
+        <option value="LeftTop">
+         Left Top
+        </option>
+        <option selected="selected" value="RightTop">
+         Right Top
+        </option>
+        <option value="LeftBottom">
+         Left Bottom
+        </option>
+        <option value="RightBottom">
+         Right Bottom
+        </option>
+       </select>
+       <p class="help">
+        <i>
+         Default: Right Top
+        </i>
+       </p>
+      </div>
+      <div class="field-box field-position_agent_corner">
+       <label class="inline" for="id_position_agent_corner">
+        Agent corner:
+       </label>
+       <select id="id_position_agent_corner" name="position_agent_corner">
+        <option value="LeftTop">
+         Left Top
+        </option>
+        <option selected="selected" value="RightTop">
+         Right Top
+        </option>
+        <option value="LeftBottom">
+         Left Bottom
+        </option>
+        <option value="RightBottom">
+         Right Bottom
+        </option>
+       </select>
+       <p class="help">
+        <i>
+         Default: Right Top
+        </i>
+       </p>
+      </div>
+      <div class="field-box field-position_offset_x">
+       <label class="required inline" for="id_position_offset_x">
+        Offset X:
+       </label>
+       <p class="help">
+        <i>
+         Default: 0
+        </i>
+       </p>
+      </div>
+      <div class="field-box field-position_offset_y">
+       <label class="required inline" for="id_position_offset_y">
+        Offset Y:
+       </label>
+       <p class="help">
+        <i>
+         Default: 40
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <span id="preview_wrapper">
+     <div class="draggable" id="preview_ehr">
+      <a class="inline-deletelink" href="#" id="preview_close" title="Close">
+      </a>
+      <p>
+       This window simulates your EHR application.
+      </p>
+      <p>
+       Move this window and the EHR Agent simulator will move with it.
+      </p>
+      <p>
+       Move the EHR Agent around to change its position in relation to this window.
+      </p>
+      <p>
+       <label for="preview_snap">
+        Snap: helps to align the EHR Agent exactly with the EHR's outer boundaries.
+       </label>
+      </p>
+     </div>
+     <div class="draggable" id="preview_agent">
+      <div id="preview_fields_box">
+       <div class="form-row aligned" id="preview_fields">
+       </div>
+       <div class="submit-row" id="preview_buttons">
+       </div>
+      </div>
+     </div>
+    </span>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

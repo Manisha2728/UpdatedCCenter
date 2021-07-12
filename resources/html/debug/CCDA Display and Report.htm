@@ -1,0 +1,211 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the CCDA Display, Report and Data Export Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/cvccdadisplaypage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="cvccdadisplaypage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ccdadisplay_set-group">
+     <div class="inline-related" id="ccdadisplay_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        CCDA Display and Report Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-display_mode">
+        <div>
+         <label for="id_ccdadisplay_set-0-display_mode_0">
+          CCDA Display Mode:
+         </label>
+         <ul class="radiolist" id="id_ccdadisplay_set-0-display_mode">
+          <li>
+           <label for="id_ccdadisplay_set-0-display_mode_0">
+            PDF
+           </label>
+          </li>
+          <li>
+           <label for="id_ccdadisplay_set-0-display_mode_1">
+            CVE
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines in which Mode the CCDA is displayed when it is opened in the CV, CVA and PV.
+          <br>
+           PDF: Displayed as a PDF using the Allscripts PDF Converter Web API
+           <br>
+            CVE: CCDA is opened with the Interactive CVE (CVE is Allscripts Clinical View Engine)
+            <br/>
+            <i>
+             Default: PDF
+            </i>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        CCDA Configuration
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        Note: The configuration enables connections between dbMotion and Allscripts Common Component Services such as Clinical Viewer Engine (CVE), PDF Converter, and Validation as a Service (VaaS).
+        <br>
+         Refer to the IHE Implementation Guide for more detail.
+        </br>
+       </div>
+       <div class="form-row field-transformation_cloud_service">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-transformation_cloud_service">
+          Transformation cloud service:
+         </label>
+         <p class="help">
+          URL for dbMotion transformation cloud service
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-transformation_service_subscription">
+        <div>
+         <label for="id_ccdadisplay_set-0-transformation_service_subscription">
+          Transformation service subscription:
+         </label>
+         <p class="help">
+          Subscription key for dbMotion transformation cloud service
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-cve_renew_certificate">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-cve_renew_certificate">
+          Certificate:
+         </label>
+         <p class="help">
+          Defines the Certificate Thumbprint for the Retrieval Key. The Certificate must be downloaded from the Allscripts Community Configuration Manager (CCM) and installed on the Application server.
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-source_system">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-source_system">
+          Source System:
+         </label>
+         <p class="help">
+          Defines the dbMotion project OID.
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-customer_name">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-customer_name">
+          Customer Name:
+         </label>
+         <p class="help">
+          Defines the dbMotion customer name.
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-retrieval_key_cloud_service">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-retrieval_key_cloud_service">
+          Retrieval key for Cloud service:
+         </label>
+         <p class="help">
+          URL for retrieval key for Cloud service
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-Cve_document_conversion">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-Cve_document_conversion">
+          CVE document conversion:
+         </label>
+         <p class="help">
+          URL for CVE document conversion
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-Pdf_document_conversion">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-Pdf_document_conversion">
+          PDF document conversion:
+         </label>
+         <p class="help">
+          URL for PDF document conversion
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-vaas_document_conversion">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-vaas_document_conversion">
+          VAAS document conversion:
+         </label>
+         <p class="help">
+          URL for VAAS document conversion. This service is only supported for the Cloud and will work via Cloud regardless if On premise option is selected.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

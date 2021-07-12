@@ -1,0 +1,65 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Federation Group
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="group_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      Federation Group
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+       <p class="help">
+        Defines a unique Group Name.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-node">
+      <div>
+       <label for="id_node">
+        Nodes:
+       </label>
+       <select id="id_node" multiple="multiple" name="node" size="10">
+        <option value="1">
+         NODE1
+        </option>
+       </select>
+       <p class="help">
+        Defines the nodes included in the Federation Group. Select the nodes from the dropdown menu.
+        <br>
+         Possible values: A Group can contain all nodes, specified nodes, or no nodes. Different Groups can have overlapping members.
+         <br>
+          <br>
+           <b>
+            To Delete a Group:
+           </b>
+           Because of references to the Group in various configurations, it is recommended to change the Group Name to Deleted and remove all group members. The Group remains available in the dropdown menu and can be referenced again and updated in the future. The behavior of an empty group is similar to a group with no (None) members. Hold down "Control", or "Command" on a Mac, to select more than one.
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

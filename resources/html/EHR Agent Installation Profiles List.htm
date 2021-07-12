@@ -1,0 +1,120 @@
+<div class="colSM" id="content">
+ <h1>
+  Create or Edit EHR Agent Installation Profiles
+ </h1>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="addlink" href="/admin/externalapps/installationprofile/add/">
+     Add EHR Agent Installation Profiles
+    </a>
+   </li>
+  </ul>
+  <div class="page-help">
+   This configuration is used to define set of the installation profiles.
+   <br/>
+   To add a node, select the required row and click Action -&gt; Duplicate existing installation profiler(s). Then click Go..
+   <br/>
+   To delete a node, select the required row and click Action -&gt; Delete installation profiler(s). Then click Go.
+   <br/>
+   To change a node configuration, click on the profile name and edit the profile properties as required.
+   <br>
+    <br>
+    </br>
+   </br>
+  </div>
+  <div class="module" id="changelist">
+   <form action="" id="changelist-form" method="post">
+    <div class="actions">
+     <label>
+      Action:
+      <select name="action">
+       <option selected="selected" value="">
+        ---------
+       </option>
+       <option value="copy_Selected">
+        Duplicate existing installation profiler(s)
+       </option>
+       <option value="delete_profile">
+        Delete installation profiler(s)
+       </option>
+      </select>
+     </label>
+     <button class="button" name="index" title="Run the selected action" type="submit" value="0">
+      Go
+     </button>
+     <span class="action-counter">
+      0 of 4 selected
+     </span>
+    </div>
+    <div class="results">
+     <table id="result_list">
+      <thead>
+       <tr>
+        <th class="action-checkbox-column" scope="col">
+         <div class="text">
+          <span>
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-name" scope="col">
+         <div class="text">
+          <a href="?o=1">
+           Name
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/installationprofile/0/">
+          Default Profile
+         </a>
+        </th>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/installationprofile/1/">
+          CCOW
+         </a>
+        </th>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/installationprofile/2/">
+          DBMCM
+         </a>
+        </th>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/installationprofile/3/">
+          CCOW_NO_PROD_UPD
+         </a>
+        </th>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="paginator">
+     4 EHR Agent Installation Profiles
+    </p>
+   </form>
+  </div>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,343 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Federation Node
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="node_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide extrapretty">
+     <h2>
+      Node Details
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+      </div>
+     </div>
+     <div class="form-row field-uid">
+      <div>
+       <label class="required" for="id_uid">
+        Id:
+       </label>
+       <p class="help">
+        Defines the Node ID as an integer.
+        <br>
+         The Node ID must be unique in the federation.
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+       <p class="help">
+        Defines the Node Name as text.
+        <br>
+         It must be unique in the federation.
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-application_server">
+      <div>
+       <label class="required" for="id_application_server">
+        Application Server:
+       </label>
+       <p class="help">
+        The name of the application server, which is the NLB.
+        <br>
+         It must be unique in the federation.
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-request_from">
+      <div>
+       <label for="id_request_from">
+        Retrieve from:
+       </label>
+       <select id="id_request_from" name="request_from">
+        <option value="0">
+         &lt;All&gt;
+        </option>
+        <option selected="selected" value="-1">
+         &lt;None&gt;
+        </option>
+       </select>
+       <a class="add-another" href="/admin/federation/group/add/?_to_field=id" id="add_id_request_from" onclick="return showAddAnotherPopup(this);">
+        <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+       </a>
+       <a class="edit-related" href_base="/admin/federation/group/{0}/" id="edit_id_request_from" onclick="return showEditPopup(this);">
+        <img alt="Edit" height="10" src="/static/admin/img/icon_changelink.gif" width="10"/>
+       </a>
+       <p class="help">
+        Defines the Group of nodes to which this node can send requests and receive responses with data.
+        <br>
+         Possible values: All, None, Defined Group.
+         <br>
+          <b>
+           All:
+          </b>
+          Requesting information is applicable to all nodes including future added members. However, this might be limited by nodes that restrict the exchange of information with specified Groups.
+          <br>
+           <b>
+            None:
+           </b>
+           Requesting information outside this local node is disabled.
+           <br>
+            <b>
+             Defined Group:
+            </b>
+            Requesting information is applicable only to this Defined Group of nodes.
+            <br>
+             To define a Group of nodes, click the + sign to open the Federation Group window. Only one Group can be defined. To edit the Group settings, click the pencil sign.
+             <br>
+              When adding or changing a Group, the change applies to all configurations that refer to this Group.
+              <br/>
+              <i>
+               Default: None
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-response_to">
+      <div>
+       <label for="id_response_to">
+        Provide to:
+       </label>
+       <select id="id_response_to" name="response_to">
+        <option value="0">
+         &lt;All&gt;
+        </option>
+        <option selected="selected" value="-1">
+         &lt;None&gt;
+        </option>
+       </select>
+       <a class="add-another" href="/admin/federation/group/add/?_to_field=id" id="add_id_response_to" onclick="return showAddAnotherPopup(this);">
+        <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+       </a>
+       <a class="edit-related" href_base="/admin/federation/group/{0}/" id="edit_id_response_to" onclick="return showEditPopup(this);">
+        <img alt="Edit" height="10" src="/static/admin/img/icon_changelink.gif" width="10"/>
+       </a>
+       <p class="help">
+        Defines the Group of nodes from which this node can accept requests and provide responses with data.
+        <br>
+         Possible values: All, None, Defined Group.
+         <br>
+          <b>
+           All:
+          </b>
+          Providing information is applicable to all nodes including future added members. However, this might be limited by nodes that restrict the exchange of information with specified Groups.
+          <br>
+           <b>
+            None:
+           </b>
+           Providing information outside this local node is disabled. However, if a node is set to not provide data, local data is always provided to local users.
+           <br>
+            <b>
+             Defined Group:
+            </b>
+            Providing information is applicable only to this Defined Group of nodes.
+            <br>
+             To define a Group of nodes, click the + sign to open the Federation Group window. Only one Group can be defined. To edit the Group settings, click the pencil sign.
+             <br>
+              When adding or changing a Group, the change applies to all configurations that refer to this Group.
+              <br/>
+              <i>
+               Default: None
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-pl_active">
+      <div>
+       <label class="vCheckboxLabel" for="id_pl_active">
+        Provide to Patient List
+       </label>
+       <p class="help">
+        Determines whether this node provides data for the Patient List.
+        <br/>
+        <i>
+         Default: False.
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ppol_provider_node">
+      <div>
+       <label class="required" for="id_ppol_provider_node">
+        PPOL Provider Node:
+       </label>
+       <select id="id_ppol_provider_node" name="ppol_provider_node">
+        <option value="">
+         ---------
+        </option>
+        <option selected="selected" value="1">
+         NODE1
+        </option>
+       </select>
+       <p class="help">
+        Defines the node that provides the Provider Registry Service (PPOL).
+        <br>
+         It is recommended to configure an identical value for the PPOL service on each node in order to configure one single centralized PPOL service in the federation.
+         <br>
+          Important! If a different PPOL service is configured on each node, the clustering of Patient and Provider data cannot be achieved between the PPOL instances.
+          <br>
+           For example, in Collaborate events will be displayed only for those Patients or Providers that are managed within the relevant PPOL Instance.
+           <br>
+            The rest will be filtered out by the Data Event Monitor. Additionally, Population Health will calculate rules (for Disease Populations) only for the patient indexes in the relevant PPOL Instance, and based only on the partial clinical data that is available.
+           </br>
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-node_confidentiality_level">
+      <div>
+       <label for="id_node_confidentiality_level">
+        Configuring Confidentiality Codes for Display of Node Outage Indication:
+       </label>
+       <p class="help">
+        This configuration (in Code^Code format) defines the user's confidentiality code(s) assigned to the user's Security Role, that determine whether this node's outage status is displayed in the dbMotion applications (with the red semaphore icon in the Retrieval Status table) when the node is in outage mode.
+        <br>
+         *  If confidentiality code(s) are not defined here, the status of this node in outage mode will be displayed with the red semaphore icon.
+         <br>
+          *  If the confidentiality code(s) defined here (for example, PSY code) were assigned to the user's Security Role, when this node is in outage mode the node will be displayed in the Retrieval Status table with the red semaphore icon.
+          <br>
+           *  If the confidentiality code(s) defined here (for example, PSY code) were NOT assigned to the user's Security Role, when this node is in outage mode the node will NOT be displayed in the Retrieval Status table.
+           <br>
+            The confidentiality codes configured here must be configured in allowConfidentialityLevels configuration in the Security Management role profile.
+            <br>
+             <br>
+              <em>
+               <u>
+                Note:
+               </u>
+               This configuration is supported only in Israeli projects (that are implemented with the CDR Adapter).
+              </em>
+              <br/>
+              <i>
+               Default: Empty
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_available_during_document_search">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_available_during_document_search">
+        Available for federated Document Search
+       </label>
+       <p class="help">
+        If enabled, the node can be searched and can search other Elasticsearch nodes in the federation.
+        <br/>
+        If disabled, the node cannot be searched or searched by other Elasticsearch nodes in the federation.
+        <br/>
+        <b>
+         Note:
+        </b>
+        Restart services "Communication Data Service" and all its dependences to apply changes.
+        <br/>
+        <i>
+         Default: False.
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide extrapretty">
+     <h2>
+      Patient Authorization
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+      </div>
+     </div>
+     <div class="form-row field-pas_option_remote">
+      <div>
+       <label class="required" for="id_pas_option_remote_0">
+        Filter Federated Patient Records Policy:
+       </label>
+       <ul class="radiolist" id="id_pas_option_remote">
+        <li>
+         <label for="id_pas_option_remote_0">
+          Apply local node policy
+         </label>
+        </li>
+        <li>
+         <label for="id_pas_option_remote_1">
+          Opt In and Most updated consent
+         </label>
+        </li>
+        <li>
+         <label for="id_pas_option_remote_2">
+          Opt Out and Most updated consent
+         </label>
+        </li>
+        <li>
+         <label for="id_pas_option_remote_3">
+          Opt In and Most restricted consent
+         </label>
+        </li>
+        <li>
+         <label for="id_pas_option_remote_4">
+          Opt Out and Most restricted consent
+         </label>
+        </li>
+       </ul>
+       <p class="help">
+        This configuration is used to define the behavior of the Patient Consent functionality in a federated system where different nodes are configured with different Patient Consent policies (PAR).
+        <br/>
+        This configuration is required in order to enable each HIE participant to define and enforce its own Privacy and Consent requirements. The configuration enables each dbMotion node to define how to handle patient consent defined by other dbMotion nodes.
+        <br/>
+        In a federated system, a Patient Consent conflict might occur when the Patient Search returns patient indexes from different nodes (different systems) where each node has a different Patient Consent policy. The conflict is resolved by using this configuration to filter out of the Patient Search results all indexes that do not provide consent according to the consent policy of the specific node.
+        <br/>
+        The following guidelines apply to this configuration:
+        <br/>
+        - If all nodes in the federation have the same Patient Consent policy, there is no need to perform this configuration.
+        <br/>
+        - If different nodes have different Patient Consent policies it is mandatory to perform this configuration. If the configuration was not performed, the system uses the local Patient Consent policy definitions for all nodes.
+        <br/>
+        - The local node configuration applies only when exported to other nodes. The configuration for the actual local node behavior is located in: Security -&gt; General Definition -&gt; Defining Patient Consent Policy.
+        <br/>
+        <i>
+         Default: Apply local node policy
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

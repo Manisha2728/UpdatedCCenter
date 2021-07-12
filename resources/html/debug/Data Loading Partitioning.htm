@@ -1,0 +1,62 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Partitioning Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dataloading/partitioningpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="partitioningpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <p class="alertnote">
+     Caution ! This process is irreversible! Make sure before saving that you have the authority to DELETE these messages.
+    </p>
+    <p class="alertnote">
+     Caution ! Records that are DELETED will be removed from ArchMessage and ArchMessageState tables and therefore these messages will not appear in DAT and cannot be replayed in the Replay tool.
+    </p>
+    <div>
+    </div>
+    <div class="inline-group" id="partitioning_set-group">
+     <div class="inline-related" id="partitioning_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Partitioning Details
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="form-row field-history_depth">
+        <div>
+         <label for="id_partitioning_set-0-history_depth">
+          DELETE all records from ArchMessage tables that are older than (days):
+         </label>
+         <p class="help">
+          This configuration DELETES old records from ArchMessage tables and moves them to DILMessagesArchive_Expired db as part of the database size reduction process. These messages will no longer be available in the DAT and the Replay tool.
+          <br/>
+          <i>
+           Default: 11000 days (about 30 years). It is recommended NOT to change the default value unless database size reduction is requested.
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

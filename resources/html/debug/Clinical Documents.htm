@@ -1,0 +1,531 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Viewer Clinical Documents Front End Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicaldomaindocuments/18/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicaldomaindocuments_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentcvcommonclinicaldomainsproperties_set-group">
+     <div class="inline-related" id="ehragentcvcommonclinicaldomainsproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Time Range Filter
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_searching_time field-default_searching_option">
+        <div class="field-box field-default_searching_time">
+         <label for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_time">
+          Time range filter:
+         </label>
+        </div>
+        <div class="field-box field-default_searching_option">
+         <label class="inline" for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+         </label>
+         <select id="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option" name="ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+          <option selected="selected" value="0">
+           Year
+          </option>
+          <option value="1">
+           Month
+          </option>
+          <option value="4">
+           All
+          </option>
+         </select>
+         <p class="help">
+          The textbox determines the time Range used to filter the patient's Clinical Documents list when using the Show option.
+          <br/>
+          The dropdown menu defines the time Unit used to filter the patient's Clinical Documents list. For example, if the Unit is "month" and the Range is 10, the patient's Clinical Documents over the past 10 months are displayed.
+          <br>
+           This configuration affects the Clinical Viewer and EHR Agent.
+           <br>
+            <i>
+             Default: 1 Year.
+            </i>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicaldomainproperties_set-group">
+     <div class="inline-related" id="clinicaldomainproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-show_cancelled_display field-show_cancelled_selected">
+        <div class="field-box field-show_cancelled_display">
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-show_cancelled_display">
+          "Show Cancelled" is displayed
+         </label>
+         <p class="help">
+          Determines whether the "Show Cancelled" checkbox is displayed in Clinical Viewer.
+          <br>
+           If False: Show Cancelled checkbox is not displayed, and cancelled items are not displayed in the Clinical Viewer.
+           <br>
+            If True: Show Cancelled checkbox is displayed. Its default behavior is based on the "Show Cancelled is selected" configuration.
+            <br>
+             <i>
+              Default: True
+             </i>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+        <div class="field-box field-show_cancelled_selected">
+         <label class="vCheckboxLabel inline" for="id_clinicaldomainproperties_set-0-show_cancelled_selected">
+          "Show Cancelled" is selected
+         </label>
+         <p class="help">
+          Determines whether the Show Cancelled checkbox (if displayed) is selected.
+          <br>
+           <i>
+            Default: True
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_ShowExternalDocumentsLabel">
+        <div>
+         <label for="id_clinicaldomainproperties_set-0-ClinicalDocument_ShowExternalDocumentsLabel">
+          Show External Documents Checkbox Label:
+         </label>
+         <p class="help">
+          Determines the text to show for all External Documents on Disclaimer after the fixed text
+          <br/>
+          <i>
+           Default: 'Show External Documents' and Fixed text: 'You are about to access patient documents from external system(s) for the following reasons:'
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_BringExtDocsOnShowAll">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-ClinicalDocument_BringExtDocsOnShowAll">
+          Retrieve External Documents on Show All
+         </label>
+         <p class="help">
+          Determines whether external documents are retrieved and shown with other documents - when the user selects to Show All.
+          <br/>
+          <b>
+           True:
+          </b>
+          The External Documents checkbox will be selected automatically, so external documents will be retrieved and displayed with other documents.
+          <br/>
+          <b>
+           False:
+          </b>
+          The External Documents checkbox will not be selected automatically, so external documents will be not retrieved and displayed.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_ShowExternalDocumentsLabelForAgent">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-ClinicalDocument_ShowExternalDocumentsLabelForAgent">
+          External Documents Display
+         </label>
+         <p class="help">
+          Determines whether an External Document disclaimer will be displayed in EHR Agent when the user wants to access External Documents.
+          <br>
+           <br>
+            <b>
+             True:
+            </b>
+            <br>
+             In the EHR Agent a disclaimer message will be displayed before displaying the list of External Documents to the user. The user is expected to approve the disclaimer.  The disclaimer will concatenate a fixed text with a configurable text.
+             <br>
+              Fixed Disclaimer Text:"You are about to access patient documents from external systems for the following reason(s):"
+              <br>
+               Configured Disclaimer Text: This will be the same text configured for the label of the Show External Documents checkbox in the Clinical Viewer. (The label is configured in the Show External Documents Checkbox Label configuration.) The text will be the same for both applications.
+               <br>
+                This configured text will also be displayed above the list of External Documents in the EHR Agent.
+                <br>
+                 <br>
+                  <b>
+                   False:
+                  </b>
+                  <br>
+                   The EHR Agent will not display the disclaimer text and will not display the configured text above the External Documents list. However, this text, if configured for Clinical Viewer External Documents checkbox, will be displayed in the Clinical Viewer.
+                   <br/>
+                   <i>
+                    Default: False
+                   </i>
+                  </br>
+                 </br>
+                </br>
+               </br>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-Documents_CompletionStatusAdded field-ClinicalDocument_ShowEmptyFolders">
+        <div class="field-box field-Documents_CompletionStatusAdded">
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-Documents_CompletionStatusAdded">
+          The presentation of the Document Completion Status is added to both the Preview and the Report (with title Report Status).
+         </label>
+         <p class="help">
+          Determines whether in the Clinical Documents clinical view the presentation of the Document Completion Status is added to both the Preview and the Report (with title Report Status).
+          <br/>
+          Note: This configuration applies only to a document opened in the Clinical Document clinical view, but not to the same document opened in an Imaging clinical view.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+        <div class="field-box field-ClinicalDocument_ShowEmptyFolders">
+         <label class="vCheckboxLabel inline" for="id_clinicaldomainproperties_set-0-ClinicalDocument_ShowEmptyFolders">
+          Show a Clinical Document folder even if it is empty
+         </label>
+         <p class="help">
+          Determines whether to show a Clinical Document folder even if it is empty.
+          <br/>
+          If True, the empty folder is displayed.
+          <br/>
+          If False, the empty folder is not displayed.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_DocPreviewFontFamily">
+        <div>
+         <label for="id_clinicaldomainproperties_set-0-ClinicalDocument_DocPreviewFontFamily">
+          Clinical Document preview font type:
+         </label>
+         <select id="id_clinicaldomainproperties_set-0-ClinicalDocument_DocPreviewFontFamily" name="clinicaldomainproperties_set-0-ClinicalDocument_DocPreviewFontFamily">
+          <option value="Arial">
+           Arial
+          </option>
+          <option selected="selected" value="Courier New">
+           Courier New
+          </option>
+         </select>
+         <p class="help">
+          Defines the Font Type in the preview of Clinical Documents.
+          <br/>
+          <i>
+           Default: Courier New
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_SortTypeByDesignation">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-ClinicalDocument_SortTypeByDesignation">
+          Sort Clinical Documents by designation
+         </label>
+         <p class="help">
+          Determines whether to sort documents by designation or by domain code.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_DocsTreePaneWidth field-ClinicalDocument_ExtDocsTreePaneHeight">
+        <div class="field-box field-ClinicalDocument_DocsTreePaneWidth">
+         <label class="required" for="id_clinicaldomainproperties_set-0-ClinicalDocument_DocsTreePaneWidth">
+          Documents Tree Pane Width:
+         </label>
+         <p class="help">
+          Defines the width of the Documents pane (in percentage) in relation to the Preview pane. The value range is 33%-70%.
+          <br/>
+          <i>
+           Note: The horizontal width will be set after the user opens the Clinical Documents page. There is no need to click on External Documents.
+          </i>
+          <br/>
+          <i>
+           Default: 33%
+          </i>
+         </p>
+        </div>
+        <div class="field-box field-ClinicalDocument_ExtDocsTreePaneHeight">
+         <label class="required inline" for="id_clinicaldomainproperties_set-0-ClinicalDocument_ExtDocsTreePaneHeight">
+          External Documents Tree Pane Height:
+         </label>
+         <p class="help">
+          Defines the height of the External Documents area (in percentage) within the entire area of the Documents pane (including Internal and External Documents areas). The remainder of the Documents pane contains the internal Documents area (meaning, 100% minus this value). The value range is 0%-100%.
+          <br/>
+          <i>
+           Note: This configuration takes effect only after External Documents is selected.
+          </i>
+          <br/>
+          <i>
+           Default: 35%
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ExteranlDocument_Default_Grouping">
+        <div>
+         <label class="required" for="id_clinicaldomainproperties_set-0-ExteranlDocument_Default_Grouping">
+          External Documents Default Grouping:
+         </label>
+         <select id="id_clinicaldomainproperties_set-0-ExteranlDocument_Default_Grouping" name="clinicaldomainproperties_set-0-ExteranlDocument_Default_Grouping">
+          <option value="">
+           ---------
+          </option>
+          <option value="Type">
+           By Type
+          </option>
+          <option value="Author">
+           By Author
+          </option>
+          <option selected="selected" value="Date">
+           By Date
+          </option>
+          <option value="Facility">
+           By Facility
+          </option>
+         </select>
+         <p class="help">
+          Defines the default grouping method for the External Documents domain in Clinical Viewer.
+          <br>
+           Note that this does not affect the "Internal Documents" grouping in this domain.
+           <br/>
+           <i>
+            Default: By Date
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpoehragentdomains_set-group">
+     <h2>
+      Filtering Clinical Data
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(Clinical Viewer)
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="vpoehragentdomains_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-filter_codes">
+        <div>
+         <label for="id_vpoehragentdomains_set-0-filter_codes">
+          Filter out Clinical Documents types:
+         </label>
+         <textarea cols="100" id="id_vpoehragentdomains_set-0-filter_codes" name="vpoehragentdomains_set-0-filter_codes" rows="4">
+         </textarea>
+         <p class="help">
+          Defines the document types (using the &lt;code system&gt;|&lt;code&gt;^&lt;code system&gt;|&lt;code&gt; format) that are filtered out of Clinical Documents. This configuration is mainly used to exclude Collaborate-bound e-Referrals from the clinical view, but it can also be used to filter out Imaging acts.
+          <br/>
+          This configuration applies to Clinical Viewer, EHR Agent and Patient View.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-medical_staff_types_priority">
+        <div>
+         <label for="id_vpo_set-0-medical_staff_types_priority">
+          Priority of Medical staff types:
+         </label>
+         <textarea cols="100" id="id_vpo_set-0-medical_staff_types_priority" name="vpo_set-0-medical_staff_types_priority" rows="4">
+          2.16.840.1.113883.5.90|AUT^2.16.840.1.113883.5.90|AUTHEN
+         </textarea>
+         <p class="help">
+          Defines the code (using the &lt;code system&gt;|&lt;code&gt;^&lt;code system&gt;|&lt;code&gt; format) used to determine the priority order for displaying the Medical Staff type in the Document label.
+          <br/>
+          For example, if the priority is Author, Authenticator, then the Author of the document is displayed. If there is no Author, the Authenticator is displayed.
+          <br/>
+          If both exist, the first is displayed.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.5.90|AUT^2.16.840.1.113883.5.90|AUTHEN
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Grouping
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-grouping_mode">
+        <div>
+         <label for="id_vpo_set-0-grouping_mode_0">
+          Grouping Priority Order:
+         </label>
+         <ul class="radiolist" id="id_vpo_set-0-grouping_mode">
+          <li>
+           <label for="id_vpo_set-0-grouping_mode_0">
+            Baseline, Local
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-0-grouping_mode_1">
+            Local, Baseline
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines the priority order for grouping:
+          <br>
+           Baseline, Local: First, group by baseline subdomain; if local code is unmapped, group by local subdomain.
+           <br>
+            Local, Baseline: First, group by local subdomain; if local code is under the root domain, and is mapped to a baseline code, group by baseline subdomain.
+            <br>
+             If local code is unmapped and is under a root domain, display under "Others".
+             <br>
+              This configuration applies to Clinical Viewer, EHR Agent and Patient View .
+              <br/>
+              <i>
+               Default: Baseline, Local
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,33 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+	<h1>Finished importing DB</h1>
+
+    <br />
+    {% if import_error %}
+        <ul class="errorlist">
+            <li>ERROR: {{import_error_msg}}</li>
+        </ul>
+        
+        <br />
+        Please try again.
+
+        <a class="import-button" href="/import_db/">Back to Import Page</a>
+
+    {% else %}
+        DB imported succesfuly!
+    {% endif %}
+
+
+
+    <br />
+</div>
+
+{% block object-tools-items %}{% endblock %}
+{% endblock %}
+
+
+

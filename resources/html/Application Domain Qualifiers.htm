@@ -1,0 +1,377 @@
+<div class="colSM" id="content">
+ <h1>
+  Create or Edit Application Domain Qualifier Settings for Unmanaged Users
+ </h1>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="addlink" href="/admin/security/applicationdomains/add/">
+     Add Application Domain Qualifier
+    </a>
+   </li>
+  </ul>
+  <div class="page-help">
+   This configuration is used to authenticate unmanaged users who use Single Sign On (SSO) to access dbMotion applications; for example when launching dbMotion applications from their EHR.
+  </div>
+  <div class="module" id="changelist">
+   <form action="" id="changelist-form" method="post">
+    <div class="actions">
+     <label>
+      Action:
+      <select name="action">
+       <option selected="selected" value="">
+        ---------
+       </option>
+       <option value="delete_selected">
+        Delete selected Application Domain Qualifier Settings for Unmanaged Users
+       </option>
+       <option value="copy_SelectedAppDomain">
+        Make a Copy of selected Application Domain Qualifier
+       </option>
+      </select>
+     </label>
+     <button class="button" name="index" title="Run the selected action" type="submit" value="0">
+      Go
+     </button>
+     <span class="action-counter">
+      0 of 2 selected
+     </span>
+    </div>
+    <div class="results">
+     <table id="result_list">
+      <thead>
+       <tr>
+        <th class="action-checkbox-column" scope="col">
+         <div class="text">
+          <span>
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-application_domain_qualifier sorted ascending" scope="col">
+         <div class="sortoptions">
+          <a class="sortremove" href="?o=" title="Remove from sorting">
+          </a>
+          <a class="toggle ascending" href="?o=-1" title="Toggle sorting">
+          </a>
+         </div>
+         <div class="text">
+          <a href="?o=-1">
+           Application Domain Qualifier
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-default_role" scope="col">
+         <div class="text">
+          <a href="?o=2.1">
+           Default dbMotion Role
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="column-SAML_Issuer_Name" scope="col">
+         <div class="text">
+          <span>
+           Saml issuer name
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="column-SAML_Issuer_Certificate_Thumbprint" scope="col">
+         <div class="text">
+          <span>
+           Saml issuer certificate thumbprint
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-application_domain_qualifier">
+         <a href="/admin/security/applicationdomains/1/">
+          dbMotion.unmanaged
+         </a>
+        </th>
+        <td class="field-default_role nowrap">
+         EHR Extensive
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.2018444.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.2020911.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion.com
+           </td>
+          </tr>
+          <tr>
+           <td>
+            urn:allscripts.com
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            0f9935d91c840fcfe1ec0ab832fa981723f0b038
+           </td>
+          </tr>
+          <tr>
+           <td>
+            3b4ce45490ce4ec99a8c4b60f1d712466265eadf
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ‎125ea6e92f44c66f4e0967a9702ae84752e7c2f4
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-application_domain_qualifier">
+         <a href="/admin/security/applicationdomains/2/">
+          urn:allscripts.com
+         </a>
+        </th>
+        <td class="field-default_role nowrap">
+         EHR Extensive
+        </td>
+        <td class="field-SAML_Issuer_Name">
+         <table>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.1712016.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.2018444.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.2020911.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.3102015.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.11.9999.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.3.1712016.3
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.3.8881153.3
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.3.8881702.3
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.3.9999718.3
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.4.1153.4
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.4.1712016.4
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.4.2020111.1
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1.3.6.1.4.1.22812.4.225.4
+           </td>
+          </tr>
+          <tr>
+           <td>
+            aetk
+           </td>
+          </tr>
+          <tr>
+           <td>
+            allscripts.com
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion SmartAgent
+           </td>
+          </tr>
+          <tr>
+           <td>
+            dbMotion.com
+           </td>
+          </tr>
+          <tr>
+           <td>
+            urn:allscripts.com
+           </td>
+          </tr>
+         </table>
+        </td>
+        <td class="field-SAML_Issuer_Certificate_Thumbprint">
+         <table>
+          <tr>
+           <td>
+            9726296dfe2354e5a4e572fe1091961adefe8616
+           </td>
+          </tr>
+          <tr>
+           <td>
+            0f9935d91c840fcfe1ec0ab832fa981723f0b038
+           </td>
+          </tr>
+          <tr>
+           <td>
+            3b4ce45490ce4ec99a8c4b60f1d712466265eadf
+           </td>
+          </tr>
+          <tr>
+           <td>
+            3d01e992c9dc756ed184b95ec03f6ae7b80a2c14
+           </td>
+          </tr>
+          <tr>
+           <td>
+            419b189c364bd6f50359eaa0c00a8d5692efac88
+           </td>
+          </tr>
+          <tr>
+           <td>
+            df0215dd4f54291df3c6cbd27daf5f5096769155
+           </td>
+          </tr>
+          <tr>
+           <td>
+            4ef7cd8c36a3e877a5b9473a4aec59e66a66ef8b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            f548f63ed8c076d2c2e1bb1b379c2e687fde2ac9
+           </td>
+          </tr>
+          <tr>
+           <td>
+            1b610e6dffd454a37ab3ecb8f68c75d99884b35e
+           </td>
+          </tr>
+          <tr>
+           <td>
+            a405a50b0cbc22c44b57060982bb41a670f6d3d5
+           </td>
+          </tr>
+          <tr>
+           <td>
+            885a133c1f574c184fc8d38bd1bca7d88e4bebf2
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ead18ea3cecb4315dc07b7448c51d286ff897b4e
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ‎0427ad66cc4ede8f809288009c1a400e1492b5c5
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ‎8fc906c40af6c808a733b923fa9fd46233898ce3
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ‎125ea6e92f44c66f4e0967a9702ae84752e7c2f4
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            6dab14e6beda56ece144fd9a078f2145bfc48a1b
+           </td>
+          </tr>
+          <tr>
+           <td>
+            ‎125ea6e92f44c66f4e0967a9702ae84752e7c2f4
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="paginator">
+     2 Application Domain Qualifier Settings for Unmanaged Users
+    </p>
+   </form>
+  </div>
+ </div>
+ <br class="clear"/>
+</div>

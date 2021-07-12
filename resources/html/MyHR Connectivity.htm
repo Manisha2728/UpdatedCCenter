@@ -1,0 +1,302 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the MyHR Connectivity Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/myhrconnectivitypage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="myhrconnectivitypage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="myhrconnectivityentity_set-group">
+     <div class="inline-related" id="myhrconnectivityentity_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        MyHR Connectivity
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             dbMotion XDS IHE Services
+             <li>
+              VIA
+              <li>
+               IIS(CVA)
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-enable_my_hr_flow">
+        <div>
+         <label class="vCheckboxLabel" for="id_myhrconnectivityentity_set-0-enable_my_hr_flow">
+          Enable MyHR Connectivity
+         </label>
+         <p class="help">
+          Enables MyHR Connectivity for Australian projects.
+          <br/>
+          <i>
+           Default: Disable
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-my_hr_oid">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-my_hr_oid">
+          IHI source system OID:
+         </label>
+         <p class="help">
+          Defines the Australian virtual source system used to retrieve the patient IHI. This OID must be identical to the OID of this virtual source system as configured in EMPI -&gt; Authority Systems.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-my_hr_node_id">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-my_hr_node_id">
+          MyHR Node ID:
+         </label>
+         <p class="help">
+          Defines MyHR Node id, node value should be between 101-120
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-pcehr_exist_url">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-pcehr_exist_url">
+          Does PCEHR exists URI:
+         </label>
+         <p class="help">
+          Defines doesPCEHRexists URI to MyHR
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-gain_access_url">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-gain_access_url">
+          Gain PCEHR access URI:
+         </label>
+         <p class="help">
+          Defines gainPCEHRAccess URI to MyHR
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-get_document_list_url">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-get_document_list_url">
+          Get Document List URI:
+         </label>
+         <p class="help">
+          Defines getDocumentList URI MyHR
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-get_document_url">
+        <div>
+         <label for="id_myhrconnectivityentity_set-0-get_document_url">
+          Get Document URI:
+         </label>
+         <p class="help">
+          Defines getDocument URI MyHR
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-stylesheet">
+        <div>
+         <label class="required" for="id_myhrconnectivityentity_set-0-stylesheet">
+          CDA Stylesheet:
+         </label>
+         <p class="file-upload">
+          Currently:
+          <a href="/dbmconfigapp/files/MyHR/Stylesheet/DH_Generic_CDA_Stylesheet-1.3.0.xsl">
+           MyHR/Stylesheet/DH_Generic_CDA_Stylesheet-1.3.0.xsl
+          </a>
+          <br/>
+          Change:
+         </p>
+         <p class="help">
+          Defines the stylesheet that will be used to display CDAs retrieved from the MyHR node. The file extension must be .xslt or .xsl for the system to function properly. The stylesheet should contain all styling as part of the xslt and should be XSLT 1.0.
+          <br/>
+          <i>
+           Default: DH_Generic_CDA_Stylesheet-1.3.0.xsl
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="myhrorganizationsentity_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        MyHR Organizations
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion XDS IHE Services
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           IHO Name
+           <img alt="(Defines the IHO nameDefault: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the IHO nameDefault: Empty" width="10"/>
+          </th>
+          <th class="required">
+           IHO Thumbprint
+           <img alt="(Defines the thumbprint of IHODefault: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the thumbprint of IHODefault: Empty" width="10"/>
+          </th>
+          <th>
+           Organization Name
+           <img alt="(Defines the Organization Name of the IHODefault: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Organization Name of the IHODefault: Empty" width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="myhrorganizationsentity_set-0">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="myhrorganizationsentity_set-1">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="myhrorganizationsentity_set-2">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="myhrorganizationsentity_set-3">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 " id="myhrorganizationsentity_set-4">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="myhrorganizationsentity_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-iho_name">
+          </td>
+          <td class="field-iho_thumbprint">
+          </td>
+          <td class="field-org_name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

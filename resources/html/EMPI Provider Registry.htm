@@ -1,0 +1,297 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Provider Registry Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Population Health, Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/via/empippolgeneralpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="empippolgeneralpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ppolgeneral_set-group">
+     <div class="inline-related" id="ppolgeneral_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Provider Registry General Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion PPOL Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-PatientDefaultCacheTolerance">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-PatientDefaultCacheTolerance">
+          Patient Default Cache Tolerance (Seconds):
+         </label>
+         <p class="help">
+          Patient information is imported from the VIA service. To improve the Provider Registry service performance, the patient information is cached in the Provider Registry service.
+          <br/>
+          Each cached patient stores its last refreshed Date and Time. Patient retrieval service calls may specify the maximum period of time that they accept cached patient information to be used.
+          <br/>
+          For example, if a consumer accepts cached patient up to a week, and the actual patient was last refreshed 6 days ago, the Provider Registry will communicate to VIA to import updated data.
+          <br/>
+          In addition, the Provider Registry service may eagerly import patient information from VIA when the cached information is close to expiration.
+          <br/>
+          This configuration defines the default patient cache tolerance value in seconds.
+          <br/>
+          If a service call does not specify a cache tolerance, the service does not refresh the patient information.
+          <br/>
+          If you set a shorter period of time may lower the service response time.
+          <br/>
+          The default is that service calls shouldn't trigger a patient refresh, due to the 'CDR Auto Discovery' mechanism of ProviderRegistry, where loaded messages to CDR triggers a patient refresh.
+          <br/>
+          Possible Values: -1 (no refresh), 604800 (Week).
+          <br/>
+          <i>
+           Default: -1 (no refresh)
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-PcpRelationStrategy">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-PcpRelationStrategy">
+          PCP relation strategies:
+         </label>
+         <select id="id_ppolgeneral_set-0-PcpRelationStrategy" name="ppolgeneral_set-0-PcpRelationStrategy">
+          <option selected="selected" value="0">
+           CDR aligned PCP relation strategy
+          </option>
+          <option value="1">
+           Last Updated PCP relation strategy
+          </option>
+         </select>
+         <p class="help">
+          Defines the PCP relation strategy.
+          <br/>
+          CDR aligned - This strategy enables a single patient cluster to have more than one PCP relation
+          <br/>
+          Last Updated - This strategy enables a single patient cluster to have only one PCP relation
+          <br/>
+          <i>
+           Default: CDR aligned PCP relation strategy.
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        CDR Discovery Sync Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion PPOL Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        In projects with no CAG, PH or Patient View it is recommended to stop these services. This action is recommended in order to improve system performance.
+        <br/>
+        <div style="color:red">
+         Important! Check this with the Product team before disabling the service
+        </div>
+       </div>
+       <div class="form-row field-CdrDiscovery">
+        <div>
+         <label class="vCheckboxLabel" for="id_ppolgeneral_set-0-CdrDiscovery">
+          Enable CDR discovery
+         </label>
+         <p class="help">
+          Determines whether Provider Registry should sync both CDR patients and their PCP relations into Provider Registry DB. Used for CAG, Collaborate and PH.
+          <br/>
+          <span style="font-style:italic">
+           Default: True
+          </span>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-MaximumAttemptsNumber">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-MaximumAttemptsNumber">
+          Maximum attempts number:
+         </label>
+         <p class="help">
+          Maximum number of attempts to try resolving either patients or relations in case of failure
+          <br/>
+          <span style="font-style:italic">
+           Default: 3.
+          </span>
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-PatientResetWorker">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-PatientResetWorker">
+          Time duration until patient status reset:
+         </label>
+         <p class="help">
+          The time duration between failed patient and process status reset.
+          <br/>
+          <span style="font-style:italic">
+           Default: 20.
+          </span>
+          <br/>
+          <span style="font-style:italic">
+           Units: Minutes.
+          </span>
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-RelationSourceResetWorker">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-RelationSourceResetWorker">
+          Time duration until relation source status reset:
+         </label>
+         <p class="help">
+          The time duration between failed relation source and process status reset.
+          <br/>
+          <span style="font-style:italic">
+           Default: 20.
+          </span>
+          <br/>
+          <span style="font-style:italic">
+           Units: Minutes.
+          </span>
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-RelationTargetResetWorker">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-RelationTargetResetWorker">
+          Time duration until relation target status reset:
+         </label>
+         <p class="help">
+          The time duration between failed relation target and process status reset.
+          <br/>
+          <span style="font-style:italic">
+           Default: 20.
+          </span>
+          <br/>
+          <span style="font-style:italic">
+           Units: Minutes.
+          </span>
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-GeneralResetWorker">
+        <div>
+         <label class="required" for="id_ppolgeneral_set-0-GeneralResetWorker">
+          Time duration until unexpected status reset:
+         </label>
+         <p class="help">
+          The time duration between unexpected failed item and process status reset.
+          <br/>
+          <span style="font-style:italic">
+           Default: 720.
+          </span>
+          <br/>
+          <span style="font-style:italic">
+           Units: Minutes.
+          </span>
+          <br/>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Medical Staff Sync Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion PPOL Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        In projects with no CAG, PH or Patient View it is recommended to stop these services. This action is recommended in order to improve system performance.
+        <br/>
+        <div style="color:red">
+         Important! Check this with the Product team before disabling the service
+        </div>
+       </div>
+       <div class="form-row field-MedicalStaffSync">
+        <div>
+         <label class="vCheckboxLabel" for="id_ppolgeneral_set-0-MedicalStaffSync">
+          Enable medical-staff sync
+         </label>
+         <p class="help">
+          Determines whether Provider Registry should sync CDR medical-staff into Provider Registry DB. Used for CAG, Collaborate.
+          <br/>
+          <span style="font-style:italic">
+           Default: True
+          </span>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-MedicalStaffSyncTracing">
+        <div>
+         <label class="vCheckboxLabel" for="id_ppolgeneral_set-0-MedicalStaffSyncTracing">
+          Enable medical-staff sync tracing files generation
+         </label>
+         <p class="help">
+          Determines whether Provider Registry should generate trace files during CDR medical-staff synchronization.
+          <br/>
+          <span style="font-style:italic">
+           Default: False
+          </span>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

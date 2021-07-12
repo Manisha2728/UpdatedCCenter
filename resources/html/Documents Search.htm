@@ -1,0 +1,224 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Document Search General Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/documentsearchgeneral/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="documentsearchgeneral_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="documentsearchgeneralproperties_set-group">
+     <div class="inline-related" id="documentsearchgeneralproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Search of CDR clinical documents
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+            <li>
+             dbMotion Communication BOT Service
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-is_ds_of_cdr_enabled">
+        <div>
+         <label class="vCheckboxLabel" for="id_documentsearchgeneralproperties_set-0-is_ds_of_cdr_enabled">
+          Enable indexing and searching for CDR clinical documents
+         </label>
+         <p class="help">
+          To conduct a document search, the Elasticsearch engine must index the documents that are loaded in the CDR. In Patient View, this setting enables a document search field in the Documents category.
+          <br/>
+          <b>
+           Note:
+          </b>
+          Users must be assigned a security task to conduct a search.
+          <br/>
+          <i>
+           Default: False.
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-content_free_systems_mode">
+        <div>
+         <label class="required" for="id_documentsearchgeneralproperties_set-0-content_free_systems_mode">
+          Search metadata only mode:
+         </label>
+         <select id="id_documentsearchgeneralproperties_set-0-content_free_systems_mode" name="documentsearchgeneralproperties_set-0-content_free_systems_mode">
+          <option selected="selected" value="1">
+           None
+          </option>
+          <option value="2">
+           Custom
+          </option>
+          <option value="3">
+           All
+          </option>
+         </select>
+         <p class="help">
+          Systems are configured to search content and metadata, or search metadata only. Systems configured for metadata search only do not index content into Elasticsearch, meaning content is not available for searching. This setting specifies which systems to search using metadata only.
+          <br/>
+          <b>
+           Note:
+          </b>
+          The setting affects the indexing process, but not the search process, and does not affect documents already indexed in Elasticsearch.
+          <br/>
+          *
+          <b>
+           None:
+          </b>
+          None of the systems are defined to support metadata search only. All systems support both metadata and content search for supported document types.
+          <br/>
+          *
+          <b>
+           Custom:
+          </b>
+          Systems are defined by the organization to support metadata search only, using the document ID_Root of the clinical document. Use the pipe symbol [|] as a delimiter between systems.
+          <br/>
+          *
+          <b>
+           All:
+          </b>
+          All systems are defined to support metadata search only.
+          <br/>
+          <i>
+           Default: None.
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-content_free_systems">
+        <div>
+         <label for="id_documentsearchgeneralproperties_set-0-content_free_systems">
+          Systems to CDR metadata search systems:
+         </label>
+         <textarea cols="100" id="id_documentsearchgeneralproperties_set-0-content_free_systems" name="documentsearchgeneralproperties_set-0-content_free_systems" rows="4">
+         </textarea>
+         <p class="help">
+          Define source systems to metadata search only. Use the pipe symbol [|] as a delimiter between systems. Use the document Id_Root from clinicalDocument table.
+          <br/>
+          <b>
+           Note:
+          </b>
+          Changes to this setting does not affect past indexing.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-index_free_systems">
+        <div>
+         <label for="id_documentsearchgeneralproperties_set-0-index_free_systems">
+          Systems to omit from index process:
+         </label>
+         <textarea cols="100" id="id_documentsearchgeneralproperties_set-0-index_free_systems" name="documentsearchgeneralproperties_set-0-index_free_systems" rows="4">
+         </textarea>
+         <p class="help">
+          Define source systems to omit during indexing. Use the pipe symbol [|] as a delimiter between systems. Use the document Id_Root from clinicalDocument table.
+          <br/>
+          <b>
+           Note:
+          </b>
+          Changes to this setting does not affect past indexing.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Search of External clinical documents
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+            <li>
+             dbMotion Communication BOT Service
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-is_ds_of_external_enabled">
+        <div>
+         <label class="vCheckboxLabel" for="id_documentsearchgeneralproperties_set-0-is_ds_of_external_enabled">
+          Enable indexing and searching for External clinical documents
+         </label>
+         <p class="help">
+          To conduct a document search, the Elasticsearch engine must index the documents that are loaded in the External documents repositories. In Patient View, this setting enables a document search field in the External Documents category.
+          <br/>
+          <b>
+           Note 1:
+          </b>
+          The search for external documents is supported only on metadata fields.
+          <br/>
+          <b>
+           Note 2:
+          </b>
+          Users must be assigned a security task to conduct a search.
+          <br/>
+          <i>
+           Default: False.
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

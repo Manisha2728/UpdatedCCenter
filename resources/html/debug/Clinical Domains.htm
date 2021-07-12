@@ -1,0 +1,1450 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set Clinical domains Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/pvclinicaldomainpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="pvclinicaldomainpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentclinicaldomainsproperties_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Attention Rule Time Filters (For Badging)
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration enables the user to define the time period for calculating the displayed Badging in the Agent Hub and Patient View.
+        <br/>
+        Clinical data available within this defined time period (for example, the past 7 days) activates the applications Badging mechanism.
+        <br/>
+        To disable the Badging, set the Attention Time Unit to Off.
+        <br/>
+        The Badging displays clinical data updates. For more information, see the relevant chapter in the Agent Hub/Patient View Functional Specification.
+        <br/>
+        Note that Semantic Delta configuration applies not only to badging but also to the data displayed in the Clinical View Agent/Patient View application.
+        <br/>
+        For optimal performance, it is recommended to limit this configuration to a maximum period of 7 days. A value greater than 7 days might result in reduced performance.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Clinical Domain
+          </th>
+          <th class="required">
+           Attention Time Range
+          </th>
+          <th class="required">
+           Attention Time Unit
+          </th>
+          <th>
+           Default Attention Time
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="ehragentclinicaldomainsproperties_set-0">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            All Clinical Domains
+           </p>
+          </td>
+          <td class="field-attention_searching_time">
+          </td>
+          <td class="field-attention_searching_option">
+           <select id="id_ehragentclinicaldomainsproperties_set-0-attention_searching_option" name="ehragentclinicaldomainsproperties_set-0-attention_searching_option">
+            <option value="0">
+             Year
+            </option>
+            <option value="1">
+             Month
+            </option>
+            <option selected="selected" value="3">
+             Day
+            </option>
+            <option value="6">
+             Off
+            </option>
+           </select>
+          </td>
+          <td class="field-default_attention_time">
+           <p>
+            7 Days
+           </p>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="ehragentclinicaldomainsproperties_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            All Clinical Domains
+           </p>
+          </td>
+          <td class="field-attention_searching_time">
+          </td>
+          <td class="field-attention_searching_option">
+           <select id="id_ehragentclinicaldomainsproperties_set-__prefix__-attention_searching_option" name="ehragentclinicaldomainsproperties_set-__prefix__-attention_searching_option">
+            <option value="0">
+             Year
+            </option>
+            <option value="1">
+             Month
+            </option>
+            <option selected="selected" value="3">
+             Day
+            </option>
+            <option value="6">
+             Off
+            </option>
+           </select>
+          </td>
+          <td class="field-default_attention_time">
+           <p>
+            7 Days
+           </p>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentblinks_set-group">
+     <div class="inline-related" id="ehragentblinks_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        First Day Of Admission Behavior (For Badging)
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-admission_interval">
+        <div>
+         <label for="id_ehragentblinks_set-0-admission_interval_0">
+          First Day Of Admission Interval:
+         </label>
+         <select id="id_ehragentblinks_set-0-admission_interval_1" name="ehragentblinks_set-0-admission_interval_1">
+          <option selected="selected" value="3">
+           Days
+          </option>
+          <option value="5">
+           Hours
+          </option>
+         </select>
+         <p class="help">
+          Defines the time span from the start of an inpatient admission for which the Badging functionality is enabled.
+          <br/>
+          <i>
+           Default: 1 Day
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-admission_inpatient_domains">
+        <div>
+         <label for="id_ehragentblinks_set-0-admission_inpatient_domains">
+          First Day Of Admission Encounter Type Domains:
+         </label>
+         <textarea cols="100" id="id_ehragentblinks_set-0-admission_inpatient_domains" maxlength="400" name="ehragentblinks_set-0-admission_inpatient_domains" rows="4">
+          e757b766e61d08f435d3e9e6280f355c
+         </textarea>
+         <p class="help">
+          Defines the Encounter Type domains (in a comma-separated list) used to define the inpatient encounter for which the Badging functionality is enabled.
+          <br/>
+          <i>
+           Default: e757b766e61d08f435d3e9e6280f355c (Inpatient encounter)
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentsemanticdelta_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Semantic Delta Configuration
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Clinical Domain
+          </th>
+          <th>
+           Enable Semantic Delta
+           <img alt="(Determines whether EHR Agent or Patient View filters out data from the selected domains according to semantic similarity.
+For more details about the semantic delta behavior please refer to the functional specs.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether EHR Agent or Patient View filters out data from the selected domains according to semantic similarity.
+For more details about the semantic delta behavior please refer to the functional specs." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="ehragentsemanticdelta_set-0">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Allergies
+           </p>
+          </td>
+          <td class="field-enable_semantic_delta">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="ehragentsemanticdelta_set-1">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Immunizations
+           </p>
+          </td>
+          <td class="field-enable_semantic_delta">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="ehragentsemanticdelta_set-2">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Medications
+           </p>
+          </td>
+          <td class="field-enable_semantic_delta">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="ehragentsemanticdelta_set-3">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Problems, Diagnosis and Past Medical History
+           </p>
+          </td>
+          <td class="field-enable_semantic_delta">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="ehragentsemanticdelta_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-enable_semantic_delta">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="ehragentgeneral_set-group">
+     <div class="inline-related" id="ehragentgeneral_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-my_ehr_data_default_view">
+        <div>
+         <label class="required" for="id_ehragentgeneral_set-0-my_ehr_data_default_view_0">
+          Initial data view:
+         </label>
+         <ul class="radiolist" id="id_ehragentgeneral_set-0-my_ehr_data_default_view">
+          <li>
+           <label for="id_ehragentgeneral_set-0-my_ehr_data_default_view_0">
+            Delta view
+           </label>
+          </li>
+          <li>
+           <label for="id_ehragentgeneral_set-0-my_ehr_data_default_view_1">
+            Show All view
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines whether the Delta view or Show All view is displayed by default when first opening the Patient View or EHR Agent.
+          <br/>
+          <i>
+           Default: Delta view
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpoehragentdomains_set-group">
+     <h2>
+      Filtering Out Clinical Data
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(Clinical Viewer)
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="vpoehragentdomains_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-filter_codes">
+        <div>
+         <label for="id_vpoehragentdomains_set-0-filter_codes">
+          Filter out Clinical Documents types:
+         </label>
+         <textarea cols="100" id="id_vpoehragentdomains_set-0-filter_codes" name="vpoehragentdomains_set-0-filter_codes" rows="4">
+         </textarea>
+         <p class="help">
+          Defines the document types (using the &lt;code system&gt;|&lt;code&gt;^&lt;code system&gt;|&lt;code&gt; format) that are filtered out of Clinical Documents. This configuration is mainly used to exclude Collaborate-bound e-Referrals from the clinical view, but it can also be used to filter out Imaging acts.
+          <br/>
+          This configuration applies to Clinical Viewer, EHR Agent and Patient View.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+     <div class="inline-related" id="vpoehragentdomains_set-1">
+      <fieldset class="module aligned ">
+       <div class="form-row field-filter_codes">
+        <div>
+         <label for="id_vpoehragentdomains_set-1-filter_codes">
+          Filter out Diagnosis types:
+         </label>
+         <textarea cols="100" id="id_vpoehragentdomains_set-1-filter_codes" name="vpoehragentdomains_set-1-filter_codes" rows="4">
+          2.16.840.1.113883.3.57.1.2.17.87|DRG
+         </textarea>
+         <p class="help">
+          This configuration defines the baseline code(s) (in codeSystem|Code format) for the Diagnosis Type(s) that you want to filter out of the clinical applications (in the Diagnoses view and in EHR Agent Clinical History reports). 
+                The default value is used to filter out the DRG (Diagnosis-Related Group) that provides billing information, which is generally not relevant in a clinical report.
+          <br/>
+          Note: DRG is a system for classifying hospital cases into one of originally 467 groups. It does not add clinical relevance for Diagnoses. The information is however stored in the CDR to be used for analytics purposes.
+          <br/>
+          This configuration applies to Clinical Viewer, EHR Agent and Patient View.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.3.57.1.2.17.87|DRG
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+     <div class="inline-related" id="vpoehragentdomains_set-2">
+      <fieldset class="module aligned ">
+       <div class="form-row field-filter_codes">
+        <div>
+         <label for="id_vpoehragentdomains_set-2-filter_codes">
+          Filter out Medications Mood codes:
+         </label>
+         <textarea cols="100" id="id_vpoehragentdomains_set-2-filter_codes" name="vpoehragentdomains_set-2-filter_codes" rows="4">
+          2.16.840.1.113883.3.57.1.2.17.82|ADMSTRD^
+         </textarea>
+         <p class="help">
+          Defines the Mood code used to filter out (not display) Medications from the Medications clinical view, Medications Grid in the Summary Page and Medications Grid in the Diabetes clinical view (using the &lt;code system&gt;|&lt;code&gt;^&lt;code system&gt;|&lt;code&gt; format).
+          <br/>
+          This configuration applies to Clinical Viewer, EHR Agent and Patient View.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.3.57.1.2.17.82|ADMSTRD^
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpoehragentdomains_set-2-group">
+     <h2>
+      Filtering Procedures by type
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(Clinical Viewer)
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="vpoehragentdomains_set-2-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-filter_type">
+        <div>
+         <label for="id_vpoehragentdomains_set-2-0-filter_type">
+          Filter type:
+         </label>
+         <select id="id_vpoehragentdomains_set-2-0-filter_type" name="vpoehragentdomains_set-2-0-filter_type">
+          <option value="0">
+           Filter Out
+          </option>
+          <option selected="selected" value="1">
+           Filter In
+          </option>
+         </select>
+        </div>
+       </div>
+       <div class="form-row field-filter_codes">
+        <div>
+         <label for="id_vpoehragentdomains_set-2-0-filter_codes">
+          Filter Procedure codes:
+         </label>
+         <textarea cols="100" id="id_vpoehragentdomains_set-2-0-filter_codes" name="vpoehragentdomains_set-2-0-filter_codes" rows="4">
+         </textarea>
+         <p class="help">
+          Defines the Type code used to filter out (not display) or filter in (display only) Procedure types from the Procedures domain in EHR Agent and Patient View (using the &lt;code system&gt;|&lt;code&gt;^&lt;code system&gt;|&lt;code&gt; format)
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="encounterdiagnosisrelationship_set-group">
+     <div class="inline-related" id="encounterdiagnosisrelationship_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Configure the Encounter Diagnosis
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        This configuration determines the values used for Primary and Admitting Diagnoses in the encounter-condition act-relationship (Field name: PriorityNumber).
+        <br>
+         The values are used as part of the logic that determines the display of the Encounter Diagnosis (or Encounter Reason) in the dbMotion clinical applications (for example, the data displayed in Discharge Diagnosis or the Admitted Reason fields).
+         <br>
+          The configuration is required since different values may be used depending on the customer location (for example, in the American market the values are Admitting=0 and Primary=1 while in the Israeli market the values are Primary=1, 6 and Other=0, while there is no value for Admitting) and on the specific field in the application.
+          <br>
+           This configuration affects EHR Agent, Patient List and Patient View. For a detailed description of the business logic, see the Functional Specification documentation.
+          </br>
+         </br>
+        </br>
+       </div>
+       <div class="form-row field-primary_diagnosis">
+        <div>
+         <label class="required" for="id_encounterdiagnosisrelationship_set-0-primary_diagnosis">
+          Primary Diagnosis:
+         </label>
+         <p class="help">
+          Determines the value(s) used for the main (primary) diagnosis of the patient during an encounter, such as a hospitalization.
+          <br/>
+          Possible values: Any value can be configured. For example:  American market: 1   Israeli market: 1, 6, or 1,6
+          <br/>
+          Default Value: 1 (American market)
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-admitted_diagnosis">
+        <div>
+         <label for="id_encounterdiagnosisrelationship_set-0-admitted_diagnosis">
+          Admitting Diagnosis:
+         </label>
+         <p class="help">
+          Determines the value(s) used for the admitting diagnosis given when the patient was first admitted to the hospital.
+          <br/>
+          Possible Values: Any value can be configured. For example:  American market: 0   Israeli market: Null (empty)
+          <br/>
+          Default Value: 0 (American market)
+          <br/>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        BusinessRules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-encounters_remove_duplicated">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpo_set-0-encounters_remove_duplicated">
+          Encounter Details: Remove duplicated Location records
+         </label>
+         <p class="help">
+          Determines whether to display all Locations in the Location History grid as retrieved (that is, including, if relevant, the same location consecutively more than once) or to filter the Locations by removing consecutive duplicate records.
+          <br/>
+          If True, the second and any subsequent consecutive duplicate location records are removed.
+          <br/>
+          If False, all locations records are displayed as retrieved.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-2-group">
+     <div class="inline-related" id="vpo_set-2-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Grouping Priority Order
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-grouping_mode">
+        <div>
+         <label for="id_vpo_set-2-0-grouping_mode_0">
+          Documents Grouping Priority Order:
+         </label>
+         <ul class="radiolist" id="id_vpo_set-2-0-grouping_mode">
+          <li>
+           <label for="id_vpo_set-2-0-grouping_mode_0">
+            Baseline, Local
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-2-0-grouping_mode_1">
+            Local, Baseline
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines the priority order for grouping:
+          <br>
+           Baseline, Local: First, group by baseline subdomain; if local code is unmapped, group by local subdomain.
+           <br>
+            Local, Baseline: First, group by local subdomain; if local code is under the root domain, and is mapped to a baseline code, group by baseline subdomain.
+            <br>
+             If local code is unmapped and is under a root domain, display under "Others".
+             <br>
+              This configuration applies to Clinical Viewer, EHR Agent and Patient View .
+              <br/>
+              <i>
+               Default: Baseline, Local
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-3-group">
+     <div class="inline-related" id="vpo_set-3-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-grouping_mode">
+        <div>
+         <label for="id_vpo_set-3-0-grouping_mode_0">
+          Imaging Grouping Priority Order:
+         </label>
+         <ul class="radiolist" id="id_vpo_set-3-0-grouping_mode">
+          <li>
+           <label for="id_vpo_set-3-0-grouping_mode_0">
+            Baseline, Local
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-3-0-grouping_mode_1">
+            Local, Baseline
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines the priority order for grouping:
+          <br>
+           Baseline, Local: First, group by baseline subdomain; if local code is unmapped, group by local subdomain.
+           <br>
+            Local, Baseline: First, group by local subdomain; if local code is under the root domain, and is mapped to a baseline code, group by baseline subdomain.
+            <br>
+             If local code is unmapped and is under a root domain, display under "Others".
+             <br>
+              This configuration applies to Clinical Viewer, EHR Agent and Patient View .
+              <br/>
+              <i>
+               Default: Baseline, Local
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="pvcategoriesproperties_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient View Categories
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Category Type
+          </th>
+          <th class="required">
+           Category Display Name
+           <img alt="(Defines the name to display for the clinical category in the application. Display name configuration is applicable to Patient View only.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the name to display for the clinical category in the application. Display name configuration is applicable to Patient View only." width="10"/>
+          </th>
+          <th>
+           Hide Fields
+           <img alt='(For the Details pane, specify the metadata fields to hide. Use the format Label1, Label2 ; example, in Problems  enter: "Status, Source" to hide these fields on details page of Problems. For Encounters: Diagnosis, Chief Complaint, Location History and Providers sections can also be hidden, also hides Service, Location and Diagnosis on encounter cards and reports.)' class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title='For the Details pane, specify the metadata fields to hide. Use the format Label1, Label2 ; example, in Problems  enter: "Status, Source" to hide these fields on details page of Problems. For Encounters: Diagnosis, Chief Complaint, Location History and Providers sections can also be hidden, also hides Service, Location and Diagnosis on encounter cards and reports.' width="10"/>
+          </th>
+          <th class="required">
+           Category Order
+           <img alt="(Defines the order of clinical categories to display in the application. Category order configuration is applicable to Patient View only.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the order of clinical categories to display in the application. Category order configuration is applicable to Patient View only." width="10"/>
+          </th>
+          <th>
+           Expand by default
+           <img alt="(Defines if the category should be expanded by default on enter patient file, in view by category. Applicable only to Patient view application.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines if the category should be expanded by default on enter patient file, in view by category. Applicable only to Patient view application." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-0">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Encounters
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-1">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-2">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Medical History
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-3">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Diagnoses
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-4">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Allergies
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-5">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Medications
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-6">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Measurements
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-7">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Labs
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-8">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-9">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Immunizations
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-10">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-11">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Procedures
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-12">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            Documents
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-13">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/pvcategoriesproperties/14/" onclick="return showEditPopup(this);" title="Click to edit">
+             External Documents
+            </a>
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="pvcategoriesproperties_set-14">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/pvcategoriesproperties/15/" onclick="return showEditPopup(this);" title="Click to edit">
+             External Documents
+            </a>
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="pvcategoriesproperties_set-15">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/pvcategoriesproperties/16/" onclick="return showEditPopup(this);" title="Click to edit">
+             External Documents
+            </a>
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="pvcategoriesproperties_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-category_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/pvcategoriesproperties/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-display_name">
+          </td>
+          <td class="field-hide_fields">
+          </td>
+          <td class="field-category_order">
+          </td>
+          <td class="field-expand_by_default">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicaldomainproperties_set-group">
+     <div class="inline-related" id="clinicaldomainproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        External Documents
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_ShowExternalDocumentsLabel">
+        <div>
+         <label for="id_clinicaldomainproperties_set-0-ClinicalDocument_ShowExternalDocumentsLabel">
+          Disclaimer Text:
+         </label>
+         <p class="help">
+          Determines the text to show for all External Documents on Disclaimer after the fixed text
+          <br/>
+          <i>
+           Default: 'Show External Documents' and Fixed text: 'You are about to access patient documents from external system(s) for the following reasons:'
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-disclaimer">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-disclaimer">
+          Disclaimer Required
+         </label>
+         <p class="help">
+          Determines whether a disclaimer will be displayed in Patient view when the user wants to access any External Documents category.
+          <br/>
+          <b>
+           True:
+          </b>
+          <br/>
+          In the external documents category a disclaimer message will be displayed before displaying the list of External Documents to the user. The user is expected to approve the disclaimer. The disclaimer will concatenate a fixed text with a configurable text.
+          <br/>
+          <b>
+           False:
+          </b>
+          <br/>
+          The application will not display the disclaimer in any external documents category.
+          <br/>
+          Default: False.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicaldomainproperties_set-2-group">
+     <div class="inline-related" id="clinicaldomainproperties_set-2-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Override Disclosure Directive
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        A Disclosure Directive is a patient privacy authorization directive, under the Canadian healthcare regulations (in British Columbia), which enables a patient to choose who can access information within the patient's electronic health record. If a patient applies a Disclosure Directive on the patient record, the patient's clinical data is hidden and cannot be viewed by the healthcare provider. However, under certain conditions, it is possible to override the Disclosure Directive.
+        <br>
+         This configuration defines the Help links available in the Disclosure Directive Override Page.
+         <br>
+          <b>
+           Note: The Disclosure Directive feature is relevant only for External Documents that might require the Disclosure Directive override process to view the patient record.
+          </b>
+         </br>
+        </br>
+       </div>
+       <div class="form-row field-ClinicalDocument_DD_ResetPasskey">
+        <div>
+         <label for="id_clinicaldomainproperties_set-2-0-ClinicalDocument_DD_ResetPasskey">
+          Reset Keyword:
+         </label>
+         <p class="help">
+          Defines the text displayed in the Patient View that explains how the patient can reset the Disclosure Directive password (maximum length of 300 Characters).
+          <br>
+           (For example: To reset keyword, the patient should call XXX-XXX-XXXX.)
+           <br/>
+           <i>
+            Default: empty
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_DD_ProviderPolicy_URL">
+        <div>
+         <label for="id_clinicaldomainproperties_set-2-0-ClinicalDocument_DD_ProviderPolicy_URL">
+          Providers Policies Help Page:
+         </label>
+         <p class="help">
+          Defines the URL (or network drive) of the providers policies help page.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_DD_PatientPolicy_URL">
+        <div>
+         <label for="id_clinicaldomainproperties_set-2-0-ClinicalDocument_DD_PatientPolicy_URL">
+          Patients Policies Help Page:
+         </label>
+         <p class="help">
+          Defines the URL (or network drive) of the patients policies help page.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ClinicalDocument_DD_OverrdieWithoutConsentOrgPolicy_URL">
+        <div>
+         <label for="id_clinicaldomainproperties_set-2-0-ClinicalDocument_DD_OverrdieWithoutConsentOrgPolicy_URL">
+          Override Without Consent Policy:
+         </label>
+         <p class="help">
+          Defines the URL (or network drive) of the Organization's Override Without Consent Policy Page.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="imagingpacs_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Imaging PACS
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used to access the PACS (Picture Archiving and Communication Systems) to display the selected Imaging records of the specific patient. The deviceId, useCode, schemeCode represents the system identity. The link to the system can be composed of both static and dynamic parts. These parts can be a function of the metadata (for example, use code) of the imaging record. Patient View only supports https:// URL for viewing PACS images.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           URI
+          </th>
+          <th>
+           deviceId
+           <img alt="(The Imaging study deviceId based on the Federation Node Id.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study deviceId based on the Federation Node Id.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           useCode
+           <img alt="(The Imaging study useCode based on the UMS ImageValue.use.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study useCode based on the UMS ImageValue.use.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           schemeCode
+           <img alt="(The Imaging study SchemeCode based on the UMS ImageValue.Scheme.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study SchemeCode based on the UMS ImageValue.Scheme.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           facility
+           <img alt="(In some organizations the PACS URL depends on the user location. In order to configure the correct URL, according to the user location, the User Facility Identification should  be enabled and configured.If configured, the system will use the PACS URL with the facility that matches the user facility (it detects the facility mapped to the EHR instance intercepted by the Agent Hub).User Facility Identification should be configured in the following location: CCenter &gt; Agent Hub -&gt; EHR Integration -&gt; EHR Instances -&gt; User Facility Identification.Format: ID Root|ID Extension.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="In some organizations the PACS URL depends on the user location. In order to configure the correct URL, according to the user location, the User Facility Identification should  be enabled and configured.If configured, the system will use the PACS URL with the facility that matches the user facility (it detects the facility mapped to the EHR instance intercepted by the Agent Hub).User Facility Identification should be configured in the following location: CCenter &gt; Agent Hub -&gt; EHR Integration -&gt; EHR Instances -&gt; User Facility Identification.Format: ID Root|ID Extension.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           method
+           <img alt="(For a Web Application, use one of the following:POST: All the specified parameters are passed as hidden values.GET: All the specified parameters are passed as a connection string, in the order they appear in the configuration.Default: GET)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="For a Web Application, use one of the following:POST: All the specified parameters are passed as hidden values.GET: All the specified parameters are passed as a connection string, in the order they appear in the configuration.Default: GET" width="10"/>
+          </th>
+          <th>
+           Parameters
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 empty-form" id="imagingpacs_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/imagingpacs/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-device_id">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-use_code">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-schema_code">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-facility">
+           <p>
+            ALL
+           </p>
+          </td>
+          <td class="field-method">
+           <p>
+            GET
+           </p>
+          </td>
+          <td class="field-parameters">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="imagingpacsdisclaimer_set-group">
+     <div class="inline-related" id="imagingpacsdisclaimer_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Imaging
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-Pacs_Disclaimer_Text">
+        <div>
+         <label for="id_imagingpacsdisclaimer_set-0-Pacs_Disclaimer_Text">
+          PACS Disclaimer Text:
+         </label>
+         <p class="help">
+          This configuration determines the text to display as disclaimer on PACS images. When it has some text we display a disclaimer, when it is empty the disclaimer wont be showed.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-Grouping_by_Modality">
+        <div>
+         <label class="vCheckboxLabel" for="id_imagingpacsdisclaimer_set-0-Grouping_by_Modality">
+          Imaging Grouping by Modality
+         </label>
+         <p class="help">
+          This configuration enables grouping of (UMS: Image study.typecode) designations received with imaging study type. All studies that are received with the same type code designations are grouped together. If the configuration is set to false, grouping of imaging results is by sub domain designation of imaging study  (UMS: Imaging Study code).
+          <br>
+           <i>
+            Default: False.
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

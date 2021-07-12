@@ -1,0 +1,443 @@
+<div class="colSM" id="content">
+ <h1>
+  Add EHR Agent Installation Profiles
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="installationprofile_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide extrapretty">
+     <h2>
+      Installation Profile Details
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+       <p class="help">
+        Name.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-product_server_url">
+      <div>
+       <label for="id_product_server_url">
+        Product Server URL:
+       </label>
+       <p class="help">
+        Used by the update service to download new client versions when using a File System path
+        <br/>
+        <i>
+         (e.g. \networkdrive\sharedfolder\EhrAgentUpdate.zip)
+        </i>
+        <br/>
+        If this value is not a File System path, Agent will get new client versions based on the Profile, Web Server and Domain values.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_PRODUCT_SERVER_URL
+        <br/>
+        For Agent client versions older than 19.2 CU2 to use this configuration, it's needed to activate access to this URL.
+        <br/>
+        Refer to the product documentation for more information.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_auto_run">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_auto_run">
+        Auto Run
+       </label>
+       <p class="help">
+        Determines whether the Agent Hub starts immediately after installation and also with the client machine restart.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_AUTO_RUN
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_install_ccow_context_receiver">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_install_ccow_context_receiver">
+        Install CCOW Context Receiver
+       </label>
+       <p class="help">
+        Indicates whether or not to install the Context Manager Lite.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_INSTALL_CCOW_CONTEXT_RECEIVER
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_install_dbm_context_receiver">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_install_dbm_context_receiver">
+        Install DBM Context Receiver
+       </label>
+       <p class="help">
+        If set to true, enables the Agent Hub Context Manager Lite and a third party context manager (for example, Sentillion) to work together on the same machine.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_INSTALL_DBM_CONTEXT_RECEIVER
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_launch_api">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_launch_api">
+        Launch API Service Mode
+       </label>
+       <p class="help">
+        Not supported yet.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_LAUNCH_API_SERVICE_MODE
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-profile_name">
+      <div>
+       <label class="required" for="id_profile_name">
+        Profile Name:
+       </label>
+       <p class="help">
+        Server name.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_PROFILE_NAME
+        <br/>
+        <i>
+         Default: $_NODE_WEB_SERVER_STATEFUL$
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_show_system_tray_icon">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_show_system_tray_icon">
+        Show System Tray Icon
+       </label>
+       <p class="help">
+        Determines whether the Agent Hub displays the System Tray icon.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_SHOW_SYSTEM_TRAY_ICON
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-web_server_stateful">
+      <div>
+       <label class="required" for="id_web_server_stateful">
+        Node Web Server Stateful:
+       </label>
+       <p class="help">
+        Server name.
+        <br/>
+        For NLB configurations, it defines the stateful VIP Address.
+        <br/>
+        Together with Node User Absolute Domain configuration, it configure the New Product versions URL and download configurations URL.
+        <br/>
+        The default value for New Product versions URL and download configurations URL are:
+        <br/>
+        - https://$_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$/SmartAgent/AgentSetup/[Pofile Name]/EhrAgentUpdate.zip
+        <br/>
+        - https://$_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$/SmartAgent/Config/
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        _NODE_WEB_SERVER_STATEFUL, SMART_AGENT_CONFIG_SERVER_URL and SMART_AGENT_PRODUCT_SERVER_URL
+        <br/>
+        <i>
+         Default: $_NODE_WEB_SERVER_STATEFUL$
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-user_absolute_domain">
+      <div>
+       <label class="required" for="id_user_absolute_domain">
+        Node User Absolute Domain:
+       </label>
+       <p class="help">
+        AD Domain.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        _NODE_USER_ABSOLUTE_DOMAIN
+        <br/>
+        <i>
+         Default: $_NODE_ACCESS_ABSOLUTE_DOMAIN$
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_multitenant">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_multitenant">
+        Is Multitenant
+       </label>
+       <p class="help">
+        Determines whether the Agent Hub is configured in multitenant mode.
+        <b>
+         Note:
+        </b>
+        If this is set to true, the update mechanism is disabled and the update configurations are not relevant.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        ISMULTITENANT
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_uninstall_previous_version">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_uninstall_previous_version">
+        Uninstall Previous Versions
+       </label>
+       <p class="help">
+        If set to false, upon first time installation will remove existing Agent Hub version.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_UNINSTALL_PREVIOUS_VERSIONS
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_update_configuration_enabled">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_update_configuration_enabled">
+        Enable Update Configuration
+       </label>
+       <p class="help">
+        Determines whether the Agent Hub client will update the configuration files automatically.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_UPDATE_CONFIGURATION_ENABLED
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_update_new_version_enabled">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_update_new_version_enabled">
+        Enable Update New Version
+       </label>
+       <p class="help">
+        Determines whether Agent Hub will upgrade to a new version automatically via the Easy Deployment process.
+        <br/>
+        Note: When setting this option to
+        <b>
+         true
+        </b>
+        , the update service will run under a local system account, which runs with administrator permissions.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_UPDATE_NEW_VERSION_ENABLED
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_activate_ccow_receiver">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_activate_ccow_receiver">
+        No Activation of CCOW Context Receiver
+       </label>
+       <p class="help">
+        If true, Agent Hub installation will not create a registry key for auto launch of the Agent Hub by EMR context join request.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_CCOW_CONTEXT_RECEIVER_NO_ACTIVATION
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_display_alert_message">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_display_alert_message">
+        Display EHR Alert Messages
+       </label>
+       <p class="help">
+        If false, the Agent Hub first installation will not display a popup message to close the EHRs.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        DISPLAY_EHR_ALERT_MESSAGE
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_ccow_isolated_session">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_ccow_isolated_session">
+        Enable CCOW Isolating Session Manager
+       </label>
+       <p class="help">
+        If set to true, enables users to work in shared desktop mode.
+        <br/>
+        <b>
+         Note:
+        </b>
+        If set to true, SMART_AGENT_INSTALL_CCOW_CONTEXT_RECEIVER must also be set to true.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        CCOW_ISOLATING_SESSION_MANAGER_ENABLED
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-display_lang">
+      <div>
+       <label class="required" for="id_display_lang">
+        Display Language:
+       </label>
+       <p class="help">
+        Display language and also regional setting behavior.
+        <br/>
+        <b>
+         Name of XML Element:
+        </b>
+        SMART_AGENT_DISPLAY_LANGUAGE
+        <br/>
+        <i>
+         Default: $_NODE_DEFAULT_LANGUAGE$
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide extrapretty">
+     <h2>
+      Installation URL Creation
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-install_url_expiration_date">
+      <div>
+       <label for="id_install_url_expiration_date">
+        Expiration Date:
+       </label>
+      </div>
+     </div>
+     <div class="form-row field-install_url">
+      <div>
+       <label for="id_install_url">
+        Installation URL:
+       </label>
+       <textarea cols="150" id="id_install_url" name="install_url" rows="4">
+       </textarea>
+       <p class="help">
+        Link to the first time installation file. This link can be used to allow secure access to installation files.
+        <br/>
+        The link URL will be created when saving the Installation Profile.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

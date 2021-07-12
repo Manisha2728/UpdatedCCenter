@@ -1,0 +1,431 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Active Directory Provider
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="adproviders_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      Active Directory Providers Settings for Managed Users
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Security Service
+         <li>
+          IIS(CVA)
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(Security Management)
+           </li>
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-domain_id">
+      <div>
+       <label class="required" for="id_domain_id">
+        Domain Id:
+       </label>
+       <p class="help">
+        Defines the Domain Id.
+        <br>
+         Note: If the project was upgraded from an earlier release where the security configurations were performed in the Project Pack (prior to release 7.0),
+         <br>
+          you must make sure that the Domain ID configured here for the domain is identical to the Storage ID configured in the Project Pack configuration for this domain.
+          <br>
+           The PP configuration is located in the AD Providers worksheet in the Northwind Configuration Nodes Excel file.
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-domain_name">
+      <div>
+       <label class="required" for="id_domain_name">
+        Domain Name:
+       </label>
+       <p class="help">
+        Defines the qualified name of the Active Directory.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-domain_port">
+      <div>
+       <label for="id_domain_port">
+        Port:
+       </label>
+       <p class="help">
+        Defines the port of the Active Directory.
+        <br/>
+        This value can be empty for the default port.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-container">
+      <div>
+       <label for="id_container">
+        Container:
+       </label>
+       <p class="help">
+        Defines the Containers of the Active Directory (required only for clients that use AD containers).
+        <br/>
+        Containers are used to segment and organize a network (for users, groups, and so on). There is no default value.
+        <br/>
+        For Helios AD, the container is mandatory.
+        <br/>
+        Keywords are used to define the AD Containers. Keywords are not case sensitive and have the following meanings:
+        <br/>
+        cn: Common Name
+        <br/>
+        ou: Organizational Unit
+        <br/>
+        dc: Domain Component
+        <br/>
+        The following format should be used to define the AD Container:
+        <br/>
+        &lt;keyword&gt;=&lt;object&gt;,&lt;keyword&gt;=&lt;object&gt;.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-untrusted_ad">
+      <div>
+       <label class="vCheckboxLabel" for="id_untrusted_ad">
+        Untrusted Active Directory
+       </label>
+       <p class="help">
+        Defines an Active Directory in which there is not full trust between this AD and the dbMotion enterprise domain.
+        <br/>
+        The dbMotion security service account has no access to this directory domain and therefore its users are unknown to dbMotion.
+        <br/>
+        If an Active Directory is untrusted, its users can be accessed in dbMotion only by configuring the username and password of one of its members (impersonation).
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-untrusted_ad_user_name">
+      <div>
+       <label for="id_untrusted_ad_user_name">
+        Untrusted AD User Name:
+       </label>
+       <p class="help">
+        Defines the User Name for the untrusted Active Directory.
+        <br/>
+        <b>
+         Note:
+        </b>
+        this field will not be transferred in the export/import process.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-untrusted_ad_user_password">
+      <div>
+       <label for="id_untrusted_ad_user_password">
+        Untrusted AD User Password:
+       </label>
+       <p class="help">
+        Defines the User Password for the untrusted Active Directory.
+        <br/>
+        <b>
+         Note:
+        </b>
+        this field will not be transferred in the export/import process.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      Mapping of Active Directory Attributes to dbMotion Profile Properties
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Security Service
+         <li>
+          IIS(CVA)
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(Security Management)
+           </li>
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="description">
+      This configuration is used to map the properties of the dbMotion User Profile in the Security Service with the user properties in the Active Directory.
+     </div>
+     <div class="form-row field-ad_mapping_FirstName">
+      <div>
+       <label for="id_ad_mapping_FirstName">
+        First Name:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the First Name User Profile property in the dbMotion Security Service.
+        <br/>
+        <i>
+         Default: givenName
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ad_mapping_LastName">
+      <div>
+       <label for="id_ad_mapping_LastName">
+        Last Name:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the Last Name User Profile property in the dbMotion Security Service.
+        <br/>
+        <i>
+         Default: sn
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ad_mapping_Title">
+      <div>
+       <label for="id_ad_mapping_Title">
+        Title:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the Title property in the dbMotion Security Service.
+        <br/>
+        <i>
+         Default: title
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ad_mapping_Description">
+      <div>
+       <label for="id_ad_mapping_Description">
+        Description:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the Description property in the dbMotion Security Service.
+        <br/>
+        <i>
+         Default: Description
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ad_mapping_Facility">
+      <div>
+       <label for="id_ad_mapping_Facility">
+        Facility:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the Facility property in the dbMotion Security Service. This is required and relevant only when the Facility Based Filter is enabled by configuration.
+        <br/>
+        <i>
+         Default: physicalDeliveryOfficeName
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ad_mapping_NationalIdNumber">
+      <div>
+       <label for="id_ad_mapping_NationalIdNumber">
+        National Id Number:
+       </label>
+       <p class="help">
+        Defines the AD user attribute that is mapped to the National Id Number Profile property in the dbMotion Security Service.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      Additional Settings
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Security Service
+         <li>
+          IIS(CVA)
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(Security Management)
+           </li>
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-netbios_domain_name">
+      <div>
+       <label for="id_netbios_domain_name">
+        NetBios Domain Name:
+       </label>
+       <p class="help">
+        Enables users (who normally log in to applications with their AD Domain name or NetBios name) to access dbMotion applications.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-use_dnl_format">
+      <div>
+       <label class="vCheckboxLabel" for="id_use_dnl_format">
+        Use the Down-Level Logon Name format
+       </label>
+       <p class="help">
+        Determines whether DLN format will be used instead of UPN format for user name. The option will be disabled if NetBios Domain Name is empty.
+        <br/>
+        - DLN (Down-Level Logon Name): NETBIOS_DOMAIN_NAME\USER_NAME
+        <br/>
+        - UPN (User Principal Name): USER_NAME@DOMAIN_NAME
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-helios">
+      <div>
+       <label class="vCheckboxLabel" for="id_helios">
+        Helios
+       </label>
+       <p class="help">
+        Determines whether the Active Directory is the Helios type.
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-allow_alternative_authentication">
+      <div>
+       <label class="vCheckboxLabel" for="id_allow_alternative_authentication">
+        Use SSL Binding Authentication Method
+       </label>
+       <p class="help">
+        Determines whether SSL Binding is used for authentication of AD users logging in to dbMotion
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="inline-group" id="samlissuers_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        SAML Issuers Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Security Service
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(Security Management)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used for authentication of users who use Single Sign On (SSO) between the External EHR and the dbMotion application.
+        <br/>
+        Each Active Directory domain can have multiple Issuers with different names and the same or different Certificates. The Security Authority uses the Certificate to authenticate and validate SAML Tokens.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           SAML Issuer Name
+           <img alt="(Defines the name of the Issuer of the SAML response Token before sending it to dbMotion. This name must be unique in the domain.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the name of the Issuer of the SAML response Token before sending it to dbMotion. This name must be unique in the domain." width="10"/>
+          </th>
+          <th class="required">
+           SAML Certificate Thumbprint
+           <img alt="(Defines the Thumbprint as found in the Certificate. The Certificate must be installed on the Windows Certificate store on the Local Machine, Personal folder.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Thumbprint as found in the Certificate. The Certificate must be installed on the Windows Certificate store on the Local Machine, Personal folder." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="samlissuers_set-0">
+          <td class="original">
+          </td>
+          <td class="field-saml_issuer_name">
+          </td>
+          <td class="field-saml_certificate_thumbprint">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="samlissuers_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-saml_issuer_name">
+          </td>
+          <td class="field-saml_certificate_thumbprint">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

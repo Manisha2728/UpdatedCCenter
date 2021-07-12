@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f9694783-4b2d-4221-ace6-301258d73140}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <UseIISExpress>true</UseIISExpress>
+    <Name>ConfigCenter</Name>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <PythonRunWebServerCommandArguments>runserver --settings $(DjangoSettingsModule) %SERVER_PORT% $(CommandLineArguments)</PythonRunWebServerCommandArguments>
+    <PythonDebugWebServerCommandArguments>runserver --noreload --settings=configcenter.settings $(DjangoSettingsModule) %SERVER_PORT% $(CommandLineArguments)</PythonDebugWebServerCommandArguments>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <InterpreterId>Global|VisualStudio|Python39_6</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".settings\org.eclipse.core.resources.prefs" />
+    <Content Include="authccenter\templates\authccenter\enableadloginonlymode.html" />
+    <Content Include="bats\Development\buildwix.cmd" />
+    <Content Include="bats\Development\build_create_upgrade_scripts_sql.bat" />
+    <Content Include="bats\Development\create_next_empty.bat" />
+    <Content Include="bats\Development\create_next_step.bat" />
+    <Content Include="bats\Development\curapp.txt" />
+    <Content Include="bats\Development\get_app.bat" />
+    <Content Include="bats\Development\map_groups.bat" />
+    <Content Include="bats\Development\migrate back_to_ga.bat" />
+    <Content Include="bats\Development\migrations status.bat" />
+    <Content Include="bats\Development\return_to_prev_step.bat" />
+    <Content Include="bats\Development\run_selected_test.bat" />
+    <Content Include="bats\Development\run_server.bat" />
+    <Content Include="bats\Development\squash_migrations.bat" />
+    <Content Include="bats\Development\sync_wix_migrations.bat" />
+    <Content Include="bats\Development\build_create_upgrade_scripts_sql.bat" />
+    <Content Include="bats\Development\update_search_files.bat" />
+    <Content Include="bats\Environment\collect_statics.bat" />
+    <Content Include="bats\Environment\import_files.bat" />
+    <Content Include="bats\Environment\major_upgrade.bat" />
+    <Content Include="bats\map_admins_groups.bat" />
+    <Content Include="bats\map_guests_groups.bat" />
+    <Content Include="bats\migrate.bat" />
+    <Content Include="bats\run_ccenter_login_test.bat" />
+    <Content Include="bats\run_command.bat" />
+    <Content Include="bats\run_tests.bat" />
+    <Content Include="bats\run_test_authccenter.bat" />
+    <Content Include="bats\shell.bat" />
+    <Content Include="ConfigCenter.pyproj" />
+    <Content Include="requirements.txt" />
+    <Content Include="resources\html\ACDM.htm" />
+    <Content Include="resources\html\AD Providers.htm" />
+    <Content Include="resources\html\AD Providers_form.htm" />
+    <Content Include="resources\html\Agent Hosted Apps.htm" />
+    <Content Include="resources\html\AgentHub General Definitions.htm" />
+    <Content Include="resources\html\Allergies.htm" />
+    <Content Include="resources\html\Application Domain Qualifiers.htm" />
+    <Content Include="resources\html\Application Domain Qualifiers_form.htm" />
+    <Content Include="resources\html\Applications Role Mapping.htm" />
+    <Content Include="resources\html\Applications Role Mapping_form.htm" />
+    <Content Include="resources\html\CAG Data Access Auditing.htm" />
+    <Content Include="resources\html\Capsule.htm" />
+    <Content Include="resources\html\Carequality_Integration_Settings.htm" />
+    <Content Include="resources\html\CCDA Display and Report.htm" />
+    <Content Include="resources\html\CCDA Export.htm" />
+    <Content Include="resources\html\Clinical Code Display.htm" />
+    <Content Include="resources\html\Clinical Documents.htm" />
+    <Content Include="resources\html\Clinical Domains.htm" />
+    <Content Include="resources\html\Clinical Viewer General.htm" />
+    <Content Include="resources\html\Data Access Auditing.htm" />
+    <Content Include="resources\html\Data Loading BatchLoading.htm" />
+    <Content Include="resources\html\Data Loading Partitioning.htm" />
+    <Content Include="resources\html\Demographics.htm" />
+    <Content Include="resources\html\Diagnoses.htm" />
+    <Content Include="resources\html\Direct Addresses.htm" />
+    <Content Include="resources\html\Document Search Bootstrap.htm" />
+    <Content Include="resources\html\Document Search Live Feeds.htm" />
+    <Content Include="resources\html\Documents Search.htm" />
+    <Content Include="resources\html\EHR Agent Installation Profile.htm" />
+    <Content Include="resources\html\EHR Agent Installation Profiles List.htm" />
+    <Content Include="resources\html\EHR Integration - AppID.htm" />
+    <Content Include="resources\html\EHR Integration - EHR.htm" />
+    <Content Include="resources\html\EHR Integration - Instance list.htm" />
+    <Content Include="resources\html\EHR Integration - Instance.htm" />
+    <Content Include="resources\html\EHR Integration - Properties Package.htm" />
+    <Content Include="resources\html\EMPI Authority Systems.htm" />
+    <Content Include="resources\html\EMPI Provider Registry.htm" />
+    <Content Include="resources\html\EMPI General.htm" />
+    <Content Include="resources\html\EMPI Initiate Mappings.htm" />
+    <Content Include="resources\html\EMPI Initiate.htm" />
+    <Content Include="resources\html\Encounters Details.htm" />
+    <Content Include="resources\html\Encounters.htm" />
+    <Content Include="resources\html\Federation Group.htm" />
+    <Content Include="resources\html\Federation Node List.htm" />
+    <Content Include="resources\html\Federation Node.htm" />
+    <Content Include="resources\html\General Definitions.htm" />
+    <Content Include="resources\html\Imaging.htm" />
+    <Content Include="resources\html\Immunizations.htm" />
+    <Content Include="resources\html\Lab Results History.htm" />
+    <Content Include="resources\html\Lab Results.htm" />
+    <Content Include="resources\html\Labs.htm" />
+    <Content Include="resources\html\Measurements.htm" />
+    <Content Include="resources\html\Medications.htm" />
+    <Content Include="resources\html\MyHR Connectivity.htm" />
+    <Content Include="resources\html\Pathology.htm" />
+    <Content Include="resources\html\Patient Display for Agent.htm" />
+    <Content Include="resources\html\Patient Display.htm" />
+    <Content Include="resources\html\Patient Search.htm" />
+    <Content Include="resources\html\PatientList General Definitions.htm" />
+    <Content Include="resources\html\PLV.htm" />
+    <Content Include="resources\html\Problems.htm" />
+    <Content Include="resources\html\Procedures.htm" />
+    <Content Include="resources\html\Reporting.htm" />
+    <Content Include="resources\html\Security General Definitions.htm" />
+    <Content Include="resources\html\Summary.htm" />
+    <Content Include="resources\html\Usage Reports.htm" />
+    <Content Include="resources\html\Vitals.htm" />
+    <Content Include="resources\sql\CCenter_Sparrow.bak" />
+    <Content Include="resources\sql\SparrowRestore.sql" />
+    <Content Include="static\admin\css\base.css" />
+    <Content Include="static\admin\css\dbmconfigapp\hide_admin_original.css" />
+    <Content Include="static\admin\css\dbmotion_admin_extensions.css" />
+    <Content Include="static\admin\css\externalapps\externalapps.css" />
+    <Content Include="static\admin\css\forms.css" />
+    <Content Include="static\admin\css\mselect-to-mcheckbox.css" />
+    <Content Include="static\admin\css\widgets.css" />
+    <Content Include="static\admin\js\dbmconfigapp\capsule.js" />
+    <Content Include="static\admin\js\dbmconfigapp\clinical_domains.js" />
+    <Content Include="static\admin\js\dbmconfigapp\custom-ui.js" />
+    <Content Include="static\admin\js\dbmconfigapp\data_access_auditing.js" />
+    <Content Include="static\admin\js\dbmconfigapp\document_search_bootstrap.js" />
+    <Content Include="static\admin\js\dbmconfigapp\document_search_general.js" />
+    <Content Include="static\admin\js\dbmconfigapp\document_search_live_feeds.js" />
+    <Content Include="static\admin\js\dbmconfigapp\external_documents.js" />
+    <Content Include="static\admin\js\dbmconfigapp\HideConfigurationForCVA.js" />
+    <Content Include="static\admin\js\dbmconfigapp\HostedApplicationEdit.js" />
+    <Content Include="static\admin\js\dbmconfigapp\HostedApplications.js" />
+    <Content Include="static\admin\js\dbmconfigapp\patientViewCategories.js" />
+    <Content Include="static\admin\js\dbmconfigapp\patient_display.js" />
+    <Content Include="static\admin\js\dbmconfigapp\patient_search.js" />
+    <Content Include="static\admin\js\dbm_common.js" />
+    <Content Include="static\admin\js\direct-messaging.js" />
+    <Content Include="static\admin\js\external-applications.js" />
+    <Content Include="static\admin\js\externalapps\context_provider_data.json" />
+    <Content Include="static\admin\js\externalapps\direct_addresses.js" />
+    <Content Include="static\admin\js\externalapps\ehr.js" />
+    <Content Include="static\admin\js\externalapps\instance.js" />
+    <Content Include="static\admin\js\externalapps\instance_properties.js" />
+    <Content Include="static\admin\js\federation\node.js" />
+    <Content Include="static\admin\js\field_modification.js" />
+    <Content Include="static\admin\js\inlines.js" />
+    <Content Include="static\admin\js\is_default_list_selection.js" />
+    <Content Include="static\admin\js\menu.js" />
+    <Content Include="static\admin\js\mselect-to-mcheckbox.js" />
+    <Content Include="static\admin\js\search.js" />
+    <Content Include="static\admin\js\Security\adprovider.js" />
+    <Content Include="static\admin\js\Security\Applications.js" />
+    <Content Include="static\admin\js\Security\FacilityIdentification.js" />
+    <Content Include="static\admin\js\Security\UnmanagedUsers.js" />
+    <Content Include="static\admin\js\sum_row.js" />
+    <Content Include="static\admin\js\via\authority_systems.js" />
+    <Content Include="static\admin\js\via\general_definitions.js" />
+    <Content Include="static\admin\js\via\initiate.js" />
+    <Content Include="static\admin\js\via\initiate_mappings.js" />
+    <Content Include="static\admin\js\via\ppolgeneral.js" />
+    <Content Include="static\img\concrete_page_icon.png" />
+    <Content Include="static\img\ehragent.png" />
+    <Content Include="static\img\error.png" />
+    <Content Include="static\img\home.png" />
+    <Content Include="static\img\loading.gif" />
+    <Content Include="static\img\ok.png" />
+    <Content Include="static\img\search.png" />
+    <Content Include="static\img\services.png" />
+    <Content Include="static\jquery\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="static\jquery\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="static\jquery\images\ui-icons_888888_256x240.png" />
+    <Content Include="static\jquery\jquery-ui.grey.theme.css" />
+    <Content Include="static\jquery\jquery-ui.min.css" />
+    <Content Include="static\jquery\jsTree\jquery.jstree.js" />
+    <Content Include="static\jquery\jsTree\themes\apple\bg.jpg" />
+    <Content Include="static\jquery\jsTree\themes\apple\d.png" />
+    <Content Include="static\jquery\jsTree\themes\apple\dot_for_ie.gif" />
+    <Content Include="static\jquery\jsTree\themes\apple\style.css" />
+    <Content Include="static\jquery\jsTree\themes\apple\throbber.gif" />
+    <Content Include="static\jquery\jsTree\themes\classic\d.gif" />
+    <Content Include="static\jquery\jsTree\themes\classic\d.png" />
+    <Content Include="static\jquery\jsTree\themes\classic\dot_for_ie.gif" />
+    <Content Include="static\jquery\jsTree\themes\classic\style.css" />
+    <Content Include="static\jquery\jsTree\themes\classic\throbber.gif" />
+    <Content Include="static\jquery\jsTree\themes\default-rtl\d.gif" />
+    <Content Include="static\jquery\jsTree\themes\default-rtl\d.png" />
+    <Content Include="static\jquery\jsTree\themes\default-rtl\dots.gif" />
+    <Content Include="static\jquery\jsTree\themes\default-rtl\style.css" />
+    <Content Include="static\jquery\jsTree\themes\default-rtl\throbber.gif" />
+    <Content Include="static\jquery\jsTree\themes\default\d.gif" />
+    <Content Include="static\jquery\jsTree\themes\default\d.png" />
+    <Content Include="static\jquery\jsTree\themes\default\style.css" />
+    <Content Include="static\jquery\jsTree\themes\default\throbber.gif" />
+    <Content Include="static\jquery\jsTree\_lib\jquery.cookie.js" />
+    <Content Include="static\jquery\jsTree\_lib\jquery.hotkeys.js" />
+    <Content Include="static\jquery\jsTree\_lib\jquery.js" />
+    <Content Include="static\jquery\js\jquery-1.9.1.js" />
+    <Content Include="static\jquery\js\jquery-1.9.1.min.js" />
+    <Content Include="static\jquery\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="static\jquery\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="static\jquery\js\jquery.form.min.js" />
+    <Content Include="templates\admin\500.html" />
+    <Content Include="templates\admin\auth\app_index.html" />
+    <Content Include="templates\admin\auth\change_form.html" />
+    <Content Include="templates\admin\auth\change_list.html" />
+    <Content Include="templates\admin\auth\user\add_form.html" />
+    <Content Include="templates\admin\base-ex.html" />
+    <Content Include="templates\admin\base.html" />
+    <Content Include="templates\admin\base_site.html" />
+    <Content Include="templates\admin\edit_inline\stacked_data_access_auditing.html" />
+    <Content Include="templates\admin\edit_inline\tabular_no_header.html" />
+    <Content Include="templates\admin\page_changes_history.html" />
+    <Content Include="templates\admin\changes_history.html" />
+    <Content Include="templates\admin\change_form_default.html" />
+    <Content Include="templates\admin\change_list.html" />
+    <Content Include="templates\admin\dataloading\change_form.html" />
+    <Content Include="templates\admin\dbmconfigapp\change_form.html" />
+    <Content Include="templates\admin\dbmconfigapp\export.html" />
+    <Content Include="templates\admin\dbmconfigapp\import.html" />
+    <Content Include="templates\admin\dbmconfigapp\post_import_db.html" />
+    <Content Include="templates\admin\debug.html" />
+    <Content Include="templates\admin\edit_inline\authority_systems_tabular.html" />
+    <Content Include="templates\admin\edit_inline\stacked-operational_manager.html" />
+    <Content Include="templates\admin\edit_inline\stacked.html" />
+    <Content Include="templates\admin\edit_inline\stacked_no_header.html" />
+    <Content Include="templates\admin\edit_inline\tabular.html" />
+    <Content Include="templates\admin\externalapps\change_form.html" />
+    <Content Include="templates\admin\externalapps\change_list.html" />
+    <Content Include="templates\admin\externalapps\ehr_preview_extension.html" />
+    <Content Include="templates\admin\federation\change_form.html" />
+    <Content Include="templates\admin\federation\change_list.html" />
+    <Content Include="templates\admin\includes\fieldset.html" />
+    <Content Include="templates\admin\includes\treeview.html" />
+    <Content Include="templates\admin\index.html" />
+    <Content Include="templates\admin\login.html" />
+    <Content Include="templates\admin\search_results.html" />
+    <Content Include="templates\admin\security\change_form.html" />
+    <Content Include="templates\admin\security\change_list.html" />
+    <Content Include="templates\admin\submit_line.html" />
+    <Content Include="templates\admin\via\change_form.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="authccenter\admin.py" />
+    <Compile Include="authccenter\apps.py" />
+    <Compile Include="authccenter\backends\ADAuthenticationBackend.py" />
+    <Compile Include="authccenter\backends\dbmAuthenticationBackend.py" />
+    <Compile Include="authccenter\backends\OfflineAuthenticationBackend.py" />
+    <Compile Include="authccenter\backends\__init__.py" />
+    <Compile Include="authccenter\management\commands\mapgroups.py" />
+    <Compile Include="authccenter\management\commands\__init__.py" />
+    <Compile Include="authccenter\management\__init__.py" />
+    <Compile Include="authccenter\middleware.py" />
+    <Compile Include="authccenter\models\group.py" />
+    <Compile Include="authccenter\models\settings.py" />
+    <Compile Include="authccenter\models\user.py" />
+    <Compile Include="authccenter\models\__init__.py" />
+    <Compile Include="authccenter\tests\test_backend.py" />
+    <Compile Include="authccenter\tests\test_dbm_backend.py" />
+    <Compile Include="authccenter\tests\test_models.py" />
+    <Compile Include="authccenter\tests\test_views.py" />
+    <Compile Include="authccenter\tests\__init__.py" />
+    <Compile Include="authccenter\urls.py" />
+    <Compile Include="authccenter\utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="authccenter\views.py" />
+    <Compile Include="authccenter\__init__.py" />
+    <Compile Include="bats\Environment\migrate.py" />
+    <Compile Include="configcenter\locals.py" />
+    <Compile Include="configcenter\params.py" />
+    <Compile Include="configcenter\settings.py" />
+    <Compile Include="configcenter\test_runner.py" />
+    <Compile Include="configcenter\urls.py" />
+    <Compile Include="configcenter\wsgi.py" />
+    <Compile Include="configcenter\__init__.py" />
+    <Compile Include="dataloading\admin.py" />
+    <Compile Include="dataloading\forms.py" />
+    <Compile Include="dataloading\models.py" />
+    <Compile Include="dataloading\utils.py" />
+    <Compile Include="dataloading\views.py" />
+    <Compile Include="dataloading\__init__.py" />
+    <Compile Include="dbmconfigapp\admin\admin.py" />
+    <Compile Include="dbmconfigapp\admin\agentpp_hosted_app.py" />
+    <Compile Include="dbmconfigapp\admin\apps_patient_display.py" />
+    <Compile Include="dbmconfigapp\admin\apps_reporting.py" />
+    <Compile Include="dbmconfigapp\admin\capsule.py" />
+    <Compile Include="dbmconfigapp\admin\ccda_display.py" />
+    <Compile Include="dbmconfigapp\admin\clinical_code_display.py" />
+    <Compile Include="dbmconfigapp\admin\clinical_domain.py" />
+    <Compile Include="dbmconfigapp\admin\clinical_viewer_general.py" />
+    <Compile Include="dbmconfigapp\admin\collaborate_patient_search.py" />
+    <Compile Include="dbmconfigapp\admin\dbm_ModelAdmin.py" />
+    <Compile Include="dbmconfigapp\admin\direct_messaging_acdm.py" />
+    <Compile Include="dbmconfigapp\admin\document_search_bootstrap.py" />
+    <Compile Include="dbmconfigapp\admin\document_search_general.py" />
+    <Compile Include="dbmconfigapp\admin\document_search_live_feeds.py" />
+    <Compile Include="dbmconfigapp\admin\ehragent_clinical_domains.py" />
+    <Compile Include="dbmconfigapp\admin\ehragent_measurements.py" />
+    <Compile Include="dbmconfigapp\admin\external_documents.py" />
+    <Compile Include="dbmconfigapp\admin\tracking.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbmconfigapp\admin\operational_manager.py" />
+    <Compile Include="dbmconfigapp\admin\patient_view.py" />
+    <Compile Include="dbmconfigapp\admin\pl_general.py" />
+    <Compile Include="dbmconfigapp\admin\__init__.py" />
+    <Compile Include="dbmconfigapp\export_logic.py" />
+    <Compile Include="dbmconfigapp\forms.py" />
+    <Compile Include="dbmconfigapp\form\ehragent_forms.py" />
+    <Compile Include="dbmconfigapp\form\fields.py" />
+    <Compile Include="dbmconfigapp\form\__init__.py" />
+    <Compile Include="dbmconfigapp\management\commands\build_create_upgrade_scripts_sql.py" />
+    <Compile Include="dbmconfigapp\management\commands\ccentermigrate.py" />
+    <Compile Include="dbmconfigapp\management\commands\CheckAllMigrationsApplied.py" />
+    <Compile Include="dbmconfigapp\management\commands\CheckMigrationVersionsRecorded.py" />
+    <Compile Include="dbmconfigapp\management\commands\CheckSite.py" />
+    <Compile Include="dbmconfigapp\management\commands\export.py" />
+    <Compile Include="dbmconfigapp\management\commands\fcgi.py" />
+    <Compile Include="dbmconfigapp\management\commands\import.py" />
+    <Compile Include="dbmconfigapp\management\commands\smart_migrate.py" />
+    <Compile Include="dbmconfigapp\management\commands\test_search.py" />
+    <Compile Include="dbmconfigapp\management\commands\update_search.py" />
+    <Compile Include="dbmconfigapp\management\commands\__init__.py" />
+    <Compile Include="dbmconfigapp\management\__init__.py" />
+    <Compile Include="dbmconfigapp\models\agentpp_hosted_app.py" />
+    <Compile Include="dbmconfigapp\models\agent_general_page.py" />
+    <Compile Include="dbmconfigapp\models\collaborate_patient_search.py" />
+    <Compile Include="dbmconfigapp\models\culture.py" />
+    <Compile Include="dbmconfigapp\models\apps_patient_display.py" />
+    <Compile Include="dbmconfigapp\models\apps_reporting.py" />
+    <Compile Include="dbmconfigapp\models\base.py" />
+    <Compile Include="dbmconfigapp\models\capsule.py" />
+    <Compile Include="dbmconfigapp\models\ccda_display.py" />
+    <Compile Include="dbmconfigapp\models\clinical_code_display.py" />
+    <Compile Include="dbmconfigapp\models\clinical_domain_laboratory.py" />
+    <Compile Include="dbmconfigapp\models\clinical_viewer_general.py" />
+    <Compile Include="dbmconfigapp\models\common.py" />
+    <Compile Include="dbmconfigapp\models\cvtables.py" />
+    <Compile Include="dbmconfigapp\models\cv_patient_display.py" />
+    <Compile Include="dbmconfigapp\models\database_storage.py" />
+    <Compile Include="dbmconfigapp\models\db_files.py" />
+    <Compile Include="dbmconfigapp\models\direct_messaging_acdm.py" />
+    <Compile Include="dbmconfigapp\models\document_search_bootstrap.py" />
+    <Compile Include="dbmconfigapp\models\document_search_general.py" />
+    <Compile Include="dbmconfigapp\models\document_search_live_feeds.py" />
+    <Compile Include="dbmconfigapp\models\ehragent.py" />
+    <Compile Include="dbmconfigapp\models\ehragent_categories.py" />
+    <Compile Include="dbmconfigapp\models\ehragent_clinical_domains.py" />
+    <Compile Include="dbmconfigapp\models\ehragent_measurements.py" />
+    <Compile Include="dbmconfigapp\models\external_documents.py" />
+    <Compile Include="dbmconfigapp\models\fields.py" />
+    <Compile Include="dbmconfigapp\models\lookups.py" />
+    <Compile Include="dbmconfigapp\models\operational_manager.py" />
+    <Compile Include="dbmconfigapp\models\patient_view.py" />
+    <Compile Include="dbmconfigapp\models\pl_general.py" />
+    <Compile Include="dbmconfigapp\models\ppol_general.py" />
+    <Compile Include="dbmconfigapp\models\system_parameters.py" />
+    <Compile Include="dbmconfigapp\models\tracking.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbmconfigapp\models\version_manager.py" />
+    <Compile Include="dbmconfigapp\models\vpo.py" />
+    <Compile Include="dbmconfigapp\models\__init__.py" />
+    <Compile Include="authccenter\signals.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbmconfigapp\templatetags\admin_modify.py" />
+    <Compile Include="dbmconfigapp\templatetags\__init__.py" />
+    <Compile Include="dbmconfigapp\tests.py" />
+    <Compile Include="dbmconfigapp\utils\custom_validators.py" />
+    <Compile Include="dbmconfigapp\utils\encryption.py" />
+    <Compile Include="dbmconfigapp\utils\modelsfactory.py" />
+    <Compile Include="dbmconfigapp\utils\modelsqueries.py" />
+    <Compile Include="security\middleware.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbmconfigapp\utils\search.py" />
+    <Compile Include="dbmconfigapp\utils\__init__.py" />
+    <Compile Include="dbmconfigapp\views.py" />
+    <Compile Include="dbmconfigapp\widgets.py" />
+    <Compile Include="dbmconfigapp\__init__.py" />
+    <Compile Include="externalapps\admin.py" />
+    <Compile Include="externalapps\forms.py" />
+    <Compile Include="externalapps\models.py" />
+    <Compile Include="externalapps\models_installation_profiles.py" />
+    <Compile Include="externalapps\utils.py" />
+    <Compile Include="externalapps\views.py" />
+    <Compile Include="externalapps\__init__.py" />
+    <Compile Include="federation\admin.py" />
+    <Compile Include="federation\forms.py" />
+    <Compile Include="federation\models.py" />
+    <Compile Include="federation\utils.py" />
+    <Compile Include="federation\views.py" />
+    <Compile Include="federation\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="security\admin.py" />
+    <Compile Include="security\forms.py" />
+    <Compile Include="security\models.py" />
+    <Compile Include="security\views.py" />
+    <Compile Include="security\__init__.py" />
+    <Compile Include="via\admin.py" />
+    <Compile Include="via\forms.py" />
+    <Compile Include="via\models.py" />
+    <Compile Include="via\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".settings" />
+    <Folder Include="authccenter\" />
+    <Folder Include="authccenter\backends\" />
+    <Folder Include="authccenter\management\" />
+    <Folder Include="authccenter\management\commands\" />
+    <Folder Include="authccenter\models\" />
+    <Folder Include="authccenter\templates\" />
+    <Folder Include="authccenter\templates\authccenter\" />
+    <Folder Include="authccenter\tests\" />
+    <Folder Include="bats" />
+    <Folder Include="bats\Development" />
+    <Folder Include="bats\Environment" />
+    <Folder Include="configcenter" />
+    <Folder Include="dataloading" />
+    <Folder Include="dbmconfigapp" />
+    <Folder Include="dbmconfigapp\admin" />
+    <Folder Include="dbmconfigapp\form" />
+    <Folder Include="dbmconfigapp\management" />
+    <Folder Include="dbmconfigapp\management\commands" />
+    <Folder Include="dbmconfigapp\models" />
+    <Folder Include="dbmconfigapp\templatetags" />
+    <Folder Include="dbmconfigapp\utils" />
+    <Folder Include="externalapps" />
+    <Folder Include="federation" />
+    <Folder Include="resources\" />
+    <Folder Include="resources\html" />
+    <Folder Include="resources\sql" />
+    <Folder Include="security" />
+    <Folder Include="static\" />
+    <Folder Include="static\admin\" />
+    <Folder Include="static\admin\css" />
+    <Folder Include="static\admin\css\dbmconfigapp" />
+    <Folder Include="static\admin\css\externalapps" />
+    <Folder Include="static\admin\js" />
+    <Folder Include="static\admin\js\dbmconfigapp" />
+    <Folder Include="static\admin\js\externalapps" />
+    <Folder Include="static\admin\js\federation" />
+    <Folder Include="static\admin\js\Security" />
+    <Folder Include="static\admin\js\via" />
+    <Folder Include="static\img" />
+    <Folder Include="static\jquery" />
+    <Folder Include="static\jquery\images" />
+    <Folder Include="static\jquery\js" />
+    <Folder Include="static\jquery\jsTree" />
+    <Folder Include="static\jquery\jsTree\themes\" />
+    <Folder Include="static\jquery\jsTree\themes\apple" />
+    <Folder Include="static\jquery\jsTree\themes\classic" />
+    <Folder Include="static\jquery\jsTree\themes\default" />
+    <Folder Include="static\jquery\jsTree\themes\default-rtl" />
+    <Folder Include="static\jquery\jsTree\_lib" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\admin" />
+    <Folder Include="templates\admin\auth" />
+    <Folder Include="templates\admin\auth\user" />
+    <Folder Include="templates\admin\dataloading" />
+    <Folder Include="templates\admin\dbmconfigapp" />
+    <Folder Include="templates\admin\edit_inline" />
+    <Folder Include="templates\admin\externalapps" />
+    <Folder Include="templates\admin\federation" />
+    <Folder Include="templates\admin\includes" />
+    <Folder Include="templates\admin\security" />
+    <Folder Include="templates\admin\via" />
+    <Folder Include="via" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|Python39_6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62637/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>True</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

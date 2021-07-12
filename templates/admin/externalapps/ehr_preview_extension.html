@@ -1,0 +1,40 @@
+{% extends "admin/externalapps/change_form.html" %}
+
+{% block jquery %}{{ block.super }}
+
+	// add "Preview" button
+	$('div.form-row.field-position_app_corner').append('<input id="preview_button" class="default" type="button" value="Preview"/>');
+	//$('#preview_button').click(togglePreview);
+	$('#preview_button').click(startPreview);
+	
+	
+{% endblock %}
+
+
+{% block after_field_sets %}
+
+<span id="preview_wrapper">
+	<div id="preview_ehr" class="draggable" >
+		<a id="preview_close" class="inline-deletelink" title="Close" href="#"> </a>
+		
+		<p>This window simulates your EHR application.</p>
+		<p>Move this window and the EHR Agent simulator will move with it.</p>
+		<p>Move the EHR Agent around to change its position in relation to this window.</p>
+		<p><input id="preview_snap" type="checkbox" title="Snap and to EHR"/> <label for="preview_snap">Snap: helps to align the EHR Agent exactly with the EHR's outer boundaries.</label></p>
+		
+	</div>
+	<div id="preview_agent" class="draggable">
+		<div id="preview_fields_box">
+			<div id="preview_fields" class="form-row aligned">
+			</div>
+			<div id="preview_buttons" class="submit-row">
+				<input id="preview_apply" class="default" type="button" value="Apply"/>
+				<input id="preview_cancel" class="default" type="button" value="Cancel"/>
+				<input id="preview_ok" class="default" type="button" value="OK"/>
+			</div>
+		</div>
+	</div>
+</span>
+
+
+{% endblock %}

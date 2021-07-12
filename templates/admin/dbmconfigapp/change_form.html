@@ -1,0 +1,164 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static admin_modify %}
+{% load admin_urls %}
+
+{% block extrahead %}{{ block.super }}
+<script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+<script type="text/javascript" src="/static/admin/js/sum_row.js"></script>
+<script type="text/javascript" src="/static/admin/js/field_modification.js"></script>
+<script type="text/javascript" src="/static/admin/js/is_default_list_selection.js"></script>
+{{ media }}
+
+<script type="text/javascript" class="source below">
+
+    $(function(){
+    	{% if not is_popup %}
+   
+        add_sum_row('dataelement', 'enable', 'name', ['page_width', 'report_width']);
+        add_sum_row('griddataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('documentdataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('findingdataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('locationhistorydataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('providerrelationshipdataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('diagnosesdataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('medicationsdataelement', 'enable', 'name', ['page_width','report_width']);
+        add_sum_row('labsdataelement', 'enable', 'name', ['page_width','report_width']);
+        add_sum_row('allergiesdataelement', 'enable', 'name', ['page_width','report_width']);
+        add_sum_row('problemsdataelement', 'enable', 'name', ['page_width','report_width']);
+        add_sum_row('diagnosisdataelement', 'enable', 'name', ['page_width','report_width']);
+        add_sum_row('patientsearchdataelement', 'enable', 'name', ['page_width']);
+        add_sum_row('patientsearchhistorydataelement', 'enable', 'name', ['page_width']);
+        if ('{{original.get_tree_id}}' != 'pl_patient_display' && '{{original.get_tree_id}}' != 'pv_patient_display') {
+            add_sum_row('insurancedataelement', 'enable', 'name', ['page_width', 'report_width']);
+        }
+        
+
+        if ('{{original.get_tree_id}}' == 'cv_vitals') {
+            set_vitals_grid_layout();
+        }
+        if ('{{original.get_tree_id}}' == 'cv_lab_results') {
+            fields_readonly_by_name('dataelement', 'report_width', ['Checkbox', 'Graph']);
+            // hide last column (_info)
+            $("th:last-child,td:last-child").hide();
+        }
+        if ('{{original.get_tree_id}}' == 'ehragent_clinical_domains') {
+            enable_field_by_lookup_value('ehragentclinicaldomainsproperties', 'display_name', 'enable_semantic_delta', ['All Clinical Domains'], true);
+        }
+        
+        {% endif %}
+
+    });
+    
+  
+</script>
+
+{% endblock %}
+
+{% block jquery %}{{ block.super }}
+	
+	tree_selection_id = '{{ original.get_tree_id }}';
+	
+	// in dbm_common.py
+	if (typeof ActivateChangedEvent == 'function') { 
+    	ActivateChangedEvent();
+   	}
+   
+    {% if errors %}
+		changesMade = true; 
+	{% endif %}
+    
+{% endblock %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
+
+{% block coltype %}{% if ordered_objects %}colSM{% else %}{% if not is_popup %}colSM{% endif %}{% endif %}{% endblock %}
+
+{% block bodyclass %}{{ opts.app_label }}-{{ opts.object_name.lower }} change-form{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ app_label|capfirst|escape }}</a>
+&rsaquo; {% if has_change_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
+&rsaquo; {% if add %}{% trans 'Add' %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content_title %}
+<h1 id="page_header">{{ original.page_title }}</h1>
+{% if original.get_affected_components.strip %}
+<h1 id="affected_services">Applies to: {{ original.get_affected_components }}</h1>
+{% endif %}
+<div style="padding-right: 100px;">{{ original.page_help_text|safe }}</div>
+{% endblock %}
+
+{% block content %}<div id="content-main">
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    {% block object-tools-items %}
+    <li>
+        <a href="{% url opts|admin_urlname:'history' original.pk|admin_urlquote %}" class="historylink">{% trans "History" %}</a>
+    </li>
+    {% if has_absolute_url %}
+        <li>
+            <a href="{% url 'admin:view_on_site' content_type_id original.pk %}" class="viewsitelink">{% trans "View on site" %}</a>
+        </li>
+    {% endif%}
+    {% endblock %}
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.module_name }}_form">{% csrf_token %}{% block form_top %}{% endblock %}
+<div>
+{% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
+{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% if errors %}
+    <p class="errornote">
+    {% blocktrans count counter=errors|length %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+    </p>
+    {{ adminform.form.non_field_errors }}
+{% endif %}
+
+{# talb - hide the block (only if not popup). not removed to keep fields for post. #}
+<div {% if not is_popup %}style="display:none;"{% endif %}>
+{% block field_sets %}
+{% for fieldset in adminform %}
+	{% include "admin/includes/fieldset.html" %}
+{% endfor %}
+{% endblock %}
+</div>
+
+{% block after_field_sets %}{% endblock %}
+
+{% block inline_field_sets %}
+{% for inline_admin_formset in inline_admin_formsets %}
+	{% if forloop.counter < 4 %}
+    {% autoescape off %}
+	    <div>{% cycle original.help_text_1 original.help_text_2 original.help_text_3 %}</div>
+    {% endautoescape %}
+    {% endif %}
+    {% include inline_admin_formset.opts.template %}
+{% endfor %}
+{% endblock %}
+
+{% block after_related_objects %}{% endblock %}
+
+{% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
+
+{% if adminform.first_field and add %}
+   <script type="text/javascript">document.getElementById("{{ adminform.first_field.id_for_label }}").focus();</script>
+{% endif %}
+
+{# JavaScript for prepopulated fields #}
+{% prepopulated_fields_js %}
+
+</div>
+</form></div>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+

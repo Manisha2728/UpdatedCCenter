@@ -1,0 +1,252 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set Carequality Integration Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/carequalityintegrationsettingspage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="carequalityintegrationsettingspage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="carequalityintegrationsettingsmodel_set-group">
+     <div class="inline-related" id="carequalityintegrationsettingsmodel_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Carequality Integration
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion XDS IHE Services
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-enable_carequality_integration">
+        <div>
+         <label class="vCheckboxLabel" for="id_carequalityintegrationsettingsmodel_set-0-enable_carequality_integration">
+          Enable Carequality Integration
+         </label>
+         <p class="help">
+          Determines whether to enable or disable Carequality Integration.
+          <br/>
+          For detailed implementation instructions, see the IHE Integration Implementation Guide.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-home_community_id">
+        <div>
+         <label for="id_carequalityintegrationsettingsmodel_set-0-home_community_id">
+          Home Community ID:
+         </label>
+         <p class="help">
+          Defines the dbMotion Home Community ID (OID) for outbound requests to Carequality.
+          <br/>
+          This value can be obtained from Allscripts Community Configuration Manager (CCM).
+          <br/>
+          The OID format should be: urn:oid:n.n.n.n.n.n. For example: urn:oid:2.16.840.1.113883.3.57.1.3.0.2.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-certificate_thumptrint">
+        <div>
+         <label for="id_carequalityintegrationsettingsmodel_set-0-certificate_thumptrint">
+          Certificate Thumprint:
+         </label>
+         <p class="help">
+          Defines the Certificate Thumbprint for HTTPS connections to Allscripts Brokering Responding Gateway.
+          <br/>
+          The Certificate must be downloaded from the Allscripts Community Configuration Manager (CCM) and installed on the Application server.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_discovery_endpoint">
+        <div>
+         <label for="id_carequalityintegrationsettingsmodel_set-0-patient_discovery_endpoint">
+          Patient Discovery Endpoint:
+         </label>
+         <p class="help">
+          URL to Allscripts Brokering Responding Gateway for IHE Transaction ITI-55 Cross Gateway Patient Discovery (XCPD).
+          <br/>
+          <i>
+           Default: https://brokeringrespondinggateway- /iti55/&lt;CQ Participant OID&gt;/outbound
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-find_documents_endpoint">
+        <div>
+         <label for="id_carequalityintegrationsettingsmodel_set-0-find_documents_endpoint">
+          Find Documents Endpoint:
+         </label>
+         <p class="help">
+          URL to Allscripts Brokering Responding Gateway for IHE Transaction ITI-38 Cross Gateway Query.
+          <br/>
+          <i>
+           Default: https://brokeringrespondinggateway- /iti38/&lt;CQ Participant OID&gt;/outbound
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-retrieve_document_endpoint">
+        <div>
+         <label for="id_carequalityintegrationsettingsmodel_set-0-retrieve_document_endpoint">
+          Retrieve Document Endpoint:
+         </label>
+         <p class="help">
+          URL to Allscripts Brokering Responding Gateway for IHE Transaction ITI-39 Cross Gateway Retrieve.
+          <br/>
+          <i>
+           Default: https://brokeringrespondinggateway- /iti39/&lt;CQ Participant OID&gt;/outbound
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="participantbaselinelistmodel_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Shared Participant List
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion XDS IHE Services
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Define a list of Carequality participants to query in an outbound flow.
+        <br/>
+        When users access a patient's Carequality documents in Patient View, all the Carequality participants listed are queried for documents,regardless of the user or patient in context, and regardless of the EHR used.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Name
+           <img alt="(Carequality participant name.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Carequality participant name." width="10"/>
+          </th>
+          <th class="required">
+           Identifier
+           <img alt="(Carequality participant OID.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Carequality participant OID." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="participantbaselinelistmodel_set-0">
+          <td class="original">
+          </td>
+          <td class="field-paticipant_name">
+          </td>
+          <td class="field-paticipant_identifier">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="participantbaselinelistmodel_set-1">
+          <td class="original">
+          </td>
+          <td class="field-paticipant_name">
+          </td>
+          <td class="field-paticipant_identifier">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="participantbaselinelistmodel_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-paticipant_name">
+          </td>
+          <td class="field-paticipant_identifier">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="participantlistbasedpaamodel_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Settings Per EHR
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion XDS IHE Services
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Define settings per EHR. Administrators can define Carequality participants to query that depend on the EHR used.
+        <br/>
+        <br/>
+        Use the Patient Assigning Authority for Display to differentiate between EHRs as configured in CCenter, in Agent Hub -&gt; EHR Integration -&gt; Properties Packages -&gt; Patient Contexts.
+       </div>
+      </fieldset>
+     </div>
+    </div>
+   </div>
+  </form>
+ </div>
+</div>

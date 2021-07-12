@@ -1,0 +1,15 @@
+{% extends "admin/dbmconfigapp/change_form.html" %}
+
+
+{% block after_field_sets %}
+	{{ block.super }}
+	{% if adminform.model_admin.Meta.show_partition_warning %}
+		<p class='alertnote'>Caution ! This process is irreversible! Make sure before saving that you have the authority to DELETE these messages.</p>
+		<p class='alertnote'>Caution ! Records that are DELETED will be removed from ArchMessage and ArchMessageState tables and therefore these messages will not appear in DAT and cannot be replayed in the Replay tool.</p>
+	{% endif %}
+	{% if adminform.model_admin.Meta.show_batch_loading_note %}
+		<p class='description'><b>Note: If the Duration Value is equal to 24 hours (for example, 1440 minutes), batch loading is performed continuously. In this case, Start Time is ignored.</b></p>
+	{% endif %}
+{% endblock %}
+
+

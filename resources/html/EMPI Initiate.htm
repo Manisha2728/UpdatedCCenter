@@ -1,0 +1,492 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Initiate General Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/via/initiatepage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="initiatepage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="initiateconnection_set-group">
+     <div class="inline-related" id="initiateconnection_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Initiate Connection Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           VIA
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        <br/>
+        <b>
+         Note!
+        </b>
+        These configurations will not be transferred in the export/import process.
+       </div>
+       <div class="form-row field-initiate_version">
+        <div>
+         <label class="required" for="id_initiateconnection_set-0-initiate_version">
+          Initiate version:
+         </label>
+         <select id="id_initiateconnection_set-0-initiate_version" name="initiateconnection_set-0-initiate_version">
+          <option value="PatientAdapter92">
+           9.5, 9.7
+          </option>
+          <option selected="selected" value="PatientAdapter100">
+           10.1, 11.4
+          </option>
+         </select>
+         <p class="help">
+          Defines the Initiate version
+          <br/>
+          <i>
+           Default: 10.1, 11.4
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-initiate_url">
+        <div>
+         <label class="required" for="id_initiateconnection_set-0-initiate_url">
+          Initiate url:
+         </label>
+         <p class="help">
+          Defines Initiate URL.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_credential_username">
+        <div>
+         <label class="required" for="id_initiateconnection_set-0-patient_credential_username">
+          VIA User Credentials: Username:
+         </label>
+         <p class="help">
+          VIA connections/operations with the MPI (for example, Patient Search, Match, Insert, Remove) require Username credentials, which must be provided by the MPI service to replace the default value.
+          <br/>
+          <i>
+           Default: system
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_credential_password">
+        <div>
+         <label class="required" for="id_initiateconnection_set-0-patient_credential_password">
+          VIA User Credentials: Password:
+         </label>
+         <p class="help">
+          VIA connections/operations with the MPI (for example, Patient Search, Match, Insert, Remove) require User credentials with a Password, which must be provided by the MPI service to replace the default value.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="initiate_set-group">
+     <div class="inline-related" id="initiate_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Initiate General Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            VIA
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_member_type">
+        <div>
+         <label class="required" for="id_initiate_set-0-patient_member_type">
+          Patient member type:
+         </label>
+         <p class="help">
+          The Initiate input parameter to define the member type in the MPI instance.
+          <br/>
+          A Member is a set of demographic information that represents one individual (for example, a Person).
+          <br/>
+          The value configured here (for example, Person) must be aligned with the Member value in the project's MPI.
+          <br/>
+          <i>
+           Default: PERSON
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_entity_type">
+        <div>
+         <label class="required" for="id_initiate_set-0-patient_entity_type">
+          Patient entity type:
+         </label>
+         <p class="help">
+          Defines the entity type in the MPI instance.
+          <br/>
+          An Entity is an attribute used for managing identities. It can have a value representing the relationship between two or more records or two members in a healthcare organization.
+          <br/>
+          For example, it can represent multiple patient records sharing one Enterprise ID.
+          <br/>
+          <i>
+           Default: PATIENT
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-set_isrealleading">
+        <div>
+         <label class="vCheckboxLabel" for="id_initiate_set-0-set_isrealleading">
+          Is Real Leading
+         </label>
+         <p class="help">
+          Determines whether the Demographics search returns the Real (true) or Virtual index (false) as the leading patient index:
+          <br/>
+          - Virtual Index: An index that is generated from a source system (root and extension) in an additional identifier field (memIdent) of the patient's record in Initiate. A record can hold multiple identifier fields.
+          <br/>
+          - Real Index: An index that is generated from a full Initiate record.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-filter_mode">
+        <div>
+         <label class="vCheckboxLabel" for="id_initiate_set-0-filter_mode">
+          Filter Mode
+         </label>
+         <p class="help">
+          Determines whether filter mode is enabled for the Search/Match operation.
+          <br/>
+          If enabled only known sources are searched (for better performance).
+          <br>
+           *In some cases of Initiate federation filter mode needs to be disabled in order to avoid searching for unknown sources.
+           <br/>
+           <i>
+            Default: True
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_results_sort_order">
+        <div>
+         <label class="required" for="id_initiate_set-0-patient_results_sort_order">
+          Patient results sort order:
+         </label>
+         <p class="help">
+          Defines the sort order of the patient  indexes that are returned from the MPI to VIA (and to the clinical applications).
+          <br/>
+          for example, "-getRecMtime" ("-" indicates descending order, and "getRecMtime" refers to the patient index modification time).
+          <br/>
+          <i>
+           Default: -getRecMtime
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Initiate Filter Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            VIA
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        For each patient index status in Initiate choose one of the following filters:
+        <br/>
+        <b>
+         - Exclude:
+        </b>
+        This patient index status will be excluded from the request of VIA to Initiate.
+        <br/>
+        <b>
+         - VIA Input:
+        </b>
+        This patient index status will be included in the request of VIA to Initiate but will not be forwarded to VIA consumers (for example, Clinical Viewer).
+        <br/>
+        <b>
+         - VIA Input and Output:
+        </b>
+        This patient index status will be included in the request of VIA to Initiate and will also be forwarded to VIA consumers.
+       </div>
+       <div class="form-row field-filter_active">
+        <div>
+         <label class="required" for="id_initiate_set-0-filter_active">
+          Active Filter:
+         </label>
+         <select id="id_initiate_set-0-filter_active" name="initiate_set-0-filter_active">
+          <option value="NONE">
+           Exclude
+          </option>
+          <option value="IN">
+           VIA Input
+          </option>
+          <option selected="selected" value="INOUT">
+           VIA Input and Output
+          </option>
+         </select>
+         <p class="help">
+          Defines the Active filter.
+          <br/>
+          Active status refers to the most current patient index in Initiate.
+          <br/>
+          <i>
+           Default: VIA Input and Output
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-filter_overlay">
+        <div>
+         <label class="required" for="id_initiate_set-0-filter_overlay">
+          Overlay Filter:
+         </label>
+         <select id="id_initiate_set-0-filter_overlay" name="initiate_set-0-filter_overlay">
+          <option selected="selected" value="NONE">
+           Exclude
+          </option>
+          <option value="IN">
+           VIA Input
+          </option>
+          <option value="INOUT">
+           VIA Input and Output
+          </option>
+         </select>
+         <p class="help">
+          Defines the Overlay filter.
+          <br/>
+          Overlay status refers to a patient index in Initiate that was overridden by another patient index.
+          <br/>
+          <i>
+           Default: Exclude
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-filter_merged">
+        <div>
+         <label class="required" for="id_initiate_set-0-filter_merged">
+          Merged Filter:
+         </label>
+         <select id="id_initiate_set-0-filter_merged" name="initiate_set-0-filter_merged">
+          <option value="NONE">
+           Exclude
+          </option>
+          <option selected="selected" value="IN">
+           VIA Input
+          </option>
+          <option value="INOUT">
+           VIA Input and Output
+          </option>
+         </select>
+         <p class="help">
+          Defines the Merged filter.
+          <br/>
+          Merged status refers to a patient index that was merged to another patient index in Initiate.
+          <br/>
+          <i>
+           Default: VIA Input
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-filter_deleted">
+        <div>
+         <label class="required" for="id_initiate_set-0-filter_deleted">
+          Deleted Filter:
+         </label>
+         <select id="id_initiate_set-0-filter_deleted" name="initiate_set-0-filter_deleted">
+          <option selected="selected" value="NONE">
+           Exclude
+          </option>
+          <option value="IN">
+           VIA Input
+          </option>
+          <option value="INOUT">
+           VIA Input and Output
+          </option>
+         </select>
+         <p class="help">
+          Defines the Deleted state filter.
+          <br/>
+          Deleted status refers to a patient index that is logically deleted in Initiate.
+          <br/>
+          <i>
+           Default: Exclude
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-filter_MinimumScoreThreshold">
+        <div>
+         <label class="required" for="id_initiate_set-0-filter_MinimumScoreThreshold">
+          Minimum Score Threshold:
+         </label>
+         <p class="help">
+          Defines the minimum score assigned by Initiate to the Patient Search results below which the search results will be filtered out and not returned. The Score is calculated internally by Initiate on each index returned in Patient Search.  It represents the quality (reliability) of the response. The purpose of the configuration is to filter out indexes that have a low quality score.
+          <br/>
+          <i>
+           Default: 5
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        HiddenSection
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            VIA
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-empi_url_address_for_patient_identity_feed_v3">
+        <div>
+         <label for="id_initiate_set-0-empi_url_address_for_patient_identity_feed_v3">
+          EMPI URL for Patient Identity Feed V3:
+         </label>
+         <p class="help">
+          Defines the EMPI URL Address for Patient Identity Feed V3.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="initiatevpo_set-group">
+     <h2>
+      Federated Patient Hub Settings
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="initiatevpo_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-enable_federated_search">
+        <div>
+         <label class="vCheckboxLabel" for="id_initiatevpo_set-0-enable_federated_search">
+          Enable federated search
+         </label>
+         <p class="help">
+          Determines if the Federated Search functionality is enabled (through PHRED) in a federated Initiate environment.
+          <br/>
+          Note that the Minimum Score Threshold value must be configured with a high score as it is used both for filtering out indexes and also for linking all returned indexes to a single cluster.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-enable_federated_match">
+        <div>
+         <label class="vCheckboxLabel" for="id_initiatevpo_set-0-enable_federated_match">
+          Enable federated match
+         </label>
+         <p class="help">
+          Determines if the Federated Match functionality is enabled (through PHRED) for matching Patient Records in a federated Initiate environment.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

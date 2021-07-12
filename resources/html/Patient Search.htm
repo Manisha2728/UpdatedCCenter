@@ -1,0 +1,1284 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Patient Search Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/cvpatientsearch/14/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="cvpatientsearch_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="collaboratepatientsearchproperties_set-group">
+     <div class="inline-related" id="collaboratepatientsearchproperties_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Search by MRN
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             VIA
+             <li>
+              IIS(CVA)
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        This configuration defines how to display the MRN System Selector dropdown list used in the Patient Search feature. The user can search for the patient either by entering demographic data or by entering the MRN. If the MRN is entered, a dropdown list appears which enables the user to select and filter for the relevant MRN System. The display of the MRN System Selector dropdown list can be configured with these configuration points.
+        <br>
+         <br>
+          This configuration applies to:
+          <ul>
+           <li>
+            Collaborate Patient Search
+           </li>
+           <li>
+            Clinical Viewer Patient Search
+           </li>
+          </ul>
+         </br>
+        </br>
+       </div>
+       <div class="form-row field-MrnSystemSelectorMaxDropItems">
+        <div>
+         <label class="required" for="id_collaboratepatientsearchproperties_set-0-MrnSystemSelectorMaxDropItems">
+          Max items displayed in the standard MRN System Selector dropdown list:
+         </label>
+         <p class="help">
+          Defines the maximum number of items that can be displayed in the standard MRN System Selector dropdown list. If the maximum value is exceeded, the enhanced MRN System Selector dropdown list is provided to display all the items on the list.
+          <br/>
+          The possible values are 2-100
+          <br/>
+          <em>
+           Default: 6
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-MrnSystemSelectorMaxColumnCount">
+        <div>
+         <label class="required" for="id_collaboratepatientsearchproperties_set-0-MrnSystemSelectorMaxColumnCount">
+          Max columns displayed in the MRN System Selector dropdown list:
+         </label>
+         <p class="help">
+          Defines the maximum number of columns that can be displayed in the MRN System Selector dropdown list.
+          <br/>
+          The possible values are 1-5
+          <br/>
+          <em>
+           Default: 2
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-MrnSystemSelectorIsSortingEnabled">
+        <div>
+         <label class="vCheckboxLabel" for="id_collaboratepatientsearchproperties_set-0-MrnSystemSelectorIsSortingEnabled">
+          MRN System Selector is sorted in ascending order
+         </label>
+         <p class="help">
+          Supported by Clinical Viewer only.
+          <br/>
+          Determines whether the MRN System Selector dropdown list is sorted.
+          <br/>
+          If true, the list is sorted in ascending order.
+          <br/>
+          If false, the list is not sorted and the displayed order is taken from the configuration of the systems.
+          <br/>
+          <em>
+           Default: True
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-PatientSearch_IsDirectEnterPatientFile">
+        <div>
+         <label class="vCheckboxLabel" for="id_collaboratepatientsearchproperties_set-0-PatientSearch_IsDirectEnterPatientFile">
+          Enter the patient's file automatically when the search results via MRN return a cluster
+         </label>
+         <p class="help">
+          Determines whether when the search results via MRN return a cluster, the system automatically enters the patient's file.
+          <br/>
+          If False, the system displays the cluster and the user can then choose to enter the patient's file.
+          <br/>
+          In External Mode access, this value is always True
+          <br/>
+          Note : Affects only Clinical Viewer and Patient View
+          <br/>
+          <em>
+           Default: True
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-PatientSearch_IsDirectEnterPatientFile_Demographics">
+        <div>
+         <label class="vCheckboxLabel" for="id_collaboratepatientsearchproperties_set-0-PatientSearch_IsDirectEnterPatientFile_Demographics">
+          Enter the patient's file automatically when the search results via Demographics return a cluster
+         </label>
+         <p class="help">
+          Determines whether when the search results via demographics return a cluster, the system automatically enters the patient's file.
+          <br/>
+          If False, the system displays the cluster and the user can then choose to enter the patient's file.
+          <br/>
+          In External Mode access, this value is always True
+          <br/>
+          Note : Affects only Clinical Viewer
+          <br/>
+          <em>
+           Default: True
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-PatientSearch_IsDirectEnterPatientFile_Demographics_MinScore">
+        <div>
+         <label class="required" for="id_collaboratepatientsearchproperties_set-0-PatientSearch_IsDirectEnterPatientFile_Demographics_MinScore">
+          Minimum score:
+         </label>
+         <p class="help">
+          Determines the minimum score, to enter the patient file automatically following a demographic search, when a single cluster is returned. If the score is lower, the system displays the cluster, and the user can then choose to enter the patient's file.
+          <br/>
+          Note: Affects only Clinical Viewer, including External Mode access.
+          <br/>
+          <em>
+           Default: 140
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-LeadingPatientRecordPolicy">
+        <div>
+         <label for="id_collaboratepatientsearchproperties_set-0-LeadingPatientRecordPolicy">
+          Leading patient record policy:
+         </label>
+         <p class="help">
+          Supported by Clinical Viewer only.
+          <br/>
+          Determines the Leading Patient Record (including which MRN is displayed in the Patient Details header and in the Demographics clinical view) in response to a Patient Search by MRN.
+          <br/>
+          This includes the Leading Patient Record that opens in the following cases:
+          <br/>
+          - When launching the Clinical Viewer from an EHR.
+          <br/>
+          - When launching the Clinical Viewer from EHR Agent or Collaborate.
+          <br/>
+          - When searching for the patient by MRN.
+          <br/>
+          <b>
+           By default,
+          </b>
+          the leading record chosen will be the record with the same MRN that the user entered in the Patient Search.
+          <br/>
+          The following configurable options enable the customer to determine cases in which the Leading Patient Record will be the first index returned by the MPI.
+          <br/>
+          In these cases, the MPI might determine a Leading Patient Record with a different MRN than the MRN used in the Patient Search.
+          <br/>
+          The following configurable options are available. In all of the following cases, the CV will choose the first record returned by the MPI regardless of the MRN used in the Patient Search or in the launching application.
+          <br/>
+          <b>
+           EMR1|EMR2 =
+          </b>
+          In the case of Clinical Viewer launch from
+          <b>
+           only these defined client applications.
+          </b>
+          If the CV is launched from any undefined application, the behavior is the default behavior.
+          <br/>
+          <b>
+           All =
+          </b>
+          In the case of Clinical Viewer launch from any (all) existing client applications.
+          <br/>
+          <b>
+           Empty =
+          </b>
+          In the case of an MRN search when the clientApplicationId was not sent by the EHR or launching application (as configured in the Launch API). This includes also a case where the CV is launched by an undefined application (for example if a user opened a browser and accessed the CV login page).
+          <br/>
+          <em>
+           Default: No default value
+          </em>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Search by Demographics
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             VIA
+             <li>
+              IIS(CVA)
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-MinSQQ">
+        <div>
+         <label class="required" for="id_collaboratepatientsearchproperties_set-0-MinSQQ">
+          Minimum SQQ score:
+         </label>
+         <p class="help">
+          Defines the minimum MPI SQQ score (quality of a search query) from which VIA will return records.
+          <br/>
+          Before submitting the patient search query, it must undergo a quality check to minimize the possibility of a large number of search results.
+          <br/>
+          The SQQ score is determined by calculating the sum of weights of the various search attributes that participate in the query.
+          <br/>
+          Only if the SQQ score is equal to or greater than the MinSQQ value, the search query passes the quality check.
+          <br/>
+          <em>
+           Default: 50
+          </em>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-ContinueSearchAfterSQQCheckFailure">
+        <div>
+         <label class="vCheckboxLabel" for="id_collaboratepatientsearchproperties_set-0-ContinueSearchAfterSQQCheckFailure">
+          Continue search although SQQ score is too low
+         </label>
+         <p class="help">
+          Determines whether if the configured MinSQQ score is too low, the user is given an option to continue the search.
+          <br/>
+          If True, a message is displayed enabling the user to continue the search or cancel it.
+          <br/>
+          If false, a message informs the user that the score is too low and the search is discontinued.
+          <br/>
+          <em>
+           Default: False
+          </em>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+     You can configure the way that the Clinical Viewer grid columns are displayed for each Clinical Viewer domain.
+     <br>
+      In case the SUM exceeds 100, a scrollbar will be added.
+      <br>
+       Note: Affects only Clinical Viewer
+      </br>
+     </br>
+    </div>
+    <div class="inline-group" id="patientsearchdataelement_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient Search Results Grid Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Enable
+           <img alt="(Determines whether or not the column is displayed.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether or not the column is displayed." width="10"/>
+          </th>
+          <th>
+           Elements (Vocabulary Domain Code)
+          </th>
+          <th class="required">
+           Column Width
+           <img alt="(Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher." width="10"/>
+          </th>
+          <th>
+           Default Column Width
+          </th>
+          <th class="required">
+           Order
+           <img alt="(Determines the order of the column in the grid)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines the order of the column in the grid" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-0">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Leading
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-1">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Checkbox
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-2">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Name
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            16.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-3">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            SSN
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            9.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-4">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Date of Birth
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            9.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-5">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Gender
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            5.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-6">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Address
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            26.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-7">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Death Indicator
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            10.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-8">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Source
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            13.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-9">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            PHIN
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchdataelement_set-10">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Phin Eff. Date
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchdataelement_set-11">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Phin Exp. Date
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="patientsearchdataelement_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+     You can configure the way that the Clinical Viewer grid columns are displayed for each Clinical Viewer domain.
+     <br>
+      In case the SUM exceeds 100, a scrollbar will be added.
+      <br>
+       Note: Affects only Clinical Viewer
+      </br>
+     </br>
+    </div>
+    <div class="inline-group" id="patientsearchhistorydataelement_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient Search Results - Patient File History Grid Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Enable
+           <img alt="(Determines whether or not the column is displayed.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether or not the column is displayed." width="10"/>
+          </th>
+          <th>
+           Elements (Vocabulary Domain Code)
+          </th>
+          <th class="required">
+           Column Width
+           <img alt="(Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the column width, as a percentage of the screen's width. The sum of weight of all visible columns should be equal to 100% or higher." width="10"/>
+          </th>
+          <th>
+           Default Column Width
+          </th>
+          <th class="required">
+           Order
+           <img alt="(Determines the order of the column in the grid)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines the order of the column in the grid" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="patientsearchhistorydataelement_set-0">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Checkbox
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            6.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchhistorydataelement_set-1">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Last Viewed
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            16.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchhistorydataelement_set-2">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Patient Details
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            51.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchhistorydataelement_set-3">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+            Emergency Mode
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            27.0
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="patientsearchhistorydataelement_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-enable">
+          </td>
+          <td class="field-name">
+           <p>
+           </p>
+          </td>
+          <td class="field-page_width">
+          </td>
+          <td class="field-default_width">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientsearchdisplayoptions_set-group">
+     <div class="inline-related" id="patientsearchdisplayoptions_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-display_warning">
+        <div>
+         <label class="vCheckboxLabel" for="id_patientsearchdisplayoptions_set-0-display_warning">
+          Display a warning message when the selected leading record has no data
+         </label>
+         <p class="help">
+          Note: Only for Clinical Viewer
+          <br>
+           Determines whether the system displays a warning message when the selected leading record has no data. In this case the system displays the latest record (from those selected by the user) for the same patient that exists in the CDR.
+           <br>
+            If True, a message informs the user that the leading record has been changed.
+            <br>
+             If False, no message is displayed.
+             <br>
+              <i>
+               Default: True
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-cluster_selection_behavior">
+        <div>
+         <label for="id_patientsearchdisplayoptions_set-0-cluster_selection_behavior_0">
+          Cluster selection behavior:
+         </label>
+         <ul class="radiolist" id="id_patientsearchdisplayoptions_set-0-cluster_selection_behavior">
+          <li>
+           <label for="id_patientsearchdisplayoptions_set-0-cluster_selection_behavior_0">
+            Previous selected linkage set is cleared
+           </label>
+          </li>
+          <li>
+           <label for="id_patientsearchdisplayoptions_set-0-cluster_selection_behavior_1">
+            Previous selected linkage set is not cleared
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Supported by Clinical Viewer only.
+          <br/>
+          This configuration enables or disables the option to clear the previously selected linkage set.
+          <br>
+           <i>
+            Default: Previous selected linkage set is not cleared
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpoppol_set-group">
+     <div class="inline-related" id="vpoppol_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Search filters
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion PPOL Service
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_privacy_remove_excluded_clusters">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpoppol_set-0-patient_privacy_remove_excluded_clusters">
+          Filter patient cluster when patient is partially confidential
+         </label>
+         <p class="help">
+          Determines whether the system does NOT return a patient cluster which includes at least one confidential patient index that the user does not have permission to see.
+          <br/>
+          If True, clusters with at least one confidential index that the user does not have permission to see will NOT be returned.
+          <br/>
+          If False, the cluster will be returned; however, the indexes that the user does not have permission to see will be disabled.
+          <br/>
+          This configuration is supported by CV and Agent Hub.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-facility_filter_enable">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpo_set-0-facility_filter_enable">
+          Facility filter enable
+         </label>
+         <p class="help">
+          Determines whether the User Facility filter is enabled.
+          <br/>
+          If false, the user will see the patient record regardless of the facility related to the patient's acts.
+          <br/>
+          If true, the user will only be authorized to enter the patient record if at least one patient index includes the user's facility or a child of the user's facility. If no patient index includes the user facility, the user will not be authorized to enter patient file (the system's behavior will be identical to the behavior that occurs with patient confidentiality).
+          <br/>
+          <i>
+           Default: false
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-user_facility_root_oid">
+        <div>
+         <label for="id_vpo_set-0-user_facility_root_oid">
+          User Facility Root OID:
+         </label>
+         <p class="help">
+          Defines the root Identifier of the Facility for which the Facility filter is enabled. This identifier enables the system to identify all the relevant parent and child facilities. This OID must be identical to the root OID that was used to load the customer's organizational structure to dbMotion CDR.
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="emergencydeclarationtext_set-group">
+     <div class="inline-related" id="emergencydeclarationtext_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Emergency Declaration Text
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-text">
+        <div>
+         <label for="id_emergencydeclarationtext_set-0-text">
+          Text:
+         </label>
+         <textarea cols="100" id="id_emergencydeclarationtext_set-0-text" name="emergencydeclarationtext_set-0-text" rows="4">
+          You may override organizational policies restrictions regarding the patient data you are allowed to see. To view the data in Emergency mode, select a Reason for Declaration and Click “Break Glass”. To continue without viewing the data, click Cancel. Note that any Break the Glass action is audited.
+         </textarea>
+         <p class="help">
+          Define the Emergency Declaration Text which will be displayed in the Declare Emergency windows.
+          <br/>
+          <i>
+           Default: Organizational policy prevents some patient information from being displayed. Restrictions about patient data can be overridden. To view the data in emergency mode, select a reason to remove the restriction and click Break Glass. To continue without viewing the restricted data, click Cancel. All override actions are audited.
+           <br/>
+           <i>
+            Note: there is a permanent text always displayed on Emergency Declaration dialog: "To view the patient record in Emergency mode, select a Reason for Declaration and Click Break Glass. To Exit without viewing the patient record, click Cancel".
+           </i>
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="emergencydeclarationreasons_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Emergency Declaration Reasons
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Defines the options displayed in the Reasons for Override dropdown menu. These options can be edited or deleted and new messages can be added. These options can be different per culture. This configuration affects Clinical Viewer, Collaborate and Agent Hub.
+        <br/>
+        <br/>
+        <br/>
+        <i>
+         Default: list for culture en-US: "Emergency situation", "Patient gave his consent".
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Emergency Declaration Reason
+           <img alt="(The option presented in the dropdown menu.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The option presented in the dropdown menu." width="10"/>
+          </th>
+          <th class="required">
+           Culture
+           <img alt="(The culture the option belongs to. The user will see only the list related to his culture.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The culture the option belongs to. The user will see only the list related to his culture." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="emergencydeclarationreasons_set-0">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="emergencydeclarationreasons_set-1">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="emergencydeclarationreasons_set-2">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="emergencydeclarationreasons_set-3">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="emergencydeclarationreasons_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientsearchtooltip_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient Search Tooltips
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Patient Search service provides Search Tips to facilitate the search process. This configuration enables you to define Patient Search tooltip messages that would be shown to the user when performing a patient search.
+        <br/>
+        <br/>
+        <i>
+         Default: for culture en-US, 3 tips: "First Name + Last Name + DOB", "SSN + Last Name + Zip Code", "Last Name + Phone + Zip Code".
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Search Tip
+           <img alt="(The message text presented to the user.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The message text presented to the user." width="10"/>
+          </th>
+          <th class="required">
+           Culture
+           <img alt="(The culture for which the tip will be presented.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The culture for which the tip will be presented." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="patientsearchtooltip_set-0">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientsearchtooltip_set-1">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientsearchtooltip_set-2">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="patientsearchtooltip_set-3">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="patientsearchtooltip_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientsearchdefaultsearch_set-group">
+     <div class="inline-related" id="patientsearchdefaultsearch_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Default Patient Search
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        This configuration allows to select the default type of the patient search method.
+       </div>
+       <div class="form-row field-default_search">
+        <div>
+         <label for="id_patientsearchdefaultsearch_set-0-default_search_0">
+          Default Search method:
+         </label>
+         <ul class="radiolist" id="id_patientsearchdefaultsearch_set-0-default_search">
+          <li>
+           <label for="id_patientsearchdefaultsearch_set-0-default_search_0">
+            Search by MRN
+           </label>
+          </li>
+          <li>
+           <label for="id_patientsearchdefaultsearch_set-0-default_search_1">
+            Search by Demographics
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Supported by Clinical Viewer only.
+          <br/>
+          Defines the default type of the patient search method.
+          <br>
+           <i>
+            Default: Search by Demographics
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

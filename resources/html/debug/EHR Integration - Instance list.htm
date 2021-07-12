@@ -1,0 +1,712 @@
+<div class="colSM" id="content">
+ <h1>
+  Create or Edit EHR Instances
+ </h1>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="addlink" href="/admin/externalapps/instance/add/">
+     Add EHR Instance
+    </a>
+   </li>
+  </ul>
+  <div class="page-help">
+   These configurations are used to do one of the following:
+   <ul>
+    <li>
+     Create a new instance of an EHR. Each EHR (for example, Pro) might have various instances installed in different hospital departments or clinics. The properties might be different for each EHR instance and must be configured separately for each.
+    </li>
+    <li>
+     Edit properties of an existing EHR instance.
+    </li>
+    <li>
+     Delete an EHR instance.
+    </li>
+   </ul>
+  </div>
+  <div class="module filtered" id="changelist">
+   <div id="changelist-filter">
+    <h2>
+     Filter
+    </h2>
+    <h3>
+     By EHR
+    </h3>
+    <ul>
+     <li class="selected">
+      <a href="?">
+       All
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=1">
+       TestWpfEhr
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=2">
+       TestWpfEhr-PA1
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=3">
+       TestWpfEhr-PA2
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=4">
+       CCOWParticipantTest
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=6">
+       141GAPRO
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=7">
+       TWDBMDEV50
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=11">
+       SCMDBMDEV50
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=12">
+       CSITWAUTO
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=13">
+       CSIPROAUTO
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=14">
+       CSIFUSESCM
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=15">
+       DBMTW2016
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=16">
+       DBMPRO2016
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=17">
+       DBMSCM2016
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=18">
+       CCOWTestContextManager
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=19">
+       MedHostSimulator
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=20">
+       TestUIAutomationEHR
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=21">
+       WebCCOWParticipant
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=22">
+       CCOWParticipantSentillion
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=1003">
+       SrtFlmgoPro1
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=1007">
+       SrtDfatScm2
+      </a>
+     </li>
+     <li>
+      <a href="?ehr__id__exact=2007">
+       SrtFlmgoScm1
+      </a>
+     </li>
+    </ul>
+    <h3>
+     By Properties Package
+    </h3>
+    <ul>
+     <li class="selected">
+      <a href="?">
+       All
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=1">
+       TestWpfEHR
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=2">
+       TestWpfEhr-PA1
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=3">
+       TestWpfEhr-PA2
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=4">
+       CCOWParticipantTest
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=8">
+       141GAPRO
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=9">
+       TWDBMDEV50
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=13">
+       SCMDBMDEV50
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=14">
+       CSITWAUTO
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=15">
+       CSIPROAUTO
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=16">
+       CSIFUSESCM
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=17">
+       DBMTW2016
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=18">
+       DBMPRO2016
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=19">
+       DBMSCM2016
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=20">
+       CCOWTestContextManager
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=21">
+       TestUIAutomationEHR
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=22">
+       WebCCOWParticipant
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=1003">
+       SrtFlmgoPro1
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=1007">
+       SrtDfatScm2
+      </a>
+     </li>
+     <li>
+      <a href="?instance_properties__id__exact=2007">
+       SrtFlmgoScm1
+      </a>
+     </li>
+    </ul>
+   </div>
+   <form action="" id="changelist-form" method="post">
+    <div class="actions">
+     <label>
+      Action:
+      <select name="action">
+       <option selected="selected" value="">
+        ---------
+       </option>
+       <option value="delete_selected">
+        Delete selected EHR Instances
+       </option>
+      </select>
+     </label>
+     <button class="button" name="index" title="Run the selected action" type="submit" value="0">
+      Go
+     </button>
+     <span class="action-counter">
+      0 of 21 selected
+     </span>
+    </div>
+    <div class="results">
+     <table id="result_list">
+      <thead>
+       <tr>
+        <th class="action-checkbox-column" scope="col">
+         <div class="text">
+          <span>
+          </span>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-name" scope="col">
+         <div class="text">
+          <a href="?o=1">
+           Name
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-ehr" scope="col">
+         <div class="text">
+          <a href="?o=2">
+           EHR
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-instance_properties" scope="col">
+         <div class="text">
+          <a href="?o=3">
+           Properties Package
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+        <th class="sortable column-is_enabled" scope="col">
+         <div class="text">
+          <a href="?o=4">
+           Is enabled
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/2007/">
+          SrtFlmgoScm1
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         SrtFlmgoScm1
+        </td>
+        <td class="field-instance_properties nowrap">
+         SrtFlmgoScm1
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/1007/">
+          SrtDfatScm2
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         SrtDfatScm2
+        </td>
+        <td class="field-instance_properties nowrap">
+         SrtDfatScm2
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/1003/">
+          SrtFlmgoPro1
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         SrtFlmgoPro1
+        </td>
+        <td class="field-instance_properties nowrap">
+         SrtFlmgoPro1
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/24/">
+          CCOWParticipantSentillion
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CCOWParticipantSentillion
+        </td>
+        <td class="field-instance_properties nowrap">
+         CCOWParticipantTest
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/23/">
+          WebCCOWParticipant
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         WebCCOWParticipant
+        </td>
+        <td class="field-instance_properties nowrap">
+         WebCCOWParticipant
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/22/">
+          TestUIAutomationEHRInstance
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         TestUIAutomationEHR
+        </td>
+        <td class="field-instance_properties nowrap">
+         TestUIAutomationEHR
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/21/">
+          MedHostSimulator
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         MedHostSimulator
+        </td>
+        <td class="field-instance_properties nowrap">
+         CCOWParticipantTest
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/20/">
+          CCOWTestContextManager
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CCOWTestContextManager
+        </td>
+        <td class="field-instance_properties nowrap">
+         CCOWTestContextManager
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/19/">
+          DBMSCM2016
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         DBMSCM2016
+        </td>
+        <td class="field-instance_properties nowrap">
+         DBMSCM2016
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/18/">
+          DBMPRO2016
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         DBMPRO2016
+        </td>
+        <td class="field-instance_properties nowrap">
+         DBMPRO2016
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/17/">
+          DBMTW2016
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         DBMTW2016
+        </td>
+        <td class="field-instance_properties nowrap">
+         DBMTW2016
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/16/">
+          CSIFUSESCM
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CSIFUSESCM
+        </td>
+        <td class="field-instance_properties nowrap">
+         CSIFUSESCM
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/15/">
+          CSIPROAUTO
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CSIPROAUTO
+        </td>
+        <td class="field-instance_properties nowrap">
+         CSIPROAUTO
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/14/">
+          CSITWAUTO
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CSITWAUTO
+        </td>
+        <td class="field-instance_properties nowrap">
+         CSITWAUTO
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/13/">
+          TestWpfEhr
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         TestWpfEhr
+        </td>
+        <td class="field-instance_properties nowrap">
+         TestWpfEHR
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/12/">
+          SCMDBMDEV50
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         SCMDBMDEV50
+        </td>
+        <td class="field-instance_properties nowrap">
+         SCMDBMDEV50
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/7/">
+          TWDBMDEV50
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         TWDBMDEV50
+        </td>
+        <td class="field-instance_properties nowrap">
+         TWDBMDEV50
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/6/">
+          141GAPRO
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         141GAPRO
+        </td>
+        <td class="field-instance_properties nowrap">
+         141GAPRO
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/4/">
+          CCOWParticipantTest
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         CCOWParticipantTest
+        </td>
+        <td class="field-instance_properties nowrap">
+         CCOWParticipantTest
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row2">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/3/">
+          TestWpfEhr-PA2
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         TestWpfEhr-PA2
+        </td>
+        <td class="field-instance_properties nowrap">
+         TestWpfEhr-PA2
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+       <tr class="row1">
+        <td class="action-checkbox">
+        </td>
+        <th class="field-name">
+         <a href="/admin/externalapps/instance/2/">
+          TestWpfEhr-PA1
+         </a>
+        </th>
+        <td class="field-ehr nowrap">
+         TestWpfEhr-PA1
+        </td>
+        <td class="field-instance_properties nowrap">
+         TestWpfEhr-PA1
+        </td>
+        <td class="field-is_enabled">
+         <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="paginator">
+     21 EHR Instances
+    </p>
+   </form>
+  </div>
+ </div>
+ <br class="clear"/>
+</div>

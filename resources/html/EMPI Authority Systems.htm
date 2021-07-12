@@ -1,0 +1,3243 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Authority Systems Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/via/authoritysystemspage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="authoritysystemspage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="authoritysystems_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Authority Systems Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            VIA
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        The Authority Systems configurations are used to define the attributes of all source systems that send patient data to dbMotion. Defining and mapping these attributes is required in order to successfully search for and retrieve patient demographic data from the EMPI and also to correctly retrieve the same patient's clinical data from the CDR.
+        <div id="system_type_help">
+         <br/>
+         Source System Type
+        </div>
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Source System dbMotion OID
+           <img alt="(Defines the Source System OID as represented in the CDR and that is used to retrieve the patient data from the CDR. This OID is not stored in the EMPI, but is mapped here to the EMPI Source System Name.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Source System OID as represented in the CDR and that is used to retrieve the patient data from the CDR. This OID is not stored in the EMPI, but is mapped here to the EMPI Source System Name." width="10"/>
+          </th>
+          <th class="required">
+           Source System Name
+           <img alt="(Defines the Source System Name as it is represented in the EMPI. It is a different value from the Source System dbMotion OID.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Source System Name as it is represented in the EMPI. It is a different value from the Source System dbMotion OID." width="10"/>
+          </th>
+          <th class="required">
+           Source System Display Name
+           <img alt="(Defines Source System Name as it is displayed in the Patient Search Clinical View (PSCV) dropdown list and in the Search Results grid. This might be the same or different from the EMPI Source System Name.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines Source System Name as it is displayed in the Patient Search Clinical View (PSCV) dropdown list and in the Search Results grid. This might be the same or different from the EMPI Source System Name." width="10"/>
+          </th>
+          <th>
+           Display For Search
+           <img alt="(Determines whether to display the Source System Display Name in the PSCV dropdown list. If not displayed, the user will not be able to search for a patient (with MRN Match operation) from this Source System.
+Default: True)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether to display the Source System Display Name in the PSCV dropdown list. If not displayed, the user will not be able to search for a patient (with MRN Match operation) from this Source System.
+Default: True" width="10"/>
+          </th>
+          <th>
+           Is Default System
+           <img alt="(Determines whether this is the default Source System displayed in the PSCV dropdown list. Only one Source System can be selected.
+Default: False)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether this is the default Source System displayed in the PSCV dropdown list. Only one Source System can be selected.
+Default: False" width="10"/>
+          </th>
+          <th>
+           Is System Mandatory
+           <img alt="(Describes whether this is a mandatory system index in Patient Search Results. Multiple Systems can be selected.
+Default: False)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Describes whether this is a mandatory system index in Patient Search Results. Multiple Systems can be selected.
+Default: False" width="10"/>
+          </th>
+          <th>
+           DbMotion Node Name
+           <img alt="(Defines the name of the dbMotion node in a federated system that is associated with this Source System. If a Source System is installed on multiple nodes, it must have a unique OID and a unique Source System Name for each node.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the name of the dbMotion node in a federated system that is associated with this Source System. If a Source System is installed on multiple nodes, it must have a unique OID and a unique Source System Name for each node." width="10"/>
+          </th>
+          <th>
+           Cluster Filter Indication
+           <img alt="(Determines whether a cluster of patient indexes is filtered out and not returned when performing patient search. If all source systems are configured here as False (unchecked), the feature is disabled and all indexes are returned in the response to patient search. If the cluster contains at least one index from a source system configured here as True (checked), the entire cluster will be returned in the response. If the cluster contains only indexes from source systems configured here as False (unchecked), the entire cluster will be filtered out and will not be returned.
+Default: False)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether a cluster of patient indexes is filtered out and not returned when performing patient search. If all source systems are configured here as False (unchecked), the feature is disabled and all indexes are returned in the response to patient search. If the cluster contains at least one index from a source system configured here as True (checked), the entire cluster will be returned in the response. If the cluster contains only indexes from source systems configured here as False (unchecked), the entire cluster will be filtered out and will not be returned.
+Default: False" width="10"/>
+          </th>
+          <th class="required">
+           System Type
+           <img alt="(Defines the source system type in the VIA configuration.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the source system type in the VIA configuration." width="10"/>
+          </th>
+          <th>
+           Segment Name
+           <img alt="(If this Source System Type is Virtual, defines the Segment Name in the EMPI response that contains the Source System Name. This attribute is only relevant for Initiate EMPI. If the Source System Type is Real, this attribute is Not Applicable.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="If this Source System Type is Virtual, defines the Segment Name in the EMPI response that contains the Source System Name. This attribute is only relevant for Initiate EMPI. If the Source System Type is Real, this attribute is Not Applicable." width="10"/>
+          </th>
+          <th>
+           Attribute Code
+           <img alt="(If this Source System Type is Virtual, defines the Attribute Code that contains the field that contains the Source System Name. This attribute is only relevant for Initiate EMPI. If the Source System Type is Real, this attribute is Not Applicable.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="If this Source System Type is Virtual, defines the Attribute Code that contains the field that contains the Source System Name. This attribute is only relevant for Initiate EMPI. If the Source System Type is Real, this attribute is Not Applicable." width="10"/>
+          </th>
+          <th>
+           Application Name
+           <img alt="(Defines the sending Application name in a PDQ request. This is used so that the PDQ response will return patient indexes only from the defined Application.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the sending Application name in a PDQ request. This is used so that the PDQ response will return patient indexes only from the defined Application." width="10"/>
+          </th>
+          <th>
+           Facility Name
+           <img alt="(Defines the sending Facility name in a PDQ request. This is used so that the PDQ response will return patient indexes only from the defined Facility.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the sending Facility name in a PDQ request. This is used so that the PDQ response will return patient indexes only from the defined Facility." width="10"/>
+          </th>
+          <th>
+           Organization Code
+           <img alt="(Defines an Organization Code provided by the customer that is mapped to each Source System. This is used to support the Provider Facility Filter functionality.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines an Organization Code provided by the customer that is mapped to each Source System. This is used to support the Provider Facility Filter functionality." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-0">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-0-dbmotion_node_id" name="authoritysystems_set-0-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-0-system_type" name="authoritysystems_set-0-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-0-segment_name" name="authoritysystems_set-0-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-1">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-1-dbmotion_node_id" name="authoritysystems_set-1-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-1-system_type" name="authoritysystems_set-1-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-1-segment_name" name="authoritysystems_set-1-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-2">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-2-dbmotion_node_id" name="authoritysystems_set-2-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-2-system_type" name="authoritysystems_set-2-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-2-segment_name" name="authoritysystems_set-2-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-3">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-3-dbmotion_node_id" name="authoritysystems_set-3-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-3-system_type" name="authoritysystems_set-3-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-3-segment_name" name="authoritysystems_set-3-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-4">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-4-dbmotion_node_id" name="authoritysystems_set-4-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-4-system_type" name="authoritysystems_set-4-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-4-segment_name" name="authoritysystems_set-4-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-5">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-5-dbmotion_node_id" name="authoritysystems_set-5-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-5-system_type" name="authoritysystems_set-5-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-5-segment_name" name="authoritysystems_set-5-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-6">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-6-dbmotion_node_id" name="authoritysystems_set-6-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-6-system_type" name="authoritysystems_set-6-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-6-segment_name" name="authoritysystems_set-6-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-7">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-7-dbmotion_node_id" name="authoritysystems_set-7-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-7-system_type" name="authoritysystems_set-7-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-7-segment_name" name="authoritysystems_set-7-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-8">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-8-dbmotion_node_id" name="authoritysystems_set-8-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-8-system_type" name="authoritysystems_set-8-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-8-segment_name" name="authoritysystems_set-8-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-9">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-9-dbmotion_node_id" name="authoritysystems_set-9-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-9-system_type" name="authoritysystems_set-9-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-9-segment_name" name="authoritysystems_set-9-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-10">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-10-dbmotion_node_id" name="authoritysystems_set-10-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-10-system_type" name="authoritysystems_set-10-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-10-segment_name" name="authoritysystems_set-10-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-11">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-11-dbmotion_node_id" name="authoritysystems_set-11-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-11-system_type" name="authoritysystems_set-11-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-11-segment_name" name="authoritysystems_set-11-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-12">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-12-dbmotion_node_id" name="authoritysystems_set-12-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-12-system_type" name="authoritysystems_set-12-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-12-segment_name" name="authoritysystems_set-12-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-13">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-13-dbmotion_node_id" name="authoritysystems_set-13-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-13-system_type" name="authoritysystems_set-13-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-13-segment_name" name="authoritysystems_set-13-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-14">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-14-dbmotion_node_id" name="authoritysystems_set-14-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-14-system_type" name="authoritysystems_set-14-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-14-segment_name" name="authoritysystems_set-14-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-15">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-15-dbmotion_node_id" name="authoritysystems_set-15-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-15-system_type" name="authoritysystems_set-15-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-15-segment_name" name="authoritysystems_set-15-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-16">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-16-dbmotion_node_id" name="authoritysystems_set-16-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-16-system_type" name="authoritysystems_set-16-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-16-segment_name" name="authoritysystems_set-16-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-17">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-17-dbmotion_node_id" name="authoritysystems_set-17-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-17-system_type" name="authoritysystems_set-17-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-17-segment_name" name="authoritysystems_set-17-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-18">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-18-dbmotion_node_id" name="authoritysystems_set-18-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-18-system_type" name="authoritysystems_set-18-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-18-segment_name" name="authoritysystems_set-18-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-19">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-19-dbmotion_node_id" name="authoritysystems_set-19-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-19-system_type" name="authoritysystems_set-19-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-19-segment_name" name="authoritysystems_set-19-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-20">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-20-dbmotion_node_id" name="authoritysystems_set-20-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-20-system_type" name="authoritysystems_set-20-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-20-segment_name" name="authoritysystems_set-20-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-21">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-21-dbmotion_node_id" name="authoritysystems_set-21-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-21-system_type" name="authoritysystems_set-21-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-21-segment_name" name="authoritysystems_set-21-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-22">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-22-dbmotion_node_id" name="authoritysystems_set-22-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-22-system_type" name="authoritysystems_set-22-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-22-segment_name" name="authoritysystems_set-22-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-23">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-23-dbmotion_node_id" name="authoritysystems_set-23-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-23-system_type" name="authoritysystems_set-23-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-23-segment_name" name="authoritysystems_set-23-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-24">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-24-dbmotion_node_id" name="authoritysystems_set-24-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-24-system_type" name="authoritysystems_set-24-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-24-segment_name" name="authoritysystems_set-24-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-25">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-25-dbmotion_node_id" name="authoritysystems_set-25-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-25-system_type" name="authoritysystems_set-25-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-25-segment_name" name="authoritysystems_set-25-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-26">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-26-dbmotion_node_id" name="authoritysystems_set-26-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-26-system_type" name="authoritysystems_set-26-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-26-segment_name" name="authoritysystems_set-26-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-27">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-27-dbmotion_node_id" name="authoritysystems_set-27-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-27-system_type" name="authoritysystems_set-27-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-27-segment_name" name="authoritysystems_set-27-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-28">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-28-dbmotion_node_id" name="authoritysystems_set-28-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-28-system_type" name="authoritysystems_set-28-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-28-segment_name" name="authoritysystems_set-28-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-29">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-29-dbmotion_node_id" name="authoritysystems_set-29-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-29-system_type" name="authoritysystems_set-29-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-29-segment_name" name="authoritysystems_set-29-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="authoritysystems_set-30">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-30-dbmotion_node_id" name="authoritysystems_set-30-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-30-system_type" name="authoritysystems_set-30-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-30-segment_name" name="authoritysystems_set-30-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="authoritysystems_set-31">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-31-dbmotion_node_id" name="authoritysystems_set-31-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-31-system_type" name="authoritysystems_set-31-system_type">
+            <option value="Real">
+             Real
+            </option>
+            <option selected="selected" value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-31-segment_name" name="authoritysystems_set-31-segment_name">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 " id="authoritysystems_set-32">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-32-dbmotion_node_id" name="authoritysystems_set-32-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-32-system_type" name="authoritysystems_set-32-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-32-segment_name" name="authoritysystems_set-32-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="authoritysystems_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-source_system_dbMotion_oid">
+          </td>
+          <td class="field-source_system_name">
+          </td>
+          <td class="field-source_system_display_name">
+          </td>
+          <td class="field-display_for_search">
+          </td>
+          <td class="field-is_default">
+          </td>
+          <td class="field-is_system_mandatory">
+          </td>
+          <td class="field-dbmotion_node_id">
+           <select id="id_authoritysystems_set-__prefix__-dbmotion_node_id" name="authoritysystems_set-__prefix__-dbmotion_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+           <a class="add-another" href="/admin/federation/node/add/?_to_field=id" id="add_id_authoritysystems_set-__prefix__-dbmotion_node_id" onclick="return showAddAnotherPopup(this);">
+            <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+           </a>
+          </td>
+          <td class="field-cluster_filter_indication">
+          </td>
+          <td class="field-system_type">
+           <select id="id_authoritysystems_set-__prefix__-system_type" name="authoritysystems_set-__prefix__-system_type">
+            <option selected="selected" value="Real">
+             Real
+            </option>
+            <option value="Virtual">
+             Virtual
+            </option>
+            <option value="Virtual Replace Real">
+             Virtual Replace Real
+            </option>
+            <option value="Search Only">
+             Search Only
+            </option>
+            <option value="Virtual MPIID">
+             Virtual MPIID
+            </option>
+            <option value="Search Only MPIID">
+             Search Only MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-segment_name">
+           <select id="id_authoritysystems_set-__prefix__-segment_name" name="authoritysystems_set-__prefix__-segment_name">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="memIdent">
+             memIdent
+            </option>
+            <option value="memName">
+             memName
+            </option>
+            <option value="memAddr">
+             memAddr
+            </option>
+            <option value="memAttr">
+             memAttr
+            </option>
+            <option value="memPhone">
+             memPhone
+            </option>
+            <option value="memDate">
+             memDate
+            </option>
+           </select>
+          </td>
+          <td class="field-attribute_code">
+          </td>
+          <td class="field-application_name">
+          </td>
+          <td class="field-facility_name">
+          </td>
+          <td class="field-organization_code">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ccdawithoutadtsystems_set-group">
+     <h2>
+      CCDA Without ADT Settings
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         VIA
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="ccdawithoutadtsystems_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-load_ccda_without_adt_sources">
+        <div>
+         <label class="vCheckboxLabel" for="id_ccdawithoutadtsystems_set-0-load_ccda_without_adt_sources">
+          Load CCDA Without ADT Sources
+         </label>
+         <p class="help">
+          Load CCDA without ADT virtual source systems for Untrusted System
+          <br/>
+          Determines whether 50 virtual Source Systems are defined in VIA to support CCDA without ADT from Untrusted Systems.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="dbmotionsystem_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        CCDA without ADT Real Source System
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          VIA
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Defines the single Real Source System in VIA that supports CCDA without ADT.
+        <br/>
+        Only one Real Source System can be defined for each node in a federated system.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           DbMotion Internal System
+           <img alt="(Defines dbMotion's internal system name, this system is for CCDA without ADT support.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines dbMotion's internal system name, this system is for CCDA without ADT support." width="10"/>
+          </th>
+          <th>
+           DbMotion Node Name
+           <img alt="(Defines the dbMotion node that is associated with this source.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the dbMotion node that is associated with this source." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="dbmotionsystem_set-0">
+          <td class="original">
+          </td>
+          <td class="field-dbmotion_system">
+          </td>
+          <td class="field-dbmotion_system_node_id">
+           <select id="id_dbmotionsystem_set-0-dbmotion_system_node_id" name="dbmotionsystem_set-0-dbmotion_system_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="dbmotionsystem_set-1">
+          <td class="original">
+          </td>
+          <td class="field-dbmotion_system">
+          </td>
+          <td class="field-dbmotion_system_node_id">
+           <select id="id_dbmotionsystem_set-1-dbmotion_system_node_id" name="dbmotionsystem_set-1-dbmotion_system_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="dbmotionsystem_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-dbmotion_system">
+          </td>
+          <td class="field-dbmotion_system_node_id">
+           <select id="id_dbmotionsystem_set-__prefix__-dbmotion_system_node_id" name="dbmotionsystem_set-__prefix__-dbmotion_system_node_id">
+            <option value="">
+             ---------
+            </option>
+            <option selected="selected" value="1">
+             NODE1
+            </option>
+           </select>
+           <a class="add-another" href="/admin/federation/node/add/?_to_field=id" id="add_id_dbmotionsystem_set-__prefix__-dbmotion_system_node_id" onclick="return showAddAnotherPopup(this);">
+            <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+           </a>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="via_set-group">
+     <div class="inline-related" id="via_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        EMPI Type
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            VIA
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-empi_type">
+        <div>
+         <label for="id_via_set-0-empi_type">
+          EMPI Type:
+         </label>
+         <select id="id_via_set-0-empi_type" name="via_set-0-empi_type">
+          <option selected="selected" value="Initiate">
+           Initiate
+          </option>
+          <option value="PDQ">
+           PDQ
+          </option>
+          <option value="DEMO">
+           DEMO
+          </option>
+          <option value="CDR">
+           CDR
+          </option>
+          <option value="FEDCDR">
+           Federated CDR
+          </option>
+         </select>
+         <p class="help">
+          Defines the EMPI connection type
+          <br>
+           *Federated CDR Relevant only in Israel.
+           <br/>
+           <i>
+            Default: Initiate
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

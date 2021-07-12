@@ -1,0 +1,124 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Usage Reports Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Operational Manager
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/operationalmanagerpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="operationalmanagerpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <p class="alertnote">
+     The configuration is related to the Primary SQL server only. In case AlwaysOn DB is installed, configure this manually according to the dbMotion Installation Guide.
+    </p>
+    <div class="inline-group" id="usagereports_set-group">
+     <div class="inline-related" id="usagereports_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Usage Reports
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="description">
+        The User should have writing permissions to the following file
+        <b>
+         on the Reporting Server:
+        </b>
+        \\dbm-cc-aio1\ReportServer\rsreportserver.config
+       </div>
+       <div class="form-row field-smtp_url">
+        <div>
+         <label for="id_usagereports_set-0-smtp_url">
+          SMTP URL:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-smtp_port">
+        <div>
+         <label for="id_usagereports_set-0-smtp_port">
+          SMTP port:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-from_address">
+        <div>
+         <label for="id_usagereports_set-0-from_address">
+          From address:
+         </label>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        HiddenSection
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="form-row field-status">
+        <div>
+         <label for="id_usagereports_set-0-status">
+          Status:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-message">
+        <div>
+         <label for="id_usagereports_set-0-message">
+          Message:
+         </label>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+     <div class="form-row">
+      <div>
+       <p class="alertnote">
+        In order to apply this configuration to the product, click
+        <b>
+         Apply
+        </b>
+        (for each Configuration, Installation, and Import).
+       </p>
+       <p class="alertnote">
+        Clicking
+        <b>
+         Apply
+        </b>
+        will immediately override the Subscription configuration.
+       </p>
+      </div>
+      <div id="apply_message" style="display:none">
+       <p>
+        [apply_message]
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,154 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Application Domain Qualifier
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="applicationdomains_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      Application Domain Qualifier Settings for Unmanaged Users
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Security Service
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-application_domain_qualifier">
+      <div>
+       <label class="required" for="id_application_domain_qualifier">
+        Application Domain Qualifier:
+       </label>
+       <p class="help">
+        Defines the qualified name of the external application domain. In most cases this is the NameQualifier sent in the SAML Assertion.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-default_role">
+      <div>
+       <label class="required" for="id_default_role">
+        Default dbMotion Role:
+       </label>
+       <select id="id_default_role" name="default_role">
+        <option value="8">
+         CB Office manager
+        </option>
+        <option value="10">
+         CB Orders administrator
+        </option>
+        <option value="9">
+         CB Physician
+        </option>
+        <option selected="selected" value="1">
+         EHR Common
+        </option>
+        <option value="2">
+         EHR Extensive
+        </option>
+        <option value="4">
+         EHR Researcher
+        </option>
+        <option value="3">
+         EHR Restricted
+        </option>
+        <option value="5">
+         General Practitioner
+        </option>
+        <option value="6">
+         Nurse
+        </option>
+        <option value="7">
+         Ward Manager
+        </option>
+       </select>
+       <a class="add-another" href="/admin/security/internalroles/add/?_to_field=id" id="add_id_default_role" onclick="return showAddAnotherPopup(this);">
+        <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+       </a>
+       <p class="help">
+        Defines the default role to set if the SAML Token does not contain the Role attribute or there is no Role Mappings defined to the given application ID / name.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="inline-group" id="samlissuersunmanaged_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        SAML Issuers Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Security Service
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           SAML Issuer Name
+           <img alt="(Defines the name of the Issuer of the SAML response Token before sending it to dbMotion. This name must be unique in the domain.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the name of the Issuer of the SAML response Token before sending it to dbMotion. This name must be unique in the domain." width="10"/>
+          </th>
+          <th class="required">
+           SAML Certificate Thumbprint
+           <img alt="(Defines the Thumbprint as found in the Certificate. The Certificate must be installed on the Windows Certificate store on the Local Machine, Personal folder.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the Thumbprint as found in the Certificate. The Certificate must be installed on the Windows Certificate store on the Local Machine, Personal folder." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="samlissuersunmanaged_set-0">
+          <td class="original">
+          </td>
+          <td class="field-saml_issuer_name">
+          </td>
+          <td class="field-saml_certificate_thumbprint">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="samlissuersunmanaged_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-saml_issuer_name">
+          </td>
+          <td class="field-saml_certificate_thumbprint">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

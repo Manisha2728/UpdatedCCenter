@@ -1,0 +1,225 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Document Search Bootstarp Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/documentsearchbootstrap/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="documentsearchbootstrap_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="documentsearchbootstrapproperties_set-group">
+     <div class="inline-related" id="documentsearchbootstrapproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Indexing process time frame
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Communication BOT Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-frequency_mode">
+        <div>
+         <label class="required" for="id_documentsearchbootstrapproperties_set-0-frequency_mode">
+          Bootstrap frequency mode:
+         </label>
+         <select id="id_documentsearchbootstrapproperties_set-0-frequency_mode" name="documentsearchbootstrapproperties_set-0-frequency_mode">
+          <option selected="selected" value="1">
+           Continuous
+          </option>
+          <option value="2">
+           Time Frame
+          </option>
+         </select>
+         <p class="help">
+          Each insert, update, and delete of a clinical document in the CDR triggers queuing the document in an operational table for Elasticsearch indexing. Specify how often the indexing occurs.
+          <br/>
+          *
+          <b>
+           Continuous
+          </b>
+          <br/>
+          *
+          <b>
+           Time frame:
+          </b>
+          <br/>
+          <i>
+           Default: Continuous.
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-start_scheduled_time">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-start_scheduled_time">
+          Bootstrap start time:
+         </label>
+         <p class="help">
+          Enter a time in format HH:MM:SS, click Now, or click the clock icon to select from a list of start times.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-end_scheduled_time">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-end_scheduled_time">
+          Bootstrap end time:
+         </label>
+         <p class="help">
+          Enter a time in format HH:MM:SS, click Now, or click the clock icon to select from a list of start times.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Systems with protected index rate
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Communication BOT Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-protected_systems_rate1">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-protected_systems_rate1">
+          Group #1 aggregated rate (req/min):
+         </label>
+         <p class="help">
+          Define the aggregated rate of content requests to systems from group.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-protected_systems1">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-protected_systems1">
+          Group #1 protected systems:
+         </label>
+         <textarea cols="100" id="id_documentsearchbootstrapproperties_set-0-protected_systems1" name="documentsearchbootstrapproperties_set-0-protected_systems1" rows="4">
+         </textarea>
+         <p class="help">
+          Specify a list of systems not affected by content requests by the group. Use the pipe symbol [|] as a delimiter between systems.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-protected_systems_rate2">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-protected_systems_rate2">
+          Group #2 aggregated rate (req/min):
+         </label>
+         <p class="help">
+          Define the aggregated rate of content requests to systems from group.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-protected_systems2">
+        <div>
+         <label for="id_documentsearchbootstrapproperties_set-0-protected_systems2">
+          Group #2 protected systems:
+         </label>
+         <textarea cols="100" id="id_documentsearchbootstrapproperties_set-0-protected_systems2" name="documentsearchbootstrapproperties_set-0-protected_systems2" rows="4">
+         </textarea>
+         <p class="help">
+          Specify a list of systems not affected by content requests by the group. Use the pipe symbol [|] as a delimiter between systems.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Unprotected index rate
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Communication BOT Service
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-unprotected_systems_rate">
+        <div>
+         <label class="required" for="id_documentsearchbootstrapproperties_set-0-unprotected_systems_rate">
+          Standard aggregated rate (req/min):
+         </label>
+         <p class="help">
+          Define the maximum standard rate of content requests for unprotected sources. Changing this setting might affect the system.
+          <br/>
+          <i>
+           Default: 8000
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

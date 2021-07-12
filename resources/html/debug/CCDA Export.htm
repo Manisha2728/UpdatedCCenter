@@ -1,0 +1,83 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the CCDA Display and Data Export Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/dataexportccdadisplaypage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="dataexportccdadisplaypage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ccdadisplay_set-group">
+     <div class="inline-related" id="ccdadisplay_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Allscripts Cloud Services
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        The configuration enables connections between dbMotion and Allscripts Common Component Services such as Clinical Viewer Engine (CVE), PDF Converter, and Validation as a Service (VaaS).
+        <br>
+         Refer to the IHE Implementation Guide for more detail.
+        </br>
+       </div>
+       <div class="form-row field-cve_renew_certificate">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-cve_renew_certificate">
+          Certificate:
+         </label>
+         <p class="help">
+          Defines the Certificate Thumbprint for the Retrieval Key. The Certificate must be downloaded from the Allscripts Community Configuration Manager (CCM) and installed on the Application server.
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-source_system">
+        <div>
+         <label class="required" for="id_ccdadisplay_set-0-source_system">
+          Source System:
+         </label>
+         <p class="help">
+          Defines the dbMotion project OID.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

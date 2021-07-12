@@ -1,0 +1,436 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Reporting Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer, Patient List, Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/cvreportingpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="cvreportingpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="appsreporting_set-group">
+     <div class="inline-related" id="appsreporting_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Reporting
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             dbMotion Patient List Service &amp; IIS(PL.API)
+             <li>
+              IIS(CVA)
+              <li>
+               dbMotion Patient View Service
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-MrnText">
+        <div>
+         <label class="required" for="id_appsreporting_set-0-MrnText">
+          Patient identifier caption in reports:
+         </label>
+         <p class="help">
+          Defines the caption used for the Patient Identifier field in the report header. For example, MRN or PHIN.
+          <br/>
+          This applies to:
+          <br/>
+          - Clinical Viewer: RTF, TIF and Clinical Summary selected items reports.
+          <br/>
+          - Collaborate: All reports.
+          <br/>
+          - EHR Agent: All reports.
+          <br/>
+          - Patient List: All reports.
+          <br/>
+          - Patient View: All reports.
+          <br/>
+          <i>
+           Default: MRN
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-font_size">
+        <div>
+         <label class="required" for="id_appsreporting_set-0-font_size">
+          Report Font Size:
+         </label>
+         <p class="help">
+          Defines the Font Size to use in the report.
+          <br/>
+          This applies to:
+          <br/>
+          - Collaborate: TXT reports.
+          <br/>
+          - EHR Agent: TXT reports.
+          <br/>
+          - Patient List: TXT reports.
+          <br/>
+          - Patient View: TXT reports.
+          <br/>
+          <i>
+           Default: 9
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-header_footer_font_type">
+        <div>
+         <label for="id_appsreporting_set-0-header_footer_font_type">
+          Report Header and Footer Font Type:
+         </label>
+         <select id="id_appsreporting_set-0-header_footer_font_type" name="appsreporting_set-0-header_footer_font_type">
+          <option selected="selected" value="Arial">
+           Arial
+          </option>
+          <option value="Courier New">
+           Courier New
+          </option>
+         </select>
+         <p class="help">
+          Defines the Font Type in the header and footer of the report.
+          <br/>
+          This applies to:
+          <br/>
+          - Clinical Viewer: RTF, TIF and Clinical Summary selected items reports.
+          <br/>
+          - Collaborate: All reports.
+          <br/>
+          - EHR Agent: All reports.
+          <br/>
+          - Patient List: All reports.
+          <br/>
+          - Patient View: All reports.
+          <br/>
+          <i>
+           Default: Arial
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-date_time_format">
+        <div>
+         <label for="id_appsreporting_set-0-date_time_format">
+          Date Time Format:
+         </label>
+         <select id="id_appsreporting_set-0-date_time_format" name="appsreporting_set-0-date_time_format">
+          <option value="d">
+           Short date: 4/17/2006
+          </option>
+          <option value="D">
+           Long date: Monday, April 17, 2006
+          </option>
+          <option value="t">
+           Short time: 2:22 PM
+          </option>
+          <option value="T">
+           Long time: 2:22:48 PM
+          </option>
+          <option value="f">
+           Full date/short time: Monday, April 17, 2006 2:22 PM
+          </option>
+          <option value="F">
+           Full date/long time: Monday, April 17, 2006 2:22:48 PM
+          </option>
+          <option value="g">
+           General date/short time: 4/17/2006 2:22 PM
+          </option>
+          <option selected="selected" value="G">
+           General date/long time (default): 4/17/2006 2:22:48 PM
+          </option>
+          <option value="M">
+           Month: April 17
+          </option>
+          <option value="R">
+           RFC1123: Mon, 17 Apr 2006 21:22:48 GMT
+          </option>
+          <option value="s">
+           Sortable: 2006-04-17T14:22:48
+          </option>
+          <option value="u">
+           Universal sortable (invariant): 2006-04-17 21:22:48Z
+          </option>
+          <option value="U">
+           Universal full date/time: Monday, April 17, 2006 9:22:48 PM
+          </option>
+          <option value="Y">
+           Year: April, 2006
+          </option>
+          <option value="o">
+           Roundtrip (local): 2006-04-17T14:22:48.2698750-07:00
+          </option>
+         </select>
+         <p class="help">
+          Defines the Date and Time format of the Report footer.
+          <br/>
+          This applies to:
+          <br/>
+          - Clinical Viewer: RTF, TIF and Clinical Summary selected items reports.
+          <br/>
+          - Collaborate: All reports.
+          <br/>
+          - EHR Agent: All reports.
+          <br/>
+          - Patient List: All reports.
+          <br/>
+          - Patient View: All reports.
+          <br/>
+          <i>
+           Default: General date/long time
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-show_confidentiality_disclamer">
+        <div>
+         <label class="vCheckboxLabel" for="id_appsreporting_set-0-show_confidentiality_disclamer">
+          Show Confidentiality Disclaimer in Report
+         </label>
+         <p class="help">
+          Determines whether the Clinical Viewer, Patient View, Collaborate and EHR Agent reports use the special disclaimer template (Word file) which displays the confidentiality disclaimer.
+          <br/>
+          True: The system uses the special Disclaimer templates for reports.
+          <br/>
+          False: The system uses the regular OOB templates for the reports (default).
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-rtf_report_remove_reference_fields">
+        <div>
+         <label class="vCheckboxLabel" for="id_appsreporting_set-0-rtf_report_remove_reference_fields">
+          Remove internal links from RTF documents
+         </label>
+         <p class="help">
+          Determines whether to remove internal links in RTF documents, because these internal links occasionally produce error messages in the document upon conversion to PDF.
+          <br/>
+          True: Removes RTF internal links. The links will still exist in the PDF file as text.
+          <br/>
+          False: Does not remove RTF internal links.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Logos
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             dbMotion Patient List Service &amp; IIS(PL.API)
+             <li>
+              IIS(CVA)
+              <li>
+               dbMotion Patient View Service
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-dbmotion_logo">
+        <div>
+         <label for="id_appsreporting_set-0-dbmotion_logo">
+          DbMotion Logo:
+         </label>
+         <p class="file-upload">
+          Currently:
+          <a href="/dbmconfigapp/files/Logos/dbMotion/dbMotion.gif">
+           Logos/dbMotion/dbMotion.gif
+          </a>
+          <span class="clearable-file-input">
+           <label for="appsreporting_set-0-dbmotion_logo-clear_id">
+            Clear
+           </label>
+          </span>
+          <br/>
+          Change:
+         </p>
+         <p class="help">
+          Defines the dbMotion logo image that will be displayed in the report.
+          <br/>
+          This applies to:
+          <br/>
+          - Clinical Viewer: RTF, TIF and Clinical Summary selected items reports.
+          <br/>
+          - Collaborate: All reports.
+          <br/>
+          - EHR Agent: All reports.
+          <br/>
+          - Patient List: All reports.
+          <br/>
+          - Patient View: All reports.
+          <br/>
+          <b>
+           Note:
+          </b>
+          Only .gif files are supported. The recommended size is: 120x40 px. The size cannot exceed 220x60 px.
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-customer_logo">
+        <div>
+         <label for="id_appsreporting_set-0-customer_logo">
+          Customer Logo:
+         </label>
+         <p class="help">
+          Defines the customer logo image that will be displayed in the report:
+          <br/>
+          This applies to:
+          <br/>
+          - Clinical Viewer: RTF, TIF and Clinical Summary selected items reports.
+          <br/>
+          - Collaborate: All reports.
+          <br/>
+          - EHR Agent: All reports.
+          <br/>
+          - Patient List: All reports.
+          <br/>
+          - Patient View: All reports.
+          <br/>
+          <b>
+           Note:
+          </b>
+          Only .gif files are supported. The recommended size is: 120x40 px. The size cannot exceed 220x60 px.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-lab_susceptibility_methods_code_type">
+        <div>
+         <label for="id_vpo_set-0-lab_susceptibility_methods_code_type_0">
+          Labs method type:
+         </label>
+         <ul class="radiolist" id="id_vpo_set-0-lab_susceptibility_methods_code_type">
+          <li>
+           <label for="id_vpo_set-0-lab_susceptibility_methods_code_type_0">
+            MIC: Displays all types of test results in a MIC captioned column.
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-0-lab_susceptibility_methods_code_type_1">
+            KB: Displays all types of test results in a KB captioned column.
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-0-lab_susceptibility_methods_code_type_2">
+            Both: Displays all types of results in a Zone\MIC captioned column and also the following designation in the Remarks column: Vocabulary Domain designation or Method Unknown.
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines how the Lab Results and Lab Results History clinical views and reports (in the Clinical Viewer, Collaborate, Patient List and EHR Agent applications) display the types of Microbiology Test results.
+          <br/>
+          <i>
+           Default: MIC: Displays all types of test results in a MIC captioned column.
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-lab_report_fixed_width_font">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpo_set-0-lab_report_fixed_width_font">
+          Display report text in fixed-width font
+         </label>
+         <p class="help">
+          Determines whether to show the Lab Report Remark and Result text in fixed-width font.
+          <br/>
+          True: Displays text in fixed-width font.
+          <br/>
+          False: Does not display text in fixed-width font.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

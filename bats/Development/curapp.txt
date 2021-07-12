@@ -1,0 +1,11 @@
+dbmconfigapp
+
+**** Write one of the following apps in the first line to make it active ****
+
+dbmconfigapp
+externalapps
+via
+federation
+security
+dataloading
+authccenter

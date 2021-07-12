@@ -1,0 +1,444 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Patient List General Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Patient List
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/plgeneralpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="plgeneralpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpofacilitydisplay_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Facility Display Prioritization
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           Communication
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Determines how to calculate the organization shown in the Facility field. This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List.
+        <br/>
+        <br/>
+        <i>
+         Default: Display the first participant or parent organization that is defined by the INS (institute) code
+        </i>
+        . This option supports only the INS type and no other types.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Clinical Domain
+          </th>
+          <th class="required">
+           Calculation of the Facility field
+           <img alt="(Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-0">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            AllergyIntolerances
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-0-facility_source" name="vpofacilitydisplay_set-0-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-1">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-1-facility_source" name="vpofacilitydisplay_set-1-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-2">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Diagnoses
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-2-facility_source" name="vpofacilitydisplay_set-2-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-3">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Immunizations
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-3-facility_source" name="vpofacilitydisplay_set-3-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-4">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-4-facility_source" name="vpofacilitydisplay_set-4-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-5">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Medications
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-5-facility_source" name="vpofacilitydisplay_set-5-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-6">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Encounters
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-6-facility_source" name="vpofacilitydisplay_set-6-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-7">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Procedures
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-7-facility_source" name="vpofacilitydisplay_set-7-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-8">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Measurements
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-8-facility_source" name="vpofacilitydisplay_set-8-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-9">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            LabEvents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-9-facility_source" name="vpofacilitydisplay_set-9-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-10">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-10-facility_source" name="vpofacilitydisplay_set-10-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-11">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Documents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-11-facility_source" name="vpofacilitydisplay_set-11-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="vpofacilitydisplay_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-__prefix__-facility_source" name="vpofacilitydisplay_set-__prefix__-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="encounterdiagnosisrelationship_set-group">
+     <div class="inline-related" id="encounterdiagnosisrelationship_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Configure the Encounter Diagnosis
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        This configuration determines the values used for Primary and Admitting Diagnoses in the encounter-condition act-relationship (Field name: PriorityNumber).
+        <br>
+         The values are used as part of the logic that determines the display of the Encounter Diagnosis (or Encounter Reason) in the dbMotion clinical applications (for example, the data displayed in Discharge Diagnosis or the Admitted Reason fields).
+         <br>
+          The configuration is required since different values may be used depending on the customer location (for example, in the American market the values are Admitting=0 and Primary=1 while in the Israeli market the values are Primary=1, 6 and Other=0, while there is no value for Admitting) and on the specific field in the application.
+          <br>
+           This configuration affects Clinical Viewer Agent, Patient List and Patient View. For a detailed description of the business logic, see the Functional Specification documentation.
+          </br>
+         </br>
+        </br>
+       </div>
+       <div class="form-row field-primary_diagnosis">
+        <div>
+         <label class="required" for="id_encounterdiagnosisrelationship_set-0-primary_diagnosis">
+          Primary Diagnosis:
+         </label>
+         <p class="help">
+          Determines the value(s) used for the main (primary) diagnosis of the patient during an encounter, such as a hospitalization.
+          <br/>
+          Possible values: Any value can be configured. For example:  American market: 1   Israeli market: 1, 6, or 1,6
+          <br/>
+          Default Value: 1 (American market)
+          <br/>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-admitted_diagnosis">
+        <div>
+         <label for="id_encounterdiagnosisrelationship_set-0-admitted_diagnosis">
+          Admitting Diagnosis:
+         </label>
+         <p class="help">
+          Determines the value(s) used for the admitting diagnosis given when the patient was first admitted to the hospital.
+          <br/>
+          Possible Values: Any value can be configured. For example:  American market: 0   Israeli market: Null (empty)
+          <br/>
+          Default Value: 0 (American market)
+          <br/>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

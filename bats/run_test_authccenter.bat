@@ -1,0 +1,1 @@
+"%~dp0run_command" test authccenter --verbosity 2

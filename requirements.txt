@@ -1,0 +1,15 @@
+Django==3.0
+beautifulsoup4==4.9.3
+ldap3==2.9 			# automatically installs: pyasn1==0.1.9 
+django-mssql-backend==2.8.1		# 1.7 supports 1.7 and so on...
+Pillow==8.3.0
+pycryptodome==3.10.1			# requires: SET VS90COMNTOOLS=%VS110COMNTOOLS%
+pywin32==301
+
+# ---
+# Markdown - for HTML. not in use
+# Pygments - to highlight code. not in use
+# django-filter==0.7. not in use
+# djangorestframework==2.3.8
+# REMOVED - django-database-storage==0.1.2 (internal)
+# REMOVED - pil==1.1.7 - deprecated -- install Pillow instead!

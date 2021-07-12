@@ -1,0 +1,353 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Application ID
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="appid_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      Application ID
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+         <li>
+          IIS(CVA)
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-app_id">
+      <div>
+       <label class="required" for="id_app_id">
+        Client application ID:
+       </label>
+       <p class="help">
+        The EHR Application ID is the unique identifier of each EHR.
+        <br/>
+        It is required for registering the EHR in the VPO configurations to perform Send to My EHR.
+        <br/>
+        This value should be aligned with the "Application instance name" in the "VPO Data Export" configuration.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-categories_available_for_send">
+      <div>
+       <label for="id_categories_available_for_send">
+        Categories available for send:
+       </label>
+       <p class="help">
+        Defines the clinical categories that support Send to my EHR. For each defined category, the EHR Agent checkbox is enabled so that it can be selected for the Send to EHR functionality. The checkbox is disabled for categories that do not support Send to EHR and for categories not defined in this field.
+        <br/>
+        The Data Integration engineer must determine all act types that can be sent from this data source.
+        <br/>
+        Possible values are 'All' or one or more of the following, in a comma-separated list:
+        <br/>
+        <b>
+         Encounters, ProblemList, Diagnoses, Allergies, Medications, Laboratory, Immunizations, Procedures, ClinicalDocuments, PastMedicalHistory
+        </b>
+        <br/>
+        If the list is empty, all categories are disabled.
+        <br/>
+        <i>
+         Default: All
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-send_to_my_EHR_success_message field-send_to_my_EHR_failure_message field-send_to_my_EHR_ccda_only">
+      <div class="field-box field-send_to_my_EHR_success_message">
+       <label for="id_send_to_my_EHR_success_message">
+        Send to my EHR success message:
+       </label>
+       <p class="help">
+        If field is empty, the product default message will be used.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+      <div class="field-box field-send_to_my_EHR_failure_message">
+       <label class="inline" for="id_send_to_my_EHR_failure_message">
+        Send to my EHR failure message:
+       </label>
+       <p class="help">
+        If field is empty, the product default message will be used.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+        <br/>
+        <br/>
+        This configuration enables you to define the message text that appears for a successful and an unsuccessful Send to EHR operation that was completed.
+       </p>
+      </div>
+      <div class="field-box field-send_to_my_EHR_ccda_only">
+       <label class="vCheckboxLabel inline" for="id_send_to_my_EHR_ccda_only">
+        Send Only structured CCDA Documents
+       </label>
+       <p class="help">
+        Determines whether "Send to My EHR" will enable to send only documents that arrived to dbMotion as structured CCD/A, or any other media type, such as unstructured CCD/A, TIFF, PDF, etc.
+        <br>
+         True: Will support structured CCD/A only.
+         <br>
+          False: Will support sending any document type.
+          <br>
+           <br>
+            Note: The checkbox is enabled if "All" or "ClinicalDocuments" were chosen above.
+            <br/>
+            <i>
+             Default: False
+            </i>
+           </br>
+          </br>
+         </br>
+        </br>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="inline-group" id="sourcesystem_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Delta View Source Systems
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        <b>
+         Configuring the Delta View
+        </b>
+        <br/>
+        The EHR Agent Delta View displays all patient clinical data that is NOT displayed in the hosting EHR. In order to enable the Delta View, it is necessary to define all act types that are received by the EHR from each external source system. These configured act types will not be displayed in the EHR Agent Delta View.
+        <br/>
+        For each external Source System define the following:
+        <br/>
+        <ul>
+         <li>
+          Name - Source System name as configured in the OIDs XML file
+          <li>
+           Act types - All the act types sent by this source system to the EHR
+          </li>
+         </li>
+        </ul>
+        Possible values are 'All' or one or more of the following, in a comma-separated list:
+        <br/>
+        AllergyIntolerance, ClinicalDocument, ClinicalImageStudyRequest, ClinicalImageStudy, Diagnosis, Encounter, Immunization, LabEvent, LabRequest, LabResult, MeasurementEvent, Medication, Problem, Procedure, PathologyEvent, PathologyResult
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Name
+          </th>
+          <th class="required">
+           Act types
+           <img alt="(Defines the types of clinical acts that can be sent from this dataSource to the main EHR.
+The Data Integration engineer must determine all act types that can be sent from this data source. If all supported dbMotion act types can be sent, this attribute does not have to be defined.
+If the data source can send only specific act types, these must be defined in this attribute.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the types of clinical acts that can be sent from this dataSource to the main EHR.
+The Data Integration engineer must determine all act types that can be sent from this data source. If all supported dbMotion act types can be sent, this attribute does not have to be defined.
+If the data source can send only specific act types, these must be defined in this attribute." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="sourcesystem_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-act_types">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="sourcesystem_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-act_types">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="orderingfacilities_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Delta View By Ordering Facilities
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        <b>
+         Configuring the Delta View By Ordering Facility
+        </b>
+        <br/>
+        Configure the required Ordering Facilities to be filtered out of the Delta View
+        <br/>
+        <br/>
+        The following Facilities can be configured:
+        <br/>
+        <ul>
+         <li>
+          Referral organization for Lab Request/Pathlogy Request/Imaging Request or Participate Organization for Clinical Document
+          <li>
+           Sending organization (will be used only if there is no referral organization)
+          </li>
+         </li>
+        </ul>
+        For each Ordering Facility define the following:
+        <br/>
+        <ul>
+         <li>
+          Act type - Possible values are: Lab Event, Pathology Event, Clinical Image Study, Clinical Document
+          <li>
+           Ordering Facility ID Root - OID of the Ordering Facility (e.g: 2.16.840.1.113883.3.57.1.3.5.1.111.1.6.1)
+           <li>
+            Ordering Facility ID Extension - Extension of the Ordering Facility (e.g: facilityName)
+           </li>
+          </li>
+         </li>
+        </ul>
+        <br/>
+        <b>
+         Note that Delta By Ordering Facility will override Delta by Source System for any domain that is configured in this section. For these domains the system will filter out data based on the configured Ordering Facility and not based on the configured Source System.
+        </b>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Act Type
+           <img alt="(Possible values are: LabEvent, PathologyEvent, ClinicalImageStudy, ClinicalDocument)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Possible values are: LabEvent, PathologyEvent, ClinicalImageStudy, ClinicalDocument" width="10"/>
+          </th>
+          <th class="required">
+           Ordering Facility ID Root
+          </th>
+          <th class="required">
+           Ordering Facility ID Extension
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="orderingfacilities_set-0">
+          <td class="original">
+          </td>
+          <td class="field-act_type">
+           <select id="id_orderingfacilities_set-0-act_type" name="orderingfacilities_set-0-act_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="ClinicalDocument">
+             Clinical Document
+            </option>
+            <option value="ClinicalImageStudy">
+             Clinical Image Study
+            </option>
+            <option value="LabEvent">
+             Lab Event
+            </option>
+            <option value="PathologyEvent">
+             Pathology Event
+            </option>
+           </select>
+          </td>
+          <td class="field-facility_root">
+          </td>
+          <td class="field-facility_extension">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="orderingfacilities_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-act_type">
+           <select id="id_orderingfacilities_set-__prefix__-act_type" name="orderingfacilities_set-__prefix__-act_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="ClinicalDocument">
+             Clinical Document
+            </option>
+            <option value="ClinicalImageStudy">
+             Clinical Image Study
+            </option>
+            <option value="LabEvent">
+             Lab Event
+            </option>
+            <option value="PathologyEvent">
+             Pathology Event
+            </option>
+           </select>
+          </td>
+          <td class="field-facility_root">
+          </td>
+          <td class="field-facility_extension">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

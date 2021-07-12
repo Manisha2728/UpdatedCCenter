@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+<h1>
+    CCenter Debug Information
+</h1>
+<br/>
+
+<div class="module">
+{% if general_info %}
+    <table >
+        <tbody>
+        {% for key,value in general_info.items %}
+        <tr>
+            <td><b>{{ key | capfirst }}</b></td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+</div>
+
+<div class="module">
+{% if app_migrations %}
+    <table >
+        <thead>
+        <tr>
+            <th scope="col">Application</th>
+            <th scope="col">GA migration</th>
+            <th scope="col">Last applied</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for app in app_migrations %}
+        <tr>
+            <td>{{ app.name }}</td>
+            <td>{{ app.ga_migration }}</td>
+            <td>{{ app.last_applied }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+</div>
+
+</div>
+{% endblock %}

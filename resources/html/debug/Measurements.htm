@@ -1,0 +1,323 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set Measurement Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/pvmeasurementpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="pvmeasurementpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-unit_priority_list_body_weight">
+        <div>
+         <label for="id_vpo_set-0-unit_priority_list_body_weight">
+          UOM priority order to display concatenated Body Weight:
+         </label>
+         <textarea cols="100" id="id_vpo_set-0-unit_priority_list_body_weight" name="vpo_set-0-unit_priority_list_body_weight" rows="4">
+          2.16.840.1.113883.6.8,kg;2.16.840.1.113883.6.8,g|2.16.840.1.113883.6.8,[lb_av];2.16.840.1.113883.6.8,[oz_av]
+         </textarea>
+         <p class="help">
+          Defines the priority order to display concatenated Body Weight measurements, when there are different types of UoM (Units of Measurement).
+          <br/>
+          If the value is empty, all measurement types are displayed in a comma-separated list.
+          <br/>
+          If the priorities are defined, the system displays the first (concatenated) measurement type if it exists. If it does not exist, the second priority is displayed, and so on.
+          <br/>
+          If the concatenation configuration above is on, then the results will be concatenated.
+          <br/>
+          The list of priorities must be displayed in the following format. If not, the display of vital signs will fail.
+          <br/>
+          &lt;first priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;|&lt;second priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;
+          <br/>
+          <br/>
+          Note: When ticking this checkbox, please fill out the relevant configuration of UOM priory, in order for it to take effect.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.6.8,kg;2.16.840.1.113883.6.8,g|2.16.840.1.113883.6.8,[lb_av];2.16.840.1.113883.6.8,[oz_av]
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-unit_priority_list_body_height">
+        <div>
+         <label for="id_vpo_set-0-unit_priority_list_body_height">
+          UOM priority order to display concatenated Body Height:
+         </label>
+         <textarea cols="100" id="id_vpo_set-0-unit_priority_list_body_height" name="vpo_set-0-unit_priority_list_body_height" rows="4">
+          2.16.840.1.113883.6.8,[ft_us];2.16.840.1.113883.6.8,[in_us]|2.16.840.1.113883.6.8,m;2.16.840.1.113883.6.8,cm
+         </textarea>
+         <p class="help">
+          Defines the priority order to display concatenated Body Height measurements, when there are different types of UoM (Units of Measurement).
+          <br/>
+          If the value is empty, all measurement types are displayed in a comma-separated list.
+          <br/>
+          If the priorities are defined, the system displays the first (concatenated) measurement type if it exists. If it does not exist, the second priority is displayed, and so on.
+          <br/>
+          If the concatenation configuration above is on, then the results will be concatenated.
+          <br/>
+          The list of priorities must be displayed in the following format. If not, the display of vital signs will fail.
+          <br/>
+          &lt;first priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;|&lt;second priority - code system&gt;,&lt;code&gt;;&lt;code system&gt;,&lt;code&gt;
+          <br/>
+          <br/>
+          Note: When ticking this checkbox, please fill out the relevant configuration of UOM priory, in order for it to take effect.
+          <br/>
+          <i>
+           Default: 2.16.840.1.113883.6.8,[ft_us];2.16.840.1.113883.6.8,[in_us]|2.16.840.1.113883.6.8,m;2.16.840.1.113883.6.8,cm
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vitalsinpatientmeasurement_set-group">
+     <h2>
+      Inpatient Measurements
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+         <li>
+          IIS(CVA)
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="vitalsinpatientmeasurement_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-include_inpatient_measurements">
+        <div>
+         <label class="vCheckboxLabel" for="id_vitalsinpatientmeasurement_set-0-include_inpatient_measurements">
+          Include Inpatient Measurements
+         </label>
+         <p class="help">
+          Determines whether Inpatient Measurements are displayed in the Vital Signs domain in CV and EHR Agent.
+          <br>
+           True: Inpatient Measurements will be displayed in Vital Signs.
+           <br>
+            False: Inpatient Measurements will be filtered out and not displayed in Vital Signs.
+            <br>
+             Inpatient Encounter baseline codes: 2.16.840.1.113883.5.4|IMP^2.16.840.1.113883.5.4|ACUTE^2.16.840.1.113883.5.4|NONAC
+             <br>
+              <br>
+               Note that all Inpatient Measurements will be displayed. In extreme cases, this can increase system load and reduce performance and product usability. Therefore, we recommend loading only the relevant measurements to the CDR.
+               <br/>
+               <i>
+                Default: False
+               </i>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-include_emergency_measurements">
+        <div>
+         <label class="vCheckboxLabel" for="id_vitalsinpatientmeasurement_set-0-include_emergency_measurements">
+          Include Emergency Measurements
+         </label>
+         <p class="help">
+          Determines whether Emergency Measurements are displayed in the Vital Signs domain in CV and EHR Agent.
+          <br>
+           True: Emergency Measurements will be displayed in Vital Signs.
+           <br>
+            False: Emergency Measurements will be filtered out and not displayed in Vital Signs.
+            <br>
+             Emergency Encounter baseline codes: 2.16.840.1.113883.5.4|EMER
+             <br>
+              <br>
+               Note that all Emergency Measurements will be displayed. In extreme cases, this can increase system load and reduce performance and product usability. Therefore, we recommend loading only the relevant measurements to the CDR.
+               <br/>
+               <i>
+                Default: False
+               </i>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentsemanticgroup_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Measurements Domain Groupings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        For Patient View, configure the measurement vocabulary domains and define the semantic grouping.
+        <br>
+         <b>
+          Group Display Name:
+         </b>
+         Define a new semantic group name under Measurements.
+         <br>
+          <b>
+           Group Order:
+          </b>
+          Specify the order to display the groups under Measurements.
+         </br>
+        </br>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Group Display Name
+          </th>
+          <th class="required">
+           Group Order
+          </th>
+          <th>
+           Measurements
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="ehragentsemanticgroup_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/ehragentsemanticgroup/1/" onclick="return showEditPopup(this);" title="Click to edit">
+             Vital Signs
+            </a>
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+          <td class="field-measurements">
+           <p>
+            HeartRate, BloodPressure, OxygenSaturation
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="ehragentsemanticgroup_set-1">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/ehragentsemanticgroup/2/" onclick="return showEditPopup(this);" title="Click to edit">
+             Height, Weight &amp; BMI
+            </a>
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+          <td class="field-measurements">
+           <p>
+            BodyHeight, BodyWeight, BMI
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="ehragentsemanticgroup_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/ehragentsemanticgroup/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-order">
+          </td>
+          <td class="field-measurements">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

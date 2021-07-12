@@ -1,0 +1,183 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the General Definitions Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/agenthubgeneralpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="agenthubgeneralpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentbaseurl_set-group">
+     <div class="inline-related" id="ehragentbaseurl_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        URL Definitions
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-base_url">
+        <div>
+         <label class="required" for="id_ehragentbaseurl_set-0-base_url">
+          Agent Hub base URL configuration:
+         </label>
+         <p class="help">
+          This is the full qualified domain name for dbMotion's web server. This will be used to build URLs for Collaborate, CV and Agent Service endpoint.
+          <br/>
+          For the default value the following URLs will be used:
+          <br/>
+          https://$_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$/SmartAgent/SmartAgentWebService.svc
+          <br/>
+          https://$_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$/dbMotionClinicalViewer/ApplicativeDomains/Host/PublicPages/Dispatcher.aspx
+          <br/>
+          https://$_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$/collaborate/dbmotion/frontend/security/authentication/dbmPrincipal.v2.api
+          <br/>
+          <i>
+           Default: $_NODE_WEB_SERVER_STATEFUL$.$_NODE_ACCESS_ABSOLUTE_DOMAIN$
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="currentculture_set-group">
+     <div class="inline-related" id="currentculture_set-0">
+      <fieldset class="module aligned module aligned wide extrapretty">
+       <h2>
+        User Interface Language
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-name">
+        <div>
+         <label class="required" for="id_currentculture_set-0-name">
+          Name:
+         </label>
+         <select id="id_currentculture_set-0-name" name="currentculture_set-0-name">
+          <option selected="selected" value="1">
+           en-US
+          </option>
+          <option value="2">
+           en-GB
+          </option>
+          <option value="3">
+           en-CA
+          </option>
+          <option value="4">
+           en-AU
+          </option>
+          <option value="5">
+           he-IL
+          </option>
+         </select>
+         <p class="help">
+          Define the default language for application User Interfaces.
+          <br/>
+          Default: en-US.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="culture_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Language list
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Additional Languages
+           <img alt="(Define a new language for the user interface.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Define a new language for the user interface." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="culture_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="culture_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

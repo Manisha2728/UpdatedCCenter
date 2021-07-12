@@ -1,0 +1,335 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Security General Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/security/securitygeneralpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="securitygeneralpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="securitygeneral_set-group">
+     <div class="inline-related" id="securitygeneral_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Facility Identification
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            dbMotion Analysis Data Repository
+            <li>
+             dbMotion Patient List Service &amp; IIS(PL.API)
+             <li>
+              IIS(CVA)
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-activate_facility_identification">
+        <div>
+         <label class="vCheckboxLabel" for="id_securitygeneral_set-0-activate_facility_identification">
+          Confidentiality Filter - User Facility Identification
+         </label>
+         <p class="help">
+          Determines whether the Confidentiality Filter using User Facility Identification is enabled. If true, if the user role has a confidentiality permission (for example, Restricted) and the act has the equivalent act confidentiality (in this case, Restricted), the confidential data is displayed only if the act is related to the user's local facility. If false, confidential data is displayed, depending on the user role, from all nodes and facilities, regardless of the user's facility.
+          <br>
+           <br>
+            <b>
+             Important!
+            </b>
+            To enable the functionality in this section it is mandatory to configure the 'User Facility Identification' in the following CCenter page: Agent Hub -&gt; EHR Integration -&gt; EHR Instances -&gt; User Facility Identification
+            <br>
+             <br>
+              <b>
+               Note:
+              </b>
+              If this is configured as True, and the 'User Facility Identification' in the EHR Integration section is not configured or if the user logs into CV directly (and not through the EHR Agent), the user will not see confidential data at all.
+              <br>
+               <br>
+                <em>
+                 Default: False
+                </em>
+               </br>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-facility_identification_excluded_codes">
+        <div>
+         <label for="id_securitygeneral_set-0-facility_identification_excluded_codes">
+          Codes Excluded from User Facility Confidentiality Filter:
+         </label>
+         <textarea cols="100" id="id_securitygeneral_set-0-facility_identification_excluded_codes" name="securitygeneral_set-0-facility_identification_excluded_codes" rows="4">
+         </textarea>
+         <p class="help">
+          This configuration is used in conjunction with the following CCenter configuration: Confidentiality Filter - User Facility Identification. It is used to specify confidentiality codes that are not  filtered out by the User Facility Identification Filter.
+          <br>
+           <br>
+            This configuration defines the confidentiality codes (in Code System | Code ^ format) that the customer wants to exclude from the Confidentiality Filter - User Facility Identification. The Confidentiality Filter allows users to see confidential data only from the user's (configured) local facility.  However, codes configured here (for example, 2.16.840.1.113883.5.25|PSY^) will NOT be filtered out by the User Facility Identification Filter. Confidential data with these codes can be viewed by users with relevant permissions from all facilities.
+            <br>
+             Codes configured here must be in allowConfidentialityLevels configuration in the Security Management role profile.
+             <br/>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-active_encounter_validation_rule">
+        <div>
+         <label class="vCheckboxLabel" for="id_securitygeneral_set-0-active_encounter_validation_rule">
+          Restricting Access to Patient File Based on Active Encounter
+         </label>
+         <p class="help">
+          Determines (if true) whether a user will only be allowed to access and view a patient record if the patient has an Active Encounter that originated from the User Facility.
+          <br>
+           <br>
+            The User Facility is defined in the User Facility Identification CCenter configuration.
+            <br>
+             <u>
+              An Active Encounter is defined as one of the following:
+             </u>
+             <br>
+              *  Encounter Act that has no end date or future end date.
+              <br>
+               *  Encounter Act that ends within the number of days configured in the Security Role Profile (configured per Security Role).
+               <br>
+                The facility of the Encounter is taken from the CDR from the MessageWrapper.Sender Organization.
+                <br>
+                 <br>
+                  <em>
+                   <u>
+                    Note:
+                   </u>
+                   This functionality is relevant only for Israel Implementation that uses the 'Federated CDR' EMPI Adapter (configured in: EMPI→ General Definitions)
+                  </em>
+                  <br>
+                   <br>
+                    <em>
+                     Default: False
+                    </em>
+                    <br/>
+                   </br>
+                  </br>
+                 </br>
+                </br>
+               </br>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="patientauthorization_set-group">
+     <div class="inline-related" id="patientauthorization_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient Authorization
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Security Service
+           <li>
+            dbMotion PPOL Service
+            <li>
+             dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+             <li>
+              dbMotion Patient Services
+              <li>
+               IIS(CVA)
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        <div style="color:red">
+         <b>
+          Important!
+         </b>
+         After modifying the Patient Consent Policy definition please manually
+         <b>
+          run the SQL Server job
+         </b>
+         named:
+         <b>
+          "AnaliticsCDR2Gateway_SetConsent"
+         </b>
+         in the CAG instance
+        </div>
+       </div>
+       <div class="form-row field-pas_option_local">
+        <div>
+         <label class="required" for="id_patientauthorization_set-0-pas_option_local_0">
+          Defining Patient Consent Policy:
+         </label>
+         <ul class="radiolist" id="id_patientauthorization_set-0-pas_option_local">
+          <li>
+           <label for="id_patientauthorization_set-0-pas_option_local_0">
+            Disabled
+           </label>
+          </li>
+          <li>
+           <label for="id_patientauthorization_set-0-pas_option_local_1">
+            Opt In and Most updated consent
+           </label>
+          </li>
+          <li>
+           <label for="id_patientauthorization_set-0-pas_option_local_2">
+            Opt Out and Most updated consent
+           </label>
+          </li>
+          <li>
+           <label for="id_patientauthorization_set-0-pas_option_local_3">
+            Opt In and Most restricted consent
+           </label>
+          </li>
+          <li>
+           <label for="id_patientauthorization_set-0-pas_option_local_4">
+            Opt Out and Most restricted consent
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          This configuration defines the Patient Consent Policy and how to resolve a Patient Authorization Record (PAR) conflict. A PAR conflict exists when a patient has multiple indexes and at least two indexes have a different consent value. This configuration is applied to Clinical Viewer, Collaborate, EHR Agent, and CAG applications.
+          <br>
+           This configuration is not relevant if Defining Patient Consent Policy is set to Disabled.
+           <br>
+            - Disabled: Determines whether the Patient Authorization Service (PAS) is disabled. If true (Disabled), the system does not apply a Patient Consent calculation when entering the Patient File in dbMotion applications. Patient Consent Policy is ignored.
+            <br>
+             - OptIn: Determines whether the OptIn Patient Consent Policy is applied. OptIn policy allows users to view patient data and enter the patient file only of those patients that explicitly agreed to give consent.
+             <br>
+              - OptOut: Determines whether the OptOut Patient Consent Policy is applied. OptOut policy allows users to view patient data and enter the patient file of either those patients that agreed to give consent or of patients that did not yet specify their consent (null Par) and consent is undefined.
+              <br>
+               - Most Updated Consent: Determines whether the Most Updated Consent Policy is applied. If true, when a patient has multiple indexes, Patient Consent Policy is applied according to the consent value in the most updated index of the patient cluster.
+               <br>
+                - Most Restricted Consent: Determines whether the Most Restricted Consent Policy is applied. If true, when a patient has multiple indexes, Patient Consent Policy is applied according to the consent value in all the indexes of the cluster. If even one index does not give consent, the user cannot enter the patient file.
+                <br/>
+                <i>
+                 Default: Disabled
+                </i>
+               </br>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="patientproviderrelationship_set-group">
+     <h2>
+      Patient Provider Relationship
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         dbMotion Security Service
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="patientproviderrelationship_set-0">
+      <fieldset class="module aligned ">
+       <div class="form-row field-patient_provider_relationship">
+        <div>
+         <label class="vCheckboxLabel" for="id_patientproviderrelationship_set-0-patient_provider_relationship">
+          Add Psychiatric permission based on Provider - Patient relationship
+         </label>
+         <p class="help">
+          Determines whether to allow members of the patient's Care Team to access the patient's psychiatric data by adding Psychiatric permissions (Code: Psy, Code System: 2.16.840.1.113883.5.25) to the Provider's security permissions.
+          <br>
+           The Patient-Provider relationship exists when both the Patient and the Provider are related to the same Care Team. The Provider's Care Team is managed as an Organization, which is defined as a Care Team if the Code ID (of the Organization)  is under the CareTeam sub domain. The Patient's Care Team is managed as a PrimaryCareProvider, which is defined as a Care Team if the Code ID (of the PrimaryCareProvider) is under the CareTeamLink subdomain.
+           <br>
+            To define the Provider's Care Team, the Provider's National ID value (configured in the Active Directory) is used to associate the Provider to the relevant Medical Staff Identifier (ID extension) in the CDR that defines the Provider's Care Team.
+            <br>
+             The configuration of the Provider's National ID value is performed in the following CCenter location:  Security &gt; Managed Users &gt; National ID.
+             <br>
+              To define the Medical Staff ID root, the EHR User Assigning Authority value must be configured in the following CCenter location: Agent Hub &gt; EHR Integration &gt; Properties Packages.
+              <br>
+               If the Patient and Provider have overlapping Care Team values,  this indicates that the Patient-Provider relationship exists. In this case the Psychiatric permission will be added to the User.
+               <br/>
+               <i>
+                Default: False
+               </i>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,761 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set Patient View Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/patientviewpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="patientviewpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="patientviewgeneraldefinitions_set-group">
+     <div class="inline-related" id="patientviewgeneraldefinitions_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Login Screen Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_domain">
+        <div>
+         <label for="id_patientviewgeneraldefinitions_set-0-default_domain">
+          Default Active Directory Domain:
+         </label>
+         <select id="id_patientviewgeneraldefinitions_set-0-default_domain" name="patientviewgeneraldefinitions_set-0-default_domain">
+          <option value="">
+           ---------
+          </option>
+          <option selected="selected" value="5">
+           CORP.ALLSCRIPTS.COM
+          </option>
+          <option value="1">
+           dbMotion.loc
+          </option>
+          <option value="2">
+           DEV.local
+          </option>
+          <option value="3">
+           DEV2.local
+          </option>
+          <option value="4">
+           SITQA2.RD.ALLSCRIPTS.COM
+          </option>
+         </select>
+         <a class="add-another" href="/admin/security/adproviders/add/?_to_field=id" id="add_id_patientviewgeneraldefinitions_set-0-default_domain" onclick="return showAddAnotherPopup(this);">
+          <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+         </a>
+         <p class="help">
+          This configuration is to define the default active directory domain in Login page of standalone mode.
+          <br/>
+          The Domain must be added first to the list in Active directory domains.
+          <br/>
+          <i>
+           Default: N/A
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-default_logofile">
+        <div>
+         <label for="id_patientviewgeneraldefinitions_set-0-default_logofile">
+          Logo Image:
+         </label>
+         <p class="help">
+          Defines the default logo presented in the Login Page.
+          <br/>
+          The following are the logo image type and size requirements:
+          <br/>
+          Type: PNG
+          <br/>
+          Height: 28px
+          <br/>
+          Width: 304px
+          <br/>
+          <i>
+           Default: Allscripts Logo
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-project_name">
+        <div>
+         <label for="id_patientviewgeneraldefinitions_set-0-project_name">
+          Project Name:
+         </label>
+         <p class="help">
+          This configuration is to define the default Project Name presented in the Login Page.
+          <br/>
+          <i>
+           Default: dbMotionâ„¢ Solution
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-background_image">
+        <div>
+         <label for="id_patientviewgeneraldefinitions_set-0-background_image">
+          Background Image:
+         </label>
+         <p class="help">
+          Defines the background image displayed in the Login Page.
+          <br/>
+          The following are the background image type and size requirements:
+          <br/>
+          Type: JPEG, PNG, BMP, GIF
+          <br/>
+          Height: 1080px
+          <br/>
+          Width: 1920px
+          <br/>
+          Weight: Upto 2MB
+          <br/>
+          <i>
+           Default: Solid #f2f2f2 Background color
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpocommunication_set-group">
+     <div class="inline-related" id="vpocommunication_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Confidentiality
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            Communication
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-is_encounter_conf_inheritance">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpocommunication_set-0-is_encounter_conf_inheritance">
+          Enable encounter confidentiality inheritance flow
+         </label>
+         <p class="help">
+          Determines whether to enable the inheritance from an encounter to its related acts.
+          <br/>
+          It also supports the inheritance of the encounter type code confidentiality to its related acts.
+          <br/>
+          This configuration affects Clinical viewer, Clinical View Agent, Patient View, SDK. In addition, supported when dbMotion serves as an XDS.b repository.
+          <br/>
+          For more information, look for "Data type level confidentiality" in the "Data Integration Layer Implementation Guide"
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="vpofacilitydisplay_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Facility Display Prioritization
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           Communication
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Determines how to calculate the organization shown in the Facility field. This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List.
+        <br/>
+        <br/>
+        <i>
+         Default: Display the first participant or parent organization that is defined by the INS (institute) code
+        </i>
+        . This option supports only the INS type and no other types.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Clinical Domain
+          </th>
+          <th class="required">
+           Calculation of the Facility field
+           <img alt="(Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-0">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            AllergyIntolerances
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-0-facility_source" name="vpofacilitydisplay_set-0-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-1">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-1-facility_source" name="vpofacilitydisplay_set-1-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-2">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Diagnoses
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-2-facility_source" name="vpofacilitydisplay_set-2-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-3">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Immunizations
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-3-facility_source" name="vpofacilitydisplay_set-3-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-4">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-4-facility_source" name="vpofacilitydisplay_set-4-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-5">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Medications
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-5-facility_source" name="vpofacilitydisplay_set-5-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-6">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Encounters
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-6-facility_source" name="vpofacilitydisplay_set-6-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-7">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Procedures
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-7-facility_source" name="vpofacilitydisplay_set-7-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-8">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Measurements
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-8-facility_source" name="vpofacilitydisplay_set-8-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-9">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            LabEvents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-9-facility_source" name="vpofacilitydisplay_set-9-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-10">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-10-facility_source" name="vpofacilitydisplay_set-10-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-11">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Documents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-11-facility_source" name="vpofacilitydisplay_set-11-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="vpofacilitydisplay_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-__prefix__-facility_source" name="vpofacilitydisplay_set-__prefix__-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientviewdefaultlandingpage_set-group">
+     <div class="inline-related" id="patientviewdefaultlandingpage_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient Summary
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(CVA)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_page">
+        <div>
+         <label class="required" for="id_patientviewdefaultlandingpage_set-0-default_page">
+          Default landing page:
+         </label>
+         <select id="id_patientviewdefaultlandingpage_set-0-default_page" name="patientviewdefaultlandingpage_set-0-default_page">
+          <option selected="selected" value="0">
+           Patient Summary
+          </option>
+          <option value="1">
+           View by Category
+          </option>
+          <option value="2">
+           View by Date
+          </option>
+         </select>
+         <p class="help">
+          Determines the default landing page when a user enters a patient file. This configuration applies to Patient View only. A user can override the configuration and select a different landing page in User Settings &gt; Application Preferences.
+          <br/>
+          <i>
+           Default: Patient Summary
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="specializedviews_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Specialized Views
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           View name
+           <img alt="(Defines the name of specialized view and allows to type alpha numeric text. Mandatory field to fill to create a view, default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the name of specialized view and allows to type alpha numeric text. Mandatory field to fill to create a view, default: Empty" width="10"/>
+          </th>
+          <th class="required">
+           Domains and Codes file
+           <img alt="(The CSV file Defines the category type and codes (Code &amp; Code system) to display under the specialized view. Category type should match with the defined category types in dbMotion. Mandatory field to fill, default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The CSV file Defines the category type and codes (Code &amp; Code system) to display under the specialized view. Category type should match with the defined category types in dbMotion. Mandatory field to fill, default: Empty" width="10"/>
+          </th>
+          <th class="required">
+           Permitted Roles
+           <img alt="(Defines the user roles which has access to view this specialized view.Possible values: All, None, Role names separated by ','. When the value is 'All' all users will have access to view this category.  When certain role(s) are filled, only users having that role(s) will be able to access this category.When the value is 'None' no user can view/access this category.Default: None.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the user roles which has access to view this specialized view.Possible values: All, None, Role names separated by ','. When the value is 'All' all users will have access to view this category.  When certain role(s) are filled, only users having that role(s) will be able to access this category.When the value is 'None' no user can view/access this category.Default: None." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 empty-form" id="specializedviews_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-view_name">
+          </td>
+          <td class="field-domain_codes_file_name">
+          </td>
+          <td class="field-roles">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientslistviews_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        "My Patient" Lists
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        In standalone mode, My Patient List tabs are only displayed for users with the specified User Role. In addition, users must have a relationship with a patient for the patients to display in a list on a tab. Patient relationships are loaded in the Provider Registry (PPOL) database.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Patients List Type
+          </th>
+          <th class="required">
+           Label
+           <img alt="(Defined label is displayed to all users with page access. Default is page name.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defined label is displayed to all users with page access. Default is page name." width="10"/>
+          </th>
+          <th class="required">
+           Order
+           <img alt="(The order of pages are displayed.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The order of pages are displayed." width="10"/>
+          </th>
+          <th class="required">
+           User Roles
+           <img alt="(Defines the user roles which has access to view this Page. Possible Values: All, None, Role names separated by ','. When the values is 'All' all users will have access to view this page. When certain role(s) are filled, only users having that role(s) will be able to access this page. Default is None , which means no user can access this page)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the user roles which has access to view this Page. Possible Values: All, None, Role names separated by ','. When the values is 'All' all users will have access to view this page. When certain role(s) are filled, only users having that role(s) will be able to access this page. Default is None , which means no user can access this page" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="patientslistviews_set-0">
+          <td class="original">
+          </td>
+          <td class="field-patients_list_type">
+           <p>
+            Recently Hospitalized
+           </p>
+          </td>
+          <td class="field-patients_list_label">
+          </td>
+          <td class="field-patients_list_order">
+          </td>
+          <td class="field-patients_list_roles">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="patientslistviews_set-1">
+          <td class="original">
+          </td>
+          <td class="field-patients_list_type">
+           <p>
+            Worklist
+           </p>
+          </td>
+          <td class="field-patients_list_label">
+          </td>
+          <td class="field-patients_list_order">
+          </td>
+          <td class="field-patients_list_roles">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="patientslistviews_set-2">
+          <td class="original">
+          </td>
+          <td class="field-patients_list_type">
+           <p>
+            Worklist
+           </p>
+          </td>
+          <td class="field-patients_list_label">
+          </td>
+          <td class="field-patients_list_order">
+          </td>
+          <td class="field-patients_list_roles">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="patientslistviews_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-patients_list_type">
+           <p>
+           </p>
+          </td>
+          <td class="field-patients_list_label">
+          </td>
+          <td class="field-patients_list_order">
+          </td>
+          <td class="field-patients_list_roles">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

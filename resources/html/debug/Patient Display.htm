@@ -1,0 +1,1029 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Patient Display Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer, EHR Agent, Patient List, Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/cvpatientdisplaypage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="cvpatientdisplaypage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="appspatientdisplaycommon_set-group">
+     <div class="inline-related" id="appspatientdisplaycommon_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient MRN Display
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-is_display_patient_mrn">
+        <div>
+         <label class="vCheckboxLabel" for="id_appspatientdisplaycommon_set-0-is_display_patient_mrn">
+          Display patient MRN in the applications
+         </label>
+         <p class="help">
+          Determines whether the MRN is displayed in the Patient Details header of the Clinical Views and Clinical View Agent.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-is_display_patient_mrn_report">
+        <div>
+         <label class="vCheckboxLabel" for="id_appspatientdisplaycommon_set-0-is_display_patient_mrn_report">
+          Display patient MRN in the reports
+         </label>
+         <p class="help">
+          Determines whether the MRN is displayed in the Report Headers of Clinical Viewer and Clinical View Agent.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="appspatientdisplaywithagent_set-group">
+     <div class="inline-related" id="appspatientdisplaywithagent_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient Name Display - Patient Header
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_name_format">
+        <div>
+         <label class="required" for="id_appspatientdisplaywithagent_set-0-patient_name_format">
+          Patient Name Display:
+         </label>
+         <p class="help">
+          This configuration is used to define the patient name display in:
+          <br/>
+          - Clinical Viewer Patient Header
+          <br/>
+          - EHR Agent Patient Header
+          <br/>
+          - Patient List
+          <br/>
+          The order of the Patient Name parts is defined according to the following values. You can make changes by removing a value, adding a value, or changing the order of the values.
+          <br/>
+          Where:
+          <br/>
+          - {0} = Last Name
+          <br/>
+          - {1} = First Name
+          <br/>
+          - {2} = Middle Initial
+          <br/>
+          The | symbol is required to separate the data in the value, but is not displayed in the output.
+          <br/>
+          <i>
+           Default: {0}, |{1} |{2}
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="appspatientdisplay_set-group">
+     <div class="inline-related" id="appspatientdisplay_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient Name Display - Patient Search
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_search_name_format">
+        <div>
+         <label class="required" for="id_appspatientdisplay_set-0-patient_search_name_format">
+          Patient Name Display in Patient Search:
+         </label>
+         <p class="help">
+          This configuration is used to define the display of the patient name returned after performing a Patient Search in Collaborate or the Clinical Viewer.
+          <br/>
+          The order of the Patient Name parts is defined according to the following values. You can make changes by removing a value, adding a value, or changing the order of the values.
+          <br/>
+          Where:
+          <br/>
+          - {0} = Last Name
+          <br/>
+          - {1} = First Name
+          <br/>
+          The | symbol is required to separate the data in the value, but is not displayed in the output.
+          <br/>
+          <i>
+           Default: {0}, |{1}
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Patient Address Display
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-collaborate_address_format">
+        <div>
+         <label for="id_appspatientdisplay_set-0-collaborate_address_format">
+          Patient Address Display (Collaborate, Agent Hub):
+         </label>
+         <p class="help">
+          Defines the patient's address display in Collaborate and Agent Hub according to the following values.
+          <br/>
+          You can make changes to the display by removing a value, adding a value, or changing the order of the values.
+          <br/>
+          Where:
+          <br/>
+          - {0} = AddressLine1
+          <br/>
+          - {1} = AddressLine2
+          <br/>
+          - {2} = City
+          <br/>
+          - {3} = State
+          <br/>
+          - {4} = Country
+          <br/>
+          - {5} = Postal Code
+          <br/>
+          The | symbol is required to separate the data in the value, but is not displayed in the output. The comma is not required in the value. If it is in the value it will be displayed in the output.
+          <br>
+           <i>
+            Default: {0} |{1}, |{2}, |{3}, |{4} |{5}
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-cv_address_format">
+        <div>
+         <label for="id_appspatientdisplay_set-0-cv_address_format">
+          Patient Address Display (Clinical Viewer):
+         </label>
+         <p class="help">
+          Defines the patient address display in the Patient Search clinical view (in the Search Results table, Search History table, and Consent Manager form) according to the following values.
+          <br/>
+          You can make changes to the display by removing a value, adding a value, or changing the order of the values.
+          <br/>
+          Where:
+          <br/>
+          - {0} = Address
+          <br/>
+          - {1} = City
+          <br/>
+          - {2} = State
+          <br/>
+          The | symbol is required to separate the data in the value, but is not displayed in the output. The comma is not required in the value. If it is in the value it will be displayed in the output.
+          <br>
+           <i>
+            Default: {0}, |{1}, |{2}
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="appspatientdisplayagecalculation_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient Age Display
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration defines the calculation used to display different age groups in the clinical applications. Each age group is defined by an Age Range calculated by defining the upper value of the range.
+        <br/>
+        Patient Age Range Upper Value: Defines the Upper Value used to define an age group, for example, 6 years.
+        <br/>
+        The Lower Value of this group is automatically calculated as equal to the Upper Value configured for the age group below this group, for example 30 months.
+        <br/>
+        In this example, the Age Range for this group is 30 months to 6 years.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Patient Age Range (Upper Value)
+          </th>
+          <th class="required">
+           Date Unit To Display
+          </th>
+          <th class="required">
+           Order
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="appspatientdisplayagecalculation_set-0">
+          <td class="original">
+          </td>
+          <td class="field-age_calc_time_span">
+           <select id="id_appspatientdisplayagecalculation_set-0-age_calc_time_span_1" name="appspatientdisplayagecalculation_set-0-age_calc_time_span_1">
+            <option value="0">
+             Years
+            </option>
+            <option value="1">
+             Months
+            </option>
+            <option value="2">
+             Weeks
+            </option>
+            <option value="3">
+             Days
+            </option>
+            <option selected="selected" value="4">
+             Hours
+            </option>
+           </select>
+          </td>
+          <td class="field-date_format">
+           <select id="id_appspatientdisplayagecalculation_set-0-date_format" name="appspatientdisplayagecalculation_set-0-date_format">
+            <option value="">
+             ---------
+            </option>
+            <option value="PY">
+             Years
+            </option>
+            <option value="PM">
+             Months
+            </option>
+            <option value="PW">
+             Weeks
+            </option>
+            <option value="PD">
+             Days
+            </option>
+            <option value="PYM">
+             Years and Months
+            </option>
+            <option value="TH">
+             Hours
+            </option>
+            <option selected="selected" value="THM">
+             Hours and Minutes
+            </option>
+           </select>
+          </td>
+          <td class="field-priority_order">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="appspatientdisplayagecalculation_set-1">
+          <td class="original">
+          </td>
+          <td class="field-age_calc_time_span">
+           <select id="id_appspatientdisplayagecalculation_set-1-age_calc_time_span_1" name="appspatientdisplayagecalculation_set-1-age_calc_time_span_1">
+            <option value="0">
+             Years
+            </option>
+            <option selected="selected" value="1">
+             Months
+            </option>
+            <option value="2">
+             Weeks
+            </option>
+            <option value="3">
+             Days
+            </option>
+            <option value="4">
+             Hours
+            </option>
+           </select>
+          </td>
+          <td class="field-date_format">
+           <select id="id_appspatientdisplayagecalculation_set-1-date_format" name="appspatientdisplayagecalculation_set-1-date_format">
+            <option value="">
+             ---------
+            </option>
+            <option value="PY">
+             Years
+            </option>
+            <option value="PM">
+             Months
+            </option>
+            <option value="PW">
+             Weeks
+            </option>
+            <option selected="selected" value="PD">
+             Days
+            </option>
+            <option value="PYM">
+             Years and Months
+            </option>
+            <option value="TH">
+             Hours
+            </option>
+            <option value="THM">
+             Hours and Minutes
+            </option>
+           </select>
+          </td>
+          <td class="field-priority_order">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="appspatientdisplayagecalculation_set-2">
+          <td class="original">
+          </td>
+          <td class="field-age_calc_time_span">
+           <select id="id_appspatientdisplayagecalculation_set-2-age_calc_time_span_1" name="appspatientdisplayagecalculation_set-2-age_calc_time_span_1">
+            <option value="0">
+             Years
+            </option>
+            <option selected="selected" value="1">
+             Months
+            </option>
+            <option value="2">
+             Weeks
+            </option>
+            <option value="3">
+             Days
+            </option>
+            <option value="4">
+             Hours
+            </option>
+           </select>
+          </td>
+          <td class="field-date_format">
+           <select id="id_appspatientdisplayagecalculation_set-2-date_format" name="appspatientdisplayagecalculation_set-2-date_format">
+            <option value="">
+             ---------
+            </option>
+            <option value="PY">
+             Years
+            </option>
+            <option selected="selected" value="PM">
+             Months
+            </option>
+            <option value="PW">
+             Weeks
+            </option>
+            <option value="PD">
+             Days
+            </option>
+            <option value="PYM">
+             Years and Months
+            </option>
+            <option value="TH">
+             Hours
+            </option>
+            <option value="THM">
+             Hours and Minutes
+            </option>
+           </select>
+          </td>
+          <td class="field-priority_order">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="appspatientdisplayagecalculation_set-3">
+          <td class="original">
+          </td>
+          <td class="field-age_calc_time_span">
+           <select id="id_appspatientdisplayagecalculation_set-3-age_calc_time_span_1" name="appspatientdisplayagecalculation_set-3-age_calc_time_span_1">
+            <option selected="selected" value="0">
+             Years
+            </option>
+            <option value="1">
+             Months
+            </option>
+            <option value="2">
+             Weeks
+            </option>
+            <option value="3">
+             Days
+            </option>
+            <option value="4">
+             Hours
+            </option>
+           </select>
+          </td>
+          <td class="field-date_format">
+           <select id="id_appspatientdisplayagecalculation_set-3-date_format" name="appspatientdisplayagecalculation_set-3-date_format">
+            <option value="">
+             ---------
+            </option>
+            <option value="PY">
+             Years
+            </option>
+            <option value="PM">
+             Months
+            </option>
+            <option value="PW">
+             Weeks
+            </option>
+            <option value="PD">
+             Days
+            </option>
+            <option selected="selected" value="PYM">
+             Years and Months
+            </option>
+            <option value="TH">
+             Hours
+            </option>
+            <option value="THM">
+             Hours and Minutes
+            </option>
+           </select>
+          </td>
+          <td class="field-priority_order">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="appspatientdisplayagecalculation_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-age_calc_time_span">
+           <select id="id_appspatientdisplayagecalculation_set-__prefix__-age_calc_time_span_1" name="appspatientdisplayagecalculation_set-__prefix__-age_calc_time_span_1">
+            <option selected="selected" value="0">
+             Years
+            </option>
+            <option value="1">
+             Months
+            </option>
+            <option value="2">
+             Weeks
+            </option>
+            <option value="3">
+             Days
+            </option>
+            <option value="4">
+             Hours
+            </option>
+           </select>
+          </td>
+          <td class="field-date_format">
+           <select id="id_appspatientdisplayagecalculation_set-__prefix__-date_format" name="appspatientdisplayagecalculation_set-__prefix__-date_format">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="PY">
+             Years
+            </option>
+            <option value="PM">
+             Months
+            </option>
+            <option value="PW">
+             Weeks
+            </option>
+            <option value="PD">
+             Days
+            </option>
+            <option value="PYM">
+             Years and Months
+            </option>
+            <option value="TH">
+             Hours
+            </option>
+            <option value="THM">
+             Hours and Minutes
+            </option>
+           </select>
+          </td>
+          <td class="field-priority_order">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Business Rules
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_id_type_display_priority">
+        <div>
+         <label for="id_vpo_set-0-patient_id_type_display_priority">
+          Patient ID display priority:
+         </label>
+         <p class="help">
+          This configuration applies to Clinical Viewer only.
+          <br/>
+          Defines the priority for displaying the patient ID in the Patient Details header (can be used to display the patient's PHIN instead of displaying the MRN), using the &lt;code&gt;|&lt;code&gt; format.
+          <br/>
+          <i>
+           Default: MRN|SSN
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_privacy_indicate_minority">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpo_set-0-patient_privacy_indicate_minority">
+          Indicate if a patient is a minor
+         </label>
+         <p class="help">
+          This configuration applies to Clinical Viewer and Patient View.
+          <br/>
+          Determines whether the system indicates if a patient is a minor in the Patient Details area.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_privacy_minor_min">
+        <div>
+         <label class="required" for="id_vpo_set-0-patient_privacy_minor_min">
+          Minor minimum age:
+         </label>
+         <p class="help">
+          This configuration applies to Clinical Viewer and Patient View.
+          <br/>
+          Defines the minimum age in years (inclusive) that determines if the patient is a minor.
+          <br/>
+          <i>
+           Default: 11
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-patient_privacy_minor_max">
+        <div>
+         <label class="required" for="id_vpo_set-0-patient_privacy_minor_max">
+          Minor maximum age:
+         </label>
+         <p class="help">
+          This configuration applies to Clinical Viewer and Patient View.
+          <br/>
+          Defines the maximum age in years (inclusive) that determines if the patient is a minor.
+          <br/>
+          <i>
+           Default: 18
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpoppol_set-group">
+     <div class="inline-related" id="vpoppol_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Display SSN
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion PPOL Service
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-patient_privacy_mask_ssn">
+        <div>
+         <label for="id_vpoppol_set-0-patient_privacy_mask_ssn">
+          Number of SSN digits to display:
+         </label>
+         <select id="id_vpoppol_set-0-patient_privacy_mask_ssn" name="vpoppol_set-0-patient_privacy_mask_ssn">
+          <option value="-1">
+           All
+          </option>
+          <option value="0">
+           Do not display
+          </option>
+          <option value="1">
+           1
+          </option>
+          <option value="2">
+           2
+          </option>
+          <option value="3">
+           3
+          </option>
+          <option selected="selected" value="4">
+           4
+          </option>
+          <option value="5">
+           5
+          </option>
+          <option value="6">
+           6
+          </option>
+          <option value="7">
+           7
+          </option>
+          <option value="8">
+           8
+          </option>
+          <option value="9">
+           9
+          </option>
+         </select>
+         <p class="help">
+          This configuration applies to Clinical Viewer and Collaborate.
+          <br/>
+          Defines the number of SSN digits to display (masking the rest).
+          <br/>
+          For example, if the number is 4, then only the last 4 digits of the SSN will be displayed.
+          <br/>
+          This configuration affects the Identifiers grid in Demographics page and the Search Results grid in Patient Search page.
+          <br/>
+          <i>
+           Default: 4
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="appspatientdisplayvaluebaseprogram_set-group">
+     <div class="inline-related" id="appspatientdisplayvaluebaseprogram_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Displayed Risk Scores
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        Determines the Risk Score level(s) which will be displayed to the user in the EHR Agent and Clinical Viewer header.
+        <b>
+         The Risk Score level is determined based on the assigned sub-domain of the risk score interpretation code.
+        </b>
+        <br/>
+        One or more of the following 4 levels can be displayed: Low, Medium, High, and Very High.
+        <br/>
+        Only the latest metric from the selected Risk Score will be displayed.
+       </div>
+       <div class="form-row field-vbp_low_risk_score field-vbp_medium_risk_score field-vbp_high_risk_score field-vbp_very_high_risk_score">
+        <div class="field-box field-vbp_low_risk_score">
+         <label class="vCheckboxLabel" for="id_appspatientdisplayvaluebaseprogram_set-0-vbp_low_risk_score">
+          Low
+         </label>
+        </div>
+        <div class="field-box field-vbp_medium_risk_score">
+         <label class="vCheckboxLabel inline" for="id_appspatientdisplayvaluebaseprogram_set-0-vbp_medium_risk_score">
+          Medium
+         </label>
+        </div>
+        <div class="field-box field-vbp_high_risk_score">
+         <label class="vCheckboxLabel inline" for="id_appspatientdisplayvaluebaseprogram_set-0-vbp_high_risk_score">
+          High
+         </label>
+        </div>
+        <div class="field-box field-vbp_very_high_risk_score">
+         <label class="vCheckboxLabel inline" for="id_appspatientdisplayvaluebaseprogram_set-0-vbp_very_high_risk_score">
+          Very High
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-vbp_risk_score_code">
+        <div>
+         <label for="id_appspatientdisplayvaluebaseprogram_set-0-vbp_risk_score_code">
+          Risk Score Code:
+         </label>
+         <p class="help">
+          Defines the Code (in CodeSystem|Code format) of the patient's Risk Score.
+          <br/>
+          Code can be local or baseline
+          <br/>
+          For example: 2.16.840.1.113883.3.57.1.2.17.89|0006
+          <br/>
+          <b>
+           Note: The code that is configured and the code used to store the Risk Score in the CDR are assumed to be the same.
+          </b>
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="appspatientdisplayvbp_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Value Based Program
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        A Value Based Program (VBP) is a program provided by an organization of health care providers (for example, an ACO) that agrees to be accountable for the quality, cost, and overall care of patients who are assigned to it.
+        <br/>
+        dbMotion Clinical Viewer and Patient View (but not Collaborate) applications display an indication for patients that are registered in a VBP in the application header. This configuration is used to define all the VBPs in an organization. A patient can belong to multiple VBPs but only one program is displayed for a  patient in the application. The order of the configured VBPs configured here determines the priority order for display of the VBP in the application. If a patient belongs to multiple VBPs, the patient's VBP with the highest priority will be displayed in the application header.
+        <br/>
+        <br/>
+        <br/>
+        The System OID field can also be structured as MetricCodeSystem|MetricCode|InterpretationDomain to be displayed as a metric-based indicator. For example: 2.16.840.1.113883.3.57.1.2.17.89|0006|Interpretation_VeryHigh
+        <br>
+         <br>
+          The display of metric-based indicators takes precedence over indicators without metric codes. If there are multiple metric-based indicators, then the most recent one will be displayed, regardless of the configured order in CCenter. If the most recent metric-based indicator is not configured for display, then no metric-based indicator will be displayed. This configuration applies to Clinical Viewer only.
+          <br/>
+         </br>
+        </br>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           System OID
+           <img alt="(Defines the patient system OID (root id), which represents the patient's ID in the Value Based Program (VBP). This OID should also be configured in VIA. For example: 2.16.840.1.113883.3.57.1.3.5.52.1.8.6Default: empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the patient system OID (root id), which represents the patient's ID in the Value Based Program (VBP). This OID should also be configured in VIA. For example: 2.16.840.1.113883.3.57.1.3.5.52.1.8.6Default: empty" width="10"/>
+          </th>
+          <th>
+           Display Name
+           <img alt="(If the patient is in a VBP, defines the VBP name displayed in the EHR Agent and Clinical Viewer header. The value should not exceed 15 chars.Default: empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="If the patient is in a VBP, defines the VBP name displayed in the EHR Agent and Clinical Viewer header. The value should not exceed 15 chars.Default: empty" width="10"/>
+          </th>
+          <th>
+           Description
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="appspatientdisplayvbp_set-0">
+          <td class="original">
+          </td>
+          <td class="field-vbp_oid_system">
+          </td>
+          <td class="field-vbp_display_name_long">
+          </td>
+          <td class="field-vbp_description">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="appspatientdisplayvbp_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-vbp_oid_system">
+          </td>
+          <td class="field-vbp_display_name_long">
+          </td>
+          <td class="field-vbp_description">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="appsadvancedirectivenodes_set-group">
+     <div class="inline-related" id="appsadvancedirectivenodes_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Advance Directives
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        Advance Directive is a document by which a person makes provision for health care decisions in the event that, in the future, he/she becomes incapable of making these decisions. When this document exists (the document type code is located in the Advance Directive vocabulary subdomain), a textual indication is displayed in the Agent Hub header.
+       </div>
+       <div class="form-row field-adv_dir">
+        <div>
+         <label class="required" for="id_appsadvancedirectivenodes_set-0-adv_dir">
+          Advance Directive indicator:
+         </label>
+         <p class="help">
+          Define the displayed value of the Advance Directive indication.
+          <br/>
+          <i>
+           Default: ADVDIR
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-nodes">
+        <div>
+         <label for="id_appsadvancedirectivenodes_set-0-nodes">
+          Advance Directive nodes:
+         </label>
+         <p class="help">
+          Define a comma-separated list of the dbMotion nodes (as a Node ID) to be queried for Advance Directive documents.
+          <br/>
+          An empty value will send the request to all the nodes.
+          <br/>
+          For example, for Node ID=1 and Node ID=12, enter the following value:  1,12
+          <br/>
+          <i>
+           Default: empty
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

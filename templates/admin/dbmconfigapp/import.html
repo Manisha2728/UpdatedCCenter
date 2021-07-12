@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrahead %}{{ block.super }}
+<style type="text/css">
+      #form-import{
+      	width: 80%;
+      }
+      
+</style>
+{% endblock %}
+
+
+
+{% block jquery %}
+	
+	$("input:submit").click(function(){
+		// a workaround for IE (the one and only) for the gif to keep animating after submit
+		setTimeout('$("#loading").html(\'<div class="loading">Importing. Please wait...</div>\')', 200);
+	});
+
+{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+<form id="form-import" enctype="multipart/form-data" action="/import_db/" method="post">{% csrf_token %}
+	<h1>Import configurations to Configuration Center</h1>
+	<br/>
+	<p>1. Choose the configuration file to import (*.json).</p>
+	<div style="margin-left: 36px;">
+	{{ form.as_p }}
+	</div>
+	<p>
+	<br/>
+2. Click Apply in order to import the configurations.
+
+	<ul class="errorlist">
+		<li>Attention: all the existing configurations will be overridden.</li>
+		<li>Important: in order to deploy the new configurations, restart the relevant services</li>
+
+	</ul>
+	<div class="button-wrap">
+		<input class="default" type="submit" value="Apply" />
+	</div>
+	
+	<div id="loading">
+	
+	</div>
+</form>
+
+</div>
+
+{% block object-tools-items %}{% endblock %}
+{% endblock %}
+
+
+

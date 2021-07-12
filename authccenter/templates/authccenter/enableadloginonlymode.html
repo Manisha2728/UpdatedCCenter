@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrahead %}{{ block.super }}
+<style type="text/css">
+      #form-import{
+      	width: 80%;
+      }
+
+
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <form id="form-import" enctype="multipart/form-data" action="/authccenter/Command/" method="post">{% csrf_token %}
+        {# Title #}
+        <h1>Switch to AD (Active Directory) Login only</h1>
+        <h2>Please note that:</h2>
+
+        {% if ad_providers_exists %}
+
+
+        {# Warnings for final Action #}
+        <ul class="errorlist">
+            <li>Important: All the existing CCenter users and groups will be deleted.</li>
+            <li>Important: Please ensure that the relevant AD providers are configured under security page.</li>
+            <li>Warning! All original CCenter authentication will be cancelled when switching to AD Login only!
+                This action is final and cannot be reverted!</li>
+
+        </ul>
+        {# Apply Button #}
+        <div class="button-wrap">
+            <input class="default" type="submit" value="Apply"/>
+        </div>
+        {% else %}
+        <ul class="errorlist">
+            <li>Please configure a minimum of 1 Active Directory provider under security page.</li>
+        </ul>
+        {% endif %}
+
+
+    </form>
+
+</div>
+
+{% block object-tools-items %}{% endblock %}
+{% endblock %}
+
+
+

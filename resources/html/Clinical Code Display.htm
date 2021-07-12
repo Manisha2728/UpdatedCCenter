@@ -1,0 +1,5628 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Code Display Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer, EHR Agent, Patient View
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicalcodedisplaypage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicalcodedisplaypage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+     Defines the priority order for displaying the Code Designation, which defines the text that is displayed for each clinical code in Clinical Viewer, EHR Agent, Patient View and Patient List. The Code Designation Priority Order configuration provides the following options:
+     <br>
+      <br>
+       <ul>
+        <li>
+         <b>
+          Preferred
+         </b>
+         - Code Designation as configured in the preferred code translations (applied for EHR Agent and Patient View).
+        </li>
+        <li>
+         <b>
+          Baseline
+         </b>
+         - Code Designation as defined in the dbMotion Ontology.
+        </li>
+        <li>
+         <b>
+          Local
+         </b>
+         - Code Designation as received from the act's source system.
+        </li>
+        <li>
+         <b>
+          Text
+         </b>
+         - Displays the text as it was sent in the original message.
+        </li>
+       </ul>
+       For each field, if the first priority does not exist or is not valid, the second priority is used, and so on.
+       <br>
+        Change the priority order by dragging and dropping the option as required for each field.
+        <br>
+         <br>
+          Default priority order: Preferred, Baseline, Local, Text
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        AllergyIntolerance
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Note that the Allergies Reaction.code configuration will affect Immunization Reaction.code as well
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationIntoleranceType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            IntoleranceValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            IntoleranceValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReactionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SeverityValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SeverityObservation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="clinicalcodedisplay_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-2-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        ClinicalDocuments
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-2-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ClinicalDocuments
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DocumentCompletionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            DocumentCompletion
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-2-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-2-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-2-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ClinicalDocuments
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DocumentTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            DocumentType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-2-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-2-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-2-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ClinicalDocuments
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-2-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-2-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-2-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-2-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-2-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-3-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Diagnosis
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Note that the following configuration points must be identical : Diagnosis (ValueCode), AllergyIntolerance (ReactionCode), and Immunization (ReactionCode)
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-3-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Diagnosis
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationDiagnosisTypes
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-3-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Diagnosis
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SeverityCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SeverityObservation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-3-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Diagnosis
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-3-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Diagnosis
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            UncertaintyCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActUncertainty
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-3-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Diagnosis
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-3-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-3-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-3-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-4-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Problems
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-4-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Calc_TypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationConditionTypes
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-4-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ClassCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            dbmObservationStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-4-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-4-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SeverityCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SeverityObservation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-4-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-4-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            UncertaintyCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActUncertainty
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="clinicalcodedisplay_set-4-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-4-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-4-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-5-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Imaging
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-5-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            DiagnosticImageCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-5-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-5-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-5-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ImagingTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            dbmImagingType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-5-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-5-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-5-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-5-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-5-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-5-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-5-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-5-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-6-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Immunization
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Note that the following configuration points must be identical : Diagnosis (ValueCode), AllergyIntolerance (ReactionCode), and Immunization (ReactionCode)
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-6-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Immunization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            *
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-6-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Immunization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReasonCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActReason
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-6-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Immunization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            RouteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            RouteOfAdministration
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-6-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Immunization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-6-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            RelatedReactions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReactionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-6-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-6-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-6-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-7-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Laboratory
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-7-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AdditiveMaterial
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            MaterialEntityClassType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-7-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ClusterCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ClusterType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-7-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            BatteryType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-7-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ResultCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            TestType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-7-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SpecimenMaterialTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SpecimenEntityType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-7-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-7-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryResult
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            TestType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-7-7">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryResult
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-7-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-7-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-7-8">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            TestCode
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            TestType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-8-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-8-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-7-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-7-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-7-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-8-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Pathology
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-8-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ClusterCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ClusterType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-8-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            BatteryType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-8-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ProcedureActSiteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSite
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-8-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReportCompletionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            DocumentCompletion
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-8-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SpecimenMaterialTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SpecimenEntityType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-8-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PathologyFinding
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            *
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-8-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PathologyFinding
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            PathologyValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-8-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-8-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-8-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-9-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Medication
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-9-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            AdministrationUnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            OrderableDrugForm
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-9-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSubstanceAdministrationCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-9-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DispenseQuantityUnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            UnitsOfMeasureCaseInsensitive
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-9-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DoseQuantityUnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            UnitsOfMeasureCaseInsensitive
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-9-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DurationUnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            UnitsOfMeasureCaseInsensitive
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-9-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            FrequencyCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            GTSAbbreviation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-9-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MoodCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActMood
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-9-7">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            RouteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            RouteOfAdministration
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-7-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-7-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-9-8">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MedicationRequest
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-8-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-8-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-9-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-9-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-9-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-10-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Demography
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ParticipantOrganization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            CAREGIVERCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            HealthcareProviderRoleType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ParticipantOrganization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            COVPTYCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActInsurancePolicyCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            ParticipantOrganization
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            RoleStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientContacts
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SchemeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            URLScheme
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientContacts
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            UseCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            *
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            AdministrativeGender
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            AdministrativeGender
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            BirthCountry
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            CountryEntityType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-7">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            EthnicGroup
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            Ethnicity
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-7-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-7-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-8">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MaritalStatus
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            MaritalStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-8-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-8-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-9">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            PreferredLanguage
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            HumanLanguage
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-9-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-9-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-10">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Race
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            Race
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-10-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-10-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-10-11">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReligiousAffiliation
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ReligiousAffiliation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-11-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-11-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-10-12">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            PatientRecord
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            VeryImportantPerson
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            PatientImportance
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-12-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-12-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-10-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-10-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-10-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-11-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Summary
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            IntoleranceValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            IntoleranceValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReactionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            AllergyIntolerance
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            SeverityValueCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SeverityObservation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Conditions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Conditions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Diagnosis.Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Conditions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Diagnosis.TypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationDiagnosisTypes
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Conditions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ProblemList.Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationValue
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-7">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Conditions
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ProblemList.TypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationConditionTypes
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-7-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-7-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-8">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActEncounterCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-8-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-8-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-9">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Calc_SpecimenMaterialTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            SpecimenEntityType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-9-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-9-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-10">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ClusterCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ClusterType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-10-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-10-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-11">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            LaboratoryEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            BatteryType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-11-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-11-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-12">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            SubstanceAdministration
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSubstanceAdministrationCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-12-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-12-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-13">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            SubstanceAdministration
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DoseQuantityUnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            UnitsOfMeasureCaseInsensitive
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-13-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-13-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-11-14">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            SubstanceAdministration
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            FrequencyCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            GTSAbbreviation
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-14-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-14-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-11-15">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            SubstanceAdministration
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            RouteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            RouteOfAdministration
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-15-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-15-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="clinicalcodedisplay_set-11-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-11-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-11-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-12-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        MeasurementsEvent
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-12-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Measurement
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            CommonClinicalObservationType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-12-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Measurement
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MethodCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ObservationMethod
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-12-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Measurement
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Value_UnitCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            UnitsOfMeasureCaseInsensitive
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-12-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MeasurementsEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-12-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            MeasurementsEvent
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            TargetSiteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSite
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-12-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-12-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-12-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-13-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Procedure
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-13-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ApproachSiteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSite
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-13-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActProcedureCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-13-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            dbmServiceDeliveryLocationCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ServiceDeliveryLocationRoleType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-13-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MethodCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ProcedureMethod
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-13-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MoodCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActMood
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-13-5">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            PriorityCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActPriority
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-5-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-5-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-13-6">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ProcedureTypeCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            dbmProcedureType
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-6-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-6-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-13-7">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-7-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-7-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-13-8">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Procedure
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            TargetSiteCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActSite
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-8-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-8-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-13-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-13-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-13-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="clinicalcodedisplay_set-14-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Encounter
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           dbMotion Patient List Service &amp; IIS(PL.API)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           business table
+           <img alt="(The business table within the business aspect.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business table within the business aspect." width="10"/>
+          </th>
+          <th>
+           code name
+           <img alt="(The business codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The business codes." width="10"/>
+          </th>
+          <th>
+           vocabulary domain
+           <img alt="(The relevant Vocabulary domain of the codes.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The relevant Vocabulary domain of the codes." width="10"/>
+          </th>
+          <th>
+           Display as
+           <img alt="(Change the priority order by dragging and dropping the text in the required field.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Change the priority order by dragging and dropping the text in the required field." width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-14-0">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            Code
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActEncounterCode
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-0-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-0-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-14-1">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            DischargeDispositionCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            EncounterDischargeDisposition
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-1-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-1-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-14-2">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            MoodCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActMood
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-2-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-2-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="clinicalcodedisplay_set-14-3">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            ReasonCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActReason
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-3-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-3-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="clinicalcodedisplay_set-14-4">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+            Encounter
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+            StatusCode
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+            ActStatus
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-4-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-4-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="clinicalcodedisplay_set-14-empty">
+          <td class="original">
+          </td>
+          <td class="field-business_table">
+           <p>
+           </p>
+          </td>
+          <td class="field-code_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-vocabulary_domain">
+           <p>
+           </p>
+          </td>
+          <td class="field-display_as">
+           <ul class="sortable" id="id_clinicalcodedisplay_set-14-__prefix__-display_as" maxlength="50" name="horizontalsortable_clinicalcodedisplay_set-14-__prefix__-display_as">
+            <li class="ui-state-default" id="Preferred">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Preferred
+            </li>
+            <li class="ui-state-default" id="Baseline">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Baseline
+            </li>
+            <li class="ui-state-default" id="Local">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Local
+            </li>
+            <li class="ui-state-default" id="Text">
+             <span class="ui-icon ui-icon-arrowthick-2-n-s">
+             </span>
+             Text
+            </li>
+           </ul>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

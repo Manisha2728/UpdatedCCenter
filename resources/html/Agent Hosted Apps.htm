@@ -1,0 +1,619 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Configure Hosted Applications
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Agent Hub
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/agentpphostedapppage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="agentpphostedapppage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="agenthostedappsbehavior_set-group">
+     <h2>
+      Hosted Applications Visibility Behavior
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="agenthostedappsbehavior_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <div class="form-row field-is_app_related_to_ehr">
+        <div>
+         <label class="vCheckboxLabel" for="id_agenthostedappsbehavior_set-0-is_app_related_to_ehr">
+          Applications visibility is related to the EHR
+         </label>
+         <p class="help">
+          Determines how Agent Hub hosted applications are displayed in relation to the EHR. Applications are operational and displayed with a patient in context in the EHR.
+          <br/>
+          - False - Applications display independent of the EHR and can be minimized regardless of EHR state.
+          <br/>
+          - True (default) -  Application display is dependent on Agent Hub and EHR display. Agent Hub must be displayed for the application to be displayed.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="agentpphostedapp_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Patient Centric Applications
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Define one or more Patient Centric applications to be hosted by the Agent Hub:
+        <br/>
+        In addition,  for each application you need configure the application logo to be displayed in the Agent Hub header.
+        <br/>
+        The logo size must be 24x24 pixels.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Hosted Application Name
+          </th>
+          <th>
+           Enabled
+           <img alt="(Enable one or more of the following applications to be hosted by the Agent Hub.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Enable one or more of the following applications to be hosted by the Agent Hub." width="10"/>
+          </th>
+          <th class="required">
+           Logo File
+           <img alt="(Define the logo file that will be displayed for the application in the Agent Hub header.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Define the logo file that will be displayed for the application in the Agent Hub header." width="10"/>
+          </th>
+          <th>
+           Application Page URL
+           <img alt="(Define the launch URL of the hosted application.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Define the launch URL of the hosted application." width="10"/>
+          </th>
+          <th>
+           Application State URL
+           <img alt="(Define the URL that will be used to send the updated context information (user/patient) to the hosted application.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Define the URL that will be used to send the updated context information (user/patient) to the hosted application." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="agentpphostedapp_set-0">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentpphostedapp/6/" onclick="return showEditPopup(this);" title="Click to edit">
+             Patient View
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-LogoFile">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentHostedApps/Logo/PatientViewLogo.png">
+             AgentHostedApps/Logo/PatientViewLogo.png
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            (auto generated)
+           </p>
+          </td>
+          <td class="field-get_application_state_url">
+           <p>
+            https://PH-ST7-APP.dbMotion.loc/cva/server/api/patient/notifications?pv
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="agentpphostedapp_set-1">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentpphostedapp/1/" onclick="return showEditPopup(this);" title="Click to edit">
+             Care Director Plan
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-LogoFile">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentHostedApps/Logo/CareDirectorPlanLogo.png">
+             AgentHostedApps/Logo/CareDirectorPlanLogo.png
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            https://PH-ST7-APP.dbMotion.loc/HostedWebSimulator/api/CDP/OpenApplicationHTMLIframe
+           </p>
+          </td>
+          <td class="field-get_application_state_url">
+           <p>
+            https://PH-ST7-APP.dbMotion.loc/HostedWebSimulator/api/CDP/GetApplicationState
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="agentpphostedapp_set-2">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentpphostedapp/4/" onclick="return showEditPopup(this);" title="Click to edit">
+             Hosted Application Simulator
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-LogoFile">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentHostedApps/Logo/ca_root.ico">
+             AgentHostedApps/Logo/ca_root.ico
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            https://PH-ST7-APP.dbMotion.loc/HostedWebSimulator/api/SimulatorRequests/OpenApplicationWithAuthToken
+           </p>
+          </td>
+          <td class="field-get_application_state_url">
+           <p>
+            https://PH-ST7-APP.dbMotion.loc/HostedWebSimulator/api/SimulatorRequests/GetApplicationStateWithAuthToken
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="agentpphostedapp_set-3">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentpphostedapp/5/" onclick="return showEditPopup(this);" title="Click to edit">
+             PHA
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-LogoFile">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentHostedApps/Logo/PHA_appicon_20px.png">
+             AgentHostedApps/Logo/PHA_appicon_20px.png
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            https://prt-hub01.rd.allscripts.com:5566/Gateway/OpenApplication
+           </p>
+          </td>
+          <td class="field-get_application_state_url">
+           <p>
+            https://prt-hub01.rd.allscripts.com:5566/Gateway/GetApplicationState
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="agentpphostedapp_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentpphostedapp/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-LogoFile">
+          </td>
+          <td class="field-launch_url">
+           <p>
+           </p>
+          </td>
+          <td class="field-get_application_state_url">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="launchergeneralproperties_set-group">
+     <h2>
+      Default Application
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="inline-related" id="launchergeneralproperties_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <div class="form-row field-default_app">
+        <div>
+         <label for="id_launchergeneralproperties_set-0-default_app">
+          Default Application:
+         </label>
+         <select id="id_launchergeneralproperties_set-0-default_app" name="launchergeneralproperties_set-0-default_app">
+          <option value="">
+           ---------
+          </option>
+          <option selected="selected" value="6">
+           Patient View
+          </option>
+          <option value="1">
+           Care Director Plan
+          </option>
+          <option value="4">
+           Hosted Application Simulator
+          </option>
+          <option value="5">
+           PHA
+          </option>
+         </select>
+         <p class="help">
+          Defines the default application to be launched via the Application Launcher's middle button.
+          <br/>
+          <i>
+           Default: Patient View (if the application is enabled).
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="agentsmartonfhirapp_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        SMART on FHIR Applications
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Define the list of SMART on FHIR applications to be hosted by Agent Hub.
+        <br/>
+        The defined hosted SMART on FHIR applications will be visible in the Patient Centric Applications workflow of the Agent Hub.
+        <br/>
+        Currently only applications that use dbMotion FHIR Server are supported.
+        <br/>
+        In addition, 
+        configure the application logo to be displayed in the Agent Hub header.
+        <br/>
+        The logo size must be 20x20 pixels.
+        <br/>
+        <br/>
+        In order to configure the launching of a remote CV, add the remote CV address in the launch URL field, with the prefix [CV],
+        <br/>
+        such as [CV]https://ServerName.dbMotion.loc/dbMotionClinicalViewer
+        and configure a unique Client Name and Client ID.
+        <br/>
+        Refer to the product documentation for more information.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Client Name
+          </th>
+          <th>
+           Enabled
+           <img alt="(Enable or disable the following SMART on FHIR application to be hosted by the Agent Hub.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Enable or disable the following SMART on FHIR application to be hosted by the Agent Hub." width="10"/>
+          </th>
+          <th class="required">
+           Logo File
+           <img alt="(Define the logo file that will be displayed for the of the SMART on FHIR application in the Agent Hub header. The logo size must be 20x20 pixels.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Define the logo file that will be displayed for the of the SMART on FHIR application in the Agent Hub header. The logo size must be 20x20 pixels." width="10"/>
+          </th>
+          <th>
+           Client ID
+           <img alt="(The SMART on FHIR application ID. The Client ID should be unique for this node. Obtain this information from the application owner.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The SMART on FHIR application ID. The Client ID should be unique for this node. Obtain this information from the application owner." width="10"/>
+          </th>
+          <th>
+           Launch URL
+           <img alt="(Launch URL of the SMART on FHIR application. Obtain this information from the application owner.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Launch URL of the SMART on FHIR application. Obtain this information from the application owner." width="10"/>
+          </th>
+          <th>
+           Redirect URL
+           <img alt="(Redirect URL of the SMART on FHIR application. Obtain this information from the application owner.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Redirect URL of the SMART on FHIR application. Obtain this information from the application owner." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="agentsmartonfhirapp_set-0">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentsmartonfhirapp/3/" onclick="return showEditPopup(this);" title="Click to edit">
+             pillboxFHIR
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-logo_file">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentSMARTonFHIRApps/Logo/globe_32xMD.png">
+             AgentSMARTonFHIRApps/Logo/globe_32xMD.png
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-client_id">
+           <p>
+            pillbox
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            https://pillbox-smart.interopion.com/launch.html
+           </p>
+          </td>
+          <td class="field-redirect_url">
+           <p>
+            https://pillbox-smart.interopion.com
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="agentsmartonfhirapp_set-1">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentsmartonfhirapp/4/" onclick="return showEditPopup(this);" title="Click to edit">
+             meducationFHIR
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-logo_file">
+           <p class="file-upload">
+            Currently:
+            <a href="/dbmconfigapp/files/AgentSMARTonFHIRApps/Logo/test_32x_MD.png">
+             AgentSMARTonFHIRApps/Logo/test_32x_MD.png
+            </a>
+            <br/>
+            Change:
+           </p>
+          </td>
+          <td class="field-client_id">
+           <p>
+            meducation
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+            https://fhir-dstu2.meducation.com/launch.html
+           </p>
+          </td>
+          <td class="field-redirect_url">
+           <p>
+            https://fhir-dstu2.meducation.com/index.html
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="agentsmartonfhirapp_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-app_name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/agentsmartonfhirapp/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-enabled">
+          </td>
+          <td class="field-logo_file">
+          </td>
+          <td class="field-client_id">
+           <p>
+           </p>
+          </td>
+          <td class="field-launch_url">
+           <p>
+           </p>
+          </td>
+          <td class="field-redirect_url">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="ehragenthelp_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Help Links
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration enables you to configure additional help elements and other options to be displayed in system tray menu.
+        <br/>
+        <br/>
+        <i>
+         Default: Link name: "dbMotion System Info", URL: "/dbMotionInformationServices/dbMotionInformationPage.aspx"
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Link name
+          </th>
+          <th class="required">
+           URL
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="ehragenthelp_set-0">
+          <td class="original">
+          </td>
+          <td class="field-link_name">
+          </td>
+          <td class="field-link_url">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="ehragenthelp_set-1">
+          <td class="original">
+          </td>
+          <td class="field-link_name">
+          </td>
+          <td class="field-link_url">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="ehragenthelp_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-link_name">
+          </td>
+          <td class="field-link_url">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

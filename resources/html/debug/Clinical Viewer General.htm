@@ -1,0 +1,1212 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Viewer General Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer, EHR Agent
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicalviewergeneralpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicalviewergeneralpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicalviewergeneral_set-group">
+     <div class="inline-related" id="clinicalviewergeneral_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Web Application Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-DefaultDomain">
+        <div>
+         <label for="id_clinicalviewergeneral_set-0-DefaultDomain">
+          Domain name:
+         </label>
+         <p class="help">
+          Defines the domain that opens by default after login.
+          <br/>
+          <i>
+           Default: N/A
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-WebApplicationName">
+        <div>
+         <label class="required" for="id_clinicalviewergeneral_set-0-WebApplicationName">
+          Web Application Name:
+         </label>
+         <p class="help">
+          Defines the name of Clinical View Web Application.
+          <br/>
+          <i>
+           Default: dbMotionClinicalViewer
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-DefaultLogoFile">
+        <div>
+         <label for="id_clinicalviewergeneral_set-0-DefaultLogoFile">
+          Logo File:
+         </label>
+         <p class="help">
+          Defines the default logo presented in the Clinical Viewer.
+          <br/>
+          The following are the logo image type and size requirements:
+          <br/>
+          Type: gif
+          <br/>
+          Height: 28px
+          <br/>
+          Width: 84px
+          <br/>
+          <i>
+           Default: No default value
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-IsOtherGroupExpanded">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicalviewergeneral_set-0-IsOtherGroupExpanded">
+          Others group is always expanded
+         </label>
+         <p class="help">
+          Determines whether, in grouping scenarios, the Others group of unspecified medical information/results is always expanded.
+          <br/>
+          If True, this data is always expanded.
+          <br/>
+          If False, the  data is always collapsed.
+          <br/>
+          *Note: this configuration applies to Medications, Allergies, Problems, Diagnosis, and Procedures.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-IsTextWrappingUsedInCD">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicalviewergeneral_set-0-IsTextWrappingUsedInCD">
+          Text wrapping is used in a Clinical Document
+         </label>
+         <p class="help">
+          Defines whether text wrapping is used in a Clinical Document, in Clinical Documents and Imaging clinical domains.
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        User Name Display
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-UserNameDisplayOptions">
+        <div>
+         <label class="required" for="id_clinicalviewergeneral_set-0-UserNameDisplayOptions">
+          User name format:
+         </label>
+         <p class="help">
+          Defines the format for the parts of the user&amp;apos;s name displayed in the Clinical Viewer User Header.
+          <br/>
+          0 = Title
+          <br/>
+          1 = First Name
+          <br/>
+          2 = Last Name
+          <br/>
+          3 = TitleUnmanaged
+          <br/>
+          4 = FirstNameUnmanaged
+          <br/>
+          5 = LastNameUnmanaged
+          <br/>
+          <i>
+           Default: {0}, |{1}, |{2}|{3}, |{4}, |{5}
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Login Screen Settings
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-LoginScreenLogosOptions">
+        <div>
+         <label for="id_clinicalviewergeneral_set-0-LoginScreenLogosOptions_0">
+          Logos display:
+         </label>
+         <ul class="radiolist" id="id_clinicalviewergeneral_set-0-LoginScreenLogosOptions">
+          <li>
+           <label for="id_clinicalviewergeneral_set-0-LoginScreenLogosOptions_0">
+            In the upper area of the login screen, the dbMotion logo is displayed and the lower area is empty.
+           </label>
+          </li>
+          <li>
+           <label for="id_clinicalviewergeneral_set-0-LoginScreenLogosOptions_1">
+            In the upper area of the login screen, the customer logo is displayed and the lower area displays the dbMotion logo. Please upload the customer logo file below.
+           </label>
+          </li>
+          <li>
+           <label for="id_clinicalviewergeneral_set-0-LoginScreenLogosOptions_2">
+            In the upper area of the login screen, the customer logo is displayed and the sentence "Powered by dbMotion" is displayed beneath the customer logo. The lower area of the login screen is empty. Please upload the customer logo file below and define the position of the sentence.
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          <i>
+           Default: In the upper area of the login screen, the dbMotion logo is displayed and the lower area is empty.
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-CustomerLogoFileName">
+        <div>
+         <label for="id_clinicalviewergeneral_set-0-CustomerLogoFileName">
+          Customer Logo file name:
+         </label>
+         <p class="help">
+          Defines the file name of the customer's logo displayed in the Clinical Viewer login screen. The logo file should manually be saved to:
+          <br/>
+          C:\Program Files\dbMotion\Web\Sites\WebApp35\SiteImages\logos
+          <br/>
+          This configuration applies only in the case that the "Logos display" selection above includes the customer logo.
+          <br/>
+          The following are the logo image type and size requirements:
+          <br/>
+          Type: gif
+          <br/>
+          Height: 60px
+          <br/>
+          Width: 365px
+          <br/>
+          <br/>
+          Note: The logo file name should include the extension
+          <br/>
+          <i>
+           Example: customer.gif
+          </i>
+          <br/>
+          <i>
+           Default: No default value
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-CreditTitlePosition">
+        <div>
+         <label for="id_clinicalviewergeneral_set-0-CreditTitlePosition">
+          Position of "Powered by dbMotion" sentence:
+         </label>
+         <p class="help">
+          Defines the horizontal position of the "Powered by dbMotion" sentence relative to the left corner of the login logo container
+          <br/>
+          The default horizontal position is in the center of the logo container, 120.
+          <br/>
+          0 will position the sentence on the far left side of the login logo container.
+          <br/>
+          250 will position the sentence on the far right side of the login logo container.
+          <br/>
+          Possible values: 0-250
+          <br/>
+          <i>
+           Default: 120
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicalviewergeneral_set-2-group">
+     <div class="inline-related" id="clinicalviewergeneral_set-2-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Disclaimer in Status Bar
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="description">
+        This configuration is used to determine if to show the disclaimer text and URL link that is displayed in the Clinical Viewer status bar. It provides a disclaimer text followed by a link (URL), displayed in the clinical view status bar on all Clinical Viewer pages (except the PSCV).
+       </div>
+       <div class="form-row field-IsShowMessageSectionDisclaimer">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicalviewergeneral_set-2-0-IsShowMessageSectionDisclaimer">
+          Show the message section of the disclaimer in the clinical view status bar.
+         </label>
+         <p class="help">
+          Determines whether to show the message section of the disclaimer in the clinical view status bar.
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-IsShowLinkSectionDisclaimer">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicalviewergeneral_set-2-0-IsShowLinkSectionDisclaimer">
+          Show the link section of the disclaimer in the clinical view status bar
+         </label>
+         <p class="help">
+          Determines whether to show the link section of the disclaimer in the clinical view status bar
+          <br/>
+          <i>
+           Default: False
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-UrlOnLinkSectionDisclaimer">
+        <div>
+         <label for="id_clinicalviewergeneral_set-2-0-UrlOnLinkSectionDisclaimer">
+          Disclaimer link address:
+         </label>
+         <p class="help">
+          Defines the URL used when clicking on the link section of the disclaimer.
+          <br/>
+          The default URL: The System Info Page.
+          <br/>
+          <i>
+           Default: /dbMotionInformationServices/dbMotionInformationPage.aspx
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="disclaimertext_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Disclaimer Texts
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used to configure the disclaimer text and URL link that is displayed in the Clinical Viewer status bar. It provides a (configurable) disclaimer text followed by a link (URL), displayed in the clinical view status bar on all Clinical Viewer pages (except the PSCV). Per each culture, configure both the disclaimer text and the link text that will be presented.
+        <br/>
+        <br/>
+        <i>
+         Default: for culture en-US: Disclaimer text: "Not all clinical data is in the HIE.". Link text: "For details click here."
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Disclaimer Text
+           <img alt="(Defines the text in the message section of the disclaimer displayed in the clinical view status bar.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the text in the message section of the disclaimer displayed in the clinical view status bar." width="10"/>
+          </th>
+          <th class="required">
+           Link Text
+           <img alt="(Defines the text in the link section of the disclaimer displayed in the clinical view status bar.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the text in the link section of the disclaimer displayed in the clinical view status bar." width="10"/>
+          </th>
+          <th class="required">
+           Culture
+           <img alt="(The culture for which the text will be presented.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The culture for which the text will be presented." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="disclaimertext_set-0">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-message_link_text">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="disclaimertext_set-1">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-message_link_text">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="disclaimertext_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-message">
+          </td>
+          <td class="field-message_link_text">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpofacilitydisplay_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Facility Display Prioritization
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+          <li>
+           Communication
+           <li>
+            dbMotion Patient List Service &amp; IIS(PL.API)
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Determines how to calculate the organization shown in the Facility field. This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List.
+        <br/>
+        <br/>
+        <i>
+         Default: Display the first participant or parent organization that is defined by the INS (institute) code
+        </i>
+        . This option supports only the INS type and no other types.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Clinical Domain
+          </th>
+          <th class="required">
+           Calculation of the Facility field
+           <img alt="(Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines how to calculate the organization shown in the Facility field.This configuration affects Clinical Viewer, EHR Agent, Patient View and Patient List. Default: Display the first participant or parent organization that is defined by the INS (institute) code" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-0">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            AllergyIntolerances
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-0-facility_source" name="vpofacilitydisplay_set-0-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-1">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Problems
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-1-facility_source" name="vpofacilitydisplay_set-1-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-2">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Diagnoses
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-2-facility_source" name="vpofacilitydisplay_set-2-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-3">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Immunizations
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-3-facility_source" name="vpofacilitydisplay_set-3-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-4">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Pathology
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-4-facility_source" name="vpofacilitydisplay_set-4-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-5">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Medications
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-5-facility_source" name="vpofacilitydisplay_set-5-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-6">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Encounters
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-6-facility_source" name="vpofacilitydisplay_set-6-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-7">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Procedures
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-7-facility_source" name="vpofacilitydisplay_set-7-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-8">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Measurements
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-8-facility_source" name="vpofacilitydisplay_set-8-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-9">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            LabEvents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-9-facility_source" name="vpofacilitydisplay_set-9-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="vpofacilitydisplay_set-10">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Imaging
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-10-facility_source" name="vpofacilitydisplay_set-10-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="vpofacilitydisplay_set-11">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+            Documents
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-11-facility_source" name="vpofacilitydisplay_set-11-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="vpofacilitydisplay_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-display_name">
+           <p>
+           </p>
+          </td>
+          <td class="field-facility_source">
+           <select id="id_vpofacilitydisplay_set-__prefix__-facility_source" name="vpofacilitydisplay_set-__prefix__-facility_source">
+            <option value="0">
+             Display the first participant organization
+            </option>
+            <option value="1">
+             Display the first parent of the first participant organization
+            </option>
+            <option selected="selected" value="2">
+             Display the first participant or parent organization that is defined by the INS (institute) code
+            </option>
+           </select>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpocommunication_set-group">
+     <div class="inline-related" id="vpocommunication_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Confidentiality
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            Communication
+            <li>
+             IIS(CVA)
+            </li>
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-is_encounter_conf_inheritance">
+        <div>
+         <label class="vCheckboxLabel" for="id_vpocommunication_set-0-is_encounter_conf_inheritance">
+          Enable encounter confidentiality inheritance flow
+         </label>
+         <p class="help">
+          Determines whether to enable the inheritance from an encounter to its related acts.
+          <br/>
+          It also supports the inheritance of the encounter type code confidentiality to its related acts.
+          <br/>
+          This configuration affects Clinical viewer, Clinical View Agent, Patient View, SDK. In addition, supported when dbMotion serves as an XDS.b repository.
+          <br/>
+          For more information, look for "Data type level confidentiality" in the "Data Integration Layer Implementation Guide"
+          <br/>
+          <i>
+           Default: True
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpocommon_set-group">
+     <div class="inline-related" id="vpocommon_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Clinical Data Display Options
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-clinical_data_display_options">
+        <div>
+         <label for="id_vpocommon_set-0-clinical_data_display_options_0">
+          Concatenate Display Name:
+         </label>
+         <ul class="radiolist" id="id_vpocommon_set-0-clinical_data_display_options">
+          <li>
+           <label for="id_vpocommon_set-0-clinical_data_display_options_0">
+            Only the returned calculated value is displayed on the page
+           </label>
+          </li>
+          <li>
+           <label for="id_vpocommon_set-0-clinical_data_display_options_1">
+            The displayName from the original message is added in brackets (concatenated) to the calculated value
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines how clinical data is displayed in the Clinical Viewer.
+          <br/>
+          This configuration affects the Clinical Viewer page and all the reports.
+          <br/>
+          The behavior of this parameter depends on the Local/Baseline/Calculated property definitions and the value of the &lt;clinical view domain&gt;_LocalCodeDisplayPriorities parameter as configured for that page.
+          <br/>
+          If the displayName in the original message received from the customer, is different from the value that is returned after the calculation, the system behaves as follows:
+          <br/>
+          First option: Only the returned calculated value is displayed on the page.
+          <br/>
+          Second option: The displayName from the original message is added in brackets (concatenated) to the calculated value.
+          <br/>
+          This parameter is relevant for the following clinical data fields:
+          <br/>
+          - Summary page Allergy grid: Allergy To
+          <br/>
+          - Summary page Problems grid: Problem
+          <br/>
+          - Summary page Labs grid: Test
+          <br/>
+          - Daily Summary page Labs grid: Test
+          <br/>
+          - Problem List grid: Problem
+          <br/>
+          - Allergies page Allergies grid: Allergy To
+          <br/>
+          - Immunizations page Immunizations grid: Name
+          <br/>
+          - Labs page Labs grid: Test
+          <br/>
+          - Lab Results page Labs Results grid: Test
+          <br/>
+          - Diagnoses page Diagnoses grid: Diagnosis
+          <br/>
+          - Procedures page Procedures grid: Procedure
+          <br/>
+          - Daily Summary Procedures grid: Procedure
+          <br/>
+          <i>
+           Default: Only the returned calculated value is displayed on the page
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="webculture_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Culture
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        Determine how the date and time are displayed in both Clinical Views. Use the word "Default" for using the default format for selected culture.
+        <a href="http://msdn.microsoft.com/en-us/library/system.globalization.datetimeformatinfo(v=vs.71).aspx" target="_blank">
+         For more information click here.
+        </a>
+        <br/>
+        <br/>
+        <i>
+         Default: Culture: default; Date format: default; Date separator: default; Time format: HH:mm; PLV time format: HH:mm:ss; Time Separator: default;
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Culture
+           <img alt="(The culture that will be relevant to the date/time definition. For projects with a single language this can be left as default.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The culture that will be relevant to the date/time definition. For projects with a single language this can be left as default." width="10"/>
+          </th>
+          <th class="required">
+           Date format
+           <img alt="(The date fields format presented in the clinical view and Patient List.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The date fields format presented in the clinical view and Patient List." width="10"/>
+          </th>
+          <th class="required">
+           Date separator
+           <img alt="(The date separator presented in the clinical view and Patient List.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The date separator presented in the clinical view and Patient List." width="10"/>
+          </th>
+          <th class="required">
+           Time format
+           <img alt="(The time fields format presented in all the clinical views and Patient List.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The time fields format presented in all the clinical views and Patient List." width="10"/>
+          </th>
+          <th class="required">
+           PLV time format
+           <img alt="(The time fields format presented in PLV clinical view.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The time fields format presented in PLV clinical view." width="10"/>
+          </th>
+          <th class="required">
+           Time separator
+           <img alt="(The time separator presented in the clinical view and Patient List.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The time separator presented in the clinical view and Patient List." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="webculture_set-0">
+          <td class="original">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="field-short_date_pattern">
+          </td>
+          <td class="field-date_separator">
+          </td>
+          <td class="field-short_time_pattern">
+          </td>
+          <td class="field-long_time_pattern">
+          </td>
+          <td class="field-time_separator">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 " id="webculture_set-1">
+          <td class="original">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="field-short_date_pattern">
+          </td>
+          <td class="field-date_separator">
+          </td>
+          <td class="field-short_time_pattern">
+          </td>
+          <td class="field-long_time_pattern">
+          </td>
+          <td class="field-time_separator">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row1 empty-form" id="webculture_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-culture">
+          </td>
+          <td class="field-short_date_pattern">
+          </td>
+          <td class="field-date_separator">
+          </td>
+          <td class="field-short_time_pattern">
+          </td>
+          <td class="field-long_time_pattern">
+          </td>
+          <td class="field-time_separator">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="externalapplication_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        External Application Links
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        You can configure the access to external applications from the Clinical Viewer, using the
+        <b>
+         External Application
+        </b>
+        icon and link displayed in the navigation toolbar (at the top of the screen). The link is used to access external applications.
+        <br/>
+        <br/>
+        <i>
+         Default: The System Info page settings is configured as default. Name: dbMotionSystemInfo; Active: True; URI: /dbMotionInformationServices/dbMotionInformationPage.aspx; Method: GET; Culture: en-US; No parameters.
+        </i>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           Name
+          </th>
+          <th>
+           Active
+           <img alt="(Determines whether the External Application icon is displayed (Default: true))" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Determines whether the External Application icon is displayed (Default: true)" width="10"/>
+          </th>
+          <th>
+           URI
+           <img alt="(The URI of the External Application.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The URI of the External Application." width="10"/>
+          </th>
+          <th>
+           method
+           <img alt="(Defines the method of access to the external application (Default: GET))" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the method of access to the external application (Default: GET)" width="10"/>
+          </th>
+          <th>
+           culture
+           <img alt="(Defines the culture, For example: en-US.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the culture, For example: en-US." width="10"/>
+          </th>
+          <th>
+           Parameters
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="externalapplication_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/externalapplication/1/" onclick="return showEditPopup(this);" title="Click to edit">
+             dbMotionSystemInfo
+            </a>
+           </p>
+          </td>
+          <td class="field-is_active">
+           <p>
+            <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+           </p>
+          </td>
+          <td class="field-uri">
+           <p>
+            /dbMotionInformationServices/dbMotionInformationPage.aspx
+           </p>
+          </td>
+          <td class="field-method">
+           <p>
+            GET
+           </p>
+          </td>
+          <td class="field-culture">
+           <p>
+            en-US
+           </p>
+          </td>
+          <td class="field-parameters">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="externalapplication_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/externalapplication/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-is_active">
+           <p>
+            <img alt="True" src="/static/admin/img/icon-yes.gif"/>
+           </p>
+          </td>
+          <td class="field-uri">
+           <p>
+           </p>
+          </td>
+          <td class="field-method">
+           <p>
+            GET
+           </p>
+          </td>
+          <td class="field-culture">
+           <p>
+           </p>
+          </td>
+          <td class="field-parameters">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

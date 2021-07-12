@@ -1,0 +1,1656 @@
+<div class="colSM" id="content">
+ <h1>
+  Add Properties Package
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="instanceproperties_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      Properties Package
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+      </div>
+     </div>
+     <div class="form-row field-app_id">
+      <div>
+       <label class="required" for="id_app_id">
+        App id:
+       </label>
+       <select id="id_app_id" name="app_id">
+        <option selected="selected" value="">
+         ---------
+        </option>
+        <option value="1">
+         TestWpfEHR
+        </option>
+        <option value="2">
+         PA1
+        </option>
+        <option value="3">
+         PA2
+        </option>
+        <option value="6">
+         1.3.6.1.4.1.22812.4.225.4
+        </option>
+        <option value="7">
+         1.3.6.1.4.1.22812.3.9999718.3
+        </option>
+        <option value="10">
+         1.3.6.1.4.1.22812.11.9999.1
+        </option>
+        <option value="11">
+         1.3.6.1.4.1.22812.3.8881153.3
+        </option>
+        <option value="12">
+         1.3.6.1.4.1.22812.4.1153.4
+        </option>
+        <option value="13">
+         1.3.6.1.4.1.22812.11.3102015.1
+        </option>
+        <option value="14">
+         1.3.6.1.4.1.22812.3.1712016.3
+        </option>
+        <option value="15">
+         1.3.6.1.4.1.22812.4.1712016.4
+        </option>
+        <option value="16">
+         1.3.6.1.4.1.22812.11.1712016.1
+        </option>
+        <option value="17">
+         TestUIAutomationEHRAppId
+        </option>
+        <option value="18">
+         WebCCOWParticipant
+        </option>
+        <option value="1003">
+         1.3.6.1.4.1.22812.4.2020111.1
+        </option>
+        <option value="1007">
+         1.3.6.1.4.1.22812.11.2020911.1
+        </option>
+        <option value="2007">
+         1.3.6.1.4.1.22812.11.2018444.1
+        </option>
+       </select>
+       <a class="add-another" href="/admin/externalapps/appid/add/?_to_field=id" id="add_id_app_id" onclick="return showAddAnotherPopup(this);">
+        <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+       </a>
+       <a class="edit-related" href_base="/admin/externalapps/appid/{0}/" id="edit_id_app_id" onclick="return showEditPopup(this);">
+        <img alt="Edit" height="10" src="/static/admin/img/icon_changelink.gif" width="10"/>
+       </a>
+      </div>
+     </div>
+     <div class="form-row field-app_id_description">
+      <div>
+       <label>
+        App id description:
+       </label>
+       <p>
+        <div id="app_id_description">
+         <span id="appid_1">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+           Success!!!
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+           Failureâ€¦
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                TestWpfEHR
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_2">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                PA2
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+              <tr>
+               <td>
+                PA1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_3">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                PA2
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_6">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           ProblemList
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.4.225.4
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_7">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.3.9999718.3
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_10">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.11.9999.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_11">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.3.8881153.3
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_12">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.4.1153.4
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_13">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.11.3102015.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_14">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.3.1712016.3
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_15">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.4.1712016.4
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_16">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.11.1712016.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_17">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                All
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_18">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                All
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_1003">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.4.2020111.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Act type
+               </th>
+               <th>
+                Ordering facility id root
+               </th>
+               <th>
+                Ordering facility id extension
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                LabEvent
+               </td>
+               <td>
+                1.3.6.1.4.1.22812.4.2020111.1
+               </td>
+               <td>
+                1.3.6.1.4.1.22812.4.2020111.1
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_1007">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+           SendToMyEHR Failed, Please contact CSI Team!
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.11.2020911.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            No Ordering Facilities defined.
+           </fieldset>
+          </div>
+         </span>
+         <span id="appid_2007">
+          <br/>
+          <div>
+           <b>
+            Categories available for send:
+           </b>
+           All
+          </div>
+          <div>
+           <b>
+            Send to my EHR success message:
+           </b>
+          </div>
+          <div>
+           <b>
+            Send to my EHR failure message:
+           </b>
+           SendToMyEHR Failed, Please contact CSI Team!
+          </div>
+          <div>
+           <b>
+            Send Only structured CCDA Documents:
+           </b>
+           False
+          </div>
+          <br/>
+          <div class="tabular inline-relatedx">
+           <fieldset class"module"="">
+            <h2>
+             Delta View Source Systems
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Act types
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                1.3.6.1.4.1.22812.11.2018444.1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+              <tr>
+               <td>
+                SCM184-DuchifatSet1
+               </td>
+               <td>
+                All
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+          <br/>
+          <div class="tabular inline-related">
+           <fieldset class"module"="">
+            <h2>
+             Delta View By Ordering Facilities
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Act type
+               </th>
+               <th>
+                Ordering facility id root
+               </th>
+               <th>
+                Ordering facility id extension
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                LabEvent
+               </td>
+               <td>
+                1.3.6.1.4.1.22812.11.2018444.1
+               </td>
+               <td>
+                1.3.6.1.4.1.22812.11.2018444.1
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </div>
+         </span>
+        </div>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      User Context Authority
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-ehr_user_assign_auth">
+      <div>
+       <label for="id_ehr_user_assign_auth">
+        EHR User Assigning Authority:
+       </label>
+       <p class="help">
+        Define the root ID of the EHR user to enable a hosted application user to login automatically to the application after logging into the EHR.
+        <br/>
+        <i>
+         Default: Empty.
+        </i>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      Leading index prioritization for Launch API
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-patient_assigning_Authority_for_Display">
+      <div>
+       <label for="id_patient_assigning_Authority_for_Display">
+        Patient Assigning Authority for Display:
+       </label>
+       <p class="help">
+        When Patient View is launched using Launch API, clients specify the source system from which the patient medical record number (MRN) is taken as leading. The MRN and demographics are displayed in the patient banner and reports. Multiple values should be divided by "|" as separator.
+        <br/>
+        Values include:
+        <br/>
+        - FIRST_FROM_VIA :First index from VIA response is selected as leading.
+        <br/>
+        - OID :Multiple OIDs with "FIRST_FROM_VIA" can be added. Display priority is based on the left-to-right order of entry. Example - 1.01.01.01.0 | FIRST_FROM_VIA
+        <br/>
+        - Empty (default) :Demographics from searched MRN is displayed.
+        <br/>
+        <b>
+         Note:
+        </b>
+        When single OID or multiple are configured and the index is not found in VIA response according to configuration , application will continue to display (default) searched MRN as leading index to show demographics.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="inline-group" id="usercontext_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        User Contexts
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        <b>
+         Note:
+        </b>
+        for Non CCOW context type, Managed and Unmanaged credentials can be used only when there is a unique AppId for the EHR Instance.
+        <br/>
+        If the AppId is configured for more than one EHR Instance, these fields are irrelevant
+        <br/>
+        <br/>
+        <b>
+         User context type
+        </b>
+        options:
+        <br/>
+        <ul>
+         <li>
+          Managed - Authenticates users who are defined in the Active Directory.In a project that requires configuring more than one Active Directory Domain, enter each AD Domain value separated by the "|" character. For example: AD1|AD2
+          <br/>
+          <li>
+           Unmanaged credentials - Authenticates users who are not defined in the Active Directory.
+           <br/>
+           <li>
+            Unmanaged SAML - Authenticates users using SAML token.
+            <br/>
+            <li>
+             User for "Send to my EHR" - User to be used in the CCD of "Send to my EHR".
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           User context type
+          </th>
+          <th>
+           AD Domain
+           <img alt="(Defines the active directory domain)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the active directory domain" width="10"/>
+          </th>
+          <th>
+           Suffix
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="usercontext_set-0">
+          <td class="original">
+          </td>
+          <td class="field-user_context_type">
+           <select id="id_usercontext_set-0-user_context_type" name="usercontext_set-0-user_context_type">
+            <option selected="selected" value="Managed">
+             Managed
+            </option>
+            <option value="UnmanagedCredentials">
+             Unmanaged credentials
+            </option>
+            <option value="UnmanagedSAML">
+             Unmanaged SAML
+            </option>
+            <option value="SendToMyEHR">
+             User for "Send to my EHR"
+            </option>
+           </select>
+          </td>
+          <td class="field-ad_domain">
+          </td>
+          <td class="field-suffixes">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="usercontext_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-user_context_type">
+           <select id="id_usercontext_set-__prefix__-user_context_type" name="usercontext_set-__prefix__-user_context_type">
+            <option selected="selected" value="Managed">
+             Managed
+            </option>
+            <option value="UnmanagedCredentials">
+             Unmanaged credentials
+            </option>
+            <option value="UnmanagedSAML">
+             Unmanaged SAML
+            </option>
+            <option value="SendToMyEHR">
+             User for "Send to my EHR"
+            </option>
+           </select>
+          </td>
+          <td class="field-ad_domain">
+          </td>
+          <td class="field-suffixes">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="patientcontext_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        Patient Contexts
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        <b>
+         Patient Assigning Authority for display:
+        </b>
+        <br/>
+        Enables the customer to determine from which source system the patient MRN is taken to be displayed in the EHR Agent Patient Details header.
+        <br/>
+        If not configured, the EHR Agent will continue to display the patient MRN according to the previous logic, which is to display the MRN of the patient context and the Demographics from the leading record.
+        <br/>
+        The updated MRN display logic is as follows:
+        <br/>
+        <ul>
+         <li>
+          The EHR Agent will display a MRN from a system that can be configured.
+          <li>
+           The following logic for MRN display will be implemented:
+           <li>
+            If the configured system exists in the patient cluster returned from PHRED, use it for MRN display.
+            <li>
+             Else if the patient ID that was passed in CCOW exists in the patient cluster returned from PHRED, use it for MRN display.
+             <li>
+              Else take the first patient index (this is the last updated record OOB) from the patient cluster returned from PHRED, use it for MRN display.
+              <li>
+               dbMotion supports EHRs that use more than one patient assigning authority for resolving the patient.
+               <li>
+                MRN (according to this logic) will also be displayed in the EHR Agent report.
+                <li>
+                 The selected patient MRN system will be added to the CV launch.
+                 <li>
+                  The selected patient MRN system and MRN will be used for Send to my EHR.
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+        <b>
+         Note:
+        </b>
+        This configuration is used to make sure that when a patient search by MRN is made, the priority order is to first return the MRN of the configured system. If this configuration is not added, the EHR Agent continues to operate according to the old logic.
+        <br/>
+        <br/>
+        <b>
+         Suffixes:
+        </b>
+        <br/>
+        This field is irrelevant in case of Non CCOW context type.
+        <br/>
+        Defines the postfix of the CCOW property for the patient MRN \ MPI ID, used to retrieve the patient MRN \ MPI ID.
+        <br/>
+        For example, if MRNSystemPostfix is
+        <b>
+         pro
+        </b>
+        , the CCOW Context Receiver gets the CCOW item name
+        <b>
+         patient.id.mrn.AllscriptsEHR
+        </b>
+        .
+        <br/>
+        <br/>
+        Some EHRs can only support a single CCOW suffix, even when there are multiple Assigning Authorities.
+        <br/>
+        In a project that requires configuring more than one patient Assigning Authority for a single CCOW suffix,
+        <br/>
+        enter each Assigning Authority value separated by the  "|" character.
+        <br/>
+        For example: 1.2.3.4.1.8.1|1.2.3.4.1.8.2|1.2.3.4.1.8.3|1.2.3.4.1.8.4
+        <br/>
+        <br/>
+        In case of Non CCOW context type, only single context should be defined.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Patient Assigning Authority for resolve
+          </th>
+          <th>
+           Patient Assigning Authority for display
+          </th>
+          <th class="required">
+           Suffix type
+          </th>
+          <th>
+           Suffix
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="patientcontext_set-0">
+          <td class="original">
+          </td>
+          <td class="field-patient_assign_auth_resolve">
+          </td>
+          <td class="field-patient_assign_auth_display">
+          </td>
+          <td class="field-suffix_type">
+           <select id="id_patientcontext_set-0-suffix_type" name="patientcontext_set-0-suffix_type">
+            <option selected="selected" value="MRN">
+             MRN
+            </option>
+            <option value="MPIID">
+             MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-suffixes">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="patientcontext_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-patient_assign_auth_resolve">
+          </td>
+          <td class="field-patient_assign_auth_display">
+          </td>
+          <td class="field-suffix_type">
+           <select id="id_patientcontext_set-__prefix__-suffix_type" name="patientcontext_set-__prefix__-suffix_type">
+            <option selected="selected" value="MRN">
+             MRN
+            </option>
+            <option value="MPIID">
+             MPIID
+            </option>
+           </select>
+          </td>
+          <td class="field-suffixes">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

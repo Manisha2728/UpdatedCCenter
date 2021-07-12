@@ -1,0 +1,332 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Clinical Viewer Imaging Front End Settings
+ </h1>
+ <h1 id="affected_services">
+  Applies to: Clinical Viewer
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/clinicaldomainimaging/17/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="clinicaldomainimaging_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="ehragentcvcommonclinicaldomainsproperties_set-group">
+     <div class="inline-related" id="ehragentcvcommonclinicaldomainsproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Time Range Filter
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-default_searching_time field-default_searching_option">
+        <div class="field-box field-default_searching_time">
+         <label for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_time">
+          Time range filter:
+         </label>
+        </div>
+        <div class="field-box field-default_searching_option">
+         <label class="inline" for="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+         </label>
+         <select id="id_ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option" name="ehragentcvcommonclinicaldomainsproperties_set-0-default_searching_option">
+          <option selected="selected" value="0">
+           Year
+          </option>
+          <option value="1">
+           Month
+          </option>
+          <option value="4">
+           All
+          </option>
+         </select>
+         <p class="help">
+          The textbox determines the time Range used to filter the patient's Imaging list when using the Show option.
+          <br/>
+          The dropdown menu defines the time Unit used to filter the patient's Imaging list. For example, if the Unit is "month" and the Range is 10, the patient's Imaging over the past 10 months are displayed.
+          <br>
+           This configuration affects the Clinical Viewer and EHR Agent.
+           <br>
+            <i>
+             Default: 1 Year.
+            </i>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="clinicaldomainproperties_set-group">
+     <div class="inline-related" id="clinicaldomainproperties_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Display Filters
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           IIS(Clinical Viewer)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-Imaging_DisplayImagingMetaData">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-Imaging_DisplayImagingMetaData">
+          The Imaging Details are displayed on the top of the imaging report
+         </label>
+         <p class="help">
+          Determines whether the Imaging Details are displayed when printing an Imaging Report.
+          <br>
+           <i>
+            Default: True
+           </i>
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-Imaging_ShowEmptyFolders">
+        <div>
+         <label class="vCheckboxLabel" for="id_clinicaldomainproperties_set-0-Imaging_ShowEmptyFolders">
+          Show Imaging folder even if it is empty
+         </label>
+         <p class="help">
+          Determines whether to show Imaging folder even if it is empty.
+          <br>
+           If True, displays empty folder.
+           <br>
+            If False, does not display empty folder.
+            <br>
+             <i>
+              Default: True
+             </i>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="imagingpacs_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        Imaging PACS
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(Clinical Viewer)
+          <li>
+           IIS(CVA)
+          </li>
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used to access the PACS (Picture Archiving and Communication Systems) to display the selected Imaging records of the specific patient. The deviceId, useCode, schemeCode represents the system identity. The link to the system can be composed of both static and dynamic parts. These parts can be a function of the metadata (for example, use code) of the imaging record. Patient View only supports https:// URL for viewing PACS images.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           URI
+          </th>
+          <th>
+           deviceId
+           <img alt="(The Imaging study deviceId based on the Federation Node Id.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study deviceId based on the Federation Node Id.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           useCode
+           <img alt="(The Imaging study useCode based on the UMS ImageValue.use.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study useCode based on the UMS ImageValue.use.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           schemeCode
+           <img alt="(The Imaging study SchemeCode based on the UMS ImageValue.Scheme.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="The Imaging study SchemeCode based on the UMS ImageValue.Scheme.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           facility
+           <img alt="(In some organizations the PACS URL depends on the user location. In order to configure the correct URL, according to the user location, the User Facility Identification should  be enabled and configured.If configured, the system will use the PACS URL with the facility that matches the user facility (it detects the facility mapped to the EHR instance intercepted by the Agent Hub).User Facility Identification should be configured in the following location: CCenter &gt; Agent Hub -&gt; EHR Integration -&gt; EHR Instances -&gt; User Facility Identification.Format: ID Root|ID Extension.For Any value define ALL.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="In some organizations the PACS URL depends on the user location. In order to configure the correct URL, according to the user location, the User Facility Identification should  be enabled and configured.If configured, the system will use the PACS URL with the facility that matches the user facility (it detects the facility mapped to the EHR instance intercepted by the Agent Hub).User Facility Identification should be configured in the following location: CCenter &gt; Agent Hub -&gt; EHR Integration -&gt; EHR Instances -&gt; User Facility Identification.Format: ID Root|ID Extension.For Any value define ALL." width="10"/>
+          </th>
+          <th>
+           method
+           <img alt="(For a Web Application, use one of the following:POST: All the specified parameters are passed as hidden values.GET: All the specified parameters are passed as a connection string, in the order they appear in the configuration.Default: GET)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="For a Web Application, use one of the following:POST: All the specified parameters are passed as hidden values.GET: All the specified parameters are passed as a connection string, in the order they appear in the configuration.Default: GET" width="10"/>
+          </th>
+          <th>
+           Parameters
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 empty-form" id="imagingpacs_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name_url">
+           <p>
+            <a href="/admin/dbmconfigapp/imagingpacs/add/" onclick="return showEditPopup(this);">
+             Add new Application
+            </a>
+           </p>
+          </td>
+          <td class="field-device_id">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-use_code">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-schema_code">
+           <p>
+            (None)
+           </p>
+          </td>
+          <td class="field-facility">
+           <p>
+            ALL
+           </p>
+          </td>
+          <td class="field-method">
+           <p>
+            GET
+           </p>
+          </td>
+          <td class="field-parameters">
+           <p>
+           </p>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="vpo_set-group">
+     <div class="inline-related" id="vpo_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Grouping
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Business Access Services (VPO, VPO1, VPO2, VPO3)
+           <li>
+            IIS(CVA)
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-grouping_mode">
+        <div>
+         <label for="id_vpo_set-0-grouping_mode_0">
+          Grouping Priority Order:
+         </label>
+         <ul class="radiolist" id="id_vpo_set-0-grouping_mode">
+          <li>
+           <label for="id_vpo_set-0-grouping_mode_0">
+            Baseline, Local
+           </label>
+          </li>
+          <li>
+           <label for="id_vpo_set-0-grouping_mode_1">
+            Local, Baseline
+           </label>
+          </li>
+         </ul>
+         <p class="help">
+          Determines the priority order for grouping:
+          <br>
+           Baseline, Local: First, group by baseline subdomain; if local code is unmapped, group by local subdomain.
+           <br>
+            Local, Baseline: First, group by local subdomain; if local code is under the root domain, and is mapped to a baseline code, group by baseline subdomain.
+            <br>
+             If local code is unmapped and is under a root domain, display under "Others".
+             <br>
+              This configuration applies to Clinical Viewer, EHR Agent and Patient View .
+              <br/>
+              <i>
+               Default: Baseline, Local
+              </i>
+             </br>
+            </br>
+           </br>
+          </br>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,197 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block extrahead %}{{ block.super }}
+<style type="text/css">
+
+	div.main{
+		border-top: 1px solid #eee;
+	}
+	
+	div.common{
+		width: 500px;
+		float: left;
+		border-right: 1px solid #eee;
+	}
+	
+	
+	
+	div.bottom{
+		
+      	/*margin-top: 20px;*/
+    }
+    
+    
+    div.federation{
+    	
+    	float: left;
+    	width: 500px;
+    	
+    	padding-left: 10px;
+    }
+    
+    .export-treeview{
+    	min-height: 200px;
+    	width: 460px !important;
+    }
+    
+    h3{
+    	margin-bottom: 20px;
+    }
+    
+    
+      
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+	<h1>Create and Download Export File</h1>
+	<h3>Press the download link below to create and download the export file</h3>
+	
+
+    <br />
+    <div class="main">
+			<div class="common">
+				<h3>Common Export Scenario</h3>
+				<p>
+					Choose the pages you would like to export from the navigation tree:
+				</p>
+				<div id="treeview" class="export-treeview treeview">
+					<ul>
+						<li class="jstree-open">
+							<a href="#">All Pages</a>
+					{% include "admin/includes/treeview.html" %}
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+				<br/>
+				<ul class="errorlist" id="error-nothing-selected">
+					<li>
+						Please select at least one component to export.
+					</li>
+				</ul>
+				<div class="bottom">
+					<a class="download-button top-button" href="#" style="color: white"> Download </a>
+				</div>
+			</div>
+			<div class="federation inline-related">
+				<h3>Federation Export Scenario</h3>
+				<p>Federation export scenario includes definitions per specific federated member node servers.<br/>
+					Use this export scenario only to synch definitions between federated members within the dbMotion Health Information Exchange network.
+				</p>
+				<br/>
+				<div class="bottom">
+					<a class="download-federation top-button" href="#" style="color: white; width: 150px">Download Federation</a>
+				</div>
+						
+			</div>
+	</div>
+</div>
+
+
+
+	<script type="text/javascript" class="source below">
+    $(function(){
+    	$(".export-treeview .treeview ul:first-child").unwrap();
+    	
+        // Make all the links not work in our special tree.
+        $(".export-treeview a").attr("href", "#");
+        
+        $(".export_hidden").remove();
+        
+        
+
+        function postIt(url, data){
+
+            $('body').append($('<form/>', {
+                id: 'jQueryPostItForm',
+                method: 'POST',
+                action: url
+            }));
+
+
+            for(var i in data){
+                $('#jQueryPostItForm').append($('<input/>', {
+                    type: 'hidden',
+                    name: i,
+                    value: data[i]
+                }));
+            }
+
+            $('#jQueryPostItForm').submit();
+            $('#jQueryPostItForm').remove();
+
+        }
+
+        $('.download-button').click(function (e) {
+            e.preventDefault();
+            $("#error-nothing-selected").hide();
+            var arr_ids = new Array();
+            $(".export-treeview li[rel].jstree-checked").each(function(i) {
+                arr_ids.push($(this).attr('id'));
+            });
+
+            if (arr_ids.length === 0) {
+                $("#error-nothing-selected").show();
+            } else {
+                postIt("/download_export_db/", {'pages': arr_ids});
+
+            }
+        });
+        
+        $('.download-federation').click(function (e) {
+            e.preventDefault();
+            $("#error-nothing-selected").hide();
+            var arr_ids = ["federation_app_node"];
+            postIt("/download_export_db/", {'pages': arr_ids, 'file': 'federation_nodes.json'});
+
+        });
+
+
+        $(".export-treeview")
+            // call `.jstree` with the options object
+            .jstree({
+                // the `plugins` array allows you to configure the active plugins on this instance
+                "types" : {
+                    // "valid_children" : [ "folder" ],
+                    "types" : {
+                        "concrete_page" : {
+                            // "valid_children" : [ "file" ],
+                            // "icon" : { "image" : "http://jstree.com/tree.png"},
+                            "icon" : { "image" : "/static/img/concrete_page_icon.png"},
+                            // "max_depth" : 1
+                        },
+                        "export_disabled" : { 
+		                    "check_node" : false, 
+		                    "uncheck_node" : false ,
+		                    "icon" : { "image" : "/static/img/concrete_page_icon.png"},
+	                    } 
+                    }
+                },
+                "plugins" : ["themes","html_data","ui","crrm","hotkeys", "types", "checkbox"],
+                // originally: "plugins" : ["themes","html_data","ui","crrm","hotkeys"],
+                // each plugin you have included can have its own config object
+                "core" : { "initially_open" : [ "#open" ] }
+                // it makes sense to configure a plugin only if overriding the defaults
+            })
+            .delegate("a","click", function(e) {
+                if ($("#treeview").jstree("is_leaf", this)) {
+                    document.location.href = this;
+                }
+                else {
+                    $("#treeview").jstree("toggle_node", this);
+                }
+            });
+         
+            
+    });
+    </script>
+
+{% block object-tools-items %}{% endblock %}
+{% endblock %}
+
+
+

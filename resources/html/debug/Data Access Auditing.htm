@@ -1,0 +1,150 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the CDR Instance Data Access Auditing Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/dataaccessauditingpage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="dataaccessauditingpage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+     Use this configuration to audit database access.
+    </div>
+    <br/>
+    <p class="alertnote">
+     Changing configuration affects disk space consumption.
+    </p>
+    <p class="alertnote">
+     Changing configuration affects security attack tracking.
+    </p>
+    <div class="inline-group" id="dataaccessauditing_set-group">
+     <div class="inline-related" id="dataaccessauditing_set-0">
+      <fieldset class="module aligned ">
+       <h2>
+        Enable database access auditing
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="form-row field-auditing_type">
+        <div>
+         <label for="id_dataaccessauditing_set-0-auditing_type">
+         </label>
+         <select id="id_dataaccessauditing_set-0-auditing_type" name="dataaccessauditing_set-0-auditing_type">
+          <option selected="selected" value="0">
+           Enable suspicious activity auditing
+          </option>
+          <option value="1">
+           Enable suspicious activity and application authorized user auditing
+          </option>
+          <option value="999">
+           No auditing
+          </option>
+         </select>
+         <p class="help">
+          Suspicious activity is any access to the database by non-dbMotion service accounts.
+          <br/>
+          Application authorized users are dbMotion application service accounts.
+          <br/>
+          <i>
+           Default: Enable suspicious activity auditing
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Auditing files location and maximum storage limit
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="description">
+        Auditing files are located on the disk path specified in the system parameters -\$_NODE_SQL_SERVER_AUDIT_PATH$
+       </div>
+       <div class="form-row field-suspected_max_storage_size">
+        <div>
+         <label class="required" for="id_dataaccessauditing_set-0-suspected_max_storage_size">
+          Suspicious activity auditing files maximum storage(in MB):
+         </label>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <div class="form-row field-authorized_max_storage_size">
+        <div>
+         <label class="required" for="id_dataaccessauditing_set-0-authorized_max_storage_size">
+          Authorized activity auditing files maximum storage(in MB):
+         </label>
+         <p class="help">
+          <br/>
+          SQL Server audit files are kept in the file system.
+          <br/>
+          Specify the maximum storage limit to keep disk space use under control.
+          <br/>
+          After the limit reached, SQL Server overwrites the current files.
+          <br/>
+          Default calculated according to expected amount of activity.
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned ">
+       <h2>
+        Authorired Users
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+        </div>
+       </div>
+       <div class="form-row field-server_principals">
+        <div>
+         <label for="id_dataaccessauditing_set-0-server_principals">
+          Authorized User Name:
+         </label>
+         <textarea cols="100" id="id_dataaccessauditing_set-0-server_principals" maxlength="500" name="dataaccessauditing_set-0-server_principals" rows="4">
+         </textarea>
+         <p class="help">
+          Users listed are not monitored for suspicious activites.
+          <br/>
+          Use comma seperated list of users in a format domain\user name, domain\user name, ...
+         </p>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+     <div class="form-row">
+      <div>
+       <p class="alertnote">
+        Changes take effect immediately.
+       </p>
+      </div>
+      <span id="msg" style="margin-left:16px;">
+      </span>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

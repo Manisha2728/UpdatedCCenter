@@ -1,0 +1,59 @@
+{% load i18n static %}
+
+  	<p class='alertnote'>The configuration is related to the Primary SQL server only. In case AlwaysOn DB is installed, configure this manually according to the dbMotion Installation Guide.</p>
+ 
+<div class="inline-group" id="{{ inline_admin_formset.formset.prefix }}-group">
+	
+{{ inline_admin_formset.formset.management_form }}
+{{ inline_admin_formset.formset.non_form_errors }}
+
+{% for inline_admin_form in inline_admin_formset %}<div class="inline-related{% if forloop.last %} empty-form last-related{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+  
+  {% if inline_admin_form.form.non_field_errors %}{{ inline_admin_form.form.non_field_errors }}{% endif %}
+  {% for fieldset in inline_admin_form %}
+    {% include "admin/includes/fieldset.html" %}
+  {% endfor %}
+  {% if inline_admin_form.needs_explicit_pk_field  %}{{ inline_admin_form.pk_field.field }}{% endif %}
+  {{ inline_admin_form.fk_field.field }}
+</div>{% endfor %}
+<div class="form-row">
+	<div>
+		<p class='alertnote'>In order to apply this configuration to the product, click <b>Apply</b> (for each Configuration, Installation, and Import).</p>
+		<p class="alertnote">Clicking <b>Apply</b> will immediately override the Subscription configuration.</p>
+	</div>
+	
+	<input type="submit" value="Apply" class="apply" name="_continue" onclick="document.getElementById('id_usagereports_set-0-status').value = 'to_apply';"/>
+	<div id="apply_message" style="display:none">
+		<p>[apply_message]</p>
+	</div>
+	
+</div>
+</div>
+
+
+<script type="text/javascript">
+(function($) {
+  $("#{{ inline_admin_formset.formset.prefix }}-group .inline-related").stackedFormset({
+    prefix: '{{ inline_admin_formset.formset.prefix }}',
+    adminStaticPrefix: '{% static "admin/" %}',
+    deleteText: "{% trans "Remove" %}",
+    addText: "{% blocktrans with verbose_name=inline_admin_formset.opts.verbose_name|title %}Add another {{ verbose_name }}{% endblocktrans %}"
+  });
+  
+  var status = $('#id_usagereports_set-0-status');
+  
+  if (status.val() == 'applied') {
+  	$('#apply_message p').text($('#id_usagereports_set-0-message').val())
+  	$('#apply_message').addClass('successmessage').show();
+  }
+  else
+	  if (status.val() == 'error') {
+	  	$('#apply_message p').text($('#id_usagereports_set-0-message').val())
+	  	$('#apply_message').addClass('errormessage').show();
+  }
+  
+  // reset status
+  status.val('not_applied');
+  
+})(django.jQuery);
+</script>

@@ -1,0 +1,56 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+<h1>
+    Search results for: {{ search_string }}
+</h1>
+<br/>
+
+{% if debug %}
+
+{% endif %}
+
+<div class="module">
+{% if page_list %}
+    <table id="search-results">
+        <thead>
+        <tr>
+            <th scope="col">{% trans 'Page' %}</th>
+            <th scope="col">Occurrences</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for page in page_list %}
+        <tr>
+            <td><a href="{{ page.link }}?search={{ search_string }}">{{ page.name }}</a></td>
+            <!-- <td>{{ page.texts|length }} Occurrence{{ page.texts|length|pluralize }}</td> -->
+            <td>
+            	<ul>
+            	{% for t in page.texts %}
+            		<li>{{ t }}</li>
+            	{% endfor %}
+            	</ul>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>{% trans "No results found." %}</p>
+{% endif %}
+</div>
+{% if page_list %}
+Total pages: {{ page_list|length }}
+{% endif %}
+</div>
+{% endblock %}

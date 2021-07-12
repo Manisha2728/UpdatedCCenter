@@ -1,0 +1,189 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Capsule Service Settings (For Israeli market only)
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/dbmconfigapp/capsulepage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="capsulepage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="capsuleservice_set-group">
+     <div class="inline-related" id="capsuleservice_set-0">
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Capsule Type
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Data Loading
+           <li>
+            Capsule
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-capsule_type">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-capsule_type">
+          Capsule Types:
+         </label>
+         <select id="id_capsuleservice_set-0-capsule_type" name="capsuleservice_set-0-capsule_type">
+          <option selected="selected" value="1">
+           Hospital To HMO
+          </option>
+          <option value="2">
+           HMO To HMO
+          </option>
+         </select>
+         <p class="help">
+          Defines the Capsule Type.
+          <br/>
+          Possible types:
+          <br/>
+          1) Hospital To HMO
+          <br/>
+          2) HMO to HMO
+          <br/>
+          <i>
+           Default: Hospital To HMO.
+          </i>
+         </p>
+        </div>
+       </div>
+      </fieldset>
+      <fieldset class="module aligned wide extrapretty">
+       <h2>
+        Capsule Service
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_container" style="position:relative; width:100%">
+        <div class="services_to_restart_content info">
+         <a class="inline-deletelink" title="Close">
+         </a>
+         <ul>
+          <li>
+           dbMotion Data Loading
+           <li>
+            Capsule
+           </li>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="form-row field-scheduled_time">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-scheduled_time">
+          Start Time (for Daily):
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-end_scheduled_time">
+        <div>
+         <label for="id_capsuleservice_set-0-end_scheduled_time">
+          End Time (for Daily):
+         </label>
+         <p class="help">
+          Note: The EndTime setting enables working time frame control of the capsule service. This time frame controls the working time of the capsule service when processing a large number of capsule generation requests, as expected in the quarterly process.
+          <br/>
+          <i>
+           Default: Empty
+          </i>
+         </p>
+        </div>
+       </div>
+       <div class="form-row field-local_folder">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-local_folder">
+          Set the archive / local folder for the auto generated Capsules:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-vault_folder">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-vault_folder">
+          Set the destination folder for auto generated Capsules:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-on_demand_local_folder">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-on_demand_local_folder">
+          Set the local folder for the On Demand Capsules:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-on_demand_vault_folder">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-on_demand_vault_folder">
+          Set the archive / destination folder for the On Demand Capsules:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-outbound_csv_vault_folder">
+        <div>
+         <label for="id_capsuleservice_set-0-outbound_csv_vault_folder">
+          Set the HMO outbound csv folder:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-inbound_csv_vault_folder">
+        <div>
+         <label for="id_capsuleservice_set-0-inbound_csv_vault_folder">
+          Set the HMO inbound csv folder:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-num_of_days_to_delete_capsules">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-num_of_days_to_delete_capsules">
+          Set number of days to delete archive from local folder:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-capsules_paging_size">
+        <div>
+         <label class="required" for="id_capsuleservice_set-0-capsules_paging_size">
+          Set how many capsules can be generated at the same time:
+         </label>
+        </div>
+       </div>
+       <div class="form-row field-confidentiality_filter">
+        <div>
+         <label class="vCheckboxLabel" for="id_capsuleservice_set-0-confidentiality_filter">
+          Enable Confidentiality filter to filter confidential data
+         </label>
+        </div>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

@@ -1,0 +1,1089 @@
+<div class="colSM" id="content">
+ <h1 id="page_header">
+  Set the Meaningful Use Reporting Endpoints Settings
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <ul class="object-tools">
+   <li>
+    <a class="historylink" href="/admin/externalapps/directaddressendpointspage/1/history/">
+     History
+    </a>
+   </li>
+  </ul>
+  <form action="" enctype="multipart/form-data" id="directaddressendpointspage_form" method="post">
+   <div>
+    <div class="submit-row">
+    </div>
+    <div>
+    </div>
+    <div class="inline-group" id="instance_set-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        EHR Instances
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This table consolidates all configurations of Direct addresses and Reporting endpoints in one place. The configuration can be done in this page and in each EHR Instance page. Each EHR Instance should have a unique Direct Address. When relevant, configure the end point URL to send the numerator data for this EHR Instance to external reporting systems.
+        <br/>
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th colspan="2">
+           EHR Instance
+          </th>
+          <th>
+           Direct Address
+           <img alt="(Defines Direct Address associated to the EHR instance.When users send Direct messages from ClinicalView Agent, this address will be the user's sending address.Example: Facility.name@location.direct.comDefault: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines Direct Address associated to the EHR instance.When users send Direct messages from ClinicalView Agent, this address will be the user's sending address.Example: Facility.name@location.direct.comDefault: Empty" width="10"/>
+          </th>
+          <th>
+           Direct Address Suffix
+           <img alt="(
+        Define suffix for a group of direct addresses. 
+        Should only use in case the EHR using privates direct addresses for his providers and routed the direct messages also to dbMotion
+        Example: @location.direct.com
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Define suffix for a group of direct addresses. 
+        Should only use in case the EHR using privates direct addresses for his providers and routed the direct messages also to dbMotion
+        Example: @location.direct.com
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Meaningful Use Reporting Endpoint
+           <img alt="(Defines the endpoint URL used to report Sending/Receiving of CCDA documents over Direct. Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Defines the endpoint URL used to report Sending/Receiving of CCDA documents over Direct. Default: Empty" width="10"/>
+          </th>
+          <th>
+           Source System Name
+           <img alt='(
+        Define the source system name as exist in the CDR common.device.devicename.
+        Note: This field should be configured only if two or more EHR instances using the same OID in "Assigning Authority for display" and the reporting process should find only the relevant patient for the EHR instance.
+        Default: Empty)' class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title='
+        Define the source system name as exist in the CDR common.device.devicename.
+        Note: This field should be configured only if two or more EHR instances using the same OID in "Assigning Authority for display" and the reporting process should find only the relevant patient for the EHR instance.
+        Default: Empty' width="10"/>
+          </th>
+          <th>
+           Reporting Interface
+           <img alt="(
+        Defines the interface used to report Sending/Receiving of CCDA documents over Direct.
+        Note: This field is mandatory if an endpoint is configured.
+        SCM: SCM interface (reporting to CPM).
+        TW: TW interface (reporting to AAP).
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Defines the interface used to report Sending/Receiving of CCDA documents over Direct.
+        Note: This field is mandatory if an endpoint is configured.
+        SCM: SCM interface (reporting to CPM).
+        TW: TW interface (reporting to AAP).
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Certificate Thumbprint
+           <img alt="(
+        Defines thumbprint of the certificate for the configured endpoint in the field: Meaningful Use Reporting Endpoint.
+        Note: This field is mandatory if an endpoint is configured and SCM is the reporting interface. 
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Defines thumbprint of the certificate for the configured endpoint in the field: Meaningful Use Reporting Endpoint.
+        Note: This field is mandatory if an endpoint is configured and SCM is the reporting interface. 
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Unity Service User
+           <img alt="(
+        Define the Unity service user that will be used when reporting to TW.
+        Unity service user should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Define the Unity service user that will be used when reporting to TW.
+        Unity service user should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Unity Service Password
+           <img alt="(
+        Define the Unity service Password that will be used when reporting to TW.
+        Unity service Password should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface. 
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Define the Unity service Password that will be used when reporting to TW.
+        Unity service Password should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface. 
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Application Name
+           <img alt="(
+        Define dbMotion application name as configured in Unity.
+        Application name should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Define dbMotion application name as configured in Unity.
+        Application name should be configured for the relevant TW environment: TEST / PROD.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty" width="10"/>
+          </th>
+          <th>
+           Community OID
+           <img alt="(
+        Define TW Community OID as configured in TW, for the dbMotion - TW integration. 
+        The value should be provided from TW resource.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="
+        Define TW Community OID as configured in TW, for the dbMotion - TW integration. 
+        The value should be provided from TW resource.
+        Note: This field is mandatory when TW is the reporting interface.
+        Default: Empty" width="10"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 has_original" id="instance_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/2/">
+             TestWpfEhr-PA1
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-0-mu_reporting_type" name="instance_set-0-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-1">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/3/">
+             TestWpfEhr-PA2
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-1-mu_reporting_type" name="instance_set-1-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-2">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/4/">
+             CCOWParticipantTest
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-2-mu_reporting_type" name="instance_set-2-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-3">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/6/">
+             141GAPRO
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-3-mu_reporting_type" name="instance_set-3-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-4">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/7/">
+             TWDBMDEV50
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-4-mu_reporting_type" name="instance_set-4-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-5">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/12/">
+             SCMDBMDEV50
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-5-mu_reporting_type" name="instance_set-5-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-6">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/13/">
+             TestWpfEhr
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-6-mu_reporting_type" name="instance_set-6-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-7">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/14/">
+             CSITWAUTO
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-7-mu_reporting_type" name="instance_set-7-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-8">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/15/">
+             CSIPROAUTO
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-8-mu_reporting_type" name="instance_set-8-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-9">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/16/">
+             CSIFUSESCM
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-9-mu_reporting_type" name="instance_set-9-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-10">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/17/">
+             DBMTW2016
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-10-mu_reporting_type" name="instance_set-10-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-11">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/18/">
+             DBMPRO2016
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-11-mu_reporting_type" name="instance_set-11-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-12">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/19/">
+             DBMSCM2016
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-12-mu_reporting_type" name="instance_set-12-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-13">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/20/">
+             CCOWTestContextManager
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-13-mu_reporting_type" name="instance_set-13-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-14">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/21/">
+             MedHostSimulator
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-14-mu_reporting_type" name="instance_set-14-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-15">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/22/">
+             TestUIAutomationEHRInstance
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-15-mu_reporting_type" name="instance_set-15-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-16">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/23/">
+             WebCCOWParticipant
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-16-mu_reporting_type" name="instance_set-16-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-17">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/24/">
+             CCOWParticipantSentillion
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-17-mu_reporting_type" name="instance_set-17-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-18">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/1003/">
+             SrtFlmgoPro1
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-18-mu_reporting_type" name="instance_set-18-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 has_original" id="instance_set-19">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/1007/">
+             SrtDfatScm2
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-19-mu_reporting_type" name="instance_set-19-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row1 has_original" id="instance_set-20">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/2007/">
+             SrtFlmgoScm1
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-20-mu_reporting_type" name="instance_set-20-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="instance_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name_as_link">
+           <p>
+            <a href="/admin/externalapps/instance/None/">
+            </a>
+           </p>
+          </td>
+          <td class="field-direct_address">
+          </td>
+          <td class="field-direct_address_suffix">
+          </td>
+          <td class="field-mu_reporting_endpoint">
+          </td>
+          <td class="field-mu_reporting_source_system_name">
+          </td>
+          <td class="field-mu_reporting_type">
+           <select id="id_instance_set-__prefix__-mu_reporting_type" name="instance_set-__prefix__-mu_reporting_type">
+            <option selected="selected" value="">
+             ---------
+            </option>
+            <option value="SCM">
+             SCM
+            </option>
+            <option value="TW">
+             TW
+            </option>
+           </select>
+          </td>
+          <td class="field-thumbprint">
+          </td>
+          <td class="field-mu_reporting_login">
+          </td>
+          <td class="field-mu_reporting_password">
+          </td>
+          <td class="field-mu_reporting_app_name">
+          </td>
+          <td class="field-mu_reporting_community_oid">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

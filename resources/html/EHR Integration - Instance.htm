@@ -1,0 +1,945 @@
+<div class="colSM" id="content">
+ <h1>
+  Add EHR Instance
+ </h1>
+ <div style="padding-right: 100px;">
+ </div>
+ <div id="content-main">
+  <form action="" enctype="multipart/form-data" id="instance_form" method="post" novalidate="">
+   <div>
+    <div class="submit-row">
+    </div>
+    <fieldset class="module aligned wide">
+     <h2>
+      EHR Instance
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-name">
+      <div>
+       <label class="required" for="id_name">
+        Name:
+       </label>
+       <p class="help">
+        Defines the EHR instance name.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ehr">
+      <div>
+       <label class="required" for="id_ehr">
+        EHR:
+       </label>
+       <select id="id_ehr" name="ehr">
+        <option selected="selected" value="">
+         ---------
+        </option>
+        <option value="1">
+         TestWpfEhr
+        </option>
+        <option value="2">
+         TestWpfEhr-PA1
+        </option>
+        <option value="3">
+         TestWpfEhr-PA2
+        </option>
+        <option value="4">
+         CCOWParticipantTest
+        </option>
+        <option value="6">
+         141GAPRO
+        </option>
+        <option value="7">
+         TWDBMDEV50
+        </option>
+        <option value="11">
+         SCMDBMDEV50
+        </option>
+        <option value="12">
+         CSITWAUTO
+        </option>
+        <option value="13">
+         CSIPROAUTO
+        </option>
+        <option value="14">
+         CSIFUSESCM
+        </option>
+        <option value="15">
+         DBMTW2016
+        </option>
+        <option value="16">
+         DBMPRO2016
+        </option>
+        <option value="17">
+         DBMSCM2016
+        </option>
+        <option value="18">
+         CCOWTestContextManager
+        </option>
+        <option value="19">
+         MedHostSimulator
+        </option>
+        <option value="20">
+         TestUIAutomationEHR
+        </option>
+        <option value="21">
+         WebCCOWParticipant
+        </option>
+        <option value="22">
+         CCOWParticipantSentillion
+        </option>
+        <option value="1003">
+         SrtFlmgoPro1
+        </option>
+        <option value="1007">
+         SrtDfatScm2
+        </option>
+        <option value="2007">
+         SrtFlmgoScm1
+        </option>
+       </select>
+       <p class="help">
+        Select the EHR for which you want to create an instance.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_enabled">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_enabled">
+        Is enabled
+       </label>
+       <p class="help">
+        Determines if the current instance is enabled.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-instance_properties">
+      <div>
+       <label class="required" for="id_instance_properties">
+        Properties Package:
+       </label>
+       <select id="id_instance_properties" name="instance_properties">
+        <option selected="selected" value="">
+         ---------
+        </option>
+        <option value="1">
+         TestWpfEHR
+        </option>
+        <option value="2">
+         TestWpfEhr-PA1
+        </option>
+        <option value="3">
+         TestWpfEhr-PA2
+        </option>
+        <option value="4">
+         CCOWParticipantTest
+        </option>
+        <option value="8">
+         141GAPRO
+        </option>
+        <option value="9">
+         TWDBMDEV50
+        </option>
+        <option value="13">
+         SCMDBMDEV50
+        </option>
+        <option value="14">
+         CSITWAUTO
+        </option>
+        <option value="15">
+         CSIPROAUTO
+        </option>
+        <option value="16">
+         CSIFUSESCM
+        </option>
+        <option value="17">
+         DBMTW2016
+        </option>
+        <option value="18">
+         DBMPRO2016
+        </option>
+        <option value="19">
+         DBMSCM2016
+        </option>
+        <option value="20">
+         CCOWTestContextManager
+        </option>
+        <option value="21">
+         TestUIAutomationEHR
+        </option>
+        <option value="22">
+         WebCCOWParticipant
+        </option>
+        <option value="1003">
+         SrtFlmgoPro1
+        </option>
+        <option value="1007">
+         SrtDfatScm2
+        </option>
+        <option value="2007">
+         SrtFlmgoScm1
+        </option>
+       </select>
+       <a class="add-another" href="/admin/externalapps/instanceproperties/add/?_to_field=id" id="add_id_instance_properties" onclick="return showAddAnotherPopup(this);">
+        <img alt="Add Another" height="10" src="/static/admin/img/icon_addlink.gif" width="10"/>
+       </a>
+       <p class="help">
+        Configure the properties for each EHR Instance by doing one of the following:
+        <br/>
+        - Select one of the Properties Packages from the dropdown list to reuse a set of predefined properties for this instance.
+        <br/>
+        - Click the plus sign to open a dialog box where you can configure a new Properties Package for this instance which can later be reused.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-env_variable_name field-env_variable_value">
+      <div class="field-box field-env_variable_name">
+       <label for="id_env_variable_name">
+        Environment variable name:
+       </label>
+      </div>
+      <div class="field-box field-env_variable_value">
+       <label class="inline" for="id_env_variable_value">
+        Environment variable value:
+       </label>
+       <p class="help">
+        Defines various environment variables.
+        <br/>
+        If the properties based on the executable application are not enough to differentiate two different EHR Agent scenarios, the environment variables are used. In this case, a different environment variable will be set on the client computers working in different scenarios.
+        <br/>
+        Then, the System Engineer should set the name and the value of the variable.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      Context Properties
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="description">
+      Context properties define the way that User and Patient data are retrieved from an EHR
+     </div>
+     <div class="form-row field-context_type">
+      <div>
+       <label for="id_context_type_0">
+        Context type:
+       </label>
+       <ul class="radiolist" id="id_context_type">
+        <li>
+         <label for="id_context_type_0">
+          CCOW - EHR Agent plays Participant role (Context Manager available)
+         </label>
+        </li>
+        <li>
+         <label for="id_context_type_1">
+          CCOW - EHR Agent plays Context Manager role (Context Manager light)
+         </label>
+        </li>
+        <li>
+         <label for="id_context_type_2">
+          Non CCOW - Custom context interceptor
+         </label>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-nonCcowPluginType">
+      <div>
+       <label class="required" for="id_nonCcowPluginType">
+        Non CCOW plugin type:
+       </label>
+       <select id="id_nonCcowPluginType" name="nonCcowPluginType">
+        <option selected="selected" value="Custom">
+         Custom
+        </option>
+        <option value="ContextProviderServiceInterceptor.ContextProviderServiceInterceptor, dbMotion.SmartAgent.ContextProviderServiceInterceptor">
+         UI Automation
+        </option>
+       </select>
+      </div>
+     </div>
+     <div class="form-row field-interceptor_type">
+      <div>
+       <label for="id_interceptor_type">
+        Plugin type name:
+       </label>
+       <textarea cols="150" id="id_interceptor_type" name="interceptor_type" rows="2">
+       </textarea>
+       <p class="help">
+        Full namespace and assembly name are required in Non-CCOW scenario.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-uiAutomation_config_file_path">
+      <div>
+       <label for="id_uiAutomation_config_file_path">
+        UI Automation configuration file path:
+       </label>
+       <textarea cols="150" id="id_uiAutomation_config_file_path" name="uiAutomation_config_file_path" rows="2">
+       </textarea>
+       <p class="help">
+        Enter the UI Automation configuration files full path including the file extension.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-is_user_mapping_enabled">
+      <div>
+       <label class="vCheckboxLabel" for="id_is_user_mapping_enabled">
+        Enable user mapping
+       </label>
+       <p class="help">
+        User mapping is needed when the user context must be obtained from the EHR display, and the user`s display name is not identical to the username in the Active Directory.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      User Mapping Properties
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="description">
+      Configuration for user mapping
+     </div>
+     <div class="form-row field-user_mapping_file_path">
+      <div>
+       <label for="id_user_mapping_file_path">
+        Mapping file path:
+       </label>
+       <textarea cols="150" id="id_user_mapping_file_path" name="user_mapping_file_path" rows="2">
+       </textarea>
+       <p class="help">
+        Enter the mapping file's full path including the file extension, such as \MachineName\FolderName\UserMapping.xml.
+        <br>
+         The file path must be accessible from the application servers.
+        </br>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-user_mapping_is_use_as_role">
+      <div>
+       <label class="vCheckboxLabel" for="id_user_mapping_is_use_as_role">
+        Map user as a role
+       </label>
+       <p class="help">
+        If selected, the user context will not be resolved by name. The role of the user will be used by the Agent Hub to determine the correct permissions for hosted applications.
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-user_mapping_is_default_to_loggedInUser">
+      <div>
+       <label class="vCheckboxLabel" for="id_user_mapping_is_default_to_loggedInUser">
+        Use logged-in user by default
+       </label>
+       <p class="help">
+        If the displayed user is listed multiple times in the mapping file, use the logged-in user by default.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned wide">
+     <h2>
+      User Facility Identification
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="description">
+      User  Facility  Identification detects the facility mapped to  the EHR instance intercepted by the EHR Agent.
+      <br/>
+      For more information about the functionality associated with this capability, see the EHR Agent Functional Specification document.
+     </div>
+     <div class="form-row field-facility_root field-facility_extension">
+      <div class="field-box field-facility_root">
+       <label for="id_facility_root">
+        Facility ID root:
+       </label>
+       <p class="help">
+        Defines the root Identifier of the facility, according to [dbmVCDRData].[Common].[Organization].[Id_Root] .
+       </p>
+      </div>
+      <div class="field-box field-facility_extension">
+       <label class="inline" for="id_facility_extension">
+        Facility ID extension:
+       </label>
+       <p class="help">
+        Defines the extension Identifier of the facility, according to [dbmVCDRData].[Common].[Organization].[Id_Extension].
+        <br/>
+        <br/>
+        The active EHR instance facility is identified by the unique features of the EHR instance.
+        <br/>
+        To distinguish between EHR instances associated with different facilities, configure one of the following:
+        <br/>
+        - If the EHR instance has a unique EXE file name , Window title, or URL per facility, configure only the Facility ID Root and Extension fields.
+        <br/>
+        - If the EHR instance EXE file name and Window title is not unique per facility, configure each EHR instance with the relevant environment variable name and value, as well as the Facility ID Root and Extension fields.
+        <br/>
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset class="module aligned collapse wide">
+     <h2>
+      More options
+      <span class="services_to_restart_tag">
+       <img alt="services" src="/static/img/services.png"/>
+       Services to restart
+      </span>
+     </h2>
+     <div class="services_to_restart_container" style="position:relative; width:100%">
+      <div class="services_to_restart_content info">
+       <a class="inline-deletelink" title="Close">
+       </a>
+       <ul>
+        <li>
+         IIS(CVA)
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="form-row field-exclude_dash_from_mrn">
+      <div>
+       <label class="vCheckboxLabel" for="id_exclude_dash_from_mrn">
+        Exclude dash character from MRN
+       </label>
+       <p class="help">
+        Defines whether EHR Agent will exclude dash character from the MRN, which recieved in the CCOW context.
+        <br/>
+        NOTE: This funcionality is availible only when Agent Hub is CCOW Participant or CCOW Context Manager.
+        <br/>
+        By default, this functionality is enabled.
+        <br/>
+        <i>
+         Default: True
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-blink_only_first_doa">
+      <div>
+       <label class="vCheckboxLabel" for="id_blink_only_first_doa">
+        Display Badging only on first day of admission
+       </label>
+       <p class="help">
+        Defines whether EHR Agent will display the Badging only during the patient's first day of admission.
+        <br/>
+        By default, this functionality is disabled. This means that by default the EHR Agent will display the Badging in all cases where there is a delta in the configured attention time frame.
+        <br/>
+        <i>
+         Default: False
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-supported_profiles">
+      <div>
+       <label for="id_supported_profiles">
+        Supported profiles:
+       </label>
+       <p class="help">
+        Defines a comma-separated list of Profiles that can use this EHR instance. If empty, all profiles can use it.
+        <br/>
+        The Profile defines various installation attributes that determine how Agent Hub will be installed on the client machine.
+        <br/>
+        Each Profile has a unique sub-folder under: \\Web App Server\EHRAgentSetup\.
+        <br/>
+        For example: Default Profile, CCOW, CCOW Shared Desktop.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-direct_address">
+      <div>
+       <label for="id_direct_address">
+        Direct Address:
+       </label>
+       <p class="help">
+        Defines Direct Address associated to the EHR instance.
+        <br/>
+        When users send Direct messages from ClinicalView Agent, this address will be the user's sending address.
+        <br/>
+        Example: Facility.name@location.direct.com
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-direct_address_suffix">
+      <div>
+       <label for="id_direct_address_suffix">
+        Direct Address Suffix:
+       </label>
+       <p class="help">
+        Define suffix for a group of direct addresses.
+        <br/>
+        Should only use in case the EHR using privates direct addresses for his providers and routed the direct messages also to dbMotion
+        <br/>
+        Example: @location.direct.com
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_endpoint">
+      <div>
+       <label for="id_mu_reporting_endpoint">
+        Meaningful Use Reporting Endpoint:
+       </label>
+       <p class="help">
+        Defines the endpoint URL used to report Sending/Receiving of CCDA documents over Direct.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_source_system_name">
+      <div>
+       <label for="id_mu_reporting_source_system_name">
+        Source System Name:
+       </label>
+       <p class="help">
+        Define the source system name as exist in the CDR common.device.devicename.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field should be configured
+        <b>
+         only
+        </b>
+        if two or more EHR instances using the same OID in "Assigning Authority for display" and the reporting process should find only the relevant patient for the EHR instance.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_type">
+      <div>
+       <label for="id_mu_reporting_type">
+        Reporting Interface:
+       </label>
+       <select id="id_mu_reporting_type" name="mu_reporting_type">
+        <option selected="selected" value="">
+         ---------
+        </option>
+        <option value="SCM">
+         SCM
+        </option>
+        <option value="TW">
+         TW
+        </option>
+       </select>
+       <p class="help">
+        Defines the interface used to report Sending/Receiving of CCDA documents over Direct.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field is mandatory if an endpoint is configured.
+        <br/>
+        SCM: SCM interface (reporting to CPM).
+        <br/>
+        TW: TW interface (reporting to AAP).
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-thumbprint">
+      <div>
+       <label for="id_thumbprint">
+        Certificate Thumbprint:
+       </label>
+       <p class="help">
+        Defines thumbprint of the certificate for the configured endpoint in the field: Meaningful Use Reporting Endpoint.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field is mandatory if an endpoint is configured and SCM is the reporting interface.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_login">
+      <div>
+       <label for="id_mu_reporting_login">
+        Unity Service User:
+       </label>
+       <p class="help">
+        Define the Unity service user that will be used when reporting to TW.
+        <br/>
+        Unity service user should be configured for the relevant TW environment: TEST / PROD.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field is mandatory when TW is the reporting interface.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_password">
+      <div>
+       <label for="id_mu_reporting_password">
+        Unity Service Password:
+       </label>
+       <p class="help">
+        Define the Unity service Password that will be used when reporting to TW.
+        <br/>
+        Unity service Password should be configured for the relevant TW environment: TEST / PROD.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field is mandatory when TW is the reporting interface.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_app_name">
+      <div>
+       <label for="id_mu_reporting_app_name">
+        Application Name:
+       </label>
+       <p class="help">
+        Define dbMotion application name as configured in Unity.
+        Application name should be configured for the relevant TW environment: TEST / PROD.
+        <b>
+         Note:
+        </b>
+        This field is mandatory when TW is the reporting interface.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-mu_reporting_community_oid">
+      <div>
+       <label for="id_mu_reporting_community_oid">
+        Community OID:
+       </label>
+       <p class="help">
+        Define TW Community OID as configured in TW, for the dbMotion - TW integration.
+        <br/>
+        The value should be provided from TW resource.
+        <br/>
+        <b>
+         Note:
+        </b>
+        This field is mandatory when TW is the reporting interface.
+        <br/>
+        <i>
+         Default: Empty
+        </i>
+       </p>
+      </div>
+     </div>
+     <div class="form-row field-ccow_item_name">
+      <div>
+       <label for="id_ccow_item_name">
+        CCOW Parameter for EHR Instance Identification:
+       </label>
+       <p class="help">
+        Defines a CCOW parameter with an added suffix (for example,  the syntax will be Patient.Id.Mrn.Suffix) that is used to identify an EHR instance.
+        <br/>
+        <br/>
+        <b>
+         Configure this parameter when there is a need to differentiate between EHR instances, when
+        </b>
+        all instances have the same values for the following parameters (meaning that the system cannot differentiate between them):
+        <br/>
+        - Same EHR (Application)
+        <br/>
+        - URL (for Web application)
+        <br/>
+        - Executable file name (for Desktop application)
+        <br/>
+        - Application Title
+        <br/>
+        - Application Version
+        <br/>
+        - Environment Variable (or cannot create it)
+        <br/>
+        - Context Type
+        <br/>
+        - Participant Name
+        <br/>
+        - Passcode
+        <br/>
+        - Same Supported profiles
+        <br/>
+        <br/>
+        This configuration provides an additional method for organizations to differentiate between the instances of the same EHR. When the instance is identified, the relevant product functionality will apply per instance, as usual.
+        <br/>
+        <br/>
+        - Delta View can be configured per instance
+        <br/>
+        - Unique Patient Assigning Authority can be configured per instance
+        <br/>
+        - Send to My EHR endpoint can be configured per instance
+        <br/>
+        <br/>
+        For the implementation of this functionality, the following conditions apply:
+        <br/>
+        - It applies only with context interception using CCOW.
+        <br/>
+        - Each EHR instance is configured with a separate Properties Package.
+        <br/>
+        <br/>
+        <b>
+         Limitation:
+        </b>
+        <br/>
+        This configuration is ignored for an Instance with a Property Package that has more than one configured Patient Assigning Authority.
+       </p>
+      </div>
+     </div>
+    </fieldset>
+    <div class="inline-group" id="participant_set-group">
+     <div class="tabular inline-related ">
+      <fieldset class="module">
+       <h2>
+        participants
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used to configure the participant name and passcode that the EHR needs in order to join the context of the Context Manager.
+        <br/>
+        These values are provided by the customer or by dbMotion and must be agreed upon by both.
+        <br/>
+        If the customer does not provide a passcode, use the Generate button to generate a passcode.
+        <br/>
+        <b>
+         Note:
+        </b>
+        Is Shared functionality works only for non Web EHRs.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Name
+           <img alt="(Identifies the participant in the Context Manager.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Identifies the participant in the Context Manager." width="10"/>
+          </th>
+          <th class="required">
+           CCOW passcode
+           <img alt="(CCOW Passcode is used for a secured registration to the Context Manager.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="CCOW Passcode is used for a secured registration to the Context Manager." width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="participant_set-0">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-ccow_passcode">
+           <textarea cols="140" id="id_participant_set-0-ccow_passcode" name="participant_set-0-ccow_passcode" rows="2">
+           </textarea>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="participant_set-empty">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-ccow_passcode">
+           <textarea cols="140" id="id_participant_set-__prefix__-ccow_passcode" name="participant_set-__prefix__-ccow_passcode" rows="2">
+           </textarea>
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="inline-group" id="participant_set-2-group">
+     <div class="tabular inline-related last-related">
+      <fieldset class="module">
+       <h2>
+        participants
+        <span class="services_to_restart_tag">
+         <img alt="services" src="/static/img/services.png"/>
+         Services to restart
+        </span>
+       </h2>
+       <div class="services_to_restart_content info">
+        <a class="inline-deletelink" title="Close">
+        </a>
+        <ul>
+         <li>
+          IIS(CVA)
+         </li>
+        </ul>
+       </div>
+       <div class="description">
+        This configuration is used to configure the participant name and passcode that the EHR needs in order to join the context of the Context Manager.
+        <br/>
+        These values are provided by the customer or by dbMotion and must be agreed upon by both.
+        <br/>
+        If the customer does not provide a passcode, use the Generate button to generate a passcode.
+        <br/>
+        <b>
+         Note:
+        </b>
+        Is Shared functionality works only for non Web EHRs.
+       </div>
+       <table>
+        <thead>
+         <tr>
+          <th class="required" colspan="2">
+           Name
+           <img alt="(Identifies the participant in the Context Manager.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="Identifies the participant in the Context Manager." width="10"/>
+          </th>
+          <th class="required">
+           CCOW passcode
+           <img alt="(CCOW Passcode is used for a secured registration to the Context Manager.)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="CCOW Passcode is used for a secured registration to the Context Manager." width="10"/>
+          </th>
+          <th>
+           Is shared
+           <img alt="(This value is used to specify if participant is shared. If true, this participant can be associated with several instances of the same EHR. Note: Is Shared functionality works only for non Web EHRs)" class="help help-tooltip" height="10" src="/static/admin/img/icon-unknown.gif" title="This value is used to specify if participant is shared. If true, this participant can be associated with several instances of the same EHR. Note: Is Shared functionality works only for non Web EHRs" width="10"/>
+          </th>
+          <th>
+           Delete?
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="form-row row1 " id="participant_set-2-0">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-ccow_passcode">
+           <textarea cols="140" id="id_participant_set-2-0-ccow_passcode" name="participant_set-2-0-ccow_passcode" rows="2">
+           </textarea>
+          </td>
+          <td class="field-is_shared">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+         <tr class="form-row row2 empty-form" id="participant_set-2-empty">
+          <td class="original">
+          </td>
+          <td class="field-name">
+          </td>
+          <td class="field-ccow_passcode">
+           <textarea cols="140" id="id_participant_set-2-__prefix__-ccow_passcode" name="participant_set-2-__prefix__-ccow_passcode" rows="2">
+           </textarea>
+          </td>
+          <td class="field-is_shared">
+          </td>
+          <td class="delete">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </fieldset>
+     </div>
+    </div>
+    <div class="submit-row">
+    </div>
+   </div>
+  </form>
+ </div>
+ <br class="clear"/>
+</div>

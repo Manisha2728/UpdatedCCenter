@@ -1,0 +1,108 @@
+/* affects the Preview button */
+.default {
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.draggable{
+	
+	position: absolute;
+}
+
+#preview_wrapper {
+	display: none;
+}
+
+#preview_ehr {
+	width: 800px;
+	height: 600px;
+	border: 1px solid #aaaaaa;
+	background-color: #DFEFFC;
+	padding: 18px 8px;
+	top: 150;
+	left: 250;
+}
+
+#preview_ehr p{
+	margin-left: 14px; 
+}
+
+#preview_agent {
+	width: 252px;
+	height: 558px;
+	background: url(../../../img/ehragent.png) no-repeat;
+	background-color: white;
+	border: 1px solid grey;
+	z-index: 100;
+}
+
+
+
+#preview_close {
+	z-index: 1;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
+
+#preview_fields_box{
+	background: white url(../../img/nav-bg.gif) 0 100% repeat-x;
+	top: 37px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	position:absolute;
+}
+
+#preview_fields_box #preview_fields{
+	margin-top: 100px;
+	border: none;
+}
+
+#preview_fields_box #preview_fields label{
+	width: 7em;
+}
+
+#preview_fields_box .submit-row{
+	bottom: 1px;
+	right: 4px;
+	left: 4px;
+	position:absolute;
+}
+
+.corner{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+  	padding: 0px;
+  	margin: 3px;
+}
+
+.draggable .LeftTop{
+	left: 0;
+	top: 0;
+	/*box-shadow: -4px -4px 4px rgba(81, 203, 238, 1);*/
+}
+
+.draggable .RightTop{
+	right: 0;
+	top: 0;
+}
+
+.draggable .LeftBottom{
+	left: 0;
+	bottom: 0;
+}
+
+.draggable .RightBottom{
+	right: 0;
+	bottom: 0;
+}
+
+input.passcode{
+	margin-left: 10px;
+}
+
+
+
+
