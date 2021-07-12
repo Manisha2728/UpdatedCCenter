@@ -35,14 +35,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
         'default': {
-      'NAME': 'MyCCenterDB',#get_param('db_name', 'dbmCCenter')'',
+      'NAME': get_param('db_name', 'dbmCCenter'),
       'ENGINE': 'sql_server.pyodbc',
-        'HOST': 'myccenterserver.database.windows.net',
+        'HOST': get_param('cag_sql_server_name'),
         'USER': 'myccenteradmin',
         'PASSWORD': 'omnamhshivay@123',
         'OPTIONS': {
                     'driver': 'ODBC Driver 13 for SQL Server',
-                    },
+                },
     },
 	# 'default': {
     #   'NAME': get_param('db_name', 'dbmCCenter'),
