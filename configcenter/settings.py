@@ -34,17 +34,26 @@ MANAGERS = ADMINS
 #AUTHENTICATION_BACKENDS = ('authccenter.backends.OfflineAuthenticationBackend.Backend','authccenter.backends.dbmAuthenticationBackend.Backend',)
 
 DATABASES = {
-        
-	'default': {
-      'NAME': get_param('db_name', 'dbmCCenter'),
+        'default': {
+      'NAME': 'MyCCenterDB',#get_param('db_name', 'dbmCCenter')'',
       'ENGINE': 'sql_server.pyodbc',
-        'HOST': get_param('db_host'),
+        'HOST': 'myccenterserver.database.windows.net',
+        'USER': 'myccenteradmin',
+        'PASSWORD': 'omnamhshivay@123',
         'OPTIONS': {
-                    'provider': 'SQLNCLI11',
-                   'use_mars': True,
-                   'use_legacy_date_fields': True,
+                    'driver': 'ODBC Driver 13 for SQL Server',
                     },
     },
+	# 'default': {
+    #   'NAME': get_param('db_name', 'dbmCCenter'),
+    #   'ENGINE': 'sql_server.pyodbc',
+    #     'HOST': get_param('db_host'),
+    #     'OPTIONS': {
+    #                 'provider': 'SQLNCLI11',
+    #                'use_mars': True,
+    #                'use_legacy_date_fields': True,
+    #                 },
+    # },
     'cag_db': {
       'NAME': get_param('cag_db_name','dbmClinicalAnalyticsGateway'),
       'ENGINE': 'sql_server.pyodbc',
