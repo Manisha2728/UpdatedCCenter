@@ -41,5 +41,7 @@ urlpatterns = [
     url(r'^apply_data_access_auditing/', apply_data_access_auditing),
     url(r'^cag_apply_data_access_auditing/', cag_apply_data_access_auditing),
     url(r'^debug/', debug_view),
-]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-handler500 = 'dbmconfigapp.views.handler500'
+ ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# handler500 = 'dbmconfigapp.views.handler500'
+
+
