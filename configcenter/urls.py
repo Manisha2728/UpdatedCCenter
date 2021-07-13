@@ -5,8 +5,8 @@ from externalapps.views import *
 from federation.views import *
 from security.views import *
 from django.views.generic.base import RedirectView
+from django.conf.urls.static import static
 
-handler500 = 'dbmconfigapp.views.handler500'
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -41,6 +41,5 @@ urlpatterns = [
     url(r'^apply_data_access_auditing/', apply_data_access_auditing),
     url(r'^cag_apply_data_access_auditing/', cag_apply_data_access_auditing),
     url(r'^debug/', debug_view),
-    
-
-]
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+handler500 = 'dbmconfigapp.views.handler500'
